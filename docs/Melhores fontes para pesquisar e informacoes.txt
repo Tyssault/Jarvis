@@ -1,0 +1,12 @@
+Principais fontes:
+https://github.com/langchain-ai/langchain/tree/master
+https://github.com/langchain-ai/local-deep-researcher
+https://github.com/langchain-ai/open_deep_research
+
+Fontes:
+https://arxiv.org/abs/2505.22571?utm_source=chatgpt.com
+https://arxiv.org/abs/2407.17535?utm_source=chatgpt.com
+https://arxiv.org/abs/2309.07870?utm_source=chatgpt.com
+https://www.reddit.com/r/LocalLLaMA/comments/1hanad7/favorite_local_ai_agent_tool/?tl=pt-br
+https://www.reddit.com/r/AI_Agents/comments/1jtj5xl/beginner_help_how_can_i_build_a_local_ai_agent/?tl=pt-br
+https://chatgptbrasil.com.br/2025/04/03/como-criar-um-agente-de-ia-local-com-python-analise-inteligente-de-dados-em-minutos/?srsltid=AfmBOoqPy3p3xCzs9W8monqODws_GQBP-n6Pe3sOc-ROSQMRFGRXVOTK
