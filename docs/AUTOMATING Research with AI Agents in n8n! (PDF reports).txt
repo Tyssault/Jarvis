@@ -1,0 +1,224 @@
+AUTOMATING Research with AI Agents in n8n! (PDF reports)
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Hoje vou mostrar como eu criei esse agente de pesquisa em N8N que pega qualquer tema que você esteja interessado e faz pesquisa em detalhe sobre ele e te cria um PDF com citações e uma folha de referência até o final, citando cada referência usada para fazer essa pesquisa. Então, esse papel de pesquisa em específico acabou sendo de 13 páginas longas, mas a coisa linda desse sistema é que seu agente decide como a seção deveria ser, quão longa deveria ser esse papel. Ele decide o que pesquisar baseado no seu input.
+
+Mas como você vai ver nesse vídeo, esse sistema agêntico cria esses papéis de pesquisa em detalhe para você em um tempo de minutos. Tudo que você precisa fazer é escrever um tópico. Vou mostrar um exemplo de como um pode ser criado nesse sistema.
+
+E lembre-se, está citando informações do mundo real. Então, eu posso clicar nesses links e, na verdade, ir às páginas que são usadas para criar esse papel de pesquisa inteiro para nós. Então, vou mostrar um exemplo.
+
+Tudo que eu preciso fazer é clicar em Test Workflow e então escrever qualquer tópico que eu estiver interessado. Talvez eu esteja mostrando interesse em fotobiomodulação e como ela pode regenerar o corpo humano. O que eu posso fazer é clicar em Submit e então diz Form Submitted.
+
+Agora, esse agente inteiro vai passar por e criar um PDF de pesquisa em detalhe, como o que eu mostrei. Agora, eu posso ir longe do meu computador, eu posso ir sobre o meu dia e esse agente vai trabalhar para mim e fazer pesquisa para mim no fundo e então colocar no meu database de pesquisa um bom link para um PDF em detalhe. Então, por enquanto, eu vou esperar para isso passar e eu voltarei uma vez que o PDF for criado.
+
+E, assim que acabou, você pode ver o PDF aqui ou você pode olhar no seu database de pesquisa de pesquisa. Eu vou selecionar aqui por enquanto e então clicar em Veja e então eu vou descarregar isso e nós podemos descarregar o nosso relatório. Como você pode ver, eu estou ficando louco com os relatórios recentemente.
+
+Eu vou clicar em Escrever e então eu posso olhar para ele. Esse aqui turnou ser 14 páginas de pesquisa em detalhe sobre biomodulação fotográfica e como ela pode regenerar o corpo humano. E ele entra em cada seção dessa pesquisa, como compreendendo primeiro com citações reales.
+
+E ele vai super em detalhe nesse único tópico que eu estou interessado. Ele entra no contexto histórico, a evolução da biomodulação fotográfica. E ele até entra nos mecanismos moleculares dela e na verdade cita coisas.
+
+E na verdade ele está colocando coisas muito avançadas, coisas de PhD de nível alto aqui. Então, se nós irmos para as fontes, nós podemos clicar e ver de onde ele pegou essa informação. Então, como você pode ver, ele usou isso para fazer alguma pesquisa para nós.
+
+E eu só quero que vocês entendam o quão louco isso é que ele gera um PDF inteiro para você que é único e original. E faz pesquisa em detalhe sobre o que você quer. E leva você passo a passo através de várias páginas, com fontes, citações.
+
+Literalmente tudo vai para o fundo do contexto histórico. Vai para quando esse tópico foi introduzido. Cita informação que podemos clicar, como eu já mostrei.
+
+E vai para tudo que você precisa para qualquer tópico que você queira pesquisar. É assim que a AI é louca. Ela pode juntar toda essa informação para você.
+
+E no final, ela te dá todas as referências que ela usou. Tudo bem formado com números e um bom PDF aqui embaixo. Então, esse aqui tinha 14 páginas, como eu disse.
+
+E eu estou apenas amando como isso está gerando para tópicos que eu quero pesquisar. Agora eu vou desmaiar o sistema e como tudo vem junto. Eu vou te mostrar alguns princípios que são muito importantes para desenvolver seu próprio agente de pesquisa.
+
+Mas se você quer o mais fácil, um clique de instalação. Não só o mais fácil, um clique de instalação, mas também o melhor caminho para aprender como construir agentes NADN. Para que você possa construir esses funcionamentos sozinho.
+
+Então, junte-se à nossa comunidade da AI Foundations. Eu vou deixar um link na descrição e no comentário abaixo. E eu estou construindo essas automações e esses agentes para a comunidade o tempo todo.
+
+Então, os membros que estão conosco, e se você é parte da AI Foundations, você tem o privilégio de entrar em nosso curso de agentes de construção com NADN. Como você pode ver, eu coloquei esses agentes aqui antes de eles aparecerem no YouTube. E também, nós temos full blueprints.
+
+Então, tudo que eu tenho que fazer é baixar isso. E quando eu volto para a NADN, tudo que eu tenho que fazer é clicar em importar do arquivo. E eu posso clicar em abrir aquele arquivo que eu acabei de baixar.
+
+E ele importa todo o meu blueprint. Tudo que você tem que fazer é entrar e fazer conexões. E eu mostro como fazer isso na comunidade.
+
+Então, se isso interessa a você, você ama o NADN, você ama agentes, você ama a AI em geral, então venha se tornar parte da nossa comunidade. Tenha certeza de se apresentar, porque nós amamos acolhedorar novos membros. Nós temos mais de 6.5 mil comentários no thread de introdução sozinho.
+
+Então, nós queremos conhecer você e esperamos vê-lo por dentro. Mas agora, vamos entrar em alguns princípios para construir um agente de pesquisa que eu acredito que são os mais importantes. Então, antes de eu construir todo o funcionamento do agente de pesquisa que realmente cria esses PDFs de pesquisa em profundidade para mim, este é um vídeo que eu realmente gostaria de ter feito, porque o que eu vou fazer é brequear princípios clave.
+
+Agora, o uso de todos vai ser diferente. O agente de pesquisa que eu mostrei vai ser diferente, provavelmente, do que você quer comparado com o que alguém mais quer. Então, eu só quero lhe dar princípios claves em vez de mostrar o um jeito de construir um agente de pesquisa.
+
+Então, vamos entrar em três conceitos importantes para desenvolver seu primeiro agente de pesquisa. Agora, quando você está desenvolvendo um agente de pesquisa, uma das coisas mais importantes é fortificar sua estrutura de pesquisa. Então, o que acontece no começo da automação, antes de você até mesmo começar a fazer a pesquisa com Perplexity, O3, DeepSeq, qualquer coisa que você está fazendo pesquisa com, isso é legal, mas essa é a parte fácil.
+
+Fortificar sua estrutura de pesquisa pode ser a coisa mais importante quando desenvolve um agente de pesquisa. Isso seta o tom do resto do seu funcionamento. Um papel de pesquisa mal estruturado vai levar a resultados ruins.
+
+Agora, o que é a próxima coisa? O princípio número dois é uma database de agregação rotativa. Isso pode soar confuso, mas eu vou desligá-lo para você. Você precisa desenvolver um sistema rotativo, como um AirTable, um Notion, um Google Sheets, que agrega informação ao longo do caminho.
+
+Então, isso não é uma coisa que você pula toda a informação no final da sua automação, mas algo que você usa durante a sua automação para que você possa publicar partes do seu funcionamento para o Google Sheets. E depois, talvez mais tarde na automação, você volta e usa isso. Isso é importante, ter uma database de agregação rotativa.
+
+Isso permite que você coloque cada citação, tarefa, saída, tópico em um lugar. Agora, isso cria um jeito organizado de guardar toda a sua pesquisa, não só para você, mas para seu agente. Então, seu agente tem um lugar que ele pode voltar e pegar certas partes, pegar citações anteriores, ele pode ver suas citações anteriores, então ele não usa a mesma, ou número a mesma citação, se já a usou lá.
+
+Então, desenvolver uma database de agregação rotativa é absolutamente crucial. Próximo, pesquisa, tarefa, separação. Se você tentar criar um PDF de 15 páginas com um único prompto, não vai funcionar.
+
+Você precisa ter seções individuais para que seu agente vá em profundidade. É por isso que guardar a pesquisa em uma database rotativa é crucial. Você pode unir tudo ao mesmo tempo, mas foque-se em cada peça de pesquisa, cada seção.
+
+Então, se você pensar em uma lista, você tem uma introdução, você tem um corpo, você tem uma conclusão, se formos muito básicos. Você gostaria de um agente fazendo tarefas individualmente. Então, você gostaria de um agente que se foque apenas na lista.
+
+Ou você gostaria de fazer uma tarefa para o agente que se foque apenas na lista. Similar ao corpo, similar à conclusão. Quando você separa tarefas, sua pesquisa, é quando você pode criar uma ótima pesquisa.
+
+Então, agora, eu acho que chegamos a construir um mini agente de pesquisa. Então, eu posso mostrar o meu processo de pensamento. Antes de eu até pensar em construir agentes, vamos pular para o diagrama do agente para ver como queremos que funcione.
+
+Então, eu vou mostrar um diagrama de como o meu agente funciona, e depois vamos implementar um sistema miniatura disso, para que você possa ver ele funcionando em ação. Então, aqui estou em uma aplicação chamada BoardMix, e é aqui que eu gosto de planejar todos os meus agentes de pesquisa, todos os meus agentes que estou construindo. Não importa se é pesquisa ou não, mas tudo começa com uma entrada do usuário.
+
+E como você viu no começo deste vídeo, eu queria que meu agente comece com uma entrada do usuário, eu apenas escrevendo em um tópico que estou interessado. Qualquer tópico que você escreve, esse tópico de escolha é enviado para algo chamado de query refiner. Se você estava fazendo pesquisa em um tópico, você precisaria refinar suas queries, certo? Você precisaria escrever coisas específicas para o Google para encontrar a pesquisa que você precisa para encontrar seu tópico de escolha, ou seu pedido que você quer pesquisar.
+
+E depois, o query refiner, o que ele faz na minha automação é enviar minhas queries para um guia de estilo. Esse guia de estilo determina a estrutura do meu papel de pesquisa. Então, como eu disse, você precisa fortificar a sua estrutura de pesquisa, um dos principais princípios.
+
+E é isso que eu estou fazendo aqui. Estou colocando uma estrutura para cada novo tópico que vem, cada novo setor de queries de pesquisa. Mas depois você precisa enviar tudo para algo que eu gosto de chamar de manager de pesquisa.
+
+Porque o que isso vai fazer não é apenas criar a sua primeira página do AirTable, como criar um tópico dentro do seu databases e dizer, ok, temos todas as queries, temos o guia de estilo, temos o tópico, e isso tudo está enviado para o manager de pesquisa. O guia de estilo, tudo. Então, agora que temos tudo setado em pedra, agora podemos criar uma página do AirTable, uma página da Notion, um Google Sheet Row, para agregar toda a nossa informação.
+
+Essa é a ideia. Isso é o que essa coisa está fazendo aqui. Primeiro, vai criar a página do AirTable para que possamos continuar agregando informação enquanto desenvolvemos pesquisa sobre isso.
+
+Mas o que esse manager de pesquisa também está fazendo é criar tarefas individuais. Cada tarefa de pesquisa é baseada em uma seção do meu guia de estilo. Então, estou criando uma tarefa ao redor da introdução, uma tarefa ao redor do fundo, estudos clínicos, etc.
+
+E então, estou enviando aquela tarefa individualmente para um loop de pesquisa. Então, cada tarefa vai ser enviada por algo chamado Manager de Operações de Pesquisa. Estou apenas tentando desenhar e mostrar o meu processo de pensamento quando estava construindo essa coisa para que você também possa implementá-la em seu próprio workflow.
+
+Mas o que isso faz é que esse agente tem diferentes ferramentas que pode usar. Talvez esteja conectado a uma das minhas databases do AirTable, certo? E pode ver certas informações que eu quero dentro da minha pesquisa. Talvez esteja conectado a minhas citações anteriores.
+
+Então, ele pode ver quais citações não pode usar de novo, ou quais citações pode usar, e quais para referência nessa lista de números. Próximo, temos Contato com uma ferramenta de pesquisa. Então, o que você quer para que você faça pesquisa? Para mim, eu queria poder rapidamente mudar o meu modelo.
+
+Então, eu vou mostrar o que isso parece, mas eu uso algo chamado Open Router. Então, eu poderia usar DeepSeq, Perplexity, ChatGPT, literalmente o que eu quiser. E depois que sua pesquisa é completa, ela fica adicionada à página do AirTable que você criou.
+
+Aqui, você pode apender conteúdo, ou você pode criar novas páginas, novas linhas de databases. Mas você está basicamente processando cada tarefa de pesquisa individual através do seu gerador de operações de pesquisa, que depois decide quais ferramentas usar para essa tarefa específica, e também quais ferramentas de pesquisa usar. Você pode ter múltiplas.
+
+E aí, é só apender aquela seção. Então, essa tarefa de pesquisa pode ser apenas a introdução, certo? Pode ser apenas a conclusão. Mas aí, ela o envia de volta à sua database.
+
+Então, você está regrupando todas essas pequenas seções juntos em uma database. E depois que todas essas tarefas foram passadas, ela então usa tudo da sua página do AirTable para criar um PDF. Vamos descer para o N8n e construir uma versão miniatura do meu gerador de pesquisa.
+
+Dessa forma, você pode entender o que vai entrar nele, o processo de pensamento, e tudo que eu poderia estar pensando quando estou construindo esse funcionamento de gerador de pesquisa. Talvez eu queira que esse gerador de pesquisa comece com um input de forma, parecido com o que eu fiz no meu gerador de pesquisa principal. O que eu posso fazer é iniciar isso em uma submissão de forma.
+
+E aí, eu só estou dando um ícone de campo, fazendo o meu texto de tipo campo, e então dando um bom pequeno placeholder aqui. Eu só posso clicar nisso. Então, agora minha forma está pronta.
+
+Eu tenho um lugar onde eu posso inserir um tópico. Em seguida, precisamos passar o nosso tópico para um gerador que talvez nos dê algumas queries de pesquisa para usar para nossa pesquisa. Semelhante a como eu coloquei a minha outra automação.
+
+Eu vou até dar o meu gerador de pesquisa e o meu prompt de gerador de pesquisa neste vídeo. Então, eu coloquei o meu gerador de pesquisa aqui. E essa coisa vai tomar inputs do usuário da forma, e então transformá-la em queries para o nosso agente, para que ele possa pesquisar o tópico que queremos para obter mais informação.
+
+Então, eu vou passar por isso. Eu vou mostrar o prompt. E eu também vou conectar o 3Mini a isso.
+
+Então, se você quiser conectar o 3Mini agora, você precisa ir para o modelo de conversão de OpenAI. E você não pode selecioná-lo da lista. Ok? Não está aqui.
+
+Então, se você quiser o melhor modelo de OpenAI, o que você tem que fazer é filtrar por ID. E então, o que você pode fazer é escrever 03-mini. E isso vai tirar aquele modelo do API.
+
+Então, você vai precisar conectar o seu credencial. Mas depois disso, nós temos agora 03, o melhor modelo de conversão GPT que tem poder nessa coisa. Próximo, vamos dar uma olhada no prompt.
+
+Então, o que eu estou fazendo é, no meu texto, eu estou passando o tópico de pesquisa. Então, se eu testar isso, e eu apenas escrevo qualquer palavra, talvez felicidade. Como você pode ver, isso vai passar a felicidade no prompt.
+
+Então, ele está tomando isso e dizendo tópico de pesquisa. Eu estou dizendo ao agente que o tópico de pesquisa é a felicidade aqui. Próximo, vamos dar uma olhada nas minhas instruções.
+
+O que você pode fazer é que você pode apenas escritar essas instruções e pastar elas para o chat GPT para fazer OCR e, na verdade, dar para você para que você possa copiar e pastar para seu próprio refiner de queries. Ou você pode apenas olhar e pegar pedaços e pedaços disso. Então, eu vou escrever para que você possa capturar cada uma dessas instruções aqui para que você possa usá-las também.
+
+Você pode apenas escritar cada seção ali. E o que precisamos fazer aqui com esse refiner de queries é levar meu tópico e criar itens para pesquisar para o nosso agente. Então, vamos dar uma olhada no que eu estou fazendo aqui.
+
+Eu basicamente estou dando um objetivo dizendo que você precisa criar 5 questões de pesquisa bem criadas, distintas, e altamente relevantes baseadas somente no tópico que o usuário mencionou. E eu basicamente dou a estrutura para exibir sua resposta. Então, eu quero exibir meu tópico e então 5 questões de pesquisa.
+
+Então, o que podemos fazer para conseguir essa saída consistente é que podemos copiar esse objeto JSON e então podemos conectar um refiner de saídas. Então, é isso que eu vou fazer. Eu vou selecionar isso e então selecionar o refiner de saídas estruturado e então eu vou pastá-lo aqui.
+
+E, pessoal, se vocês realmente querem aprender como criar esses agentes sozinhos e você não quer ter que continuar lutando, então junte-se à nossa comunidade porque as pessoas lá estão indo literalmente de zero para o herói. Elas estão ajudando um com o outro, elas estão construindo seus próprios agentes e agora, vocês sabem, elas estão construindo esses tipos de sistemas sozinhas. É aí que o curso vai levar vocês com a construção do agente N8N.
+
+Então, agora vamos testá-lo. O objetivo é obter uma saída estruturada para que possamos mapeá-la para outras partes do nosso agente e do nosso fluxo de trabalho. Eu vou testar esse fluxo de trabalho e eu posso escrever qualquer coisa, como açúcar e como isso afeta a depressão.
+
+Eu não sei se eu usei o certo efeitos ali. Mas vamos ver se açúcar tem algum link para a depressão. Eu posso submetê-lo e agora ele vai refinar as questões de pesquisa para mim.
+
+Então, termos que podem ser pesquisados que você poderia pesquisar se você estivesse fazendo a pesquisa sozinho. Então, intake de açúcar e depressão, pesquisa clínica, mecanismos de açúcar influenciando a depressão no set. E ele entra em todos esses estudos diferentes sobre como o açúcar se conecta a uma coisa certa.
+
+Isso é o que eu realmente gosto de fazer, é pegar um tópico e ver como ele se conecta a outro. Então, agora que nós temos essa saída estrutural, a cada vez que escrevemos um tópico, vai nos dar cinco queries de pesquisa em um tópico ali. Essa é a parte principal do agente, é realmente pegar esse refiner de queries.
+
+Agora, eu não vou construir todo o meu trabalho, obviamente. Nós estaríamos aqui por quatro ou cinco horas. Mas o que eu vou fazer é mostrar como eu posso conectar uma database de ações rotacionais e também como eu posso adicionar pesquisa a isso para que ele possa pesquisar todos esses termos e criar um pequeno papel de pesquisa para mim.
+
+Primeiro, vamos criar a database de ações rotacionais, nosso sistema de agregações rotacionais. Eu já criei uma base de ações rotacionais. Eu vou chamá-la de RAS, para sistema de agregações rotacionais.
+
+Eu só posso renovar essa tabela para pesquisas, papéis. Agora, eu posso desenhar isso para ser nome de tópico. Então, eu vou deixar isso simples.
+
+Eu vou apenas chamar isso de conteúdo. Então, o que eu posso fazer é criar um tópico para essa tabela no Builder Hub. E o que esse tópico vai fazer é dar acesso à minha database de ações rotacionais.
+
+Então, eu vou criar um novo tópico. Eu vou chamar isso de Delete This. E depois eu vou adicionar escopos.
+
+O Read, o Write, e depois o SchemaBase é Read. E depois eu vou adicionar uma base. Eu vou adicionar a base de RAS que nós criamos.
+
+Clique em Criar Tópico, copie essa chave, clique em Feito. E depois eu vou voltar e vou adicionar esse tópico como uma nova página dentro da nossa database de ações rotacionais. Então, se eu voltar para o tópico de ações rotacionais que nós criamos, nós queremos adicionar um novo tópico a cada vez que nós o escrevemos no campo de formato.
+
+Então, eu posso selecionar esse pequeno botão de mais, escrever AirTable, e depois criar um recorde. Lindo. Agora eu quero conectar o meu tópico de acesso ao AirTable.
+
+Então, aquela coisa que eu só copiei ali, eu posso conectar o meu AirTable para aquela base específica. Conexão testada sucessivamente. Então, agora eu posso selecionar essa base, a RAS, e depois selecionar o meu tópico, que é o tópico de pesquisas.
+
+Se ele não está carregando, clique em URL e depois em List novamente, e ele certamente carregará muito rapidamente. Lindo. Agora nós podemos mapear cada coisa para essa database aqui.
+
+Então, agora nós temos controle da nossa database com um N8n. Para o nome do tópico, eu só vou mapear o nome do tópico, e depois eu vou só deixá-lo assim. Então, agora, a cada vez que nós criamos um novo tópico, nós vamos ter uma página criada com ele.
+
+Você pode até renovar isso para criar tópico no AirTable. E agora nós podemos, na verdade, criar nosso agente de pesquisa. Agora, eu adoro usar Open Router, porque você consegue pesquisar entre todos esses modelos diferentes.
+
+Então, se eu clicar em Browse, como você pode ver, nós temos 312 modelos que podemos escolher aqui, incluindo coisas como DeepSeek, nós temos Perplexity, nós temos Google Gemini, nós temos tudo aqui. Então, eu vou usar isso, mas você pode usar realmente qualquer coisa que você quiser. Agora, a única coisa ruim sobre isso é que eu tenho que usar um requerimento de HTTP, então fica um pouco mais complicado, mas, novamente, você pode fazer isso com qualquer agente de pesquisa que você quiser.
+
+E o que eu fiz foi renovar isso para agente de pesquisa. Nós temos um requerimento de postagem. E, basicamente, o que nós vamos fazer aqui é usar qualquer modelo que nós quisermos para criar pesquisa.
+
+Então, onde diz Autorização Bearer aqui, eu só vou adicionar uma chave de Open Router. Então, eu só vou criar uma chave e então clicar em Criar, Copiar, e então eu posso pastar isso para o meu agente aqui. Então, eu vou clicar em Espaço, e então eu vou pastar.
+
+Bonitinho. Não quis nem acertar lá. Mas agora nós podemos entrar no nosso prompting.
+
+Então, quando você está usando Open Router, você vai ter que promptar com o JSON aqui. Então, nós temos a nossa função de sistema, como instruções, você pode pensar nisso como instruções customizadas, e então nós temos conteúdo, o próprio prompt que estamos enviando para o usuário. Então, eu poderia só dar algumas instruções básicas, como você é um agente de pesquisa, então eu posso dizer que você receberá cinco queries e um tópico.
+
+Você tem que fazer pesquisa em detalhe nesse tópico com essas queries. Bonitinho. Então, agora nós temos apenas uma pequena instrução aqui para o que fazer, e então esse é o prompting.
+
+Então, esse é onde nós colocamos os tópicos e as queries de pesquisa que ele está recebendo. Então, o que eu posso fazer é só escrever tópico, coluna, e então eu posso mapar dinamicamente o tópico. Então, para fazer isso, eu vou sair disso, clicar em Save, e o que eu posso fazer aqui é testar isso.
+
+Então, deixe-me testar a automação inteira para colocar um pouco de dados dinâmicos. Eu posso apenas escrever qualquer coisa. De novo, eu vou apenas escrever felicidade.
+
+Estou se sentindo muito feliz hoje. Então, vamos continuar. Agora que temos dados testados aqui, vamos conectá-los ao agente de pesquisa e mapar dinamicamente aqueles fios que queremos colocar no corpo do JSON.
+
+Então, onde diz tópico, eu vou agora pular sobre tópico e então eu posso apenas colocar uma coma e colocar pesquisas. E então eu posso pular em cada uma das pesquisas. Agora, já que eu tenho cinco pesquisas pulando em todos os tempos, eu posso apenas mapar dinamicamente pesquisas 1 até 5, certo? Se você estava lidando com um número dinâmico de pesquisas chegando, obviamente você iria querer fazer isso um pouco diferente, com um código de código de Stringify ou algo além dessas linhas, mas, por enquanto, isso vai funcionar bem.
+
+Muito simples. Estamos dando tudo o que precisa. Vou acabá-lo em quotas aqui com esse braço de JSON.
+
+Então, agora, está dinamicamente colocando meu tópico nas cinco pesquisas com essa função de sistema. Então, você é um agente de pesquisa. Agora, eu estou apenas usando o modelo de sonar de perplexidade e nós podemos até testar esse passo com a informação que tem aqui.
+
+Como você pode ver, isso me dá um estudo compreensivo sobre esse assunto. E quando você tem ambas essas coisas funcionando, como o agente de pesquisa e a criação do tópico dentro do seu databases, o que você pode fazer é, na verdade, unir essas coisas. Mas, primeiro, nós precisamos, na verdade, separar essa saída do agente de pesquisa para extrair a mensagem.
+
+Às vezes, quando coisas estão em arrays como essa, está sobre escolhas, está sobre outras escolhas, mensagem, conteúdo. O que precisamos fazer é, na verdade, precisamos separar isso. Então, podemos usar um módulo de separação para testar esse passo.
+
+Agora, ele só extrai a mensagem para nós. E, agora, o que podemos fazer é adicionar um campo de unir para unir o ID do tópico de pesquisa e, também, aquela mensagem que nós recebemos. Então, eu vou adicionar o campo de pesquisa do tópico de pesquisa para o input 1, desculpe-me, adicionar o separador para o input 2, e, depois, eu vou executar esse passo.
+
+Então, o que isso faz é que me dá o ID e, também, a mensagem aqui. Lindo. O próximo que podemos fazer é criar um módulo de recordação do tópico de pesquisa.
+
+Colocar o ID do tópico que nós criamos e atualizar o campo de conteúdo desse ID de recordação. Então, eu vou entrar aqui, vou escrever AirTable e, depois, eu vou fazer Update Record. Daí, eu quero selecionar o meu token AirTable certo, escolher a base certa, escolher a página certa ou a tabela certa que eu quero da lista.
+
+Eu quero a tabela de pesquisa. E, depois, eu mapeio essas colunas. Então, eu quero mapear ID para ID porque essa é a página que nós queremos atualizar.
+
+E, depois, eu posso eliminar o nome do tópico já que nós já temos um. E, agora, eu só quero adicionar o conteúdo aqui. Agora, a razão por que é indefinido é porque há dois objetos separados aqui.
+
+Então, o que nós podemos fazer é agregá-los em um. Então, eu vou subir aqui, eliminar essa conexão. E, depois, eu vou escrever um módulo de agregação como este.
+
+E, agora, eu posso conectá-lo a este Merge para mergulhar o ID e a mensagem em um objeto. Então, eu vou clicar em Jogar aqui. E, eu esqueci de adicionar os campos que eu queria agregar.
+
+Então, eu vou adicionar um campo de agregação e eu vou fazer essa mensagem. Eu vou renomeá-lo para Output. Então, nós temos ID e Output.
+
+Eu posso testar esse passo. Agora, nós temos ID e depois Output. Agora, quando eu conectar o módulo de agregação, o que vai acontecer é que agora eu posso conectar este ID assim.
+
+E, agora, eu também posso conectar o Output assim. Então, ambos estão chegando agora já que estão no mesmo objeto, se você quiser. E, agora, esta automação está funcionando.
+
+Então, este seria um exemplo de um mini agente de pesquisa que pega um input de forma, cria questões de pesquisa, faz pesquisa com perplexidade, separa, merge, agrega todos os dados em um novo papel da AirTable. Então, vamos testar o nosso mini agente de pesquisa. Eu vou clicar em Test Workflow e depois eu posso escrever qualquer tema.
+
+Talvez eu esteja interessado em por que os animais na Austrália são tão diferentes. Talvez eu queira fazer alguma pesquisa sobre isso. Eu posso enviar isso.
+
+E, então, ele vai atravessar todo este paradigma que criamos. Ele cria um tópico com o nome do nosso tópico e depois ele vai através do paradigma de pesquisa usando Open Router, o que é muito, muito legal. Então, depois que ele faz isso, ele vai separar, merge, agrega e depois atualiza o nosso recorde na AirTable, assim.
+
+Então, agora, quando eu volto para a AirTable, como você pode ver, nos dá o nosso papel de pesquisa aqui. Então, este seria um exemplo. Ele até nos dá pequenas fontes aqui.
+
+Mas, nós poderíamos pedir para listar as fontes que ele usou também e colocá-las aqui. Então, espero que você tenha gostado deste mini agente de pesquisa. Espero que você tenha gostado da ideia de construir um agente de pesquisa dentro do N8n.
+
+De novo, se você quer o jeito mais suave para aprender como construir agentes de AI dentro do N8n, e você ama a AI, você quer apenas um framework, um caminho provido para suceder, então eu recomendo que você junte-se à comunidade da AI Foundations. De novo, nós temos o curso N8n de 25 módulos. Nós temos uma comunidade épica aqui, onde todos falam sobre AI, todos se empurram para melhorar.
+
+Nós temos uma sala de aula cheia de módulos, além do N8n. Nós temos N8n, templos de automação de agentes, como o que mostrei hoje. Nós temos um calendário com chamadas ao vivo.
+
+E, é claro, nós temos a linda comunidade. Então, espero ver você dentro, porque este é realmente onde acontece o melhor aprendizado. E nossos alunos foram de não saber nada a fazer dinheiro com a AI, a construir agentes com a AI, a obter novas posições de trabalho, você sabe, o todo, o todo dos 9 quadrados.
+
+Então, esperamos ver você lá, porque realmente acreditamos que é o melhor jeito para você aprender. Mas, com isso dito, espero que você tenha gostado deste vídeo de agentes de pesquisa. Se você gostou, por favor, curta e se inscreva.
+
+E eu vejo você no próximo.
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.

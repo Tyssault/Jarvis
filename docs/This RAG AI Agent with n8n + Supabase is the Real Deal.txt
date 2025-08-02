@@ -1,0 +1,119 @@
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)
+
+A maioria dos tutoriais de RAG no YouTube, você sabe, o clássico conversa com seus documentos PDF, realmente não mostra como construir algo que você pode usar de verdade. Você teria que mudar um monte, e eu digo um monte, para realmente fazê-lo pronto para a produção. E honestamente, pode funcionar bem no começo, mas você vai entrar em problemas enquanto sua base de conhecimento cresce, seus documentos se atualizam, e os usuários da sua aplicação perguntam perguntas que você não esperava ou testou.
+
+Agora, não estou prometendo a solução perfeita de qualquer jeito, mas eu definitivamente tenho algo que você vai querer conferir hoje, porque eu vou mostrar como construir um agente de AI de RAG robusto sem código, usando o N8n e o SupaBase. O N8n é um ato de automação de trabalho incrível e custo-efetivo, parecido com o Make.com e Zapier. E o SupaBase, na minha mente, é a melhor, a melhor plataforma de dados que também suporta vectores para RAG, usando o PgVector.
+
+E é isso que nós vamos realmente esforçar hoje, para fazer algo que é muito mais imediatamente usável para RAG do que muitas das coisas que você viu no YouTube até agora. É tão, tão fácil combinar o N8n e o SupaBase para criar um agente de AI de RAG robusto, custo-efetivo, sem código e simples de entender, onde você pode usar literalmente qualquer um dos seus documentos como uma base de conhecimento. Começaremos rapidamente mostrando o quão poderoso este agente de RAG é, e eles vão te guiar passo a passo através de configurá-lo sozinho, então você pode fazer isso em menos de 15 minutos, incluindo configurar o SupaBase e criar este workflow N8n para o seu agente de RAG.
+
+Então vamos lá e vamos entrar. Beleza, então aqui está o workflow completo de N8n para este agente de AI de RAG, que eu vou entrar em um pouco, mas agora eu tenho que mostrar o quão legal e fácil de usar este agente é. Então, neste ponto, eu não tenho nada na minha base de conhecimento de RAG, e eu posso até ir para o SupaBase e mostrar que esta tabela de documentos que gerencia minha base de conhecimento não tem nada nela neste ponto. Então, agora o que eu posso fazer é ir para o widget de conversa, no meio inferior aqui no meu workflow N8n, e eu posso fazer uma pergunta para o meu agente que ele não deveria ter a resposta agora, porque eu não tenho nenhum documento para a sua conhecimento.
+
+Então, eu posso perguntar algo como quais são os itens de ação do encontro 8-25? E isso é algo que vai fazê-lo poder responder em um pouco aqui, mas agora eu quero mostrar que ele não tem essa resposta neste ponto. Então, com certeza, ele não pode encontrar a resposta. Então, agora vamos lá e criar um documento em sua base de conhecimento, para que ele possa responder esta pergunta.
+
+Então, eu vou pegar algumas notas de encontro estúpidas que eu fiz para o 8-25, vou copiar estas, e vou ir para o folder que eu estou usando para a base de conhecimento para este agente. Então, isto tudo está conectado ao N8n. Vou clicar em Novos Docs do Google, então eu vou fazer isto como meu arquivo aqui, e depois eu vou escrever tudo aqui, e então para o título deste documento, vamos dizer 8-25 Notas de Encontro.
+
+Então, agora vai haver um N8n Workflow que ativa para adicionar isto à base de conhecimento do RAG. Então, eu volto, uma vez que esteja feito, em, tipo, 30 segundos para um minuto. Então, apenas um minuto depois, e este N8n Workflow já executou.
+
+Eu vou mostrar mais o que estas execuções parecem depois, e como elas funcionam, mas se eu for para este passo aqui, onde eu insiro para a base de conhecimento, com certeza, o conteúdo da página aqui é exatamente o que eu criei neste Doc do Google, apenas agora. E eu também posso ir para a Super Base, e ver que a tabela de documentos que maneja a base de conhecimento também tem um recorde agora, para este arquivo de Notas de Encontro. Temos o metadata também, incluindo o ID do arquivo do Google Drive, e também o vetor de embedimento, que nós vamos usar para o RAG.
+
+Então, agora eu posso voltar para o meu chat no N8n. Então, eu volto para o editor, vou para o chat, e então, este é o nosso último pedido aqui, onde não tinha a informação na base de conhecimento. Isto é apenas de um teste anterior, onde estava funcionando, obviamente.
+
+Mas agora eu só posso copiar esta pergunta e perguntá-la de novo, e desta vez, vai ter a resposta, porque este documento está em sua base de conhecimento, como eu mostrei, tanto na Super Base, quanto na execução do N8n. E, com certeza, aqui está, temos a resposta certa. Isto é exatamente o que são esses itens de ação estúpidos que nós temos no nosso Doc do Google, aqui.
+
+Então, super fácil de usar. Esta coisa funciona muito, muito bem. Ela maneja todas as atualizações para os arquivos do Google Drive também.
+
+Então, agora eu vou entrar e mostrar-lhe passo a passo como realmente construir esta coisa. Tudo bem, então eu já construí completamente este N8n Workflow para o meu agente RAG AI, porque eu quero que este seja um passeio muito suave. Mas eu vou passar este passo a passo para você, para que você tenha uma compreensão realmente clara de como isso funciona, e que você possa implementá-lo sozinho.
+
+Eu até vou ter um link para um repositório GitHub na descrição deste vídeo, onde você pode descarregar este Workflow sozinho e trazê-lo para sua própria instância N8n muito, muito facilmente. Tudo o que você tem de fazer é descarregar o arquivo JSON para este Workflow, e então ir para os três pontos aqui no topo direito da sua instância, e então clicar em Import From File. Então, você vai trazer esse arquivo JSON, e então a única coisa que você tem de fazer é colocar suas próprias credências para coisas como o Google Drive e Superbase, e então qualquer customização que você queira, como seu folhamento para sua base de conhecimento e Google Drive, e então você está pronto para ir.
+
+Só leva alguns minutos, e você terá esta coisa completamente instalada, então você pode roubá-la de mim muito, muito facilmente. Tudo bem, então com isso, nós podemos instalar esta N8n Workflow e ver exatamente como funciona. Então, a primeira coisa que eu quero fazer antes de até chegarmos a todas as ações aqui no Workflow, é que eu quero que você esteja instalado com Superbase, porque isso vai ser usado tanto para a memória de conversa quanto para a database de vetores, e essa é a beleza de Superbase, é que podemos usá-la para ambas.
+
+Então, o que você vai precisar fazer é ir para superbase.com e então apenas inscrever-se com seu acounto GitHub. Você terá um tier gratuito, que, deixe-me ir para o preço realmente rápido e mostrar para você. O tier gratuito é incrível, tipo, é literalmente tudo que você precisa para começar.
+
+Não há motivo para ir para o plano de 25 dólares por mês até que você realmente comece a escalar sua aplicação AI. Então, uma vez que você inscreve-se e crie um passaporte, você vai ser levado a uma página de dashboard que parece assim. E então, há algumas credências que vamos precisar para algumas das passagens da NAN.
+
+Então, deixe-me apontá-las realmente rápido e eu vou referenciá-las mais tarde. Então, você vai para os setores de projetos no baixo esquerdo aqui, e então vai para a secção de database da configuração. Agora, aqui você vai ter tudo o que você precisa para a conexão Postgres para a memória de conversa.
+
+Então, você tem seu host, nome de database, porto, usuário e passaporte. Então, isso é para Postgres. E então, o que você vai precisar para o lado do vector database é a conexão API.
+
+Então, você vai para a tabela de API e então aqui você tem sua URL. Isso é customizado para você. E então, você também pode revelar e copiar seu secreto de serviço também.
+
+Então, ambas essas coisas, database e API, vamos precisar de mais tarde. Então, de qualquer forma, voltando para a NAN, o que vamos fazer aqui é mostrar-lhe passo a passo executando esse fluxo de trabalho e passando por cada um dos nodos. E então, o primeiro trigo que temos aqui para o nosso fluxo de trabalho da NAN é quando uma mensagem de conversa é recebida.
+
+Então, se eu for para o ícone de mais e apenas procurar por conversa, esse é o trigo que estamos usando aqui. E quando você adiciona isso, ele te dá esse widget de conversa no meio inferior, onde eu posso perguntar uma questão como quais são os itens de ação 8.25. A mesma coisa que eu perguntei na demo ali. E então, quando você tem esse trigo, ele te dá essa janela de conversa, o que faz com que seja tão fácil testar e debugar seus agentes de ciência e apenas iterá-lo enquanto você está desenvolvendo.
+
+Você nem precisa ir fora do seu fluxo de trabalho da NAN ou deplocar nada para poder testar as coisas. Então, aí está. Nós temos a resposta do agente de ciência.
+
+Essa é a resposta perfeita, baseada no documento que eu tenho aqui na minha base de conhecimento. E então, com isso, você pode até embedir isso no seu site se quiser. Então, você não precisa escrever qualquer código.
+
+Você pode apenas clicar em mais informação e literalmente te dá o código para embedir isso no seu próprio site se você quiser um widget de conversa para esse agente. Realmente, realmente legal. E então, agora que eu executei, eu tenho marcas verde para todos os nodos que foram executados.
+
+Então, eu posso clicar em um, e ver a saída do meu botão de conversa. Então, eu tenho o ID da sessão, que é necessário para a memória de conversa, basicamente apenas a sessão do meu usuário. E também a saída para o agente de ciência.
+
+E então, se eu for para o meu agente de ciência, eu posso ver a saída na esquerda, que é a saída de conversa do botão de conversa. E também a saída, que neste caso são os itens de ação do A25 Meeting, exatamente como eu pedi. Então, eu posso pegar a saída de conversa e apenas dragá-la aqui como eu fiz.
+
+É assim que eu recebo o texto, basicamente o pedido para a ciência. E então, eu tenho uma mensagem de sistema também. Então, é assim que eu coloco o agente.
+
+E então, tem também um par de coisas para conectá-lo, principalmente o modelo de conversa, que eu estou usando o GPT neste caso. Você pode usar algo como Anthropic também. E então, eu tenho a memória de conversa, que é usando Postgres.
+
+E então, eu tenho minhas ferramentas para Reg, que eu estou usando o Superbase VectorStore neste caso. Então, deixe-me passar por cada um muito, muito rapidamente aqui. Então, para o modelo de conversa, eu estou apenas usando o GPT40mini.
+
+Você pode usar qualquer opção do GPT com este nodo. Você pode ver a resposta que eu recebi no lado direito aqui. E então, para as credências, tudo que você tem que fazer é apenas enviar a sua chave API do OpenAI.
+
+É tão fácil. E o Superbase vai ser igualmente fácil. O Google Drive vai ser bem fácil também.
+
+Há documentação que a N8n te dá para estabelecer credências para qualquer coisa. Então, é tão fácil passar por isso e conseguir essa equipação também. E então, para a memória de conversa, é aqui que nós realmente chegamos em algo que vai ser melhor do que o que você vê em muitos tutoriais da N8n no YouTube.
+
+Porque se eu clicar nas opções de memória aqui, você pode ver que uma delas é uma memória bufada. E isso significa que vai guardar a memória de conversa localmente na sua instância N8n, que vai descarregar o servidor que você está usando para gerar N8n. Muitos tutoriais vão com isso, porque é o mais fácil, mas usar Postgres com Superbase é o jeito de realmente fazê-lo escalavelmente.
+
+E é isso que o faz pronto para a produção. E então, para estabelecer as credências, você só usa o usuário e o password do database de gerador que eu mostrei como conseguir no Superbase. E então, para o nome da mesa, pode ser o que você quiser, e a N8n vai realmente criar isso para você se você não tiver criado ele já.
+
+Então, você nem precisa criar a mesa no Superbase para isso funcionar com a N8n, o que faz isso tão, tão fácil. E então, para o REG, nós estamos usando essa ferramenta Retrieve Documents. Há muitas ferramentas diferentes aqui, mas eu estou usando apenas a ferramenta VectorStore.
+
+E então, conectando Superbase como minha VectorStore. Então, para as credências para essa, você só precisa do Host e ServiceRoleSecret, que eu também mostrei como conseguir. E então, fechando com isso aqui, você só tem que selecionar o nome da mesa e as opções para o nome da ferramenta.
+
+E para estabelecer essas duas coisas, a N8n tem documentação para isso também. Então, eu vou clicar no Docs aqui, e então, eu vou acessar onde diz um QuickStart para estabelecer a sua VectorStore. E isso te dá todo o código SQL que você precisa usar.
+
+Então, você não precisa codificar nada para ter seu Superbase estabelecido para REG. Então, você só copia tudo que você vê aqui, todo esse código SQL, volta para Superbase, e vai para o editor SQL do lado esquerdo, e então, basta copiar tudo ali. Então, ele vai criar sua extensão, basicamente, adicionando o PgVector para seu acounto Superbase, criando a mesa para documentos, e também a função de combinação para REG.
+
+Então, indo para o meu editor de mesa, isso é o que cria essa mesa de documentos que você viu na demonstração, que tem o conteúdo de metadados e embedimentos para todos os documentos que eu tenho na base de conhecimento. E então, como um ação, essa é também a mesa que o N8n cria automaticamente para as histórias de conversas. Então, aí você tem.
+
+Isso é basicamente tudo em Superbase que precisamos para esse fluxo de trabalho aqui. E então, indo para a outra metade desse fluxo de trabalho, um pouco mais simples, nós só temos o fluxo de trabalho para adicionar fios para nossa base de conhecimento quando eles são criados ou atualizados no meu drive do Google. Então, aqui, eu não vou passar por criar os credenciais do Google, mas, de novo, tem uma documentação realmente boa que o N8n dá para fazer isso.
+
+Mas, uma vez que você tem o setup de credenciais, você pode selecionar o quanto de vezes você pula para fios que são criados ou atualizados e faz isso em um fio específico. Então, no meu caso, eu estou usando esse fio de notas de encontro como, basicamente, a seção do meu drive do Google para RAG. E então, isso é para quando os fios são criados e eu tenho um trigger parecido para quando os fios são atualizados.
+
+Então, eu posso, na verdade, rumar um desses como um evento de teste, um evento de teste fechado aqui. E eu posso pegar o último fio que foi criado para que eu possa passar pelo meu fluxo de trabalho um a um e ver todos os inputs e outputs dos meus fios. Então, a gente pode ir para o próximo passo do fluxo de trabalho, que é, basicamente, extrair o ID do fio para o resto do fluxo de trabalho.
+
+Então, eu tenho todos os inputs do meu passo anterior, o trigger. Eu quero pegar o ID e passar isso como um output, que é o meu ID de fios. Então, agora eu vou usar isso em passos futuros para tirar esse fio do drive do Google e extrair o conteúdo dele e colocar ele na minha base de conhecimento.
+
+Agora, o próximo passo que temos aqui com Superbase, isso é realmente, realmente importante. Eu quero extrair todos os velhos vetores para esse fio que já existem na minha base de conhecimento, porque eu não quero nenhum duplicado. Isso é outra coisa grande que muitos tutoriais do N8n esquecem com o REG, é que eles não extraem os velhos recordes.
+
+Então, toda vez que um documento atualiza e se reinsere na base de conhecimento, vai ser um duplicado do que já está lá. Porque Superbase e todas as outras opções para databases vetorais no N8n, elas não são upserts. Ela não vai atualizar um vetor se já existe, porque ela não tem o ID do fio como o ID do vetor na base de conhecimento.
+
+E, basicamente, o que isso significa é que ela só vai continuar adicionando duplicados. Se você atualiza um fio e atualiza um fio e continuar reinserendo ele, esse conhecimento vai ser duplicado, e isso é ruim. Então, o que estamos fazendo aqui é que nós vamos, se eu for para Superbase, quando inserir outro vetor para os 825 velhos recordes, se ele for atualizado, nós vamos deletar esse primeiro e depois inserir um novo vetor com um ID de 30 que tenha os conteúdos atualizados do fio.
+
+Isso é realmente importante. Então, basicamente, qualquer vetor que tenha o ID do fio do fio Google Drive atualizado, como parte do metadata, nós vamos deletá-lo. Então, indo para a base de conhecimento, você pode ver que nós temos o ID do fio armazenado no metadata.
+
+E isso corresponde exatamente ao mesmo ID do fio do fio Google Drive. Um passo muito, muito importante. Então, nós vamos lançar isso, e então, você pode ver aqui, se eu for para Superbase, claro, esse vetor já foi eliminado.
+
+Então, o vetor-database já foi eliminado, pronto para ser inserido, pronto para ter o novo vetor inserido para a versão atualizada desse fio. Então, nós não temos duplicações. Então, voltando para o Canvas aqui, o próximo passo é, de fato, descarregar o fio localmente.
+
+Então, dessa forma, nós podemos extrair o conteúdo de texto dele. Então, eu estou recebendo o ID do fio do passo anterior, e então, convertendo qualquer documento para texto e fios Google para CSV, para que eu possa extrair o texto raw. Então, isso é o que eu vou fazer nesse passo aqui.
+
+E agora, nós temos o texto raw, que é a nota de encontro que nós temos, exatamente o que você vê aqui no documento Google. E agora, o último passo é inseri-lo no vetor-database de Superbase. Então, os credenciais são os mesmos que você já instalou.
+
+E nós vamos fazer, praticamente, todos os mesmos parâmetros de antes, usando a tabela de documentos e, então, o query de documentos de matemática. Então, quando eu instalo isso, com certeza, eu recebo um resultado com o conteúdo da página, que se encaixa exatamente com o data que nós colocamos nesse passo. E não tem que fazer nenhum chunking aqui, porque o fio é pequeno o suficiente.
+
+Eu tenho um pouco de coisas ligadas a isso aqui, como o OpenAI Embeddings, e, também, o default document loader, que vai usar um recurso de textos de personagens. Então, eu não vou fazer muito chunking, mas isso é apenas uma recomendação simples para um simples chunking que faz esse vetor-database funcionar bem. Então, isso é, literalmente, tudo para essa função.
+
+Nós agora temos um agente de AI RAG que está funcionando completamente, honestamente, bem pronta para produção. Você pode querer aumentar isso em algumas formas para adicionar, tipo, uma busca semântica melhor, ou talvez, tipo, uma busca de palavras. Há muitas formas que você pode sempre extender uma aplicação RAG, mas esse é um início realmente, realmente sólido.
+
+Então, eu vou entrar no chat aqui. Eu vou perguntar outra pergunta básica, tipo, quem são os atendentes para o encontro da 8.25? De novo, tendo que usar RAG para ir ao meu documento de encontros. E aqui vamos nós, Lucy, Bob, Tom, Jim e Stacy.
+
+Perfeito! Essa é exatamente a resposta certa. E isso é usando o novo vetor que eu adicionei depois de trocar o antigo quando eu estava passando por esse exemplo só agora. Então, isso é tudo para começar com um agente de AI RAG pronta para a produção construído sem código.
+
+N8n e Superbase é definitivamente uma das minhas combinações favoritas no mundo da AI. Então, definitivamente vou fazer mais conteúdo sobre isso no futuro. Se você tiver qualquer dúvida em geral com qualquer coisa nessa função, ou se você quer que eu implemente algo similar a isso ou para construir em cima disso depois, me diga nos comentários.
+
+Eu sempre amo o feedback e espero que você esteja ansioso para mais conteúdo com N8n e Superbase. Se você estiver, eu realmente apreciaria um like e um se inscrever. E com isso, eu te vejo no próximo vídeo.
+
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)

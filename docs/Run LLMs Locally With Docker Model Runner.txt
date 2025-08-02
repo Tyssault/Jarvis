@@ -1,0 +1,124 @@
+Run LLMs Locally With Docker Model Runner
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Olá a todos, meu nome é Krishnaik e bem-vindo ao meu canal do YouTube. Então pessoal, hoje neste vídeo em particular, nós vamos discutir sobre como podemos gerar LLMs localmente com a ajuda do Docker Model Runner. Agora, pode haver um cenário, pessoal, em que você pode estar trabalhando em vários casos de uso que podem ser relacionados a diferentes tipos de LLMs, certo? E como desenvolvedor, eu definitivamente quero flexibilidade para gerar LLMs localmente para que eu possa fazer o desenvolvimento do meu projeto inteiro, até provavelmente testá-lo e também ver a comparação entre vários modelos de abertura de fonte.
+
+Agora, esta LLM funcionando com a ajuda do Docker localmente é agora possível com a ajuda do Docker Model Runner. Então, neste vídeo em particular, eu vou ir em frente e mostrar o processo passo a passo como você pode ir em frente com isso. Agora, primeiro de tudo, o que você realmente precisa fazer é que você precisa ir em frente e baixar o desktop do Docker.
+
+Então, se você está me seguindo, seguindo muitos dos meus tutoriais relacionados a Dockers, relacionados a LLMs, eu espero que todos possam ter o desktop do Docker. Se você não tiver o desktop do Docker, eu sugeriria ir em frente e baixá-lo. E este LLM, se você realmente quiser gerar qualquer tipo de LLM localmente, é agora possível em ambos o Mac e o Windows.
+
+Então, primeiro de tudo, o que eu vou fazer é ir em frente e baixar o desktop do Docker. Então, aqui você pode ver, assim que você ir em frente e procurar o desktop do Docker, aqui está o segundo link. Apenas ir em frente e clicar nisso.
+
+E aqui você poderá ver todas as opções possíveis, como provavelmente ir em frente e fazer a instalação, certo? Então, primeiro de tudo, eu vou ir em frente e clicar em Instalação. Aqui há a opção de instalação, então você tem Mac, Windows. Digamos que se você quiser ir em frente com Windows, você pode ir em frente e baixar este particular arquivo, baseado na versão do Windows que você tem.
+
+Se você tem Mac, você também pode ir em frente e fazer isso para o Mac. Digamos que você quer ir em frente e baixar o desktop do Docker para o Mac com o Apple Silicon, você pode fazer isso. Ou se você tem Intelchip, você também pode fazer isso, ok? Então, uma vez que você fizer a instalação, apenas vá em frente e faça a instalação, e provavelmente, se você está vendo meus vídeos do Docker, eu já ensinei este particular tutorial.
+
+Agora, uma vez que você tenha feito a instalação, é assim que seu desktop do Docker vai parecer, certo? Agora, uma ferramenta muito importante para, provavelmente, lançar este modelrunner do Docker, se você for para os setingos, e se você, provavelmente, for lá e ver, tipo, qual versão seu desktop do Docker é, você precisa ter um mínimo de versão 4.4, ok? Então, se você for de volta para o artigo que eu te mostrei aqui, é basicamente escrito que agora está disponível em beta com o desktop do Docker 4.4.0 para MacOS no Apple Silicon. E, desde que este artigo foi postado em 4 de abril de 2025, agora, em Windows também vai funcionar, se você tem o desktop do Docker de 4.4.0, ok? Agora, eu já tenho esta versão particular, então, se você, provavelmente, vai lá e ver minha versão, ela está em algum lugar no 4.4.1, de qualquer forma. Agora, a próxima coisa que você realmente precisa fazer, você só precisa ir lá e clicar em Features & Development, e você também precisa ativar este Enable Docker Model Runner.
+
+E, junto com isso, desde que você também queira usar os modelos LLM, que estão funcionando em algum tipo de conteineiro do Docker, com a ajuda do Docker Model Runner, você também provavelmente iria querer usar isto em sua aplicação de código. Então, essa é a razão pela qual você precisa ir lá e clicar neste Enable Host Site TCP Support. Então, uma vez que você fizer isso, você só precisa ir lá e clicar em Aplicar e Restar.
+
+Uma vez que você fizer isso, isso basicamente significa que o seu Docker Model Runner está ativado, desde este particular Desktop do Docker. Você também pode fazer isso com a ajuda do Comand Prompt. Então, deixe-me só ir lá e mostrar para você, com a ajuda do Comand Prompt também, e como você provavelmente pode ativar este Model Runner, uma vez que você tenha instalado a versão mínima de 4.4.0, ok? Então, primeiro de tudo, apenas vá para o Comand Prompt, ok? Para verificar, digamos que você tenha instalado o Desktop do Docker, você tem a versão recente, ok? Ou você provavelmente tem que ir lá e fazer isto.
+
+Você tem que ir lá e apenas copiar e escrever este comando. Veja, aqui nós temos escrito Docker Desktop Enable Model Runner, e, já que nós já temos ativado este TCP 12434, então, se você for para cá, o seu 12434 está basicamente verificado e seu número de porta está ativado, certo? Então, uma vez que você fizer isso, você só precisa apertar Enter. Já que eu já tenho ativado isto, então eu não tenho que fazer isso de novo, então isso não está me dando nenhuma mensagem.
+
+Isso basicamente significa que meu Model Runner está ativado, ok? Agora, a próxima coisa é que, neste caso, nós definitivamente queremos verificar se o nosso, você sabe, o Model Runner está provavelmente funcionando absolutamente bem ou não, ok? Então, como eu vou lá e verificá-lo? Para isso, nós vamos lá e escrever um comando Docker Model Status, ok? Então, aqui, uma vez que você vá lá e provavelmente, vá lá e escreva este particular comando, que é Docker Model Status, aqui você será capaz de ver que o Docker Model está funcionando e provavelmente está lhe dando este estatus específico. Então, uma vez que lhe dá este estatus, isso basicamente significa que seu Docker Model Runner está funcionando absolutamente bem, ok? Além disso, nós também vamos tentar entender quais são todos os comandos importantes que podemos usar especificamente quando nós queremos, provavelmente, lançar qualquer tipo de LLM localmente, com a ajuda do Docker Model Runner. Então, para isso, nós vamos lá e escrever Docker Model Help.
+
+Agora, uma vez que eu vá lá e escrevo isto, você será capaz de ver, assim que nós escrevermos este comando, Docker Model Help, estas são a lista de comandos que nós podemos usar especificamente. O primeiro comando é Inspect, que mostra informação detalhada do modelo. O segundo comando é algo chamado List.
+
+Liste os modelos disponíveis que podem ser lançados com o Docker Model Runner. Então, você tem Logs. Então, você tem Pull, certo? Com a ajuda de Pull, você pode acessar um modelo.
+
+Com a ajuda de Push, você também pode acessar um modelo no Docker Hub. Acessar um modelo também acontece com um Docker Hub. Então, você tem RM.
+
+Ele pode tirar os modelos acessados do Docker Hub. Então, você tem Run, ok? Você também pode acessar um modelo com a ajuda do Docker Model Runner, ok? Todas estas coisas específicas que nós vamos tentar usar. Você também vai ver o Tagger Model e a versão.
+
+Mostra a versão do Docker Model Runner também. Então, estas são todas as opções possíveis que você pode usar especificamente, ok? Agora, o próximo passo é que... Veja, existem diferentes tipos de modelos LLM que você pode lançar localmente com a ajuda do Docker Model Runner. Mas você precisa entender quais modelos você pode lançar.
+
+Então, se você voltar para o desktop do Docker, e se você só voltar para a casa, ok? Aqui, há uma opção do Docker Hub, certo? E quando você provavelmente vai lá e procura no Docker Hub, certo? Aqui, você vai poder ver vários modelos. Então, vamos lá e procura por ele. Eu vou lá e escrevo ai.
+
+Digamos que eu vou lá e escrevo Llama3. E se eu for lá e procura por aqui, certo? Aqui, você vai poder ver que eu tenho vários modelos. Modelos Llama ou uma série de modelos Llama que estão disponíveis no Docker Hub.
+
+Não só isso, certo? Digamos que eu vá lá e clique nisso, ok? Agora, uma vez que eu estou clicando nisso, aqui você vai poder ver toda a informação dos modelos Llama, ok? Só para ver de uma forma muito melhor, o que eu vou fazer? Eu vou só ir lá e procurar pelo Docker Hub no browser, ok? Eu vou só ir lá e clicar nisso. E agora, vamos procurar por alguns dos modelos que estão disponíveis. Então, para isso, eu vou só ir lá e procurar por AI Slash, ok? E quando eu procurar por AI Slash, digamos que, ok, aqui AI Slash não está vindo.
+
+Ok, vamos procurar por Llama3, ok? Llama3. Agora, eu acho que você deveria poder obter o modelo, certo? Então, digamos que Llama3, Llama3.3, Llama3.1 são os modelos Llama que estão disponíveis. Eu vou clicar nisso.
+
+Agora, o que eu vou fazer? Eu vou só ir lá e ver alguns dos modelos. Tipo, essas são as informações das variantes dos modelos que estão lá. Para puxar aquele modelo, eu tenho que usar esse comando de puxar, certo? Tipo, mesmo que você tenha visto como puxar uma imagem do Docker, você também pode puxá-la apenas usando isso.
+
+Há um comando de puxar que estará disponível com respeito a várias imagens. Igualmente, em qualquer tipo de modelos LLM que estão disponíveis no Docker, esse tipo de comando também estará disponível. Agora, veja aqui.
+
+Eu fui para esse AI Llama3.2 e Llama3.2 é de novo um modelo de fonte aberta. Se eu ir lá e clicar nesse AI, ok? Há tantos modelos diferentes que estão disponíveis. Digamos que o Quen3, modelo de linguagem pequena, DeepSeq R1 Distil Llama, Llama 3.3, 3.2, Mistral, FIFO, QWQ, Quen 2.5, Gamma 3, Deep Coder Preview, Gamma Quad, 3 Quad, Llama 3.1, certo? Então, todos esses modelos específicos estão lá, certo? E a maioria desses modelos e todos os modelos que você está vendo aqui, eles são modelos de fonte aberta.
+
+Agora, nesse vídeo específico, eu só vou tentar mostrar para você com esse modelo particular, que é o SmallLLM2, ok? Agora, o que esse modelo é tudo sobre, você sabe? Então, esse é um pequeno LLM construído para velocidade, dispositivos de frente e deploymento local ou desenvolvimento, desculpe, não deploymento. E então, você pode basicamente, é um modelo de linguagem compacta com 360 milhões de parâmetros, desenhado para funcionar eficazmente no dispositivo. Então, vamos tentar usar esse modelo particular, porque digamos que eu quero ir lá e criar um assistente de chat, reescrevendo e sumando, eu posso usar esse modelo.
+
+O provider é Hugging Face, a arquitetura é Llama 2, também tem opção de chamada de ferramentas e várias opções. Então, isso basicamente significa que quando nós estamos tentando criar nosso próprio assistente de chat, nós podemos definitivamente usar isso. Existem também diferentes variantes de modelos que estão disponíveis aqui, ok? Como 360 milhões, 135 milhões, todas essas variantes estão lá.
+
+Agora, vamos lá e ver como nós devemos provavelmente puxar esse modelo. Então, para puxar esse modelo, nós temos esse comando, docker model pull ai slash small llm2. Então, esse modelo está em algum lugar em 250 MB, eu acho, vamos ver, 256.35 MB, ok? E existem outras variantes de 135 milhões e tudo mais, que é apenas 85.77 MB.
+
+Então, eu vou de novo para o meu comando prompt, e eu vou lá e escrever isso, docker model pull ai small smol m2, certo? Agora, ele está dizendo que ele basicamente usou o modelo cache, isso basicamente significa que eu já downloadei esse modelo, certo? Então, eu não estou, de novo, downloadando ele, porque pode levar algum tempo. Você pode ir e, uma vez que você provavelmente ir e escrever docker model pull ai slash small llm2, vai levar algum tempo, baseado na velocidade da internet. Uma vez que você tem esse modelo específico, a próxima coisa é, como é que nós dirigimos esse modelo, certo? Então, para dirigir o modelo, novamente, há um comando, docker model run ai slash small lm2, ok? Eu vou copiar isso e eu vou pastar ele aqui.
+
+Assim que você ver isso, quando nós, quando nós escrevemos docker model run ai slash small llm2, agora, esse é o meu janto de conversa, ok? Então, eu basicamente posso ir e conversar. Vamos dizer, eu vou ir e escrever, olá. Ele diz, olá, como posso ajudá-lo hoje? Você pode escrever um poema para mim? Ou você pode me dizer um fato sobre futebol? Ok, então essa é a minha pergunta.
+
+Então, aqui você pode ver que eu estou capaz de obter uma resposta. Então, isso é apenas atuar como um assistente do chatbot, no qual eu pergunto qualquer pergunta e ele é capaz de me responder, ok? Aqui, você pode, a melhor coisa é que você é capaz de fazer esse tipo de interação e você é capaz de trabalhar como um assistente do chatbot e entender que esse modelo inteiro está basicamente sendo gerado localmente com a ajuda do docker model runner, certo? Então, você pode ir e perguntar qualquer pergunta. Eu diria que, ei, o que você pode fazer? Ok? Então, aqui você pode ver que eu sou um assistente ajudante chamado small lm, treinado pelo Hugging Face.
+
+Eu posso fazer um monte de coisas. Eu posso fazer uma tarefa de diversão, summarizar, encontrar informação, summarizar artigos de notícias, criar histórias curtas. Digamos que eu vá lá e escrevo, criei uma história curta para um rei e uma princesa, ok? Eu estou apenas escrevendo algo.
+
+Então, aqui você pode ver, uma vez na nossa época, na terra, longe, havia um rei e uma princesa chamada Arthur Merlin. Toda essa informação é basicamente aí. Agora, já que estes são todos os modelos de abertura que podemos especificamente descarregar em nosso local e jogar com ele, você sabe, é bastante incrível.
+
+Digamos que você quer provavelmente ir e exigir, você só precisa escrever slash buy, e aqui você pode ver que a sessão do chat acabou. Perfeito, e é bastante incrível aqui que você é capaz de fazer isso de uma forma muito fácil. Digamos, eu vou tentar mostrar para você de outra forma como nós podemos, provavelmente, chamar este específico ou gerar este modelo também, ok? Apenas diretamente dando a entrada durante o tempo de ronda, ok? Então, para isso, o que eu vou fazer? Agora, eu vou ir e escrever um modelo docker.
+
+Digamos que eu vou gerar este ai small, small llm2, lm2, small lm2. E aqui, eu vou ir e dar uma pergunta para o docker em si, para este modelo em particular. Me dê um fato sobre, digamos, um elefante.
+
+E aqui está minha pergunta diretamente, certo? Não é incrível? Porque aqui, eu não vou apenas agir como uma sessão do chat. Não deveria ser uma sessão do chat. Aqui, nós só vamos dar uma entrada durante o tempo de ronda, e aqui é o que nós estamos recebendo como saída.
+
+Agora, isto tudo é incrível. Agora, deixe-me falar sobre alguns fatos mais interessantes sobre este modelo que nós estamos rolando localmente com a ajuda do docker, docker model runner, desculpe. Uma coisa incrível é que isto é completamente compatível com a biblioteca OpenAI.
+
+Então, se você estiver usando esta biblioteca OpenAI, você pode ir diretamente e provavelmente usar isto. Lá em cima, a url que você especificamente dá, será esta url que nós já vimos. Lá em cima, Enable Host Site TCP Support.
+
+Este será o porto da url, junto com localhost. Então, deixe-me mostrar-lhe um exemplo, e isto provavelmente lhe dará um exemplo muito bom. Então, aqui está a minha demo docker.
+
+Por favor, foque-se neste exemplo. Quando eu digo que é completamente compatível com a OpenAI, isso basicamente significa que nós estamos usando a biblioteca de OpenAI. Ok? Então, aqui você pode ver, de OpenAI, importo OpenAI.
+
+Agora, eu vou ir em frente e criar o cliente. Este cliente, eu estou criando com a OpenAI. A url base é nada, mas localhost colon 12434.
+
+Agora, você se lembra disso, de onde este porto veio, certo? Então, se você ver aqui, o porto é nada, mas 12434. Você também pode ir e dar o seu porto, mas, de defaulto, este é o porto que nós temos. O porto de defaulto é este.
+
+Ok? Agora, aqui você pode ver que eu estou dando slash engine slash v1. Ok? Com esta url, você será capaz de acessar o modelo, o modelo LLM que está funcionando localmente. Ok? E aqui, o segundo parâmetro é a chave API.
+
+Aqui, nós precisamos dar o docker, de defaulto. Se você provavelmente ir e ver a documentação, você será capaz de ver isso. Então, depois de criar um cliente, nós escrevemos cliente.chat.completion.create. Aqui, nós damos o nome do modelo.
+
+Agora, este nome do modelo, você pode, de novo, verificar pelo docker. Veja, se eu cancelar isto, e se eu provavelmente ver os modelos, aqui está o nome do modelo, ai slash v1 llm2. E este é o modelo que você será capaz de ver aqui.
+
+Certo? Então, aqui você tem mensagens. O papel é sistema. Estou dizendo, responda a pergunta em um par de palavras.
+
+E esta é a minha pergunta. Compartilhe uma história feliz comigo. E aqui, nós provavelmente estamos imprimindo o saque deste modelo específico.
+
+Certo? Então, se você provavelmente quer ir e ver isto, como provavelmente ir e executá-lo, eu só vou ir e clarear a tela. E eu vou escrever python docker demo.py. Certo? Então, uma vez que eu executar isto, você será capaz de ver que aqui, eu estou capaz de obter a resposta. Eu tive um momento maravilhoso na praia com a minha família.
+
+Nós construímos um sandcastle juntos. Alguma coisa, alguma informação está aparecendo. O que é bom.
+
+Porque aqui, nós estamos usando a própria biblioteca OpenAI. O melhor é que você não precisa aprender nada além do que você já aprendeu. Certo? E muitas pessoas que estão trabalhando em construção de aplicações generativas AI, elas sabem sobre esta biblioteca OpenAI.
+
+Deixe-me mostrar-lhe mais uma forma de fazer isto. Então, aqui há um streaming. Então, há também uma opção de streaming nesta biblioteca OpenAI.
+
+Certo? Aqui, nós precisamos apenas setar este parâmetro para o stream igual ao verdadeiro. Todos os códigos serão setados. O mesmo.
+
+Minha base URL será a mesma. Minha API será a mesma. Meu nome de modelo será o mesmo.
+
+E aqui, você pode ver que meus mensagens para sistema e usuário serão os mesmos. O melhor é que eu posso também convertir diretamente isto em uma aplicação chatbot, um assistente chatbot. E aqui, nós apenas mencionamos que o stream é igual ao verdadeiro.
+
+E nós estamos tentando, provavelmente, ir em frente e mostrar o conteúdo. Então, uma vez que eu vou em frente e também executar isto. Certo? PythonStreaming.py Você deveria ser capaz de ver isso.
+
+Minha interface inteira ficará visível. Eu estaria feliz em compartilhar uma história do Start onde aqui está. O último verão.
+
+Toda esta informação. Agora, isto, você pode ver que não está diretamente mostrando todo o conteúdo, tudo de uma vez. Está streamando.
+
+Uma linha por linha, uma linha por linha, provavelmente, está mostrando. Certo? Semelhante, eu também desenvolvi algo relacionado a chamadas de funções. Certo? Então, se você está muito familiar com esta biblioteca OpenAI, ela também apoia chamadas de ferramentas, chamadas de funções, todas estas coisas.
+
+E aqui, eu vou tentar proporcionar este código particular na descrição. Você também deveria ser capaz de usar isto. Então, eu espero que você goste deste vídeo particular e compreenda todas as coisas que nós discutimos com respeito a isto.
+
+Você agora pode runar LLMs localmente com Dockers com a ajuda do modelrunner, docker modelrunner. Ambos no Mac e no Windows. Vá lá e tente.
+
+Todos os passos são quase iguais. Todo o código, descrição deste blog particular, toda a informação será compartilhada na descrição deste vídeo particular. Isto foi tudo do meu lado.
+
+Eu espero que você goste deste vídeo particular. De novo, um novo dia em que eu provavelmente ensinei algumas coisas incríveis que você pode definitivamente ir e tentar. Então, sim, isto foi tudo do meu lado.
+
+Vejo você no próximo vídeo. Obrigado.
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.

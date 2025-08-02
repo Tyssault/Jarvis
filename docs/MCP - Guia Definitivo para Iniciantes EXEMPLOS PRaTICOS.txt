@@ -1,0 +1,233 @@
+MCP - Guia Definitivo para Iniciantes (EXEMPLOS PRÁTICOS)
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+MCP, que raios é isso, galera? O que eu estou recebendo de mensagem de vocês, falando pelo santo amor de Deus. Renato, me explica o que é isso, eu não entendi. Todo mundo fala que vai mudar o mundo, mas ninguém consegue explicar que raios é isso.
+
+Então, nesse vídeo, você vai entender de uma vez por todas o que é MCP. Você vai, junto comigo, criar dois exemplos práticos de MCP e você vai conseguir criar, confia em mim. E eu vou te dizer exatamente quando usar MCP, quando não usar MCP e qual é o futuro do MCP.
+
+Gosto muito de analogias, como vocês já bem sabem. Então, uma analogia que eu sempre uso com vocês aqui é o seguinte. Primeiro, o que é uma API? E assim, galera, se você está querendo estudar MCP, eu vou supor que você já entende o básico sobre API.
+
+Que você já brincou um pouquinho com N8n. Então, vou entender que pelo menos um conhecimento básico você já tem. Senão, eu vou te sugerir, pelo menos, fazer o curso gratuito N8n.
+
+Vou deixar o link aqui na descrição do vídeo, é uma aula onde você vai sair de lá. Já com muito mais embasamento para assistir isso aqui. Então, olha só.
+
+O que é uma API? A gente já falou muitas vezes sobre API aqui no canal. API, a melhor analogia que a gente pode usar é a seguinte. Imagina um restaurante.
+
+Você criou um aplicativo, você criou um software, você criou um agente de IA, o que seja. Independente disso, em todos esses cenários você tem um usuário. Esse usuário precisa se comunicar com o restaurante ou com o cozinheiro, de alguma forma.
+
+O usuário, você concorda comigo, que ele não vai lá, entra na porta do restaurante e fala, ô cozinheiro, eu quero um salmão, hein bicho. Aí o cozinheiro, fechou, daqui a pouco eu te levo. Não é assim que funciona.
+
+Você tem aqui no meio um garçom, que é a API. O garçom é quem faz a comunicação entre o usuário e o restaurante, ida e volta, inclusive. Então, você fala, garçom, quero um salmão.
+
+Cozinheiro, prepara um salmão. Tá aqui o salmão. Usuário, tá aqui o salmão.
+
+Beleza, é assim que funciona a API. O que eu quero dizer com isso na prática? O usuário do teu sistema, ele precisa se comunicar com o teu banco de dados, com o teu agente de IA, com a tua base de conhecimento, com as tuas APIs. Cara, com o que for, ele precisa se comunicar aqui.
+
+Só que o usuário não acessa diretamente o teu banco de dados. A API é o cara que está aqui no meio gerenciando isso. Ah, Renato, mas eu uso o Bubble, o NoCode, a gente não precisa de API.
+
+Não, você só não vê a API, só que ela está lá o tempo todo. Então, quando você vai lá no Bubble, por exemplo, e faz uma requisição, cara, eu quero buscar todas as tarefas que tem no meu banco de dados. Você não está falando com o banco de dados, você está falando com uma API, a API busca esse dado e a API traz de volta para o usuário, entendeu? A API sempre está no meio.
+
+Beleza, isso é uma API. Eu brinco assim que a API é como se fosse o cabo universal da internet. Todo mundo que quer, de alguma forma, abrir para se comunicar com o mundo, usa APIs.
+
+Então, por exemplo, eu quero me integrar com o Instagram para conseguir puxar o número de seguidores que eu tenho, por exemplo, no Instagram. Ele disponibiliza uma API para isso, entendeu? Então, a API é o cabo universal. Você conecta com a API, o Instagram, todo mundo conecta, ok.
+
+Dá para plugar. Agora, onde é que entra o MCP? Galera, o MCP não entra aqui. O usuário agora vai conversar com o MCP.
+
+Para o usuário, tanto faz. Ele vai continuar tendo a figura do garçom ali. A questão é, o que muda não é para o usuário final.
+
+Tanto faz se ele está conversando com uma API, com um banco de dados ou com um MCP. O que muda é para você que é o dono do restaurante ou, melhor dizendo, para você que é o desenvolvedor do software ou do agente. Para você é que muda tudo, porque olha só, concorda comigo que você não gerencia só um garçom? Você tem também para gerenciar um cozinheiro, você tem para gerenciar a equipe de limpeza, você tem para gerenciar o comprador, você tem para gerenciar o cara do estoque.
+
+Então, você tem que gerenciar tudo isso. Apaga o usuário, ele é irrelevante agora. Cada uma das funções que você tem aqui é como se fosse uma API que você precisa gerenciar, dizer para ela o que ela vai fazer.
+
+Ô, cozinheiro, o seu trabalho é isso. Ô, garçom, o seu trabalho é isso. Limpeza, o seu trabalho é isso, não sei o que.
+
+E você, enquanto dono do restaurante, precisa instruir esses caras, pagar esses caras, ouvir reclamação desses caras. É isso que você faz. O MCP entra nessa camada aqui.
+
+É um cara a mais que você vai colocar aqui. Vamos dizer como se fosse uma empresa terceirizada que você contratou. E aí, agora, você, dono do restaurante, você não se comunica mais com o cozinheiro, você se comunica com a terceirizada.
+
+A terceirizada vai cuidar do relacionamento com a API, limpeza, comprador, estoquista, tudo isso. O MCP é esse cara que entra aqui no meio para facilitar a tua vida. Então, por exemplo, antes, cara, você ouviu uma abobrinha de um cliente do restaurante, aí você tinha que ir lá e comunicar para o setor de limpeza, ô, setor de limpeza, cara, o banheiro estava sujo, então eu preciso que você revise o teu procedimento, agora você vai limpar o banheiro na segunda, quarta e sexta, das oito às nove, puta saco.
+
+Agora você vai lá e só fala assim, MCP, banheiro estava sujo. Se vira. O MCP vai cuidar do relacionamento com tudo isso aqui.
+
+E você fala com o MCP assim como você fala com o humano, linguagem natural. Que viagem, né, galera? Essa analogia foi longe. Vamos levar isso para a prática.
+
+Olha só. Vamos dizer que você foi lá e criou um banco digital. Você criou o Renabank.
+
+Galera, eu já falei disso em alguns vídeos aqui no canal, mas quando você vê um banco digital, você não está, na verdade, vendo alguém que foi lá no Banco Central e falou, cara, eu quero abrir um banco, está aqui 100 milhões de reais, ó. Não, galera, o que você vê hoje em dia são aplicativos que usam um banco nos bastidores. Então eles vão se conectar com um BAS, que é um Banking as a Service, né? Como por exemplo o Asus. Você quer ver um exemplo? A gente tem um módulo que é criando do zero um banco digital, um módulo de 8 horas, 87 aulas, onde a gente cria do zero em Bubble um banco totalmente integrado com o Asus, tá? Eu explico aqui o que é BAS, a gente introduz o Asus e aí olha só como é que funciona.
+
+Por exemplo, a gente precisa fazer uma integração aqui com o Asus para buscar a lista de clientes, para filtrar a lista de clientes, para criar um cliente, para detalhar o cliente, aí uma API para listar as chaves PIX, para cadastrar a chave PIX, outra API para enviar um PIX, outra API para extrair o extrato financeiro do usuário. Então, galera, na prática o que a gente está fazendo aqui é o seguinte, ó, por que são 87 aulas, né? Porque praticamente uma aula por chamada API que você precisa fazer. Então você precisa ir lá e criar um cliente, você precisa listar clientes, você precisa criar chave PIX, enviar PIX, puxar extrato financeiro e assim vai, uma cacetada de chamadas, né? Então qual que é o seu trabalho enquanto desenvolvedor? É vir aqui e fazer todas essas chamadas de API para que essas chamadas de API se comuniquem lá com o Asus para buscar as informações que você precisa para que o Asus devolva essas informações aqui de volta para o seu banco digital.
+
+Por isso que são 87 aulas, entendeu? Chamada, chamada, chamada, chamada. Onde que entra o MCP? Cada um desses aqui é uma API, né? Galera, o MCP ele vai entrar aqui, ó. Esquece tudo isso aqui. O MCP vai ser um cara que vai entrar aqui no meio, quando o Asus liberar o servidor MCP deles, imagino que não tenham ainda, né? E aí galera, esse servidor aqui, ó, isso tudo é construído pelo Asus, tá? Então, esse servidor usa essa ferramenta de criar cliente, de listar cliente, de criar chave PIX, de enviar PIX, de puxar, tudo isso aqui, ó, é trabalho do Asus fazer, é trabalho do servidor, entendeu? Só o que você vai precisar fazer aqui, ó, é se conectar com o servidor.
+
+Você tá brincando, Renato? Ao invés de fazer 80 chamadas API, eu vou precisar fazer só uma integração com o servidor MCP do Asus? Exatamente isso, galera, é exatamente isso mesmo. E o mais interessante, que o que eu preciso pedir aqui para o Asus não é uma integração API, o que eu preciso pedir para ele aqui é um texto de linguagem natural. Então, eu vou falar assim, ó, pegue 50 reais do usuário 123 e transfira para o usuário ABC por PIX.
+
+Então, eu vou pedir com linguagem natural para o MCP, o trabalho do MCP é entender essa linguagem natural, acionar qualquer API ou ferramenta que ele achar necessário aqui e me devolver a informação e falar, cara, transferido, fiz, tá tudo certo. É isso, galera, isso é o MCP. Então, entendido isso, vamos para o primeiro exemplo prático, a gente vai criar dois, tá? Nesse primeiro exemplo prático, eu quero demonstrar de forma um pouquinho mais simples, que é o quê? Eu quero criar um servidor MCP que se comunica com uma Google planilha, tá? Então, olha só, a gente vai lá no N8n, Renato, nunca usei N8n na minha vida, tá vacilando.
+
+Curso gratuito N8n, link na descrição do vídeo, já. Então, vamos lá, estou aqui no N8n e aí, primeiro passo, o que eu quero fazer? Eu quero criar um agente de IA que vai se comunicar com uma planilha do Google que eu criei só para isso. Cara, uma planilha super simples, que tem assim, ó, tarefa e status.
+
+O objetivo aqui vai ser criar tarefas com determinado status, entendeu? É só isso que eu preciso fazer. Então, vou lá no meu workflow, o primeiro passo, Edge First Step, vai ser adicionar um trigger de chat aqui, chat trigger, para que eu possa, vamos voltar aqui, open chat, dar um oi aqui, por exemplo, aí eu posso conversar, óbvio que não aconteceu absolutamente nada aqui, porque não tem nada para acontecer, só tem um chat, né? Então, qual que é o primeiro passo? Aqui, logo depois do chat, eu vou adicionar um node, que vai ser o AI Agent, o agente de IA. Não preciso configurar absolutamente nada aqui, na verdade, eu vou configurar, vou clicar aqui em Add Option, mensagem do sistema, que é o que eu quero que ele faça.
+
+Você é um agente que vai conversar com uma Google planilha, lendo e modificando linhas, é isso. Já consigo? Ainda não, né? Por quê? Porque a gente só colocou o agente, a gente não disse ainda com qual modelo eu quero comunicar, com qual LLM, principalmente. Então, vou aqui em Chat Model, dou um mais, e aí eu vou conectar com a OpenAI, ó, OpenAI.
+
+Cliquei em OpenAI, eu já tenho várias credenciais criadas aqui da OpenAI, vou inclusive usar a minha só de testes do YouTube aqui, ó, o modelo eu vou deixar o 4O mini, não preciso que seja nada diferente disso, e aí agora, sim, eu já tenho um agente funcionando. Oi. Olá, como posso ajudá-lo hoje? O que você faz? Eu posso ajudar com tarefas relacionadas à Google planilhas, beleza, ele já tem um chat funcional, um agente funcional aqui, show de bola.
+
+Aí agora, o que eu quero fazer, ó, eu vou aqui em Tool, conectar com a minha Google planilha. Então, vou lá e puxo o Google Sheets, que já tem aqui no N8n, tá, vou puxar a ferramenta Google Sheets, vou conectar com uma conta que eu já tenho aqui. Ah, Renato, eu não consigo, não sei como é que faz, criar nova credencial, aí você vai abrir essa documentação aqui, ó, que ele te mostra como fazer a tua conexão com a Google planilha.
+
+Não vou entrar no mérito aqui, porque, sinceramente, não é o objetivo, tá? Então, vou só conectar com a que eu já tenho. Tá, o que você quer fazer, Renato? Eu quero buscar get rows, ou seja, eu quero buscar linhas da minha planilha. Eu vou até mudar o nome aqui, ó, para buscar tarefas, tá? Tá, de qual documento você quer buscar? Eu quero buscar do documento MCP Testes YouTube.
+
+Qual página você quer buscar? Página 1, é a única que tem isso aqui, página 1. Então, eu quero buscar linhas dessa minha planilha. Beleza, já conectei essa tool aqui, vamos ver se isso está funcionando. Abrir o chat.
+
+Quantas tarefas eu tenho na minha planilha? Você não tem nenhuma tarefa na sua planilha? Realmente, não tem nenhuma tarefa na minha planilha, né? Crie a tarefa gravar vídeo YouTube com status a fazer. Atualmente não há tarefas, vou criar a tarefa com status a fazer. Você gostaria de adicionar alguma informação? Ué, mas ele não criou absolutamente nada aqui.
+
+Cara, é aquilo que eu sempre falo, né? N8n faz tudo o que você pede e nada do que você não pede. Então, eu só dei a ele o poder, a ferramenta de buscar tarefas. Eu quero poder criar tarefas.
+
+Posso criar uma nova tool aqui, mas é bem mais fácil. Eu só clicar em buscar tarefas, botão direito, duplicate ou ctrl D e eu duplico aqui, conecto. Aí eu vou configurar a segunda, vou trocar o nome para criar tarefa.
+
+E aqui em operação, eu vou mudar a operação para append row, que é criar uma nova linha na planilha. Beleza, aí ele pergunta o seguinte, qual o nome da tarefa? Qual o status da tarefa? Cara, eu posso só clicar nesse ícone de IA aqui, que eu estou dizendo que quem vai te instruir isso é o prompt, não tem padrão aqui. Beleza, então eu troquei para append row e defini tarefa status como IA generated, gerado pelo prompt.
+
+Aí se eu for no open chat agora, opa, crie uma tarefa gravar vídeo YouTube com status a fazer. A tarefa gravar vídeo YouTube com status a fazer foi criada com sucesso. Opa, realmente foi, né galera? Muito bom.
+
+Então deu certo o nosso agente. Claro que eu posso, inclusive, estender mais ainda isso aqui. Posso fazer uma tool aqui só para editar tarefa, que aí ele vai usar a operação update row.
+
+Quero fazer uma tool aqui que vai deletar tarefa, com a operação delete rows. Aí eu linko tudo aqui, conecto a tool, conecto a tool, enfim. Beleza, agora eu tenho aqui um agente que faz todas as operações possíveis na minha planilha.
+
+Show de bola. Renato, o que isso tem a ver com MCP? Só além de você criar um agente normal aí no M8n. Verdade.
+
+Onde é que entra o MCP? Olha só, imagina que eu tenho 4 APIs, 4 ferramentas conectadas. Poderia ter 30 ferramentas conectadas. Onde é que entra o servidor MCP? Eu vou dar um mais aqui, adicionar node.
+
+Eu vou criar um servidor MCP. MCP, server trigger. Ah, o meu M8n não está aparecendo.
+
+Tem que atualizar para a última versão. Criei um servidor MCP aqui. Ele já apareceu aqui.
+
+Esse é o meu servidor. Aí, galera, o que eu vou fazer? Está vendo todas essas tarefas que estão aqui? Eu vou tirar esses links todos, deleta, deleta, deleta. Vou pegar essas 4 tarefas e em vez de conectá-las no agente, eu vou conectá-las no servidor MCP.
+
+Então, conecta, conecta, conecta, conecta. Show de bola. E aí, aqui, o meu agente não vai mais se conectar diretamente nas ferramentas.
+
+Ele vai se conectar agora, vou dar um mais aqui no tool, MCP client. O client é o que vai conectar no servidor. Então, eu vou colocar um client aqui.
+
+E agora, como é que eu vou me conectar no servidor? Você vai lá no servidor, pega a URL de produção, clica aqui, e cola lá no client. Então, esse é o endereço, eles chamam de SSE. Esse é o endereço do servidor que eu quero me conectar.
+
+Vou dar um salvar aqui. Vamos ver se está funcionando. Quantas tarefas eu tenho? Veja que já ficou verdinha a tool aqui.
+
+Significa que ele usou o client MCP. Você tem uma tarefa registrada. Qual a tarefa que eu tenho? A sua tarefa é gravar vídeo para o YouTube, status é fazer.
+
+Cria uma nova tarefa com nome qualquer. A nova tarefa, nova tarefa, foi criada com status pendente. Mas tu é preguiçoso também, gente.
+
+Mas tudo bem, nova tarefa pendente está aqui criada. Então, você vê que ele está funcionando igualzinho como ele estava. Só que agora eu não converso mais com a tool.
+
+Eu converso com o servidor MCP, sacou? O servidor entrou aqui no meio. Esse cara é como se fosse uma empresa terceirizada, lá na analogia do restaurante. Renato, mas qual é a vantagem disso? Olha só, aqui nós temos duas vantagens.
+
+Primeiro, a reusabilidade, ou talvez a modularização, como você quiser chamar, que é o quê? Você pode reutilizar agora todas essas suas tools onde você quiser. Então, vamos dizer que eu queira dar acesso a você, que está aí no seu computador, a essa minha planilha do Google. Eu quero que você possa modificar essa minha planilha.
+
+Eu não preciso mais te passar acesso a essas quatro tarefas. Eu posso só te dar essa URL do meu servidor MCP. Falo, cara, só conecta nesse servidor MCP, que você vai ter acesso a tudo isso aqui.
+
+Então, se eu tenho 10 fluxos diferentes, 10 lugares diferentes, que eu uso sempre as mesmas tools, as mesmas APIs, eu não preciso mais ficar sempre trazendo essas mesmas tools e APIs em vários lugares diferentes. Eu só preciso conectar com o mesmo servidor MCP, entendeu? E eu converso com esse servidor MCP por meio de linguagem natural. Então, a reusabilidade é total aqui no MCP.
+
+E o segundo grande benefício é a segurança, principalmente de credenciais, galera. Qual seria o segundo problema de eu te passar o acesso a essa planilha do Google? Eu só consigo te passar acesso a essa planilha se eu for no N8n e inserir as minhas credenciais, galera. Eu não quero te dar acesso a minha credencial do Google Drive.
+
+Você vai ver todas as minhas fotos, você vai ver todos os meus documentos, você vai ver tudo que eu tenho, tudo coisa da empresa. Eu não quero te passar esse acesso. Eu só quero te dar acesso a essa planilha.
+
+Agora eu consigo. Por quê? Porque eu não preciso configurar nada das minhas credenciais do Drive. Eu só preciso te dar acesso ao servidor.
+
+Cara, não importa o prompt que você mande aqui. Não tem a mínima chance de você conseguir acessar um documento que não seja o documento MCP Testes YouTube. Você não vai conseguir.
+
+Por quê? Porque esse MCP não tem esse acesso. Então, Renato, eu quero conectar, por exemplo, com o meu SupaBase, que é o meu banco de dados. Cara, como é que você vai dar a credencial do SupaBase para outra pessoa? Não pode.
+
+Então, você só pluga o SupaBase aqui no MCP e aí você fornece só o SSE, que é o endereço aqui do MCP. Sacou? E agora eu quero explicar para vocês um segundo exemplo prático que eu acho que vai ajudar ainda mais nessa compreensão. Nesse exemplo, a gente vai fazer uma integração com o Appify.
+
+Por que Appify? Porque aqui foi fácil. Aqui eu peguei um exemplo de uma integração que já existe no Google Drive. Então, beleza.
+
+Quando a gente pega algo que já existe no Google Drive e joga para o MCP, fica reutilizável, fica mais seguro, mas não fica necessariamente mais fácil. Agora você vai sentir na veia a vantagem da facilidade do MCP. Olha só.
+
+O que eu quero fazer? Quero criar um agente que se comunica com um perfil do Instagram para puxar número de seguidores e descrição na bio. Pronto. Vou até pegar essa mesma descrição aqui.
+
+Vou jogar aqui. Então, vou pegar essa estrutura que a gente já criou. Vou só trocar a mensagem do sistema.
+
+Você é um agente que se comunica com o perfil do Instagram para puxar número de seguidores e descrição na bio. Salvei. Abre o chat.
+
+Puxe o número de seguidores do perfil arroba renatoassi no Instagram. Desculpe, mas não consigo acessar informações em tempo real do Instagram ou de qualquer outra plataforma. Cara, eu não consigo fazer isso sozinho.
+
+Para isso, eu vou ter que fazer uma integração com um serviço que eu gosto muito, que se chama Appify. Appify é uma plataforma que faz web scraping. O que é web scraping? É raspagem de dados, seria a melhor tradução.
+
+Então, ele extrai dados do TikTok, do Google Maps, da Amazon, de websites, do Instagram. Opa, show de bola. Agora, como é que a gente fazia isso, galera? Lindo seria se eu viesse aqui e tivesse uma ferramenta pronta do Appify.
+
+Cara, não tem, entendeu? Então, eu teria que ir aqui na documentação API do Appify. Olha como eu faria isso sem o MCP. Agora, você vai sentir na veia, você vai se apaixonar por esse negócio.
+
+Cara, você vai ter que estudar toda essa documentação e, na prática, eu te digo o que você vai ter que fazer. Você vai ter que pegar essa documentação API aqui do Create, Hector. Aí, você vai ter que fazer toda essa configuração API.
+
+Você que já mexe com API sabe que também não é difícil, mas é trabalhoso integrar API. Então, você vai ter que vir aqui, HTTP request. Aí, você vai criar aqui um Create Hector.
+
+Vai fazer todas as configurações. Vai fazer uma segunda chamada API aqui, que é o Run Hector. Para aí, sim, você fazia o exercício de garimpar os dados e tal, não sei o quê.
+
+Cara, posso ser bem franco assim? É algumas horas de trabalho para configurar o Appify aqui para funcionar. Eu sei porque eu já fiz, especialmente se for a sua primeira vez. Agora, para a nossa alegria, o Appify lançou o servidor MCP deles.
+
+O que eu faço com isso, Renato? Olha só que interessante. O que o servidor do Appify faz? Ele usa o scraper de posts do Facebook, extrator de e-mails do Google Maps, scraper de resultados do Google Search, scraper de Instagram, que é o que a gente vai usar, e o navegador web para buscar URLs, páginas web. E ele disponibiliza tudo isso por meio desse servidor MCP aqui.
+
+Esse é o SSE deles. Então, eu venho aqui... Esquece as APIs, galera. Nada disso.
+
+Eu vou só puxar um MCP Client aqui, e eu vou colar esse SSE. Com uma questão, só que eles não permitem fazer isso no autenticado. Então, no caso, eu criei a minha conta aqui no Appify, no free, não paguei nada.
+
+Eles dão 5 dólares de crédito aqui. Cara, ele não gasta nada para fazer isso aqui. Aí, você vai lá em API, cria o teu token API.
+
+Aí, você faz a tua autenticação aqui. Eu já tenho a minha criada aqui. E aí, só por curiosidade, quais ferramentas eu quero incluir? Se eu botar Selected aqui, ele vai me mostrar quais são as ferramentas que ele me permite acessar.
+
+Só aquelas que ele já mostrou, busca de atores, buscar atores, Instagram, scraper e tal. Posso deixar All aqui. Então, eu vou buscar todas.
+
+Conectei com o meu cliente MCP. E agora? Vamos ver se funciona? Vou pedir exatamente a mesma coisa. Puxa o número de seguidores do perfil Ruba Renato Aço no Instagram.
+
+Opa, já está rodando a tua aqui, galera. Inclusive, se eu for lá no Actors, eu vou ver que já está correndo o processo, que já rolou um scraping de Instagram aqui. Opa, o perfil do Instagram Renato Aço possui 69.419 seguidores.
+
+A descrição na bio é, aprenda a criar aplicativos e a gente se diaz sem precisar programar. É isso aí, galera. Então, ele já executou a tua do MCP Client.
+
+Galera, em quantos minutos a gente fez isso? Cara, a gente economizou horas de trabalho. No caso, se fosse uma API ainda mais complexa, economizaria dias, semanas de trabalho, integrando o servidor MCP. Então, aqui a gente tem mais duas vantagens muito fortes, galera.
+
+Além de reusabilidade e segurança. Facilidade absurda. Por quê? Primeiro, porque você não precisa conectar APIs.
+
+E facilidade absurda, mais uma vez, porque você usa a linguagem natural para conversar. Entende? Ele vai se virar. Você só precisa pedir o que você quer.
+
+Não precisa aprender a linguagem da API. O MCP que aprendeu a nossa linguagem, entendeu? E mais uma última vantagem aqui, que é a seguinte. Tende a reduzir alucinações dos LLMs, dos agentes, das IAs de forma geral.
+
+Explico. Olha só. Imagina um agente aqui com 30 tools diferentes, com 30 chamadas API diferentes.
+
+Para cada uma dessas chamadas API, você vai precisar explicar aqui no prompt do agente quando é que ele vai ter que usar cada uma das ferramentas. E todo mundo que trabalha nesse nível sabe que o agente começa a alucinar. Então, você tem lá 30 explicações diferentes de 30 tools que ele começa a usar.
+
+Via de regra, quanto maior o prompt, quanto mais instruções diferentes você dá para ele, maior a chance dele enlouquecer. Porque ele não entende muito bem se é para usar aquela, se não é para usar, se é para usar aquela outra. Então, ele começa a ficar confuso.
+
+Isso gera muitas alucinações. Um problema muito recorrente que agentes de IA tem, é que muitas vezes ele não consulta a base de conhecimento que era para ele consultar. Por quê? Porque ele se perde no meio de tanta informação.
+
+Então, se você pega 30 tools, que seja joga para o servidor MCP e conecta aqui com o servidor MCP, tende a reduzir alucinações. Porque o prompt fica muito mais enxuto, as instruções muito mais concisas. Agora, esse aqui é um ponto meio, não sei, há controvérsias ainda nesse ponto.
+
+Eu não tenho evidências práticas disso ainda, porque eu ainda não fiz esse teste nos meus agentes de jogar para o MCP para ver se ele reduz alucinação. Prometo que eu vou fazer e eu volto aqui no canal para contar para vocês se deu bom. Então, continuando.
+
+Quando criar, quando vale a pena criar um servidor MCP? Galera, minha opinião. Quando você tem muitas tools ou APIs ou bases de conhecimento conectadas num só agente, num só software, onde for, vale a pena, na minha opinião, criar um servidor MCP por conta de todos os motivos que eu falei acima, mas principalmente a reusabilidade. Quando você precisa utilizar as tools em vários projetos, portanto.
+
+Quando você precisa fornecer acesso de informações suas a terceiros. Isso aqui é bom pela questão da segurança. E se você está tendo problemas de alucinações, vale testar.
+
+Quando usar um cliente MCP? Aqui, galera, na minha opinião, sempre que existir um cliente MCP, provavelmente vai valer a pena em relação a usar API, desde que sejam oficiais. E aqui um pontinho de atenção, galera. Se você procurar assim, MCP servers, procura no Google, você vai achar um monte de servidores MCP.
+
+Foi assim que eu achei o da Appify, por exemplo. Aqui você vai achar, cara, olha que legal, o servidor MCP da PayPal. Massa, galera.
+
+E aí você abre aqui, inclusive, developer.paypal, você vê que é um servidor oficial da PayPal. Mas tem muitos servidores que não são oficiais. Então o da Perplexity aqui, por exemplo.
+
+Cara, você vê que é um servidor criado por um terceiro, entendeu? Então talvez seja nóia minha aqui, mas eu não gosto muito de ficar inserindo credencial minha em servidor que não é oficial. Mas enfim, talvez seja nóia minha, não sugiro. E não use clientes MCP se você precisa de um controle muito granular.
+
+Ou seja, se você tem que ser muito preciso. Então, quando eu falo, por exemplo, da integração com o banco, é mais uma brincadeira a nível de exercício mental. Porque, cara, pensa na prática, é perigoso.
+
+Ah, faça um PIX e tal. Mas será que o MCP vai consultar se o cara tem saldo na conta antes? Então, de repente, quando você quer um controle mais preciso do que vai ser executado, por exemplo, se o usuário do teu app de banco pediu PIX, você vai primeiro verificar o saldo dele. Depois vai verificar se ele está com os documentos atualizados.
+
+Depois, sim, você emite a transferência PIX, por exemplo. Vamos dizer que você tem esse processo mais lógico. Aí talvez seja mais interessante você manter as APIs, as ordens lógicas das coisas para ter mais garantia de que a coisa vai ser executada daquela forma.
+
+Para garantir que o MCP não vai enlouquecer e fazer uma operação sem atualização. E o que eu acho que vai ser o futuro? Galera, sinceramente, eu acho que no futuro não vamos mais se conectar com APIs em 99% dos casos. Acho que todos os serviços online vão oferecer servidores MCP.
+
+Se você já tem um SaaS, nada urgente, mas já vai ficando com o olho meio ligado. Como é que eu faço para oferecer um servidor MCP? Pensa comigo, não sei quem de vocês já teve que fazer uma conexão API, por exemplo, com Instagram, com Facebook. É de enlouquecer qualquer um, você fica puto.
+
+Depois de fazer isso, você sai na rua e quer bater em alguém. Porque é um pesadelo isso aqui. Primeiro que olha o tanto de conexão API que tem de absolutamente tudo.
+
+É uma experiência terrível. Não sugiro para ninguém na vida ter que fazer uma integração API com Instagram. Deve ser centenas de chamadas API que eles têm aqui.
+
+Agora imagina se eles vão lá e oferecem um servidor MCP. Você vai lá e pede, Instagram MCP, só cria uma publicação com essa imagem para o usuário e posta no perfil dele a agenda para tal horário. Cara, ele faz, entendeu? Isso aqui é um sonho.
+
+Então eu acho, sinceramente, que esse aqui vai ser o futuro. Eu acho que depois desse vídeo, imagino que vocês tenham entendido bem o porquê. Galera, se você quiser aprender mais sobre MCP, sugiro o módulo de MCP dentro do N8n, avançado na comunidade sem codar.
+
+Então aqui dentro do curso N8n tem um módulo.
+ Este arquivo é mais longo que 30 minutos.
+ Atualize para Ilimitado em TurboScribe.ai para transcrever arquivos de até 10 horas.

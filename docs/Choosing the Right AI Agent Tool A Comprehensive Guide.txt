@@ -1,0 +1,56 @@
+Choosing the Right AI Agent Tool: A Comprehensive Guide
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Todo mundo está te dizendo para construir agentes de ciência. Eles estão animados com a próxima revolução, mas com um novo framework anunciado toda semana, o pressão para entrar no avião é enorme e a confusão também. O problema é que ninguém está te dizendo como construir e como começar esse caminho agêntico, mas com a habilidade do esquema exato que você tem atualmente.
+
+Neste vídeo, vou compartilhar um mapa ajudante com você. Depois de construir e testar toneladas de sistemas agênticos, eu botei tudo isso em quatro lares claras. Este framework vai ajudar você a escolher a ferramenta perfeita para o seu negócio baseado na habilidade que você atualmente tem.
+
+Então, antes de entrarmos nos frameworks de construção de agentes, eu quero ter certeza de que estamos todos na mesma página. Por que mesmo construir um agente? O que exatamente é um agente de ciência? Um modelo de ciência estadual é como um oráculo, um cérebro em um jantar. Você pergunta uma questão, ela dá uma resposta.
+
+Um agente de ciência, por outro lado, é um trabalhador. É um cérebro com mãos e pés. Ele pode lutar por um objetivo de multas passadas criando um plano, usando ferramentas e lembrando suas ações anteriores para resolver problemas complexos que requerem uma linha de pensamento.
+
+Mas construir esses agentes poderosos vem com um grande desafio, o desafio da orquestração. Isso se divide em três componentes fundamentais. Primeiro, você tem a decomposição de tarefas, que é como o agente quebra um grande objetivo em passos mais pequenos e manejáveis.
+
+Segundo, você tem as notícias. Quando e como o agente deveria usar uma ferramenta e interpretar sua saída? E terceiro, você tem o manejamento da memória. Como um agente mantém o contexto sem se esvaziar um imenso imposto ou se confundir? É aqui que você precisa olhar a fórmula do agente.
+
+Os agentes de ciência estadual têm três partes fundamentais. Você tem o modelo de língua grande, o LLM, que é o cérebro do agente, que é seu motor de pensamento. Você tem a memória, que o permite lembrar das interações anteriores para manter o traço do que está acontecendo.
+
+E então você tem as ferramentas. As ferramentas são o que permite a um agente fazer coisas como procurar o web, retirar dados de um databases ou chamar um API. Agora, como fazer todas essas peças e como isso se combina? É aqui que temos a linha de orquestração.
+
+Eles operam em uma linha constante, comumente chamada de linha de reação, que é a razão e o ato. O agente observará o que está acontecendo. Pense no melhor próximo passo e então atue usando um dos seus ferramentas.
+
+O ciclo se repete de vez em quando até que o trabalho seja feito, o que faz um agente autonômico. Ok, com essa base, vamos entrar no nosso mapa. Agora, podemos organizar quase cada ferramenta de desenvolvimento do agente em uma dessas quatro caixas.
+
+Vamos passar por cada uma dessas, começando com a mais fundamental e a caixa mais poderosa, trabalhando até a caixa mais acessível. Então o primeiro é a partir do início. Essa aproximação te dá o máximo de controle absoluto.
+
+Então vamos olhar para os prós. Você pode finalizar cada parte do sistema para o seu caso de uso exato e você tem zero dependência externa. Os cons, no entanto, são enormes.
+
+É extraordinariamente complexo. É incrivelmente demorador e vai ser um sonho manter. Então, por que alguém escolheria esse caminho? Esse caminho é para pesquisadores de ciência empurrando as fronteiras do que é possível ou para grandes empresas que têm necessidades especialmente especializadas e equipamentos de engenharia dedicados.
+
+Para 99% de nós, isso é um ataque total. Isso nos leva para a segunda caixa, a terra dos frameworks agentes. Esse é o campo de jogo dos desenvolvedores, e é onde os mais serios desenvolvedores da AI estão passando o seu tempo.
+
+Os frameworks batem com a bonita balança entre controle e velocidade. Você não começa do zero. Você recebe blueprints arquiteturais e materiais de construção de alta qualidade.
+
+O nível mais baixo desses frameworks é o LANG Graph, que permite você construir agentes como máquinas de estado para controle total sobre o nível de entendimento. Então, você tem generalistas como a LANG Chain, que é como o Swiss Army Knife para prototipos rápidos. E então você também tem especialistas como o Lama Index, que é otimizado para recuperação de dados complexos.
+
+E, finalmente, você tem orquestradores de nível alto, como a Crue AI e a AutoGen, e também o Kit de Desenvolvimento de Agentes da Google, que permite você construir temas de múltiplos agentes que trabalham juntos para resolver um problema particular. Você também pode ver isso do ponto de vista da popularidade. E, por acaso, a popularidade não é tudo, mas é um forte sinal de apoio à comunidade, boa documentação e estabilidade.
+
+Como você pode ver, a LANG Chain é o líder claro em adoção hoje, mas o ecossistema inteiro está crescendo incrivelmente rápido. Uma comunidade grande significa que é mais fácil encontrar respostas quando se engana. Agora, vamos subir o stack.
+
+Vamos para o Layer 3, que são as plataformas de código baixo. É aqui que as coisas começam a ficar realmente interessante. Estes tools são para o que alguns chamam de desenvolvedores cidadãos ou analistas de negócios ou IT pros.
+
+Eles te dão uma vibração drag-and-drop user-friendly, mas com um cérebro de AI real. O detalhe é que você está jogando nas plataformas Wallgarden. Você tem mais controle do que o código baixo, mas você é ultimamente limitado pelas ferramentas que a plataforma decide oferecer.
+
+Isso nos leva para o Layer mais acessível, que é o Layer de Plataformas de Código Baixo. Pense neste Layer como se tivesse um domínio digital. Quando uma coisa acontece, ela triga a próxima.
+
+Plataformas como Zapier, Make.com e N8n são os reis aqui. É incrivelmente rápido e fácil. Agora, vejamos o desempenho destes.
+
+Construir o agente é apenas metade da batalha. Você também tem que pensar em produção. Então é aqui que você tem que pensar em onde você iria hostá-lo.
+
+Seria função sem servidor ou contêineres? Como você saberá se está funcionando? Você precisa de uma boa observação, log, tração e monitoramento. E como manterá-lo seguro? Você precisa gerenciar suas chaves API com segurança e proteger contra injeção de prontos. E, finalmente, como saber se está funcionando? Você precisa de uma estratégia de evaluação robusta usando databases de testes ou LLMs como evaluadores.
+
+Então, aí está. Você tem um mapa de quatro layer. Para encerrar, o Layer 1 é onde, se você é um pesquisador ou uma grande empresa que precisa de controle absoluto granular, o Layer 2 é o Layer de Framework, onde, se você é um desenvolvedor, construindo apps prontas para produção, o Layer 3 é se você está construindo uma ferramenta interna inteligente e construindo automação de negócios com lógica visual.
+
+E o Layer 4 é um pouco mais simples, mais UI-friendly, você está conectando os pontos, o workflow, certo? Então, escolha o Layer certo que é o certo para você, para o seu negócio, e também tenha em mente as habilidades que você tem. Comece lá e você sempre pode ir para cima ou para baixo da lista enquanto seus necessidades mudam. O segredo para o sucesso não é apenas saber que você deve construir um agente, é saber onde começar.
+
+É assim que você vai de ser confuso pelo hype para construir com confiança o futuro. Obrigado novamente por assistir, e eu estaria feliz em responder a qualquer pergunta. Se você gostou deste vídeo, por favor, inscreva-se, e vejo você no próximo.
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.

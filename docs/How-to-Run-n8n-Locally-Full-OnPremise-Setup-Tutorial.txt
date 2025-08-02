@@ -1,0 +1,138 @@
+How to Run n8n Locally (Full On-Premise Setup Tutorial)
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Neste vídeo, eu vou mostrar a você como se postar o N8n em pré-instalado em seu laboratório ou em um VPS no cloud. Agora, você já deve saber o que é o N8n porque você chegou aqui neste vídeo para começar sua instalação em pré-instalado. Se você não tem ideia do que é o N8n, isso fica mais difícil de dizer, bem, bem-vindo! Estou feliz que você esteja aqui.
+
+Mas, por favor, pause este vídeo agora mesmo e veja este vídeo. Eu vou esperar, eu estarei aqui. Vá em frente.
+
+De qualquer forma, prepare-se, vamos lá. Bem-vindo ao instalo em pré-instalado. Agora, de novo, expor sua instalação N8n para a internet vai dar o melhor tempo, mas você não precisa fazer isso, isso pode ser totalmente local.
+
+Pule para este timestamp para instalar o N8n. Depois disso, eu vou te mostrar como modificar sua instalação N8n para ser super, super local. Ok, pessoas de pré-instalado, antes de que possamos fazer qualquer coisa divertida, temos alguns pré-requisitos.
+
+E este é onde vem a parte complexa, porque o N8n gosta de se conectar com coisas. Ele também gosta de ter coisas que se conectem com ele. É tudo sobre conexões, Sr. Social.
+
+O problema que vem para nós, que hostamos essas coisas em pré-instalado, é que muitas dessas coisas que querem se conectar com isso, são da internet pública. E isso se torna um problema para nós, porque nossa instalação N8n é muitas vezes escondida atrás de uma parede de fogo. Protegida, segura, como deveria ser.
+
+Mas a internet pública não pode acessar a sua instalação N8n, o que, honestamente, você quer ter o melhor tempo. Mas não tudo é perdido. Pessoas de pré-instalado, há duas coisas que você pode fazer para fazer isso incrível.
+
+Nossos dois pré-requisitos. Primeiro, vamos precisar de um nome de domínio. Pode ser um subdomínio, como n8n.hackwell.com. Esse domínio é algo que você terá que comprar, mas não será muito caro.
+
+Estou falando de 3, 4, 5 dólares por ano. E vamos precisar apontar esse domínio para a nossa instalação N8n, mas ainda estamos bloqueados pelo fogo. Vem o nosso segundo pré-requisito, Cloudflare.
+
+Cloudflare tem esse produto incrível chamado Cloudflare Tunnels. Ele é completamente gratuito. E o que ele nos permite fazer é criar um super túnel secreto do nome do nosso domínio, do internet público, para a nossa instalação N8n e nossa rede.
+
+Isso é algo que eu uso o tempo todo, e é incrível e não é muito louco para se montar. Então, olhando para o nosso pré-requisito, nome de domínio, precisamos comprar um. Vai custar um pouco de dinheiro.
+
+O acounto do Cloudflare é grátis. A boa notícia é que você pode pegar ambos esses produtos do mesmo lugar. Cloudflare.
+
+Vamos fazer isso agora. Inscreva-se por um acounto do Cloudflare. De novo, é grátis.
+
+E queremos conectar um domínio que já possuímos ou registrar um novo domínio. Vou te mostrar como registrar um agora. Vamos tentar encontrar um.
+
+Vamos dizer n8niscool.com. Legal, está disponível, mas é caro. Vamos fazer n8niscool.cc. Vamos pegar isso. 8 dólares por ano.
+
+Vou registrar, comprar, e terminado. Eu consegui. Daqui, vou clicar em Manage Domain, e no painel esquerdo, você verá uma opção para Zero Trust.
+
+Clica nisso. Do nosso menu Zero Trust, agora vamos instalar um túnel Cloudflare para sua rede, que é meio incrível. Mas, até agora, já temos um domínio tomado.
+
+Vamos para o túnel. Na parte esquerda, você verá que temos a opção para redes. Vai e clica no botão.
+
+Você deve ver algo para túneis. Clica nisso. Eu já tenho alguns para outras coisas que estou fazendo.
+
+Você pode não ter nada, não importa. Clica em Criar um túnel. Escolha Cloudflare, nome o seu túnel, n8ntunnel, algo divertido.
+
+Agora vamos instalar um pequeno pedaço de software do Cloudflare que vai criar esse túnel para nós. Eu não encontrei uma rede onde isso não funciona. Você tem opções para onde você pode colocar isso.
+
+Windows, Mac, Linux, Docker. Vou instalar via Debian. Vou selecionar essa opção, e eles te dão todo o código aqui.
+
+Apenas copie tudo isso, e então se inscreva no seu computador ou servidor Linux. Este é o meu aqui. Este será a máquina que vou instalar n8n.
+
+Mas você não precisa instalar Cloudflare nesta máquina. Você pode instalar Cloudflare em qualquer outra máquina Linux ou software compatível, ou OS compatível na sua rede, enquanto tenha acesso à máquina que você está instalando n8n. Mas para manter as coisas simples, eu instalaria na mesma máquina que você está usando n8n se você nunca fez isso antes.
+
+Então eu já tenho meu comando copiado. Vou escrever aqui. Vai me pedir o meu código pseudo.
+
+E uma vez completo, volte para Cloudflare e copie este comando para instalar como serviço, para que funcione o tempo todo, mesmo quando a máquina rebota. Ótimo. Então agora eu deveria ver, sim, aqui embaixo, Conector Conected.
+
+Então agora há um túnel seguro de Cloudflare para sua rede. Daqui em Cloudflare, vamos clicar em Next, e vamos instalar nossa conexão n8n. Para Subdomain, coloque n8n assim.
+
+Para Domain, escolha seu novo domínio. n8n.cool.cc é o meu. Então aqui embaixo, para Serviço, vamos escolher Type, que será HTTPS, e vamos colocar a adressa IP do seu servidor n8n.
+
+Então, por exemplo, este vai ser o meu servidor. A adressa IP é 107771. É aqui que vou enviá-lo.
+
+Assim. Qualquer adressa IP do seu servidor, coloque lá. E vamos fazer mais uma coisa aqui.
+
+Aplicações adicionales. Vamos mudar o TLS para No TLS Verify. Aqui.
+
+Ativa. E é isso que temos que nos preocupar agora. Clica em Save.
+
+E você está pronto. Então, agora, você tem um nome de domínio. O meu é n8n.n8n.cool.cc. Isso é configurado através de um túnel de Cloudflare para acessar o meu servidor n8n.
+
+Essa parte, terminada. Mas, agora, não temos um servidor n8n. Vamos fazer isso.
+
+Então, agora, as pessoas on-prem e também a Cloud, talvez, se você não escolheu a opção fácil n8n para Hostinger, vamos instalar o n8n em nossos servidores. Passo um, logue para o seu servidor através do SSH, se você não já fez isso. Se você está em Hostinger, você verá a sua adressa IP ali.
+
+Apenas copie e paste isso para o seu terminal e se inscreva com o aconto de usuário de root. Agora, se você está on-prem ou na Cloud, você vai precisar de Docker. Vamos instalar isso agora mesmo.
+
+É bem fácil. E se você não sabe o que é Docker, você está indo para uma aventura. Se você quiser pesquisar mais, eu tenho um vídeo aqui.
+
+Por enquanto, eu vou te mostrar como instalar Docker no Ubuntu. Eu tenho um link abaixo para a documentação. Você pode seguir comigo agora mesmo e vamos instalar usando o repositório APT.
+
+Passo um, vamos apenas copiar tudo isso, ir para o nosso terminal e pastar. Você vai precisar de acesso root ou pseudo para ter permissão para isso. Uma vez isso terminado, vamos para o passo dois, instalar Docker.
+
+Pegue esse comando, paste ele, deixe ele ir para a cidade, eu vou acertar sim primeiro. Um breve descanso de café. E é isso que temos que fazer.
+
+Agora é a hora do passo três, onde nós vamos instalar o N8n, finalmente, usando Docker. Agora, para isso, nós vamos referir à documentação oficial do N8n. Por quê? Bem, porque muito do que eu digo aqui pode mudar.
+
+Então, sempre referir à sua documentação. Agora, para nós, nós vamos escrever direto para o passo quatro, criar um arquivo .env. Na verdade, primeiro, nós vamos criar um diretório. Então, mkdir, e vamos chamar isso de n8n-compose.
+
+Agora, eu estou fazendo isso lado a lado, no prem e na cloud. E depois, nós vamos pular para aquele diretório, cd n8n-compose. E depois, nós vamos criar nosso arquivo .env. E nós vamos usar o Nano por isso, porque ele é o melhor editor de texto do mundo, me batalhem, Nano, e depois espaço .env. E nós vamos pastar esse config ali, direto da documentação do N8n.
+
+Mas nós vamos fazer algumas modificações. Primeiro, nós vamos colocar o nome do domínio. Agora, se você está usando um serviço de cloud, como o Hostinger, você deve estar pensando, o que você está falando, Chuck? Deixe-me mostrar para você.
+
+No Hostinger, para qualquer VPS que você possa ter, você vai ter um nome de domínio aqui. Veja que o meu é srv-hostinger.cloud. Esse é o que eu vou usar. Eu vou pegar isso.
+
+Pastei isso aqui. Para os usuários do Home Lab, nós acabamos de montar nosso nome de domínio através do Cloudflare. E eu vou colocar isso aqui.
+
+Agora, esse vai ser o nome de domínio root, não o subdomínio. O meu era n8n-cool.cc. Agora, para todos vocês pessoas paranoicas que querem coisas totalmente locais, você ainda não tem um nome de domínio, mas podemos fazer um agora mesmo. Não importa o que seja, porque é tudo local.
+
+Então, eu vou fazer algo assim. mycoolwebsite.local. Esse nome de domínio vai ser acessível apenas para mim e para quem for na minha rede que tenha acesso ao meu servidor DNS. E sim, você vai precisar de algum tipo de servidor DNS para fazer isso funcionar.
+
+E você vai precisar adicionar isso como uma entrada DNS para o seu servidor DNS. Eu vou fazer isso agora com o meu servidor DNS. Então, eu vou copiar isso, logar no meu servidor DNS e criar uma nova entrada DNS.
+
+Vai ser n8n-subdomain.mycoolwebsite.local. Isso pode ser o que você quiser. E eu vou apontar para a adressa IP do meu servidor Docker, que é 10.7.1. Na verdade, não. O que foi? Eu já esqueci.
+
+Ah, 10.70.7.71. Eu vou adicionar o meu recorde e continuar. Depois, vamos acessar aqui para o subdomain. Para ambos o on-prem e o cloud, deixe isso como n8n, a menos que você tenha uma boa razão de mudá-lo, o que eu não acho que você faça, então não faça.
+
+Em seguida, vamos mudar a nossa zona de tempo. Eu vou ser america.com.br. Se você não sabe o que colocar para o seu, apenas google ou pergunte para a ChatsGPT. E para o e-mail SSL, vamos adicionar o nosso e-mail, o que você quiser usar para isso.
+
+Isso vai ser para a geração de certificados e só vamos aplicar para os usuários do cloud. E é isso que vamos se preocupar agora. Clicar no controle X, Y e clicar em Save.
+
+O próximo passo, vamos criar um diretório de arquivos locais. Vamos copiar e escrever o comando. É um passo simples o suficiente.
+
+E depois vamos criar o arquivo do Docker Compose. Vamos copiar todo esse config, apenas como é. Vamos para o nosso terminal e escrever nano docker-compose.yml. Isso vai abrir o nosso editor de texto, vamos copiar o nosso config. Agora, notem uma coisa, pessoas que são muito famosas com o Docker, nós estamos realmente estabelecendo dois conteúdos.
+
+Temos um conteúdo chamado tráfico e um conteúdo chamado n8n. E alguns de vocês podem estar pensando, Chuck, não precisamos de tráfico. Da forma como estamos estabelecendo isso, tudo o que precisamos é n8n.
+
+E eu diria que você está absolutamente certo. Porém, para manter as coisas fáceis e simples, e para não ir muito longe da documentação oficial, vamos mantê-la. Não é um grande negócio.
+
+Mas se você sabe o que está fazendo e quer remover o tráfico disso, isso é totalmente ok. Para todos os outros, deixe-o como é. Clique no controle X, Y, clique em Save. Então agora, estamos um passo longe de ter esse merda espalhado.
+
+Um comando. Vai ser docker-compose up, e depois vamos fazer um space-d, assim. Prontos? Prontos? Vamos lá.
+
+Coffee break enquanto está performando mágica. Não é tão bonito? Oh, eu adoro muito. Agora está tirando os contêineres de tráfico e n8n.
+
+E depois vai olhar a configuração e virar esses caras. Vou fazer na parte de on-premise também. E está pronto.
+
+Vamos verificar isso rapidamente através de escrever docker-space-ps. E aí está o contêiner. n8n, e também tráfico.
+
+Vamos ver se funciona. Então eu vou para https://n8n.n8n-cool.cc Vamos ver o que acontece. Ele disse que meu site estava inseguro.
+
+Por quê? Bem, ele conseguiu. Por que ele está dizendo que eu sou perigoso? Eu tenho um SSL em tudo. Você é louco, cara.
+
+Tipo, a Microsoft Edge não tinha problema comigo. Isso é tão engraçado. Para as pessoas do cloud, vai ser o nosso domínio aqui.
+
+Então vamos apagar isso, mas vai ser o subdomínio n8n. Então vamos colocar n8n antes disso. Dot.
+
+Excelente, está pronto. Agora, a este ponto, você está self-hostando sua própria instância n8n. E você está pronto para começar o seu primeiro projeto de automação.
+
+Repara aquele copo de café, pule para este vídeo e vamos começar.
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.

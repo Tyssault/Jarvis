@@ -1,0 +1,145 @@
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)
+
+Todos e suas mães estão usando o N8n para construir agentes AI agora mesmo. É o tópico mais popular do meu canal, e provavelmente. É tão fácil de usar o N8n para construir agentes AI simples e poderosos, sem ter que escrever qualquer código.
+
+O problema é que, a maioria do tempo, você não pode apenas construir um agente com o N8n e chamá-lo de bom. Você precisa de um front-end para você e outros usuários interagirem com seu agente de forma limpa e simples. Claro, você pode usar apenas o widget de conversa do N8n que ele te dá para seus agentes, mas, a maioria do tempo, você precisa de algo muito mais para ter uma boa experiência de uso.
+
+Então, hoje, eu vou te mostrar como usar o meu combo favorito para construir interfaces incríveis e seguras para seus agentes de AI que você pode literalmente criar e desempenhar em uma tarde. E a melhor parte é que você não precisa criar um projeto React ou Next.js completo, como você faria com o V0, e você realmente não precisa escrever nada, porque nós vamos ter o LLM fazer isso para nós. Eu sei, é uma surpresa que eu não estou usando o V0 aqui, mas eu acho que você vai gostar de como bem isso funciona.
+
+Existe um tempo e lugar para usar o V0 e também decodar um front-end sozinho, mas isso é uma discussão para outro vídeo. Agora, nós só queremos algo rápido e incrível, e isso é usando o combo de Clod, Streamlet e Superbase. Por que esse combo? Bem, deixe-me te contar bem rápido.
+
+Primeiro de tudo, Streamlet. É um paquete de Python que faz com que seja super fácil construir sites. Sem necessidade de JavaScript em geral.
+
+E então, Clod é realmente, realmente bom em codar com Streamlet. E eu sei que Clod, em geral, já é realmente bom em codar. É louco mesmo considerar isso.
+
+E então, nós unimos tudo junto com Superbase para facilidade de autenticação. E há uma boa chance de que você já está usando Superbase para seus agentes NAN, de qualquer forma, para coisas como sua memória de chat e RAG. Então, eu vou começar mostrando para você como usar Clod para criar uma interface de Streamlet básica para o agente NAN sem autenticação.
+
+Eu vou mostrar também o funcionamento do N8n para o agente e como você tem que configurá-lo para fazê-lo acessível para a frente. Depois, nós vamos voltar a usar Clod novamente para adicionar a autenticação de Superbase, tanto para a frente quanto para o fundo com o N8n. Então, sem mais delongas, vamos começar.
+
+Então, começando com Clod, nós vamos colocar o primeiro prompt para criar a versão básica da aplicação Streamlet sem autenticação. Agora, todos os prompts que eu estou usando aqui. Além de todos os códigos que eu gerentei e mudei, e todos os workflows do N8n, vão estar em um link na descrição abaixo para um repositório GitHub.
+
+Então, você pode pegar tudo que eu desenvolvi aqui e usá-lo para você ter um ponto de partida realmente bom. Então, o primeiro prompt que eu tenho aqui é criar uma aplicação de Streamlet básica com uma interface de chat para conversar com um LLM. E também, isso é realmente, realmente importante.
+
+Eu especifico o que parece para conversar com o LLM e quando e como usar esse Webhook. Também, uma coisa que eu quero mencionar é que eu tenho uma autenticação muito básica aqui com um token de guarda de código duro. Então, isso não está usando autenticação super base.
+
+Isso não é robusto e você não deveria usar isso em produção. Mas eu ainda quero um pouco de proteção para que as pessoas não possam apenas acessar o meu N8n workflow e sujar meus créditos de LLM. Então, isso é só uma nota importante ali.
+
+E eu também fico realmente específico com como usar esse Webhook, porque é um postrequest e precisa de itens específicos no payload para trabalhar com o N8n workflow. Especificamente, eu preciso passar o ID de sessão, que é o que o N8n usa para história de conversa. E eu vou mostrar esse workflow em um pouco aqui.
+
+E também o input de conversa. Esse é o segundo parâmetro no payload. Isso obviamente só tem o prompto do usuário da interface.
+
+E então, a resposta é também realmente importante. Eu tenho que dizer ao Claude que há uma chave de saída da resposta JSON e isso é o que contém o que eu recebo de volta do LLM que eu preciso mostrar de volta para o usuário. Então, com isso, eu vou lá e clico em Enter e o Claude vai passar direto por todo esse código.
+
+Ele faz isso tão, tão rápido. Ele vai abrir o código na direita, como vemos aqui. E isso está parecendo perfeito.
+
+Então, temos um pouco de placeholders que temos que encher e eu farei isso em um pouco quando eu trazer esse código para o meu código Visual Studio IDE. Nós geramos um ID de sessão em random para a memória de conversa. Nós temos essa função aqui que envia um requesto para o LLM e recebe a resposta de volta com todos os headers e usando a chave de saída, tudo que eu especifiquei, isso é perfeito.
+
+E então, na função principal aqui, nós instalamos a interface do usuário do Streamlit com a entrada de conversa e então, quando recebemos a entrada, nós vamos adicioná-la à interface do nosso usuário, receber uma resposta do LLM e então exibir isso também. Super simples, mas isso está funcionando perfeitamente. E então, agora, muito rapidamente, eu vou mostrar o que você precisa fazer no N8n para fazer isso funcionar com um Webhook e então nós também vamos descer para realmente fazer esse código funcionar.
+
+Tudo bem, então aqui eu estou agora no meu workflow do N8n onde eu construí totalmente um agente AI RAG que eu também fiz acessível para o meu front-end. E então, eu só quero dizer que em um vídeo separado no meu canal, que você pode ver acima, eu construí totalmente esse agente. Então, se você está curioso de como eu fiz isso, sinta-se livre de conferir.
+
+Eu não vou entrar em detalhes em tudo aqui, porque eu só quero focar em como integrar o agente N8n com o front-end, fazendo-o acessível através de um Webhook. Então, deixe-me descer nisso agora. Eu vou zoomar para onde recebemos os triggers para o nosso agente e, tipicamente, quando você cria um agente com o N8n, você vai ter um trigger WinChatMessageReceived.
+
+Isso é o que te dá esse widget de conversa no meio onde você pode interagir com seu agente dentro da UI do workflow. E também, se eu clicar em Mais Info, você recebe os códigos de embedimento que você pode embedir para um legal widget de conversa. Tudo bem, mas eu, obviamente, quero um Webhook para que eu possa interagir com isso através de APIs no meu front-end.
+
+E a forma que você faz isso é simplesmente adicionar um trigger Webhook no começo, como nós temos o WinChatMessageReceivedTrigger, e então você adiciona um respondeWebhook no final, logo após o agente de ferramentas. Apenas esses dois nodos, é isso. É super, super simples, mas, obviamente, eu ainda quero cobrir isso para você, porque é importante conseguir isso certo.
+
+E eu também vou falar sobre o Webhook também, porque há algumas coisas que são realmente importantes para se manter em mente aqui. Primeiramente, sua URL de produção será ativa enquanto o seu N8nWorkflow é ativado no topo direito. Então, essa é a URL que você vai colocar para encher o placeholder no código Python. 
+
+Então, o Cloud nos dá um placeholder para a URL Webhook. É isso, e isso é controlado pelo caminho aqui. Também, para a autenticação, você quer selecionar um headerAuth, e, de novo, nós vamos usar SuperBase depois, mas isso é apenas para autenticação super básica.
+
+E então, para as credências, você pode clicar em Criar nova credência, e então, aqui, o nome, você quer que seja Autorização, porque esse é o nome para as chaves de tóquio Bearer nas nossas chamadas de API. E então, para o valor aqui, você vai colocar Bearer com um capital B, espaço, e então o nome do seu tóquio. E nós vamos ver isso quando a gente vai para o código Python, exatamente o que isso parece, mas você quer que isso se mate exatamente com o que você vê aqui. 
+
+Eu, obviamente, não vou mostrar o meu password aqui, mas, sim, Autorização, e então Bearer, espaço, e então seu tóquio. E então, eu vou fechar com isso, porque eu, obviamente, tenho o meu instalado já. E então, para responder, você quer mudá-lo de imediatamente para UsarResponderWebhookNode, porque nós adicionamos isso aqui no final, e o que isso vai fazer é que você não vai ter que mudar nada.
+
+Vai, por defaulto, pegar os itens de saída do nodo anterior, que, obviamente, inclui a chave de saída do LLM, e vai retorná-lo para o WebhookRequest. E então, é assim que nós recebemos a resposta do LLM como resposta para a chamada de API. Então, com isso, isso é, literalmente, tudo. 
+
+Então, nós podemos agora salvá-lo, e então ir para implementar nosso código Python no nosso IDE, encher os placeholders, e então, lançá-lo e testá-lo. Outra coisa que eu quero mencionar muito rapidamente, nós tivemos o payload com sessionId e chatInput, porque se eu for para os fios de edição aqui, o que eu faço é que eu tenho esse trabalho para ambos o WinChatMessageReceivedTrigger e o WebhookTrigger. Então, esse é o valor que eu tenho para o WinChatMessageReceived, o chatWidgetTrigger, mas se não existir, então eu vou para o payload do WebhookRequest.
+
+Então, é json.body.chatInput, e então, para o sessionId, é exatamente o mesmo. Então, dessa maneira, não importa se nós estamos triggerando do nosso chatWidget ou do nosso Webhook, nós podemos usar ambos, e esses dois vão levar para esse node EditFields onde nós recebemos o chatInput e o sessionId, para que, por exemplo, na memória de chat do Postgres, nós possamos usar o sessionId tomado do node anterior, e isso tudo vai funcionar corretamente. Então, nós precisamos dessas chaves específicas, chatInput e sessionId, ou o workflow não vai funcionar. 
+
+Tudo certo, então, com isso de fora, nós agora temos tudo que precisamos para apagar nosso código Python do Cloud para o Visual Studio Code, e nós temos o nosso front-end. Então, o que eu vou fazer aqui é ir para esse folder que eu vou ter no repo do GitHub, esse é o link na descrição do vídeo, e eu vou criar um novo arquivo aqui, e eu vou chamá-lo de n8nYoutubeAgent. É um nome meio aleatório, eu tenho um pouco de outros scripts já aqui, só de quando eu estava testando isso antes.
+
+Então, agora eu só posso copiar e pastar do Cloud todos os códigos que ele me deu. Eu vou tocar literalmente nada além dos placeholders que ele precisa para eu encher aqui. Então, eu vou abrir outro desses scripts que eu já tenho, só para que eu possa copiar a URL do Webhook, que eu te mostrei como obter no n8n, e o token de carregador também.
+
+Então, isso é tudo depois do espaço de carregador que você instalou em seus credenciais no n8n. Então, você pode ver aqui que é espaço de carregador, e então o token que você instalou no n8n. Claro, eu vou mudar isso depois, então você não pode apenas chamar o meu workflow e ter os credenciais para isso. 
+
+É por isso que eu tenho o código duro aqui. Mas sim, essa é a única coisa que eu vou mudar. E tem um par de paquetes que você vai ter que instalar com o Python também.
+
+Então, você pode seguir as instruções do Cloud sobre isso, ou eu também tenho um arquivo .txt de requerimentos neste folder aqui, então você pode apenas fazer pip install-r requirements.txt e então ter o mesmo ambiente que eu, porque obviamente isso está funcionando perfeitamente. E sim, com isso, podemos ir em frente e ligar o Streamlit para desligar o nosso front-end. Certo, então para executar esse script, tudo que eu tinha que fazer foi ir para o diretório onde eu tenho o meu Python script e então executar o comando Streamlit, executar e então o nome do script. 
+
+Isso instantaneamente abre um instante de Streamlit no meu browser. Agora eu tenho este muito, muito simples chat widget. Você pode expandir isso em um milhão de formas diferentes, mas nós temos os pernils agora e podemos falar com o nosso agente. 
+
+Então, este é um agente AI full RAG que está funcionando como o n8n workflow. Então, eu até posso perguntar ele, baseado nos documentos que eu ingeri em um dos vídeos anteriores do meu canal. Então, eu posso dizer, quais são os itens de ação do encontro 8.25? E isso vai fazer esse pedido Webhook e n8n é bem rápido. 
+
+Eu estou usando um LLM rápido e então nós vamos ter uma resposta muito, muito rapidamente aqui. Aqui vamos nós, os itens de ação do encontro são, e então sim, só algumas coisas estúpidas que eu gerentei com GPT, mas isso está parecendo perfeito. E então agora, nós podemos ir para adicionar autenticação super base e fazer isso muito mais robusto e seguro. 
+
+Algo que você pode realmente começar a construir e na verdade usar em produção para o seu negócio. Então, de volta em Claude, porque nós vamos fazer uma coisa muito similar para apenas enriquecer esse app do Streamlit para incluir a autenticação super base. E há, de novo, um par de coisas específicas que eu adicionei no pronto para coisas que eu sei que vão ajudar a Claude muito, formas de prevenir de alucinar, e então eu vou passar por essas bem rapidamente também. 
+
+E então, dentro do pronto, eu vou apenas pastar isso aqui e eu vou dizer agora atualiza essa app para usar a super base para a autenticação. Uma coisa que ele gosta de fazer é ter um tab login e não ter um sign up. Então, eu digo para ele fazer ambos aqui, e então eu também digo para ele usar o token super base como o token guardador para o Webhook. 
+
+Então, agora, ao invés de apenas ter algo encodado, vai ser um token guardador que nós podemos gerar com a biblioteca Python super base. E então ele vai sair para o nosso instante super base e gerar um token guardador único para aquele usador que nós podemos verificar no backend, no N8n, que sim, esse token é válido e é assinado para esse usuário. E nós podemos até receber o e-mail do usuário e outras informações de profilamento e o workflow do N8n apenas do token guardador também.
+
+É uma coisa muito poderosa que ainda é muito fácil de usar. Então, você vai ver isso em um pouco aqui. E então, eu também quero mostrar alguns pedaços de informação só para mostrar o quão robusta isso é, como o e-mail do usuário no lado esquerdo.
+
+E então, às vezes, o Claude gosta de alucinar e usar ferramentas que são deprecadas. Então, eu apenas especifico isso no final aqui. Então, com isso, eu vou lá e clico em entrar.
+
+E, como antes, isso vai gerar todo esse código muito bonitamente no lado direito aqui. E vai parecer bem parecido, só que vai ser um pouco mais robusto agora. Um pouco mais de placeholders que vamos precisar adicionar para o super base. 
+
+No geral, parece bem parecido. Tipo, o e-mail para o LLM é bem parecido, só que agora nós temos um novo parâmetro do token, que nós vamos receber dinamicamente do super base, uma vez que nós realmente nos assinamos. Ok, então eu tive que pausar e voltar porque eu precisava descobrir exatamente onde tudo estava nesse código. 
+
+Mas, uma vez que eles se assinam, é quando o objeto do usuário é adicionado ao estado de sessão e é o que tem o token dentro dele. Então, se eu pular aqui, quando chamarmos o LLM, nós vamos receber o usuário do estado de sessão e então chamar o atributo do token de acesso dele. E isso é o que nós damos para passar o token Zubera para o N8n agora. 
+
+Então, sim, eu não quero pular nesse código em muito detalhe, mas apenas olhando para ele inicialmente, isso está parecendo absolutamente perfeito. Então, agora eu vou rapidamente mostrar o que você tem que fazer no workflow do N8n para trabalhar com esse super base de autenticação e então nós vamos instalá-lo em Visual Studio Code novamente e testá-lo. Então, voltando no N8n agora, porque eu quero mostrar a você como fácil é mudar esse workflow para trabalhar com esse novo token Zubera base que é específico para um usuário, ao invés de usar aquele único token Zubera autorizado que nós instalamos como um credencial no N8n. 
+
+Então, a primeira coisa muito importante que você precisa fazer é ir para o Webhook Trigger e desligar essa autenticação, porque nós não vamos ter o Webhook fazer a verificação. Agora, vai ser o passo depois porque você quer maneiramente lidar com esse novo token Zubera base. Então, desligar isso, tudo o resto pode ficar exatamente o mesmo. 
+
+Agora, depois, há um par de pedaços de informação que precisamos do Zubera base, incluindo nosso url de projeto e nossa chave API. E você pode pegar ambos desses nos settings de API no Zubera base. Então, você vai para o Zubera base, clica no Project Settings, e depois vai para o API na configuração.
+
+E você pode copiar seu url aqui. Eu vou mostrar para você como usar isso em um segundo. E então, para a chave API, você pode copiar. 
+
+Então, você pode revelar e copiar esse secreto do serviço. Esse é o secreto da chave Zubera base que você não pode compartilhar com ninguém. Do outro lado, a chave anônima de API, isso é público. 
+
+Enquanto você tem a segurança de nível row definida na sua mesa, então as pessoas não podem apenas ler e escrever o que quiser, e você pode olhar isso e ver o que é, então você pode compartilhar isso com qualquer um. Então, é assim que nós vamos ter isso na UI do Streamlet mais tarde. Então, isso é público, e essa é sua chave de API privada que você quer passar aqui. 
+
+Então, eu vou clicar no pedido HTTP, os headers que nós temos aqui para verificar o token de carregador de usuários, nós temos uma chave de API, e esse é o secreto que eu tenho copiado e pastado aqui do Zubera base. Eu não estou mostrando o todo. É por isso que eu posso revelar isso aqui. 
+
+E então, para verificar o token de carregador de usuários, nós queremos passar o seu token como a autorização para este chamado também. Então, a autorização, e então o header vai ser json.headers.authorization. Então, ele vai pegar a autorização do nosso webhook, o token Zubera base que foi passado, e então usar isso também como o header de autorização para este chamado HTTP. E a URL que nós queremos ir para, é um GET-request que vai para a nossa URL do projeto .URL.auth .v1.user Então, isso vai nos devolver um objeto de usuário válido, enquanto este token Zubera base que foi dado para este workflow N8n, é assinado para um usuário.
+
+Então, o que isso parece aqui, é que eu tenho este if statement, e basicamente, se houver um objeto de usuário válido que for devolvido, haverá um atributo de e-mail, e se tiver um atributo de e-mail, isso significa que a autenticação foi sucessiva. Há várias maneiras diferentes de lidar com isso, mas, sim, você pode apenas verificar na e-mail, essencialmente, e isso significa que há um usuário válido, e se não tiver um usuário válido, podemos retornar com um erro, caso contrário, podemos continuar com o resto do nosso workflow, exatamente como tínhamos antes, e ainda temos o input de conversão e os parâmetros de ID de sessão e o payload para fazer tudo o que precisamos para este agente de arte. Outra coisa que eu quero mencionar rapidamente, e é isso mesmo, é que não é necessariamente ideal apenas ter sua chave de API de Superbase pasteada como parâmetro aqui, você poderia usar outro serviço, como o Secret Manager de AWS, para guardar isso em um lugar mais seguro e pegar isso no workflow, e depois passar isso como valor aqui. 
+
+Eu só queria algo simples, mas apenas tenha em mente que há maneiras de fazer isso ainda mais seguro. Ainda é bem seguro, no geral, enquanto o seu NAN não for hackeado. Então, com isso, isso é tudo que temos que mudar no NAN workflow. 
+
+Espero que isso faça sentido, como estamos usando este HTTP REQUEST contra o nosso Project URL para verificar o usuário. Me diga nos comentários se você tem alguma pergunta sobre isso, mas vamos lá e descer direto para pegar o código Cloud Python e atualizar nossa aplicação Streamlit. Então, de volta no Visual Studio Code, eu vou agora pegar tudo copiado do Cloud novamente e mudar o arquivo que eu já tinha, que só tinha a autenticação básica. 
+
+E agora, neste caso, eu não vou passar por todo este código, porque está parecendo perfeito já, então eu vou adicionar os placeholders aqui, e depois vamos lançá-lo e testá-lo de novo. Então, de novo, eu tenho outro script que já está listado e eu só vou copiar tudo. Então, o seu Superbase URL e Anonymous Autenticação Key, eu já mostrei como pegá-los, então você vai copiá-los de volta do seu interface Superbase e colocar eles aqui. 
+
+E então, o Webhook URL vai ser o mesmo se você editou seu workflow em lugar, senão, só copie isso. Então, eu vou fazer isso fora da câmera e depois volto uma vez terminado. Então, você pode ver aqui que eu coloquei todos os meus placeholders.
+
+Vai parecer bem parecido para você e é isso. Não tem mais nada que eu tenho que tocar no código. Eu já sei que está funcionando bem, porque eu testei atrás da cena. 
+
+Então, tudo o que você tem que fazer para lançá-lo, eu vou abrir meu terminal de novo. De novo, apenas o mesmo comando, streamlet run n8n youtube-agent.py, e depois, voltando para o meu browser aqui, nós agora temos essa visão que nos apresenta um login. E se eu dizer algo como test.gmail.com e algum password aleatório que está inválido, nós recebemos um erro dizendo que são credenciais inválidas de login. 
+
+Talvez nós queríamos lidar com esse erro um pouco melhor. Isso não parece muito bom. Então, obviamente, tem coisas que você provavelmente tem que corrigir com o Cloud, mas o Cloud é muito bom em corrigir a si mesmo. 
+
+Mas, de qualquer forma, eu vou refazer aqui e depois eu vou logar com algo válido. Então, eu vou dizer, isso é tipo um acounto de teste que eu criei aqui. Então, eu vou logar com isso, clique em sign-in e diz login sucessivo, mas o modulo streamlet não tem atributo experimental rerun. 
+
+Então, isso é algo que eu disse que o Cloud iria alucinar. Então, de novo, você tem que trabalhar com o Cloud um pouco. Estou mantendo isso para mostrar que, tipo, não é perfeito direto do mal, mas o Cloud irá corrigir a si mesmo.
+
+Então, eu posso até entrar aqui e dizer não incluir coisas experimentais. E ele irá corrigir a si mesmo. Então, eu vou passar por isso com o Cloud e depois volto uma vez que eu o tenha corrigido. 
+
+Tudo bem, então eu trabalhei com ele um pouco fora da câmera e ele corrigiu a si mesmo no primeiro tentativo para os testes experimentais. Então, eu também tive que corrigir o UI um pouco também. De novo, eu queria deixar isso para mostrar que realmente é um processo iterativo para construir essas coisas com o Cloud, mas quando você tem um modelo tão poderoso como o Cloud, ele faz um trabalho realmente bom em corrigir a si mesmo e não entrar em uma luta infinita de alucinação.
+
+Então, com isso, eu vou entrar em meus credenciais de novo com esse pequeno acounto de teste que eu tenho e podemos ir em frente e testar tudo o resto. Então, eu vou em frente e clico em Login e depois, boom, aí vamos nós. Nós temos essa interface linda que até me mostra que eu estou logado com meu e-mail e meu ID de sessão também. 
+
+E isso está parecendo realmente, realmente legal. Ok, então agora eu posso perguntar a mesma pergunta. Quais são os itens de ação da reunião 8.25? E, oh, legal, ele até tem uma barra de carregamento aqui.
+
+Isso está parecendo realmente bom e ele tem toda a verificação de Superbase atrás das cenas no workflow agora. E aí vamos nós. A mesma resposta do que antes.
+
+Isso é perfeito. Eu espero que isso te dê um grande começo para desenvolver interfaces realmente lindas para seus agentes de A.I. N8n. Há muitas oportunidades para expandir isso, para dar até mais segurança ou mais robustez para seu front-end. 
+
+Mas isso é um bom começo e eu vou continuar a fazer mais e mais conteúdo em torno de A.I. N8n. Até falando de outras plataformas como Open Web UI para trabalhar com front-ends para seus agentes de A.I. N8n também. Então, se você está olhando para isso e você apreciou esse conteúdo, eu realmente apreciaria um like e um se inscrever. 
+
+E com isso, eu te vejo no próximo vídeo.
+
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)

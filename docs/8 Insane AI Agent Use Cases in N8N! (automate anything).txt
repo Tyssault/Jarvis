@@ -1,0 +1,207 @@
+8 Insane AI Agent Use Cases in N8N! (automate anything)
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Hoje eu vou mostrar para vocês oito casos de uso de agentes AI com o N8n. E esses agentes fazem uma variedade de coisas diferentes, de análise de dados até criar cortes virais. Há uma variedade ampla aqui.
+
+Essas são coisas que eu uso todos os dias e membros da minha comunidade usam todos os dias também. Estes são para fazer sua mente girar, te dar algumas boas ideias para construir agentes e também te mostrar algumas maneiras que agentes AI podem ser usados. Agora, esses agentes que eu vou mostrar para vocês hoje, são muito legais, são muito ajudantes, mas também são muito difíceis de construir.
+
+E se você já tentou construir um agente de AI sozinho, ou se você já procurou um agente de AI que possa cumprir seu caso de uso, você sabe que até isso é uma tarefa difícil. Muitas pessoas ficam presas em algo que eu gosto de chamar de armazenamento de templos. Elas ficam em movimento o tempo todo, procurando por outro templo para ajudá-los a cumprir seu caso de uso, quando, na realidade, tudo o que elas precisam fazer é mudar o seu pensamento de consumidor para criador.
+
+E é isso que nós fazemos na AI Foundations. Nós temos uma comunidade construída para ensinar os fundamentos de AI, fazendo com que a AI seja fácil de entender. E nós literalmente vamos, dos fundamentos, da história da AI, até construir agentes com ferramentas como o N8n.
+
+Nós temos um curso de N8n de mais de 30 módulos para que vocês aprendam a construir agentes sozinhos, assim vocês podem criar as coisas que eu vou mostrar para vocês no vídeo de hoje. E nós também temos muitos desses agentes que eu vou mostrar para vocês hoje dentro dos nossos Builds de agentes, com Blueprints, então vocês podem simplesmente clicar, um clique instala, mas a principal coisa que nós estamos te ensinando aqui é a verdadeira sabedoria sobre como pescar, certo? Nós não estamos apenas te dando peixe, nós estamos te ensinando como pescar para que você possa comer para sempre. Então se você quiser se juntar a nós, e quiser se tornar parte da nossa comunidade de 989 membros, então eu recomendo fazer isso, isso é mais do que apenas um lugar de AI, tipo, nós estamos fazendo amigos aqui.
+
+Se e quando você se juntar, vá se apresentar, nós temos mais de 8 mil comentários na linha de introdução, gostaríamos de conhecer você. Venha aqui, faça amigos, networque, aprenda sobre a AI do começo até o final, e é um processo sem fim, então se juntem. Vou deixar um link na descrição ou no comentário de cima, se esse grupo te interessa, eu prometo que você não se arrependerá.
+
+Certo, agora vamos dar uma olhada em alguns desses uso-casos de agentes de AI com o N8n. Uso-caso número 1 é um agente de roteiro LLM. Agora, esse é um agente que pode ser implementado em praticamente qualquer fluxo de trabalho, mas o que eu fiz foi extraí-lo e eu o coloquei em um sistema de agentes duais, assim, onde eu tenho um agente e dois agentes, só para que você possa ver como esse processo está funcionando.
+
+Agora, como eu disse, você pode pegar esses dois e colocá-los em qualquer fluxo de trabalho que você quiser. Eu só botei isso muito simples, para que você possa ver como esse agente de roteiro LLM está realmente funcionando atrás das cenas. Agora, a ideia desse agente é pegar sua solicitação.
+
+Então, se eu estivesse a conversar com algo e eu estivesse a escrever qualquer promta que eu quiser, baseado no seu promta, o que o agente decididor faria nesse roteiro LLM é determinar qual modelo usar. Então, eu lhe dou três opções aqui. Você pode usar Perplexity, você pode usar o ChatGPT's New O3 Mini High, ou você pode usar o Claude 3.5 Sonnet.
+
+Agora, a razão pela qual você pode querer fazer isso dentro de suas automações ou seus sistemas de agentes é porque certos modelos têm certas forças e certas deficiências também. Então, como você pode ver aqui, eu estou dando um modelo e então eu listo o modelo e estou dando as forças desse modelo. Então, para Perplexity, por exemplo, como você pode ver, eu digo que ele pode procurar o web para dados ao vivo.
+
+Então, se eu tiver alguma pergunta onde a busca ao vivo é necessária, esse agente vai poder decidir usar o modelo Perplexity aqui. E eu tenho a mesma coisa com o O3 Mini High. Como você pode ver, eu digo que isso é para tarefas de razão avançada e eu também faço o mesmo para o Anthropx Claude.
+
+Então, basicamente, eu estou listando modelo, força, modelo, força, e eu continuo e eu poderia ter quantos modelos que eu quiser aqui. Agora, se você começar a desenvolver, claro, mais de 10 modelos, você provavelmente quer que isso seja dividido em três agentes e ter um categorizador que o divida em categorias e depois seleciona modelos dentro dessas categorias primeiro. Dessa forma, você tem mais espaço para mensagens de sistema.
+
+E então, nós temos esse modelo aqui e ele usa Open Router, que pode se conectar a muitos, muitos modelos diferentes. Eu vou copiar minha saída aqui e eu só quero mostrar para você o que Open Router pode se conectar. Então, eu vou mudar isso para Fixed e, como você pode ver, Open Router pode se conectar a todos esses modelos diferentes.
+
+Tudo do Anthropx, tudo do Cohere, tudo do DeepSeek e depois só Gemini. Quer dizer, ele pode literalmente se conectar a todos esses modelos diferentes de línguas. Então, basicamente, dentro do meu primeiro agente, eu só estou usando o tag ou o ID que eu posso mapear dinamicamente para esse campo de modelos, então ele pode mudar o modelo baseado no meu código e nós podemos fazer isso com uma expressão.
+
+Então, ele está assistindo minha saída. Então, vamos testar isso para que eu possa mostrar o que isso realmente parece. Se eu conversar com isso e eu digo, me encontre em restaurantes para o Dia de São Patrício, eu posso ir em Chicago.
+
+E, já que eu estou perguntando, tipo, me encontre em alguns restaurantes, o que isso vai fazer? Esse modelo vai ter que decidir qual modelo usar baseado no meu código aqui. Então, se eu estou pedindo dados ao vivo, provavelmente deveria usar perplexidade. Então, eu vou enviar isso.
+
+E, como você pode ver, esse modelo vai funcionar e depois vai me dar uma saída estrutural aqui, que vai mudar o modelo dependendo do que esse agente decide fazer e depois me dá uma resposta. E depois me dá uma resposta atual com restaurantes no centro de Chicago que eu poderia celebrar o Dia de São Patrício. Se eu for para o meu parser de saída estrutural, o que isso faz é que isso passa o meu código e também o modelo que ele precisa usar para o outro agente.
+
+Então, como você pode ver, diz, me encontre em restaurantes para o Dia de São Patrício que eu posso ir em Chicago, e depois também passa o modelo. Então, está passando código e modelo para esse outro agente. E é isso que o agente está recebendo aqui, é o meu código, e o modelo é mapado para o campo de modelo.
+
+Então, vai me dar uma resposta agora usando esse modelo, já que temos o modelo na expressão e também já que temos esse ponto de código no texto. Esse seria um exemplo de usar um agente de roteiro e isso pode fazer muitas coisas diferentes para você, como salvar custos, dar respostas mais acuradas. Pode completamente revolucionar seus agentes de ciência.
+
+E esses também são dois agentes que você pode usar. Então, eu gosto de usar isso quando eu preciso decidir entre diferentes modelos para escolher. O próximo caso de uso de agentes de ciência é o meu agente de pesquisa profunda.
+
+Agora, essa coisa revolucionou o espaço. Tantas pessoas diferentes estão usando para tantas coisas diferentes, PhDs, broadcasters de rádio, pessoas cotidianas que querem aprender sobre N8n, pessoas cotidianas que querem aprender sobre qualquer tópico que vem à mente, essa coisa é ótima. E não se preocupe com, você sabe, modelar esse sistema exato.
+
+É bem complexo com tudo que eu criei, mas pense na ideia desse sistema e no que ele está fazendo e como ele pode fazer todo o trabalho para você. Antes de eu enviar um pedido de custo para esse vídeo, o que eu vou fazer é mostrar o que um resultado parece com essa automação. Tudo que você tem que fazer é escrever um tópico.
+
+Então, o que eu fiz foi escrever mantendo-o em B e como ele reduz o estresse. E o que essa automação vai fazer para você é criar um PDF pesquisado profundo com citações. Isso foi um grande problema dentro do espaço de AI.
+
+As pessoas queriam pesquisar profundo, mas não havia jeito de ter toda a informação apoiada por fontes reais em um formato legal muito rapidamente. Então, é isso que essa automação faz. Você escreve um tópico e faz pesquisar profundo para você, te dá citações que você pode clicar.
+
+Por exemplo, esse aqui, eu só fiz mantendo-o em B e como ele reduz o estresse. Algo que eu não tinha ideia se correlou ou não, mas eu queria ver se fez. E me deu muitas e muitas informações sobre como mantendo-o em B realmente reduz o estresse e como há estudos reais sobre isso.
+
+E você pode clicar em todas essas fontes também. Então, se eu clicar na fonte, como você pode ver, me leva a uma página chamada Benefícios Terapêuticos de Mantendo-o em B. Então, está recebendo informação dessa URL do site aqui e colocando-a na sua pesquisa. Isso é o que esse agente faz.
+
+Então, deixe-me enviar uma solicitação para um novo tópico e veremos qual pesquisa podemos gerar. A pesquisa que eu vou testar é o Water Only Fasting for 9 Days e como ele regenera o corpo. Algo muito interessante.
+
+Podemos, na verdade, submitir isso e isso é apenas uma fonte básica que é nativa do N8n. Então, quando eu clico em Test Workflow, essa fonte aparece. Eu poderia ter isso em qualquer lugar.
+
+Eu poderia ter no Google Forms, AirTable, não importa, mas eu vou clicar em Submit e o que essa automação vai fazer é, na verdade, só começar a funcionar. Ela vai criar algumas queries para mim, um estilo, ir para o Manager de Pesquisa e criar algumas linhas e alguns tópicos para que ela possa funcionar através do grande loop das operações de pesquisa, onde nós estamos, na verdade, usando a perplexidade como um modelo de pesquisa. Então, automação muito legal.
+
+Eu voltarei quando terminar de funcionar. E, junto com esse agente de pesquisa, na verdade, vem uma mesa de agentes de pesquisa em AirTable. E isso é algo que eu gosto de chamar de sistema de agregação rotacional, porque o que isso faz é que, automaticamente, vai adicionar certos itens àquele database enquanto a automação está funcionando.
+
+Então, está adicionando todas as suas citações, seus snippets de HTML, citações para HTML, toda a sua pesquisa enquanto está indo. Está atualizando sua mesa ao vivo. Então, você também tem a informação rápida aqui para cada papel de pesquisa que você cria.
+
+Tudo está ligado de volta a um papel. E também temos um lugar para guardar cada um dos nossos PDFs, o que é ótimo. Então, essa automação está apenas terminando e, como você vai ver, vai descer essa rota de feito e, depois, vai criar um PDF para nós.
+
+Então, depois que o PDF foi criado, o funcionamento foi executado sucessivamente, adicionou aquele PDF para aquela mesa de pesquisa que eu estava mostrando para você. Só para mostrar o tempo que isso levou para funcionar, como você pode ver, levou 6 minutos e 32 segundos, o que não é ruim. E, quando você ver esse papel, você vai entender quanto tempo teria levado você para fazer o mesmo trabalho.
+
+Então, eu vou voltar para esse agente de pesquisa e vou para o PDF que foi criado. Eu posso clicar para abri-lo. E, como você pode ver, nós temos o meu tópico no topo.
+
+Então, água somente alimento por 9 dias e como ela regenera o corpo. E, depois, vai para uma introdução, compreendendo o potencial regenerativo, que é uma introdução interessante, sabe? Qual é o potencial regenerativo? E, como você pode ver, isso destaca o meu tópico de uma forma tão bonita e me dá recursos e tudo mais. Então, se eu clicar nesses recursos, vamos clicar nesse primeiro.
+
+Como você pode ver, ele usou um artigo ou um papel de pesquisa de Colômbia, Universidade de Colômbia, como a refeição e reforçamento do paradigma rejuvena o cérebro antigo. E ele está extraindo informação dessas fontes reputáveis para desenvolver seu papel de pesquisa. E isso é um PDF de 11 páginas.
+
+E não só ele mapeia as fontes com o dados, mas o que isso também faz é extrair uma grande lista de referências que ele usou para sua pesquisa. Então, muito profissional, muito legal. Essa é uma maneira que você pode construir um agente de ciência, é criar PDFs para você, dar-lhe as fontes e começar a fazer pesquisa para você em qualquer tópico que você deseja.
+
+Esse é esse agente e esse é o que construímos na comunidade. Se você quiser esse template, nós também o temos na comunidade, então você pode facilmente instalar isso e levá-lo a sucesso. O próximo agente que quero mostrar a você é um agente que me permite falar com todos os meus vídeos do YouTube.
+
+Então, como isso pode ser beneficioso? Bem, não é só beneficioso para mim, mas também para alguém que gostaria de falar com meus vídeos do YouTube, alguém que aprende dos meus vídeos do YouTube. O que eu fiz foi criar um agente que tem acesso a todos os meus transcritos do YouTube em algo chamado Vector Store. E um Vector Store é apenas um melhor sistema para a AI referenciar PDFs.
+
+É como um Google Drive em esteróides que quebra seus PDFs em pequenos segmentos para que quando você perguntar, ele possa ir e pegar aquele segmento de texto. Não é só usar todos os transcritos como contexto, mas eu diria que esse agente não veio à vida sem a ajuda de duas automações. Então, como você pode ver, nós temos a automação número um, e essa automação pega as URLs de vídeo do YouTube e depois as transforma em transcritos.
+
+A próxima automação processa meus transcritos do YouTube e as uploa para o meu Vector Store, que quando está no meu Vector Store, eu posso falar com ele e perguntar perguntas muito granular por horas e horas e horas do meu vídeo. Então, deixe-me mostrar como isso funciona. De novo, isso tudo começa dentro do meu AirTable.
+
+Eu construí um database AirTable para mim mesmo e a minha comunidade para armazenar transcritos do YouTube. Eu tenho um formato aqui, então, quando eu quiser obter um transcrito de um vídeo do YouTube, eu só posso uploadar aquela URL do vídeo. Talvez eu estou acessando o canal do YouTube do Productive Dudes, e eu quero perguntar algumas perguntas sobre um vídeo com o meu agente, então, eu posso ir até mais profundo nesse assunto.
+
+Digamos que eu quero perguntar sobre o agente self-learning do Carter. Eu posso clicar nesse vídeo, eu posso pegar essa URL e depois eu posso ir para a minha formação do AirTable e escrever isso e clicar em Submit. E o que isso vai fazer é que isso automaticamente vai criar um transcrito do YouTube em um tempo de segundos baseado na URL desse vídeo.
+
+E vai usar a primeira automação nesse trabalho agêntico. Como você pode ver, ele só se popularizou em um tempo de 10 a 15 segundos. E agora, desde esse vídeo inteiro, eu pulei o transcrito do vídeo inteiro.
+
+Isso em si é um ótimo caso de uso automático dentro do N8n, mas hoje eu quero mostrar como nós podemos fazer isso agêntico, como nós podemos ter um agente no loop. Primeiro, o que eu vou fazer é processar isso na minha loja de vetores. Então, o que isso vai fazer é pegar a minha URL do vídeo, vetorizar e então mudar essa etapa automaticamente para mim.
+
+Então, agora eu sei que está vetorizado dentro da minha loja de dados e tudo está pronto para ir. E agora, eu posso ir falar com esse vídeo e perguntar perguntas específicas. Então, eu poderia dizer, o que o Carter diz nesse vídeo sobre escrever um prompto de sistema? Eu poderia copiar o título do vídeo mesmo, já que eu tenho um monte de vídeos na minha loja de dados e eu poderia falar com vídeos indivíduos.
+
+Eu poderia dizer em, coloquei no vídeo, o que o Carter diz sobre escrever um prompto de sistema e como eu posso implementar isso em outros agentes? Então, isso seria um exemplo de ir mais profundo com um transcripto do YouTube. Mas, primeiro, eu precisava importar esse transcripto inteiro para a minha loja de dados para que eu pudesse vetorizar, então eu poderia falar com ele. Então, eu poderia enviar essa pergunta e ela vai procurar minha loja de dados aqui para aquele vídeo específico e para aquela parte do vídeo sobre escrever um prompto de sistema e aí ela vai me dar dicas de como eu posso usar o conselho do Carter para meus outros agentes também.
+
+Ele diz que um prompto de sistema deve ser conciso e incluir apenas personagens essenciais, sem adicionais. Ele conselha a fabricação de promptos que são estruturados usando XML e JSON para garantir um comportamento consistente do seu AI. Então, esse é o conselho real que o Carter deu no vídeo dentro da mensagem de escrever um prompto de sistema aqui.
+
+Então, esse é outro caso de uso de agentes que pode absolutamente transformar seus funcionamentos. Quando você tem a capacidade de falar com vídeos do YouTube que você gostou, que você aprendeu, pense sobre o que isso pode fazer com sua experiência de aprendizagem e como isso pode te propelir para aprender ainda mais. O próximo caso de uso de agentes de AI é um agente de análise de dados.
+
+Agora, isso pode se tornar muito robusto. Por enquanto, eu quero mostrar um exemplo muito básico para que você tenha sua mente girando sobre como você pode implementar um analista de dados no seu próximo funcionamento agêntico. Como você pode ver, eu tenho um nodo de agentes de AI conectado a dois ferramentas, dados financeiros e tipos de gráficos.
+
+Eu tenho meus dados financeiros em um jeito muito básico do Google Sheet. No final deste vídeo, eu vou mostrar como eu conectei um agente a um database que tem mais de 300 mil recordes. Então, quando você ver isso, saiba que você pode definitivamente escalar isso, mas nós vamos ter que sair do Google Sheet.
+
+Mas, por enquanto, esse analista de dados tem acesso a este jeito. Então, nós podemos ver coisas como que mês eu traquei certas métricas, como renda, gastos total, lucro neto, pesquisa e desenvolvimento, vendas de marketing e assim por diante. Então, eu também tenho o meu Airtable Tool mostrando os diferentes tipos de gráficos e exemplos de dados de como gerenciar gráficos específicos no meu funcionamento aqui.
+
+Então, este funcionamento utiliza algo chamado QuickChart, e QuickChart permite você gerenciar imagens com um simples API aberto. Então, quando você usa este URL e você escreve dados, por exemplo, você pode apenas mostrá-los assim e isso vai gerar um gráfico. Então, isso é o que implementamos em nossas instruções de agentes para que possamos gerar gráficos e fazer análises de dados nos nossos dados que nós temos.
+
+Então, o que eu vou fazer é, eu vou conversar com este analista de dados aqui e então, eu poderia dizer algo como, talvez eu vou olhar o meu dado financeiro, como me dê um gráfico comparando renda e lucro neto, digamos assim. Eu posso dizer, gera um gráfico comparando renda e lucro neto, e então, eu posso enviar isso. E o que isso vai fazer é usar um dos modelos novos do ChatGPT, na verdade, 03, para analisar meus dados.
+
+Ele vai procurar meus dados financeiros, procurar meus tipos de gráficos, se precisar, para gerar um gráfico. Então, agora você pode ver, ele está procurando ver qual tipo de gráfico ele deveria gerar, baseado no meu pedido aqui. E então, ele vai retornar tudo isso para o chat.
+
+Agora, você pode ligar isso para Telegram, WhatsApp, Slack, você não precisa fazer tudo isso dentro do N8n, eu só estou fazendo isso pelo exemplo, mas, como você vai ver, eu vou extender esse chat um pouco. Quando ele retorna a resposta, nós também vamos ter um gráfico com essa resposta. Então, ele acabou de gerar, e ele diz, este gráfico compara renda e lucro neto nos últimos 10 meses, e ele gera um gráfico inteiro para nós.
+
+No fundo aqui, ele diz, esta visualização claramente dispõe das fluctuações e as tendências de renda e lucro neto. Nós podemos guardar essa imagem se quisermos, esse gráfico inteiro. E então, nós podemos até perguntar mais perguntas e fazer mais análises de dados.
+
+Eu posso perguntar uma pergunta, como, baseado no meu renda e lucro neto, como você diria que meus margens de lucro são? Eu poderia enviar isso. E então, ele gera uma análise baseada no meu margem de lucro, mostrando percentagens reais baseadas no meu dados, e até me gerando um gráfico de margem de lucro. Agora, você poderia editar o estilo desse de qualquer forma que você quiser, mas agora, eu posso ver o meu margem de lucro.
+
+Eu poderia guardar essa imagem. E, como você pode ver, quando eu clico, eu posso ver um pouco melhor. Todo esse dado é arbitrário, é claro.
+
+Eu apenas gerenciei alguns dados falsos com o ChatGPT, mas, como você pode ver, esse dado mostra margens de lucro de menos de 80% em maio de 2024. Então, essa empresa deve ter estado lutando, mas eles rapidamente rebateram de volta em torno de 30%. E isso é apenas um bom jeito de conversar com dados, ver dados, usando o N8n e criando um agente de análise de dados.
+
+Agente de AI, uso número cinco é um criador de databases. Sim, eu tenho esse agente que cria databases para mim. Agora, eu sou alguém que usa o Airtable bastante.
+
+Como você pode ver, eu tenho um monte de databases diferentes aqui. E uma das principais razões por quais eu tenho todas essas databases aqui é porque eu tenho um agente que pode criá-las para mim. Então, quando eu preciso de um database, seja para a sorte de informações, criar um ferramento para o meu agente, literalmente, o que eu preciso de um database para, eu posso ter esse agente, usar o Airtable HTTP Request e um input simples de forma onde eu descrevo, usando língua natural, o objetivo do meu database.
+
+Depois disso, vai criar totalmente um database para mim com regiões, colunas, opções de seleção e assim por diante. Então, por exemplo, eu poderia dizer que essa forma aqui é o tipo de database que eu quero. Por exemplo, eu poderia dizer que eu quero um database de projetos de construção que traga status de trabalho e tempo final.
+
+Eu poderia mantê-lo simples por enquanto ou eu poderia fazê-lo ainda mais robusto. Mas, uma vez que eu clico em Submit, vai enviar isso para o meu agente AI que vai decidir qual estrutura usar para o meu trabalho. E, como você pode ver, nem precisava procurar os tipos de campo, porque eu promtei na parte de trás aqui sobre como construir databases de Airtable.
+
+E, como você pode ver, esse HTTP Request correu sucessivamente. Então, se eu for para o meu Airtable, como você pode ver, agora temos um tracker de projetos de construção. Então, quando eu abro isso, como você pode ver, isso nos dá exatamente o que precisamos.
+
+Um database pré-populado com descrição, com status de trabalho aqui, de não ter começado em progresso, completado sobre revista, e nós até temos um campo de tempo final dentro do nosso Airtable. Algo muito simples, mas esse agente AI realmente me ajuda porque eu posso implementar isso em meus próprios workflows. Eu poderia chamar esse agente quando eu precisar para criar um database para mim, o que definitivamente adiciona a essa saída não determinista.
+
+Se eu preciso de um database, ele pode criar um para mim e até popularizá-lo com informação, tudo sem eu intervenir em nenhum caso. Agente AI uso caso número seis é o meu sistema de agentes de gerador de encontros. Agora, essa coisa é louca.
+
+Você pode estar olhando isso e pensando, o que no mundo está acontecendo aqui? Bem, não se preocupe, isso não está acontecendo em um único fluxo de trabalho, mas eu draguei todas essas automações, agentes e ferramentas, tudo em um espaço, para que você possa ver tudo que foi usado para criar o meu gerador de encontros. Agora, onde o sistema começa é o gerador de encontros, e sempre que eu tenho um problema, sempre que eu tenho um pedido, uma pergunta, o trabalho desse agente de gerador de encontros é chamar o método adequado que eu preciso para resolver meu problema. É uma pergunta sobre meu calendário, meu CRM? Eu quero criar um encontro no Zoom? Eu quero enviar um e-mail a alguém? Esse é o trabalho desse agente de gerador de encontros.
+
+Ele depois o envia para o método respeitado que até tem mais ferramentas para cumprir meu pedido. Então, uma solução muito robusta. Deixe-me mostrar como funciona.
+
+No gerador de encontros, eu só posso usar Telegram para isso. Então, eu tenho Telegram aberto para a direita e eu tenho meu agente de gerador de encontros aberto para a esquerda. Agora, você não vai poder ver essa corrida porque eu tenho ela ativada, mas eu posso perguntar uma pergunta, algo como, o que está no meu horário para amanhã? E quando você instala um agente como esse com um gerador de encontros que se conecta a outras ferramentas, você tem um funcionamento coesivo que funciona como mágica, porque cada ferramenta tem sua própria responsabilidade.
+
+Cada funcionamento, mais ou menos, tem sua própria responsabilidade. Então, quando eu pergunto uma pergunta como essa, o que ela vai fazer é procurar o meu calendário do Google e responder com todos os meus eventos que eu tenho amanhã. Então, como você pode ver, rotina de manhã, corte de cabelo com o Carter, A.I. Foundations Q&A.
+
+E quando eu vou aos meus eventos amanhã, como você pode ver no 19° aqui, eu tenho todos esses eventos. Então, eu tenho rotina de manhã, e eu vou fazer minha tela maximizada, corte de cabelo com o Carter e o A.I. Foundations Q&A. Agora, esses são eventos arbitrários que eu criei no calendário de teste, mas funciona com o seu verdadeiro também.
+
+Eu estava mostrando isso como um exemplo. Outra coisa que eu poderia fazer é criar eventos aqui. Então, eu poderia dizer algo como crie um evento com o Nolan para amanhã às 17h30.
+
+Nós vamos falar sobre treinamento de maratona por uma hora em uma chamada no Zoom. Então, ele vai tomar toda essa informação. Amanhã às 17h30, uma hora em uma chamada no Zoom.
+
+E então, eu digo, crie um evento de calendário com o Nolan. Bem, como ele sabe quem é o Nolan? Bem, lembre-se, ele tem acesso ao meu database CRM. Então, ele vai saber tudo sobre o Nolan, certo? Ele vai saber que o Nolan é o editor-gerente do A.I. Foundations.
+
+Ele vai saber o e-mail do Nolan, o nome completo do Nolan aqui. Então, essa solução funciona para você quando você a instala do jeito correto como esses diferentes ferramentas e você dá acesso a certas coisas. Então, eu vou enviar esse pedido.
+
+E o que isso vai fazer é criar um evento no meu calendário. Vai criar uma reunião de Zoom na minha conta do Zoom. Mas essa é a parte ótima dessa automação.
+
+Diz que há um conflito de planejamento na hora em que você pediu. Você tem um evento, o Q&A da A.I. Foundations, de 17h30 até 18h amanhã. Porque lembre-se, eu pedi para fazer de 17h30 até 18h30 e diz que eu tenho um evento de conflito, o que é ótimo.
+
+Isso é o que você quer que eu faça. Então, agora eu posso até responder em voz. Eu só vou dizer, vamos fazer de 18h30 até 18h30 em vez.
+
+Obrigado por isso. E como isso é multimodal, eu posso aceitar a minha voz, eu posso aceitar o texto. E eu adoro como isso me dá sugestões baseado no meu horário real.
+
+E então, ele vai fazer aquele evento no dia certo. Como você pode ver, ele já adicionou o treinamento de maratona. E agora, ele vai adicionar uma chamada no Zoom para aquele evento também.
+
+Porque lembre-se, eu disse que eu quero isso em uma chamada no Zoom. Então, ele vai criar uma reunião no Zoom para mim. Eu vou esperar para essa mensagem se popularizar no chat.
+
+E ela deveria me dar uma boa sugestão com os detalhes do meu evento, o meu link para o evento e assim por diante. Como você pode ver, ele disse que a discussão de treinamento de maratona com o Nolan Sirach foi sucessivamente planejada. Aqui estão os detalhes.
+
+Ele me dá o dia, o tempo. Se eu for para o meu Zoom e eu clico em Refresh, o que você vai notar é que temos discussão de treinamento de maratona vindo amanhã de 6h30 até 7h30. Temos uma descrição, um link de reunião no Zoom, um link de evento e tudo o que precisamos.
+
+Prontos para entrar aqui. Eu até poderia dizer, e-mail o Nolan os detalhes do evento e enviar isso. E o que isso vai fazer é procurar o meu CRM para o e-mail de Nolan aqui.
+
+E então, vai e-mail ele com os detalhes do evento. Esse é o meu agente de gerente de reunião. Eu tenho esse dentro da comunidade também.
+
+E eu mostrei isso em outros vídeos do YouTube. Mas só para mostrar que o e-mail funciona, diz que o e-mail para o Nolan confirmando a discussão de treinamento de maratona foi sucessivamente enviado. Como você pode ver, o e-mail teria enviado.
+
+Esse é um e-mail de teste. Nolan.example.com não existe, mas essa é a coisa que teria enviado. Você poderia trabalhar com o formato muito facilmente.
+
+O caso de uso do agente de gerente de reunião número 7 permite que você crie shorts do YouTube viral. Agora, eu vou enviar esse para o meu irmão ou cofundador da Fundação AI, Carter, para demonstrar isso, porque ele é o que construiu isso. Mas eu quero mencionar, essa é uma das automações dentro da nossa comunidade, como muitas dessas foram durante o vídeo.
+
+Mas agora, aqui está o Carter com o agente de shorts do YouTube viral. Obrigado, Drake. Estou feliz em entrar para o caso de uso número 7. O caso de uso número 7 é gerar vídeos de forma curta dentro do N8n.
+
+Eu só vou usar Telegram aqui para que eu possa conversar com esse agente no meu computador ou no meu celular quando estou no caminho. E a coisa legal dessa automação é que ela tem três passos. Então, ela tem um passo de verificação aqui, e depois ela tem a automação em si mesmo.
+
+E, finalmente, há um passo de verificação para se queremos upload esse vídeo direto para o YouTube. E esse agente vai verificar comigo e ver se eu realmente quero upload isso ou se eu quero ir em frente com uma ideia de vídeo. A primeira parte aqui, como eu disse, é só verificar se queremos usar a ideia e, basicamente, só me ajudar a pensar ideias.
+
+Então, esse agente aqui tem duas respostas diferentes que ele pode usar. Ele pode usar uma resposta conversacional, se ele está apenas falando comigo, ou ele pode, na verdade, enviar um pedido para que uma ideia de vídeo passe. E, se ele envia um pedido para que uma ideia de vídeo passe, ele irá descer essa rota aqui, onde ele pode ir para a automação ou vira de volta se eu negar a ideia de vídeo que ele me dá.
+
+Uma vez que uma ideia de vídeo for aceitada, ele vai para o Generate Video Flow e o ideador, na verdade, cria o script, o título e a descrição para a ideia de vídeo. E é aqui que você pode se tornar realmente criativo com seus prompteres de sistema e você pode realmente fazer isso do seu estilo. Depois, nós vamos para algumas requisitas de HTTP aqui.
+
+Primeiro, nós temos uma requisita de HTTP em 11 labos e isso vai em duas direções. Primeiramente, ele corta o script para cada personagem individual e vê quanto tempo esse script vai ser, para que o meu prompter de imagem possa decidir quais imagens para gerar para o vídeo. E também vai nessa rota aqui para receber apenas o arquivo de áudio.
+
+Uma vez que ele chega ao prompter de imagem, o prompter de imagem vai criar uma quantidade variável de imagens aqui baseado na longa do script e vai distribuir essas para replicar onde ele vai gerar imagens usando FluxLaura, que é um modelo de geração de imagens. Então, ele vai esperar aqui até que as imagens se completem e pegar as imagens. E então, essas imagens são usadas para pedir um vídeo.
+
+Um passo muito parecido aqui, ele vai pedir aquele vídeo, esperar para o vídeo se completar e depois pegar o vídeo final. E ele vai iterar por esse fluxo o quanto de vezes ele precisa, baseado em quantas imagens viram, que é baseado na longa do script. Então, ele vai agregar todos esses vídeos juntos, colocar juntos o arquivo de áudio e upload-o para gerar um código no ZeroCodeKit.
+
+O trabalho desse código é gerar o pedido do editor de vídeo. E então, uma vez que o pedido do editor de vídeo for gerado, vamos enviar isso para um API de edição de vídeo chamado Creatomate. Vamos esperar para o vídeo render e então, finalmente, vamos ter o node GetFinalVideo aqui, que só recebe o URL do vídeo final.
+
+Então, vamos guardar esse URL do vídeo final e todos os dados em um AirTable e vamos enviá-lo para outro passo de verificação em Telegram, onde ele vai voltar e me perguntar se eu quero postar o vídeo para o YouTube. Se eu dizer não, ele vai descer e vai dizer, ok, eu não uploadei isso, mas você pode acessá-lo no AirTable. Mas se eu dizer sim e concordo com o vídeo e quero upload-o para o YouTube, então ele vai descer essa rota aqui, onde vai receber o Base64 para aquele vídeo, converti-lo para um arquivo, uploade-o para o YouTube e então, adicionar o ID do vídeo do YouTube para o nosso database do AirTable para que eu possa ter um link de vídeo.
+
+Então, ele vai me enviar uma mensagem com o último upload de vídeo no YouTube. Então, deixe-me mostrar como isso funciona. Eu posso dizer, eu quero gerar uma ideia de vídeo sobre café.
+
+Eu posso enviar isso. E aqui, ele me dá uma ideia de vídeo. Então, diz, interessante fato sobre a ciência da cozinha de café.
+
+Se eu quisesse, eu poderia apenas descer isso e clicar em abrir. E então, ele vai voltar para mim muito intuitivamente e vai dizer, o que eu posso melhorar, certo? Então, ele diz, pode me contar um pouco mais sobre o que você está planejando para o vídeo de café? Você está se orientando para uma dica de cozinha rápida, um fato divertido sobre a cultura de café ou talvez algo mais?
+ Este arquivo é mais longo que 30 minutos.
+ Atualize para Ilimitado em TurboScribe.ai para transcrever arquivos de até 10 horas.

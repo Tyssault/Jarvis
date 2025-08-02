@@ -1,0 +1,122 @@
+O método mais FÁCIL para instalar N8N em sua VPS (Railway)
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Fala, seus viciados em N8n. Sejam bem-vindos ao vídeo que vocês tanto pediram aqui no canal. Como instalar N8n na sua VPS, ou seja, no seu próprio pedacinho de servidor, da forma mais simples, mais rápida, mais barata possível para começar a rodar N8n sem gastar praticamente nada, galera.
+
+Então, vamos lá. Mão na massa. Primeiro ponto que eu quero abordar com vocês é o seguinte.
+
+Por que instalar N8n em uma VPS e não usar na nuvem, por exemplo? Galera, e aqui a resposta é uma só, sem sombra de dúvida. É custo, tá? Vocês sabem que eu sou a pessoa que jamais vai ficar falando precisa ser o mais barato possível, precisa ser de graça. Pô, nada disso.
+
+A gente aqui acredita que as coisas têm que ter qualidade para não se tirar a dor de cabeça. Só que o problema disso é quando a gente fala do que a gente mais fala ultimamente, que são agentes de IA conversacionais, galera. E para entender isso aqui, você precisa entender como as ferramentas cobram.
+
+Vou explicar de forma bem rápida aqui, porque eu acho que isso aqui a maioria de vocês já sabem. Então, olha só. O N8n cobra por workflow executado.
+
+O que isso significa? Se você está lá no N8n, isso aqui, por exemplo, é um workflow que eu tenho. Executou aqui, rodou 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 12 passos aqui. Vai ser só uma execução de workflow.
+
+Então, quando você vai lá na precificação do N8n, logo no plano mais barato, que é de 125 reais por mês, ele te dá 2.500 execuções de workflow por mês, com passos ilimitados. Não importa quantos passos. Podia ter mil passos aqui, entendeu? Executou o workflow uma vez só, é uma execução.
+
+Então, posso executar 2.500 workflows. Está bem de boa. Já o make, ele cobra por operação, que ele também chama de op, ou operation, enfim.
+
+Ou seja, é como se fossem os nós lá dentro. Então, se você pegar uma automação que eu tenho no make aqui, por exemplo, isso aqui tudo, o que o N8n chama de workflow, o make chama de cenário, e aí cada um desses caras aqui é uma operação. Os verdinhos aqui, claro, ele não cobra, que são operações internas do make, mas enfim.
+
+1, 2, 3, 4, 5, 6, 7, aproximadamente 8 operações teria aqui. Então, se eu rodar esse cenário, ele vai considerar umas 8 operações, mais ou menos. Então, vamos dar um exemplo aqui.
+
+Vamos dizer que eu queira rodar uma automação com 2.000 execuções, com 4 nós lá dentro, por exemplo. Cara, no N8n seriam 2.000 workflows, e no make seriam 8.000 operações, mais ou menos. Cara, o plano mais barato.
+
+O N8n aqui está num plano mais barato. O plano mais barato do make te dá 10.000 operações. Também, você vai pagar 9 dólares.
+
+Cara, está bem de boa ir para a nuvem. A grande questão aqui se chama agentes de IA conversacionais, galera. Porque aí essas quantidades começam a se tornar absurdas.
+
+Então, galera, eu vou compartilhar com vocês uma calculadora. Vou até deixar o link dessa calculadora aqui na descrição do vídeo. Vocês podem fazer cópia.
+
+É uma calculadora que te ajuda a entender quantas operações, quantos workflows, enfim, quantas ações vão ser executadas pelo teu agente de IA conversacional. Então, imagina o seguinte. Você vai ter um agente aí rodando, cara, 50 conversas por dia.
+
+Não é nada demais, tá? É um modelo de negócio pequeno assim. Vamos dizer que cada pessoa troca umas 10 mensagens com o agente. Ou seja, ele manda 5 mensagens, o agente responde 5 vezes.
+
+Uma conversa também bem chutinha assim. Vamos dizer que lá no make você tenha mais ou menos uns 10 nodes rodando entre a própria IA, enfim, busca de CRM, um monte de coisa ali. Como eu mostrei para vocês aqui, né? Então, isso aqui serão no N8n 15 mil workflows executados.
+
+E no make vão ser 150 mil operações. No N8n, para rodar 15 mil workflows, a gente vai ter que vir aqui nesse plano de 50 mil execuções. Então, você já está falando, cara, para rodar um agente pequenininho, você vai para 750 reais por mês.
+
+No make, para rodar 150 mil operações, você já vai para 99, 153 dólares por mês. Também vai dar 500, 600, 700 pila para mais aqui, né? Claro, e isso para um agente que é pequeno, tá? Se você colocar em um cliente maior, que vai ter, de repente, umas 400 conversas por dia com conversas um pouquinho mais extensas, aí já vira insanidade. 240 mil workflows.
+
+Cara, você já tem que ir para plano personalizado do N8n. 2 milhões de operações. Também já passa do maior plano do make, que está de mil dólares.
+
+Então, assim, é por isso que eu considero obrigatório instalar N8n na sua própria VPS para rodar agentes de IA conversacionais. Especialmente se você for rodar algum agente em produção. Se você está só brincando, aprendendo, bem, sinceramente, tanto faz, né? Então, agora vamos para o passo a passo, galera.
+
+O primeiro passo é você acessar a Railway e criar sua conta. Para isso, você vai acessar o link que eu vou deixar na descrição, link.sencodar.com.br barra Railway. Aí você vai criar a sua conta gratuita e vai ganhar 5 dólares de crédito que já vão te permitir fazer tudo o que a gente vai fazer aqui hoje, tá? Então, você foi lá, fez a sua conta free, você já pode acessar o seu dashboard.
+
+Eu estou em uma conta free, ó. Eu ainda tenho 4,82 dólares sobrando. Eu tenho um projeto aqui, vou criar um novo projeto junto com vocês. Mas antes de tudo, presta atenção, ó. Antes de sair criando o projeto, conecte sua conta do GitHub, tá? Senão você não vai conseguir rodar o teu projeto.
+
+Isso é uma validação que o Railway faz. Então, você vai em Account Settings, Account GitHub. Vou mostrar para vocês, ó. Botão direito ali, ó. Account Settings, lá em cima.
+
+Account, aqui embaixo. Acho o GitHub. Aí, está vendo esse botãozinho Connect? Vai estar aqui.
+
+O meu já está conectado. Só conecta com a tua conta do GitHub. Renato, eu não tenho conta do GitHub.
+
+Cria uma conta do GitHub, você não vai pagar nada por isso. Então, cria a conta do GitHub e conecta aqui. Aí sim, a gente pode ir para o próximo passo, que é instalar um template pronto chamado N8n with Workers.
+
+Aí fica fácil demais, né, galera? Template pronto, pelo amor de Deus. Então, tá. Voltamos lá para os meus projetos.
+
+Clica aqui em Dashboard, né? O teu não vai ter nenhum projeto, porque você acabou de criar a tua conta. Aí, você vai clicar em New. Deploy a template.
+
+Está vendo? Você pode puxar um repositório do GitHub, um banco de dados. Cara, um monte de coisa que você pode fazer. Você vai em Deploy a template.
+
+Você vai ver que o template, o modelo pronto mais popular da Railway, já é exatamente o que a gente vai usar, que é o N8n com Workers. É esse cara aqui. Se por acaso não aparecer, sei lá Deus por quê, aí você procura por N8n, acha esse cara, o With Workers, e clica nele.
+
+E aí, ele vai te falar, olha, esses são os serviços que eu vou instalar. Eu vou instalar o N8n, eu vou instalar os Workers, vou instalar o Redis, que é como se fosse um banquinho de dados temporário. O Postgres, que é um banco de dados relacional.
+
+Enfim, isso aqui é o que ele precisa para rodar. Deploy. Só clicou em Deploy, e agora você vai esperar.
+
+Ele fala assim, criando o projeto, e agora você vai só aguardar. Então, você foi em New, Project, Deploy a Template, N8n With Workers, clicou em Deploy, e agora você aguarda. Vamos ver como é que está.
+
+Ele está lá, configurando tudo. Aplicando. Agora, nosso editor vai fazer um Time Warp, que a gente vai pular para o futuro, em 3, 2, 1, e voltamos.
+
+Galera, deu tudo certinho. Foram 1 minuto e meio aqui, mais ou menos. Deu redondo.
+
+No entanto, eu conheço esse bichinho aqui, galera. Não é sempre que vai dar. Por quê? Não sei.
+
+Deus, não sei que loucura é. Que às vezes simplesmente dá pau, entendeu? Às vezes você vai instalar, vai seguir exatamente esse mesmo método, ele vai dar crash. Ah, não conseguiu, não sei o quê. Então, cara, não sei.
+
+É o destino. O destino joga um dado, quando você clica em Deploy, e assim, 5 vezes em 6 vai funcionar, mais uma em 6 não vai. E aí, o que você faz quando não funciona? Espera, dá uns 5, 10 minutinhos, que ele vai tentando consertar, não consegue.
+
+E aí, você vai ver que aqui, quando você clica em Primary, não vai aparecer ativo aqui, não vai estar verdinho, vai estar vermelho, vai estar crashed aqui. Cara, você só clica em Redeploy, ou botão direito aqui, Redeploy. Só dá Redeploy.
+
+Aí, esse aqui vai estar vermelho, dá Redeploy, entendeu? Já fiz isso várias vezes, e cara, ele corrigiu, funcionou na boa, assim. A tua segunda opção também, caso comece a dar pau, assim, que novamente falei, cara, sei lá, por quê? Você só vai em Settings, Danger, que é perigo aqui, não. E aí, você vem Deletar Projeto aqui.
+
+Cara, deleta o projeto, cria um novo e vai na boa, entendeu? O próximo vai dar certo, assim. Então, enfim, não tem por que ficar quebrando a cabeça com isso. No meu caso, já deu certo.
+
+Aí, você vai clicar em Primary aqui, e você já tem a URL do teu projeto do N8n. Então, cliquei aqui na minha URL, e ele já vai cair no meu primeiro acesso do N8n, que é quando eu crio o meu primeiro acesso aqui. Renato A.C. Senha YouTube 99.
+
+Aí, ele te dá as configurações iniciais aqui. Ele fala para você inserir o seu e-mail, para ele te mandar uma chave de licença, para você conseguir executar alguns recursos amados aí de graça. Então, pede para ele essa licença, aí você insere a licença depois.
+
+Eu vou dar Skip aqui, que eu não preciso. Mas aí, você já está com o teu N8n rodando aqui, galera. E aí, você pode começar aqui com um agente de ar, ou você pode começar do zero, e você já consegue começar a montar os teus Workflows aqui.
+
+Filazinho. E aí, uma observação, galera. Se você precisar atualizar, porque o que acontece? Você está usando o N8n, aí você vai ver que aqui vai começar a aparecer assim, Update disponível, atualização disponível.
+
+O N8n está lá atualizando as versões deles. Você não atualiza pela interface do N8n. Você volta lá na Railway, no teu Dashboard, abre o projeto, aí você clica aqui no primário, no Primary, você vem no botão direito e redeploy, que ele vai subir de novo uma versão atualizada do teu N8n.
+
+Então, para atualizar, volta lá na Railway, projeto, Primary, três pontinhos, redeploy. Aí, você atualiza a versão do teu N8n. E pronto, galera.
+
+No entanto, a gente tem um PS aqui, que é o seguinte. Essa é a melhor estrutura temporária de VPS para N8n que eu conheço. É a mais simples de instalar, vai rodar com 5 dólares por mês, porque você vai consumindo créditos, isso aqui não é de graça para sempre.
+
+Você tem aqueles 5 dólares que você vai consumindo, depois você vai ter que colocar mais alguns dólares ali, vai rodando. Então, vai dar na faixa de uns 5 dólares por mês. É a forma mais barata que tem de rodar N8n que eu conheço.
+
+E essa estrutura é completinha. Então, ela já tem o Postgres, que é o banco de dados, já tem o Redis, já tem os workers. Cara, ela é bem legal.
+
+No entanto, eu usaria essa estrutura somente para aprender, para rodar os primeiros fluxos, rodar no primeiro cliente, se você está indo para a linha de se tornar um gestor de IA. Agora, quando você for realmente botar o negócio em produção, ou seja, vai rodar com o agente conversacional teu mais feroz, quando você for colocar isso em vários clientes, ou num cliente um pouquinho mais parrudo, quando você realmente vai levando a cérebro em cadeira, quando você fala, cara, agora eu não sou mais um aprendiz, agora eu sou um executor. Aí, eu te digo o seguinte, instale a estrutura fodástica de VPS para N8n.
+
+Qual é a estrutura fodástica? É a que a gente ensina aqui no módulo VPS e Self Hosting da Comunidade Sem Godal. O link vai estar na descrição do vídeo. Então, lá a gente recebeu o Luiz da PromovaWeb, que ele é ninja nisso.
+
+E ele fala para a gente sobre a VPS, o Portainer, o Trific, e principalmente o Docker Swarm. São várias tecnologias que você fala, nossa, meu Deus, quanta coisa. Cara, é super simples.
+
+Você vê a aula de 4 minutos, 6 minutos, é de boa. E assim, eu fiquei pensando, cara, como é que eu explico para a galera o benefício? Aí, eu falei aqui com o Chat EPT, eu falei, Chat EPT, me traga analogias para um leigo para tentar explicar por que isso aqui é tão importante, principalmente o Docker Swarm. Aí, ele fala, cara, se você não usa Docker, é como se você tivesse contratado um servidor fixo lá para rodar o teu N8n.
+
+Se ele cair, teu N8n cai, teus agentes de AK em tudo caem. Se você já usa Docker, é como se você criasse uma caixinha onde tem o teu N8n, todos os teus agentes, todas as tuas automações, configurações, tudo rodando lá. Aí, você pode pegar essa caixinha, coloca nesse servidor, se dá pau nesse servidor, você traz para esse.
+
+Enfim, você tem essa facilidade. Agora, se você tem o Docker Swarm, que é o que a gente ensina ali na comunidade, é como se você tivesse múltiplos servidores, todos eles com uma caixinha tua lá, e a tua caixinha do N8n está inspirada em todos. Então, se um cai, os outros seguram.
+
+Ele até brinca, quando tiver Black Friday, ele abre novas cópias sozinhas para aguentar o tráfego. Cara, é a estrutura mais robusta que eu conheço de instalação do N8n para nunca te deixar na mão. E acredite, quando você está falando de automações, de agentes, de IA, cara, você não vai querer ficar na mão, porque uma queda dessa de um final de semana te custa às vezes 100 vezes, sei lá, o que você pagaria para entrar na Comunidade Sem Codar para aprender a fazer isso aqui.
+
+Então, em resumo, começando agora, use essa instalação da Railway pronta. Já está virando ninja? Use a estrutura fodástica de VPS da Comunidade Sem Codar. Galera, eu vou disponibilizar para vocês esse documento com esse passo a passo, o link dele vai estar na descrição do vídeo, a calculadora de custo, tudo aqui, inclusive o minicurso gratuito de criação do meu primeiro agente em N8n, também vai estar disponível aqui.
+
+Então, não deixe de ir no link da descrição e baixar os materiais dessa aula. Espero que você tenha conseguido montar a tua VPS, agora toca a pau aí, um abraço e nos vemos semana que vem.
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.

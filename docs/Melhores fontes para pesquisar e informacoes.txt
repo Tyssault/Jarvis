@@ -1,0 +1,22 @@
+Principais fontes:
+https://www.freecodecamp.org/news/build-a-local-ai/?utm_source=chatgpt.com
+https://github.com/NirDiamant/GenAI_Agents/tree/main/all_agents_tutorials
+https://github.com/NirDiamant/GenAI_Agents/blob/main/all_agents_tutorials/mcp-tutorial.ipynb
+https://github.com/coleam00/ai-agents-masterclass?tab=readme-ov-file
+https://github.com/microsoft/ai-agents-for-beginners?utm_source=chatgpt.com
+https://github.com/abdallah-ali-abdallah/pydantic-ai-agents-tutorial?utm_source=chatgpt.com
+https://github.com/langchain-ai/langchain/tree/master
+https://github.com/langchain-ai/local-deep-researcher
+https://github.com/langchain-ai/open_deep_research
+https://chatgptbrasil.com.br/2025/04/03/como-criar-um-agente-de-ia-local-com-python-analise-inteligente-de-dados-em-minutos/?srsltid=AfmBOop__rK4R9_sZ4qQz33mAsqfnvXlaCESFz1bBEecfTDYMBpAvbvQ#:~:text=Para%20construir%20nosso%20agente%20local%2C,utilizaremos
+https://chatgptbrasil.com.br/2025/07/28/como-construir-agentes-de-ia-guia-completo-com-4-camadas-de-desenvolvimento/
+https://chatgptbrasil.com.br/2025/07/28/5-servidores-mcp-essenciais-para-desenvolvimento-acelerado-com-ia-em-2025/
+
+Fontes:
+https://arxiv.org/abs/2505.22571?utm_source=chatgpt.com
+https://arxiv.org/abs/2407.17535?utm_source=chatgpt.com
+https://arxiv.org/abs/2309.07870?utm_source=chatgpt.com
+https://www.reddit.com/r/LocalLLaMA/comments/1hanad7/favorite_local_ai_agent_tool/?tl=pt-br
+https://www.reddit.com/r/AI_Agents/comments/1jtj5xl/beginner_help_how_can_i_build_a_local_ai_agent/?tl=pt-br
+https://chatgptbrasil.com.br/2025/04/03/como-criar-um-agente-de-ia-local-com-python-analise-inteligente-de-dados-em-minutos/?srsltid=AfmBOoqPy3p3xCzs9W8monqODws_GQBP-n6Pe3sOc-ROSQMRFGRXVOTK
+https://localai.io/?utm_source=chatgpt.com

@@ -1,0 +1,91 @@
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)
+
+Eu adoro codificar meus próprios agentes de A.I. Isso me dá tanta controla para fazer o que eu quiser. Mas aqui está a coisa, codificar um agente de A.I. leva um monte de tempo e um monte de debugging. E se você pensa em criar um agente de A.I. poderoso, você tem que codificá-lo sozinho.
+
+Bem, eu tenho algumas notícias para você. Hoje vamos falar sobre o N8n e como você pode usá-lo para criar workflows de agentes de A.I. super poderosos com absolutamente nenhum código. O N8n é um atalho de automação de funcionamento muito poderoso, parecido com o Make.com ou Zapier.
+
+Mas ele está acima da competição, por dois motivos grandes. O primeiro motivo grande por que o N8n é absolutamente o melhor é que você pode hostá-lo sozinho. E o que isso significa é que você paga um total de zero dólares para funcionar suas execuções de workflows com o N8n, não importa quantos você tem por mês.
+
+Em um ponto, eu estava pagando 174 dólares por mês para o Zapier e meu negócio ainda tinha muito espaço para crescer. Então isso pode te salvar milhares e milhares de dólares. Literalmente, a única coisa que você tem que pagar com o N8n é a máquina que você tem no cloud para hostar sua própria instância.
+
+E isso pode ser tão barato quanto seis dólares por mês se você usar um serviço como DigitalOcean, que é o que eu usei. A segunda razão por que o N8n é absolutamente o melhor é que ele tem integração direta com a LangChain, que é a minha biblioteca favorita para construir aplicações de AIs que eu cobro muito neste canal. Então, com o N8n como parte da execução de sua execução de workflows, você pode ter sua própria linha custom LangChain, onde você pode escolher qualquer modelo de língua grande que você quiser.
+
+Há muitas opções para trabalhar com memória de conversa. Há tantas opções que você tem para diferentes ferramentas que você pode usar e você pode criar suas próprias ferramentas. E também há coisas como output estruturado.
+
+Então você tem toda a robustez que você geralmente teria em um agente de AIs que você código sozinho. Mas desta forma, não há código e você pode tê-lo como parte de uma execução de N8n. Então, aqui é o que eu vou mostrar para você hoje.
+
+Eu vou usar o agente de AIs para gerenciar minhas tarefas de Asana que eu estou construindo como parte da série Masterclass do agente de AIs. E eu vou mostrar para você como recriar uma versão básica dele no N8n sem código em apenas alguns minutos. Então você vai poder criar um agente de AIs poderoso sem código em N8n no final deste vídeo.
+
+Beleza, então antes de começar a criar nosso agente de AIs de Asana em N8n, eu quero falar sobre self-hosting, porque isso é o que faz o N8n tão poderoso e muito custoso, não importa o quanto você está escalando. É a minha ficha favorita do N8n, talvez além da coisa do Lanchain. Então eles têm uma documentação realmente, realmente ótima sobre como você pode self-hostar.
+
+Esta é a página especificamente para self-hosting com DigitalOcean, que é o meu serviço favorito para Cloud Compute. Eu não sou apoiado pelo DigitalOcean, ou N8n, ou Lanchain, ou nenhum desses caras. Seria ótimo se eu fosse, mas estes são apenas os serviços que eu adoro usar, que eu estou usando há anos e anos e anos.
+
+Eu uso DigitalOcean para um monte de outras coisas e sempre funcionou bem para mim. Então eu recomendo ir para esta documentação e se inscrever no DigitalOcean e hostar lá. 6 dólares por mês é tudo que leva no DigitalOcean para conseguir Cloud Compute que é poderoso o suficiente para gerar N8n.
+
+Então, com isso fora do caminho, podemos ir em frente e realmente descer na plataforma do N8n. Então aqui estamos na N8n UI, que está diretamente hostada dentro do meu Droplet DigitalOcean. E o N8n, você pode ver diretamente, é tão, tão simples.
+
+E isso é uma coisa linda, porque não queremos um monte de coisa que bloqueie o nosso software. Então tudo o que temos aqui são workflows e credenciais. Então eu vou começar com uma das workflows básicas que eu já criei, apenas para descrever um pouco de como o N8n funciona.
+
+E isso vai ser o workflow que nós temos para criar tarefas no Asana. Então se você usou Make.com ou Zapier ou algo assim antes, isso vai parecer bem familiar para você, porque cada node que nós temos em um workflow, que é basicamente apenas um gráfico de ações combinadas, vai ser ou um trigger ou uma ação. Então aqui nós temos um trigger de um workflow.
+
+Então este é o ponto de entrada para o nosso workflow. E cada outro node dentro disso, que é apenas um neste caso, é uma ação. E é isso que vai fazer algo, tipo, ir para o Asana e fazer uma tarefa, que é como o que isso faz aqui, ou ir para o Google Drive ou Salesforce ou nosso database Superbase, o que for.
+
+Então com este workflow, que é apenas um workflow muito básico, nós estamos criando uma tarefa no Asana. Então nós temos um nome e um dia de duro que é passado para este workflow. Então nós temos dados dinâmicos aqui para criar uma tarefa, dado um nome e um dia de duro.
+
+E então eu só coloquei tudo no meu projeto de encodagem no Asana por enquanto. Nós veremos isso em um pouco, como isso funciona. Vai ser bem parecido com o Asana AI Agent que está nos outros vídeos da minha série Masterclass de AIs.
+
+E então este é o workflow, na essência, para cada ação você tem os parâmetros e os setores também. E eles também têm documentação. Então para cada ação que você tem no N8n, há documentação para fazê-lo realmente, realmente claro enquanto você coloca as coisas.
+
+E também ajuda muito com as suas credências também. Então, tipo, quando você cria credências para o Asana, você precisa de um token de acesso, mas, com certeza, eles têm documentação, até mesmo para ajudar você a ter credências para aplicações específicas que você pode se conectar ao N8n. Então eles fazem tudo tão, tão fácil.
+
+Não só para o self-hosting, mas também tudo dentro da plataforma em si, para conseguir o seu set-up de trabalho. Então é absolutamente lindo. E então o que você também vai querer fazer é, na verdade, copiar o ID de trabalho que você tem na URL aqui.
+
+Então no final da sua URL, dentro desta página, você vai ter o ID de trabalho. E você vai querer copiar isso para o próximo passo aqui. Porque este é onde nós vamos para o trabalho que, na verdade, tem o nosso agente AI.
+
+E é aqui que as coisas ficam realmente, realmente divertidas. Então o ponto de entrada para este trabalho é este input de conversa aqui. E então, se eu realmente jogar isso aqui, eu vou para o chat, você pode ver aqui que você pode escrever uma mensagem dentro de uma janela de conversa, tipo o que nós temos na UI do Streamlit que eu uso muito no meu canal aqui.
+
+Então eu posso dizer algo como, Oi, como você está? E nós vamos, na verdade, receber uma resposta do AI direto dentro do trabalho do N8n, para que possamos testá-los muito, muito rapidamente com nossos agentes, o que é super, super legal. E então, o que nós também vamos fazer é computar o dia e o tempo. E a razão para isso é que nós queremos dizer ao nosso assistente Asana qual dia é, para que ele possa determinar exatamente os dias de duro quando nós damos os dias relativos, como este sábado ou na próxima sexta-feira.
+
+E então nós recebemos o dia atual e ele vai expor isso como um item que nós podemos usar em outras ações indo em frente no trabalho. Então eu vou voltar para a minha canva aqui e nós podemos ir para o nosso agente AI. E este é onde nós realmente conectamos um monte de coisas realmente legais para fazer isto um agente AI completo.
+
+Você pode ver aqui que nós temos um modelo OpenAI que nós temos conectado. Eu tenho a minha chave API colocada nos credênciais aqui. Nós temos um memória Window Buffer, que é apenas um tipo básico de memória e há muitos tipos diferentes de memória que você pode ter aqui, como podemos usar Redis, por exemplo.
+
+Também, para os modelos de língua maior, você pode usar literalmente tudo o que eu quero usar. Anthropic, Grok, Olama, OpenAI, tudo o que eu usei em meus vídeos de Masterclass antes, nós temos isso aqui também. E então, a outra parte que é realmente legal é que nós podemos definir um número infinito de ferramentas para conectar ao nosso agente AI, assim como fizemos com o LangChain no nosso código Python.
+
+E então, se eu quisesse criar mais ferramentas, eu só teria que pular para esses outros nodos de ferramentas que eu criaria. Agora, eu só tenho um, que vai referenciar o funcionamento que eu mostrei antes para criar tarefas no Asana. E então, é aqui que nós precisamos do ID de Funcionamento que nós temos copiado aqui.
+
+Mas você pode ver que você dá uma descrição para dizer ao agente AI como usar este ferramento. E então, você pode até ter uma entrada estrutural. Então, nós podemos dizer que você vai dar o ferramento, ou seja, este NAN Workflow, um nome e um dia de duro.
+
+E isso corresponde exatamente ao que eu mostrei antes, aqueles parâmetros dinâmicos que vão para criar a tarefa do Asana. Então, você pode controlar as coisas muito, muito bem e dizer ao agente como usar o ferramento, assim como você faria com código customizado. Então, é apenas uma coisa linda.
+
+E então, dentro do agente em si, nós temos o texto, que nós vamos referenciar o texto que foi enviado do trigger para este ferramento, que é quando uma mensagem de conversa é recebida. E então, tudo que você tem que fazer no NAN para referenciar algo de um nodo anterior é que você tem que executá-lo primeiro, e aí você vai ter ele disponível nos drop-downs de entrada aqui. Então, eu posso apenas pular a entrada de conversa aqui e ele vai adicioná-lo.
+
+Então, eu já tinha ele lá, por isso eu o vejo duas vezes agora, mas é tão fácil trazer algo dinâmico de outro nodo que já foi executado no ferramento. E então, vai ser a mesma coisa com o dia atual. Nós vamos adicionar isso para a mensagem de sistema aqui, onde também dizemos que você é um assistente ajudante que ajuda a criar tarefas no Asana, parecido com o que fizemos quando escrevemos tudo isso no código do Python.
+
+Então, é só coisa incrível. E tem outros setores também que você, tipicamente, não tem que jogar com, mas tem tanto controle que o N8n te dá. Tipo, isso é só incrível para mim.
+
+E então, a última coisa que vamos fazer é apenas responder a um Webhook. Então, este é apenas o final do funcionamento em que expulsamos um elemento de saída que nós podemos usar com um API. Então, eu também setuei isso com o Streamlet, então eu posso literalmente chamar todo esse funcionamento do N8n como um API e receber a resposta para mostrar para o UI.
+
+Mas você nem precisa fazer isso, porque o N8n faz com que seja bem fácil definir interfaces de usuários customizadas ao redor dos chatbots também. Eu mostrarei isso em um segundo aqui. Mas eu só queria também testar ter isso como um ponto final do API, em vez de fazê-lo tudo dentro de um chatbot N8n.
+
+E então, o que eu queria mostrar aqui como uma última coisa é como nós podemos levar este chatbot e, na verdade, criar um UI ao redor dele muito, muito facilmente com o N8n. Então, o que eu vou fazer é clicar neste botão de conversa aqui no meio inferior e aí diz Adicionar conversa para aplicação externa usando o pacote de conversa N8n. Então, você clica em Mais informações e ele literalmente vai te dar um embed que você pode colocar no seu site.
+
+E você também pode usar React ou View Embeds também se você quiser instalar o N8n chat com o npm. Eu vou fazer isso por enquanto, porque é tão fácil de setar isso. Então, uma coisa que eu queria fazer antes de mostrar isso é que você tem que entrar no seu componente de conversa e ter certeza de que você tem o chat disponível publicamente.
+
+Então, eu não vou ter isso disponível publicamente uma vez que eu publicar este vídeo, porque isso significa que você pode ir para esta URL e começar a usar o meu chatbot e gastar meus créditos de OpenAI. Mas você tem que fazer isso publico primeiro. Você também pode adicionar autenticação se você quiser protegê-lo.
+
+E então, você pode pegar esse embed e colocá-lo no seu próprio site ou, neste caso, eu vou usar um editor de HTML online. Então, eu coloquei exatamente o que me deu como embed no N8n e aí você liga e, com certeza, eu tenho este belo botão no fundo direito que você vê em muitos sites onde eu posso clicar para abrir o meu chatbot. E aqui eu posso ir em frente e perguntar algo, como, o que você pode fazer por mim? E as respostas dos agentes do N8n são, na verdade, muito, muito rápidas, como você pode ver aqui.
+
+Então, sim. Liga que pode me ajudar no Asana e então eu posso dizer algo como, legal, eu preciso assar corteses na sexta-feira. Então, vamos ver se isso faz uma tarefa para mim no Asana.
+
+Então, dê-me alguns segundos para realizar a atual ação com o workflow do N8n e aí está. Eu criei a tarefa para assar corteses na sexta-feira. Você pode ver aqui.
+
+Então, deu-me o link. Caso contrário, eu também posso ir direto para o Asana e, com certeza, eu tenho uma tarefa para assar corteses na sexta-feira. Isto não estava lá antes.
+
+Eu só tive esta tarefa de um teste anterior. Então, tudo está funcionando lindamente com este chatbot que eu posso ter como ponto final do API ou eu posso ter como um widget de conversa que mostrei agora. Você pode transformá-lo em qualquer coisa que você quiser e isso tudo com absolutamente nenhum código.
+
+Então, aí está. Em apenas alguns minutos, nós construímos um poderoso chatbot de agentes de AI do Asana no N8n sem código. Eu sou um grande proponente de usar soluções sem código para construir seus agentes de AI mais simples para que você possa realmente dedicar o tempo que você precisa para os agentes de AI mais cortados e complexos que você tem que codificar de novo só por causa da complexidade do que você está construindo.
+
+Então, eu espero que você possa usar o N8n como uma nova ferramenta no seu armário de ferramentas para construir seus agentes de AI muito mais eficientemente e com menos trabalho. Se você achou isso útil e planeja usar o N8n em geral, eu muito apreciaria um like e um subscrever e com isso, eu vejo você no próximo vídeo.
+
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)

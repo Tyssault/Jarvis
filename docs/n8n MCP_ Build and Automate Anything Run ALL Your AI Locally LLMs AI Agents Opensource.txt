@@ -1,0 +1,124 @@
+n8n + MCP: Build and Automate Anything! Run ALL Your AI Locally - LLMs, AI Agents! (Opensource)
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Há alguns meses atrás, fizemos um vídeo mostrando como você pode runar seu AI todo localmente, completamente gratuito. De modelos de língua maior e agentes de AI, a pipelines de RAG e mais, todos apoiados por Docker e Nathan. Mas hoje, temos um método ainda mais poderoso para construir o ideal workflow local de AI, com agentes que podem executar tarefas, falar com modelos de língua maior, executar RAG e mais, mas esta vez, apoiado pelo MCP.
+
+O MCP, ou Protocolo de Contexto de Modelo, é um estándar aberto da Anthropic, que permite aos aplicativos de AI conectar com fontes de dados externas, serviços ou até mesmo seu sistema de arquivos local de AI. Ele permite modelos de língua maior descobrir e executar ferramentas custom com o contexto certo, dando-lhes uma maneira flexível e desenvolvedora para construir workflows de AI mais inteligentes. No vídeo de hoje, eu vou mostrar como você pode configurá-lo localmente.
+
+Vamos usar o Docker para virar o NAN. O NAN é um atalho de automação de workflow aberto, que permite conectar serviços e executar tarefas visualmente, usando um único conteineiro para um setup fácil. Depois, vamos integrar MCPs diretamente no NAN para supercarregar o seu workflow de AI.
+
+Para fazer isso possível, vamos usar o Desktop de Docker, um atalho simples e poderoso que vai estrenar seu desenvolvimento com a tecnologia de conteineiros do Docker. Com o Desktop de Docker, você vai integrá-lo completamente com seus atalhos de desenvolvimento favoritos, fazendo-o mais fácil para você gerenciar conteineiros localmente. Isso vai simplificar o desempenho e acelerar dramaticamente sua eficiência de workflow.
+
+Se você ainda não tentou, você está perdendo. Então, veja o link na descrição para começar facilmente e acessar o Docker agora. Enquanto o vídeo de hoje se centra em equiparar o Nathan com o Docker e o MCP para construir workflows de AI poderosas, tem outro ótimo caso de uso que vale a pena ver.
+
+Anthropic recentemente se uniu com o Docker para fazer o Desktop de Cloud fácil de gerar com os servidores de MCPs de conteineiros. Seja você está automizando tarefas de browser com o Puppeteer, acessando o GitHub ou trabalhando com databases, tudo isso é possível em um ambiente de Docker limpo e isolado. Então eu vou deixar um link para o blog deles abaixo para que você possa tentar essa equipação também.
+
+Agora, antes de começar a equiparar o Nathan, vamos rapidamente explicar por que o Docker é um mudador de jogos para a automação. Pense no Docker como um sistema de conteineiros virtual. Ele te permite gerar aplicações em ambientes isolados e conteineiros, chamados de conteineiros.
+
+E, essencialmente, o que vamos fazer é usá-lo para nos ajudar a acessar o MCP nesse conteineiro. Então, ao invés de instalar ferramentas complexas diretamente para sua máquina, você pode facilmente configurar coisas como MCPs, todos esses fios diferentes que vamos receber do Nathan, simplesmente com o Docker. Então, ele garante que tudo funcione de forma lenta, sem problemas de dependência ou conflitos de sistema.
+
+Isso é especialmente poderoso enquanto trabalha com o Nathan e o MCP. Com o Docker, você pode virar o Nathan em segundos e integrar os servidores do MCP rapidamente, o que vai ser super fácil, limpo, portável e seguro. Então, primeiro de tudo, você vai precisar acessar o desktop do Docker para seu sistema de operação.
+
+Nesse caso, eu tenho para Windows, então eu vou acessar e instalar. Antes de começarmos, eu só quero mencionar que você deve acessar e se inscrever no Mundo do Jornal de Inteligência. Eu estou constantemente postando diferentes jornais de notícias em uma base semanal, então é aqui que você pode ter conhecimento atualizado sobre o que está acontecendo no espaço de Inteligência.
+
+Então, definitivamente vá em frente e se inscreva, já que isso é completamente gratuito. Uma vez instalado, o que vamos precisar fazer agora é pular e instalar o NAN dentro do Docker. E para fazer isso, vá para os conteineres e simplesmente vá em frente e procure Nathan.
+
+Agora, você quer ir em frente e encontrar a imagem oficial do Nathan em um conteiner ou imagem dockerizado, e você quer ir em frente e clicar em pular. Em seguida, você quer ir em frente para as imagens e você quer clicar nesse botão de run. Mas antes de você até clicar em run, faça seir que você clicou em settings opcionais.
+
+Primeiro, vamos dar um nome. Então, nesse caso, eu dei esse nome para o conteiner. E depois eu adicionei o porto 5678, que eu recomendo que você faça.
+
+Então, para o volume, você quer ir em frente e dar um caminho de host. Então, eu criei um arquivo chamado NAN dentro do meu diretório de documentos. E depois, para o caminho do conteiner, eu quero que você copie e paste esse caminho exato.
+
+Agora, em seguida, vamos ter que setar nossos variáveis de ambiente para verdade. E isso é algo que eu vou explicar dentro desse repositório de GitHub. Esse é um cliente do Nathan Nodes MCP.
+
+E, essencialmente, o Nathan gerencia ferramentas externas de nodes comunitários, algo que precisamos para o MCP e a integração de agentes de ciência. Na verdade, ele é desativado por razões de segurança. Então, apenas ative-o se você confia nos nodes que você está usando.
+
+Então, nesse caso, faça isso em sua própria discussão. Mas, já que você quer acessar os diferentes tipos de MCPs de diferentes serviços externos, você vai precisar ativar isso como verdadeiro. Então, você quer acessar essa secção que diz exemplo de set-up de MCP com agente de ciência.
+
+Você quer depois copiar isso aqui. E depois, você quer tirar o último pedaço que diz igual verdadeiro. E depois, você quer escrever o valor como verdadeiro.
+
+E agora, você está pronto. Você pode simplesmente clicar em correr e isso vai iniciar o servidor NAN. E isso vai ser iniciado localmente dentro dos hostes locais.
+
+Então, você pode agora clicar nisso. E você vai poder acessar o Nathan no seu hoste local. E aí vamos nós.
+
+O que você vai precisar fazer primeiro é criar um acounto. Isso é totalmente gratuito, pessoal. Você não está pagando por nada, então não se preocupe com isso.
+
+E agora, você tem o Nathan, a plataforma de automação de AI, totalmente funcionando. Então, o que você pode fazer é agora ir em frente e começar de novo para trabalhar na criação de qualquer workflow. Agora, antes de nós fazermos nada com o Nathan, o que vamos precisar fazer primeiro é configurar e set-up MCPs.
+
+E é super simples. Clique nos 3 pontos, vá para o set-up, e aí você vai clicar em nodes comunitários. E você vai instalar um node comunitário.
+
+Você vai simplesmente escrever NAN Nodes MCP. E você vai clicar em Eu entendo os riscos. E aí você vai clicar em instalar.
+
+Isso vai levar alguns segundos para instalar, mas uma vez terminado, você vai poder interagir com MCPs diretamente dentro do Nathan. E isso tudo é poderado pelo Docker. E é algo que você pode facilmente desligar e ligar com um só clique.
+
+Uma vez instalado, nós vamos então voltar para o workflow principal. Dê-lhe um nome. E isso é essencialmente onde eu vou mostrar como você pode usar MCPs dentro do Nathan.
+
+Agora, o Nathan é essa plataforma de automação de workflow de AI, onde você pode facilmente criar agentes de AI para fazer quase qualquer coisa. Nesse caso, o que nós vamos fazer é simplesmente começar com o botão de conversa. Isso é essencialmente onde você pode simplesmente colocar esse botão de conversa, para que ele vá para a frente e vai executar quando uma mensagem de conversa for recebida.
+
+Você pode então conectá-lo a qualquer coisa, como um agente de AI. Você também pode conectá-lo a algo como um cliente do MCP. Mas isso é essencialmente só um exemplo básico de o que você pode fazer com o Nathan.
+
+E mostrar como você pode instalar um servidor de MCPs através do seu workflow. Então, o que nós vamos fazer é adicionar um modelo de conversa. Então, nesse caso, você pode selecionar qualquer um desses modelos.
+
+Você pode adicionar os modelos de Gemini, DeepSeek, ou até mesmo algo como OpenRouter ou Ollama. Então, isso pode ser completamente gratuito sem você gastar em nada. Mas eu estou atrasado em instalar Ollama agora.
+
+Então, nós vamos ir em frente e pastar nosso modelo OpenAI com as credências que você pode obter da plataforma. Então, vá em frente e crie uma chave API. Paste essa chave aqui.
+
+Lembre-se também que se você está criando uma chave API, faça com que você tenha ela ligada a um acounto de pagamento para que isso realmente funcione. Então, simplesmente vá em frente e adicione uma memória simples para o seu agente de AI. Como eu mencionei, o MCP é um braço extendido para o seu agente.
+
+Significando que ele vai adicionar funcionalidade adicional ou uso de diferentes plugins para aumentar sua flexibilidade em completar qualquer tipo de tarefa. Então, vá em frente e clique nesse plus e procure por MCP Client. Agora, não é o Client Tool, é o Client, o node em que nós instalamos.
+
+Se você não ver isso, você vai precisar reiniciar seu conteúdo docker. É super simples de fazer. Vá para esse conteúdo e clique no botão de reiniciar.
+
+E você deve ver depois. Então, vá em frente e adicione isso. E você quer ter isso para que você possa listar todas as ferramentas disponíveis.
+
+Então, você vai precisar selecionar as credências. Você pode fazer isso clicando em criar uma nova credência. E é aqui que você pode inserir diferentes MCPs que você quer integrar dentro do Nathan.
+
+Para inserir isso, é bem simples. Você vai instalar isso com o MPX. E você quer inserir o argumento para ser deixado como "-y".
+
+E depois, inserir o protocolo para o servidor. Agora, para usar qualquer tipo de servidor, você pode usar esse repositório do GitHub. Que tem uma lista de vários servidores que você pode integrar dentro do seu funcionamento do agente.
+
+Então, se você quiser ter algo empoderado pelo BraveSearch. Você vai clicar nisso. E você pode ir em frente, escrever.
+
+E depois, ir para a secção do MPX. E você quer copiar essa secção. Que está aqui.
+
+E depois, você quer ir de volta para o nosso funcionamento. E depois, imprimir isso. E o que você pode fazer depois é inserir sua variável de ambiente para o API do BraveSearch.
+
+Você pode depois clicar em salvar. E depois, você pode fechar isso. E o que você vai precisar fazer para as operações.
+
+É mantê-la como ListTools. E para testar se isso está funcionando. Você pode clicar em TestStep.
+
+Que vai mostrar os ferramentas em uso dentro do nosso agente do MCP. E aí está. Nós temos o primeiro ferramenta, que é o WebSearch.
+
+E depois, você pode escrever e ver o local de busca. Você pode depois fechar isso. E depois, o que você pode fazer é clicar em adicionar outro cliente do MCP para executar a busca do BraveSearch.
+
+Agora, isso é onde o segundo cliente do MCP vai ser usado para configurar a ação de busca para executar o ferramenta. Então, você quer mudar isso para executar o ferramenta. E depois, você quer manter o nome do ferramenta como esse.
+
+Eu vou deixar isso na descrição abaixo. Para que seja fácil de escrever. E depois, para os parâmetros do ferramenta.
+
+Você quer manter em branco. Porque ele vai automaticamente ficar setado. E depois, você quer voltar para o Canvas.
+
+Agora, o que você pode fazer é ir para o seu agente do AI. Você pode abrir isso. E depois, você pode adicionar uma mensagem de sistema.
+
+Então, neste caso, eu adicionei uma mensagem de sistema. E depois, o que podemos fazer é começar a trabalhar com esse MCP. Então, vamos limpar isso.
+
+E podemos ir em frente e abrir o chat. Este é onde agora você pode perguntar ao agente do AI. E ele vai ser empoderado pelo MCP de busca por internet.
+
+E ele vai poder recuperar respostas bem rapidamente. Então, neste caso, ele me deu uma boa resposta sobre o que é o mundo do AI. Eu deveria ter dito o canal.
+
+E eu teria procurado o canal do YouTube. Mas, essencialmente, foi assim que eu consegui instalar MCPs dentro deste simples funcionamento do agente. Obviamente, você pode fazer isso mais intrínseco.
+
+Mas, este é um modo simples para você instalar qualquer coisa com o nodo que instalamos dentro do Nathan. E isso tudo se reúne. Com o Docker, nós recebemos um ambiente limpo e consistente para gerar ferramentas complexas sem se preocupar com dependências esgotadas.
+
+O NAN vai adicionar automação e orquestração sem código poderosos. Fazendo isso mais fácil para conectar tudo visualmente. E aí você tem os MCPs, que vão te permitir ir em frente e trazer capacidades de agentes de AI verdadeiras.
+
+Deixando modelos de laranja interagirem com ferramentas do mundo real, como APIs, browsers e serviços locais. Juntos, nós vimos o quão incrível este local AI workflow poderia ser. Que é aberto, que é completamente grátis e pode ajudar você de várias maneiras.
+
+Então, espero que você tenha gostado deste vídeo e tenha alcançado algum tipo de valor, pessoal. Tenha certeza de olhar todos os links na descrição abaixo. Inscreva-se no segundo canal.
+
+Siga-me no newsletter. Junte-se ao nosso Discord. Siga-me no Twitter.
+
+E por último, se inscreva no canal do YouTube. Goste deste vídeo. E por favor, olhe nossos vídeos anteriores, porque há muitos conteúdos que você realmente vai se beneficiar.
+
+Mas com isso, pessoal. Tenha um dia incrível. Espalhe positividade.
+
+E vejo vocês brevemente. Paz e paz.
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.

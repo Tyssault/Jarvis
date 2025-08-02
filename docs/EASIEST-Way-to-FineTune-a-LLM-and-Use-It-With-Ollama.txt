@@ -1,0 +1,46 @@
+EASIEST Way to Fine-Tune a LLM and Use It With Ollama
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Você quer finalizar seu modelo de língua mais ampla e executá-lo localmente na sua máquina usando o Ollama. Bem, no vídeo de hoje vamos fazer exatamente isso, então vamos lá. Primeiro, a parte divertida, que é encontrar o certo dataset.
+
+A razão pela qual encontrar o certo dataset é tão importante é quando você treina um modelo de língua mais ampla pequena com um dataset que seja relevante para a tarefa que você está tentando fazer, pode realmente exercer modelos mais amplos. O que eu vou fazer hoje é criar um pequeno LLM rápido que gerará dados SQL baseados nos dados de tabela que eu ofereci. Um dos maiores datasets para fazer isso é chamado de Texto Sintético para SQL, que tem mais de 105 mil recordes divididos em colunas de prompt, conteúdo SQL, complexidade e mais.
+
+Eu estou usando um NVIDIA 4090 GPU, então eu vou finalizar isso na minha máquina usando o Ubuntu. Se você não tem um GPU, sinta-se livre de fazer isso usando o Google Colab, que permite que você faça código de treinamento na cloud. A boa notícia é que este projeto não requer muito hardware complexo para que ele esteja funcionando.
+
+Vamos usar o Unsloth, que permite que você fine-tune muitos modelos de abertura de fonte muito eficientemente com cerca de 80% menos uso de memória. E vamos usar o Llama3, que é um LLM usado para propósitos comerciales e pesquisadores, especialmente em inglês, e tem uma performance muito alta. Tenha certeza de que você tem o Anaconda instalado na sua máquina, assim como as bibliotecas CUDA.
+
+Eu vou usar o CUDA 12.1 e o Python 3.10 para este projeto. Você quer instalar as dependências requeridas pelo Unsloth, que você pode encontrar no Readme, mas para simplicidade, aqui está. Isto cria um novo ambiente para nós e instalou o PyTorch, as bibliotecas CUDA, assim como o último Unsloth.
+
+Você também quer instalar o Jupyter, se ele não está lá já, e então runar seu notebook Jupyter. E agora você está pronto com o setup. Então vamos para o notebook Jupyter e começar.
+
+Primeiro, queremos ter certeza de que todas as requerências instaladas estão lá. Se você está usando o Google Colab, este comando instalará todas as paquetes. Em seguida, vamos importar o modelo de língua rápida do Unsloth.
+
+Aqui, estamos especificando que queremos usar o modelo LLAMA3 8-bit. Também queremos instalar uma sequência máxima de 2048 tokens. Isto significa que o modelo considerará apenas até 2048 tokens, onde um token pode ser palavra, sub-palavra, personagem ou até mesmo pontuação quando processando ou gerando texto.
+
+E vamos instalar o load em 4-bit para TRUE, o que essencialmente significa que estamos usando menos bits, ao contrário de usar os típicos 16 ou 32 bits para representar a informação no modelo. Fazendo isso vai ajudar a reduzir o uso de memória e também reduzir o load na sua máquina. Depois de instalar isso, você vai receber uma imagem doce e isso significa que seu modelo está loado.
+
+Depois disso, vamos instalar o modelo PEFT, que são basicamente adaptadores LoRa. Se você não sabe o que esses termos significam, tudo bem. Basicamente, os adaptadores LoRa significam que nós só temos que atualizar 1% a 10% dos parâmetros neste modelo.
+
+Sem eles, isso significa que nós teríamos que retrainar o modelo inteiro, não apenas uma pequena porção, o que leva muito tempo, energia e até mesmo dinheiro. E a Unsloth nos oferece aqui os setores recomendados. Eu confio neles, então não se preocupe em ler cada comentário.
+
+Agora, isso é onde as coisas podem ficar um pouco difíceis, dependendo do dataset que você está usando. Agora, cada dataset vem diferente de cada outro, mas eles são formados de forma igual, de tal forma que o modelo de língua grande pode compreendê-lo. Lama 3 usa promtes Alpaca, que parecem assim.
+
+Agora, se você se lembra, nosso dataset não é tão fácil como apenas conectá-lo e deixá-lo ir para as corridas. Eu tenho que formatar minha resposta primeiro, antes de conectar os dados. Eu só estou interessado no SQL do meu database, o promte que eu estaria pedindo, assim como o código gerado e a explicação.
+
+Então, eu vou atualizar o meu código para refletir isso. Agora, nós estruturamos o módulo de treinamento. O Supervisor de Treino Finito de Hugging Face é o que eu usei.
+
+Há muitas parâmetros para usar, tudo o que pode ser descrito em seu próprio vídeo. Então, por exemplo, nós temos o Max Steps, que nos diz quantos passos de treinamento se realizam. Seed é um generador de números aleatórios que usamos para poder reproduzir resultados.
+
+E o Warm Up Steps aumenta gradualmente a velocidade de aprendizagem com o tempo. Então, agora que nós temos tudo estruturado, vamos lançá-lo. E é isso.
+
+Seu modelo foi treinado. Agora, antes de seguirmos, nós realmente precisamos convertê-lo para o tipo de arquivo certo para que nós possamos lançá-lo localmente usando o Lama. Infelizmente, Unsloth tem um one-liner que podemos usar para fazer isso.
+
+Depois disso, nós só precisamos fazer um passo para poder lançá-lo com o Lama. Primeiro, abri o seu terminal. Eu estou usando o terminal Warp aqui.
+
+Vá para o caminho onde o arquivo foi salvado. Então, crie um arquivo chamado Model File e abri-o no editor de código. Essa é a configuração de arquivo do Lama, onde nós podemos criar novos modelos com parâmetros específicos.
+
+No nosso model file, nós vamos colocar um prompt. Então, algo como você é um generador de SQL que leva uma query do usuário e dá algumas SQL ajudantes para usar. Finalmente, assegure-se que o Lama está funcionando e depois nós vamos lançar este comando.
+
+Este comando vai ler todos os itens no model file que você criou e comece a usar Lama.cpp abaixo da cabeça para garantir que o modelo funcione na sua máquina. E parabéns! Você pode agora usar o seu LLM FineTune localmente, tudo com o API compatível com a OpenAI e mais em suas aplicações. Se você está curioso para saber mais sobre o Lama, nós temos um vídeo de dois minutos sobre tudo que você precisa saber sobre o Lama aqui.
+
+Se não for assim, obrigado por assistir e vejo você na próxima.
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.

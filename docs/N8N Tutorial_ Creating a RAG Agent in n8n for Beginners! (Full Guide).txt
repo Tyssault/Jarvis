@@ -1,0 +1,255 @@
+N8N Tutorial: Creating a RAG Agent in n8n for Beginners! (Full Guide)
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Se você quer referenciar grandes quantidades de dados, coisas como PDFs, CSVs, Excel, arquivos de texto, o que você quiser, se há muita informação e aplicações básicas, como ChatGPT ou Claw, que não conseguem lidar com isso e nunca te dão respostas acuradas, então este é o vídeo para você, porque vou mostrar para você como montar um agente AI, de começo a fim, que utiliza algo chamado Retrival Augmented Generation, ou RAG. E o que isso nos permite fazer é armazenar nossos PDFs e nossos grandes dados de texto em um database vector. E o database vector organiza sua informação de uma forma para que quando você perguntar, ele saiba onde ir, para usar essa parte do seu PDF como contexto para te dar uma resposta para qualquer problema que você está lidando.
+
+Então, deixe-me mostrar para você como isso funciona. O que temos aqui é um agente AI, e este agente AI tem conhecimento sobre certos módulos de curso que eu gravei para a minha comunidade. Como você pode ver, se eu for para a minha comunidade, na sala de aula, eu gravei vários módulos diferentes aqui.
+
+Há horas de fotografia em que eu passo por modelos de línguas grandes, passamos por N8n, AI Audio, e quando eu clico neles, alguns deles são de uma hora e trinta minutos. Então, o que eu fiz é que eu peguei os transcritos de algum dos meus conteúdos de curso, e eu os uploadei para um database vector Pinecone. Não se preocupe, eu vou mostrar para você como montar tudo isso, mas, você sabe, eu também tenho isso no meu drive do Google.
+
+Deixe-me mostrar um exemplo. Eu tenho bulletproof prompting aqui, isso foi uma sequência de prompting que eu passei, e, como você pode ver, há bastante dados aqui, e isso foi um vídeo de 20 minutos, então, tem 20 minutos de transcrição. Eu tenho outros que são de uma hora e trinta minutos aqui, de uma hora.
+
+Então, o que eu posso fazer é que eu posso falar com esse agente AI sobre esse dado. Agora, pense em maneiras que você pode usar isso. Você tem PDFs? Você tem grandes quantidades de dados que você deseja que você possa falar com e perguntar sobre? E usar dentro do seu workflow, para que ele possa entender e pegar contexto, para que quando você tem uma pergunta, ou quando seu workflow começa, ele possa referenciar aquele PDF no momento exato que você precisa.
+
+Bem, veja isso, eu posso perguntar sobre todas essas diferentes fichas de texto dentro do meu Pinecone. Então, se eu for aqui, e eu clico em conversa, o que eu posso fazer é que eu posso perguntar, como se fosse um chat GPT, certo? Eu não tenho que fazer nada louco com o meu prompting, eu posso usar queries de língua natural. Então, eu posso perguntar, como se fosse, qual é a sequência bulletproof prompt? Agora, se você perguntasse essa pergunta, ele não teria ideia do que é, porque isso é algo que eu fiz pessoalmente dentro do meu curso, certo? Então, eu estou perguntando perguntas muito personalizadas, não é apenas algo que é conhecido na internet, ou algo que foi treinado.
+
+Então, eu estou usando PDFs pessoais, fichas de texto pessoais, dados pessoais, para fazer esse agente AI ter uma experiência mais personalizada. Então, agora, quando eu envio isso, qual é a sequência bulletproof prompt? O que vai fazer é que vai referenciar a minha data base e, na verdade, procurar qual é a sequência bulletproof prompt. E, como você pode ver, ele acabou de encontrar o arquivo, retornou os dados, e então me deu a minha sequência bulletproof prompt exata que eu passo dentro do vídeo.
+
+E lembre-se, o vídeo, o que eu fiz foi que eu peguei o transcript, e depois eu o pré-processei em uma data base de vectores. Uma das maiores coisas que as pessoas não sabem que precisam até que elas o tenham é uma comunidade para aprender algo. Agora, se você realmente quer levar o AI sério, você quer aprender como construir agentes de AI do começo até o fim, então eu recomendo se juntar à nossa comunidade de fundações de AI.
+
+Agora, este é o melhor lugar para ser para o AI em geral, mas também para construir agentes de AI, porque nós só saímos com um curso de construção de agentes N8N completo. Agora, esta comunidade é mais do que apenas cursos, certo? Nós gostamos de focar nos três Cs. Cursos, chamadas, nós fazemos chamadas ao vivo como grupo.
+
+E, por último, mas não menos, a comunidade. As pessoas aqui são inúteis a qualquer outro grupo que você já conheça. Nós todos nos focamos em implementar o AI, então nós temos mais de 600 membros aqui, todos focados em uma coisa, que é liderar o AI para a nossa indústria específica.
+
+Então, se você quer aprender como construir agentes de AI, você quer maestrar o AI, você quer estar com pessoas que estão pensando como você, então eu recomendo muito se juntar. Eu vou deixá-lo na descrição. E no comentário de cima.
+
+O primeiro passo é organizar todos os seus dados para o Google Drive. Agora, eu gosto de usar o Google Drive. Você provavelmente pode fazer isso com outras aplicações, mas eu acho que o Google Drive, para mim, é o mais simples, e é isso que eu vou mostrar neste vídeo.
+
+Então, o que você quer fazer é criar um folhado. Então, eu posso clicar em novo folhado, e eu posso apenas chamar de Modulo Transcritos e clicar em Criar. E, agora, eu quero puxar todos os meus dados que eu quero que meu agente de AI possa usar nesse folhado.
+
+Então, eu recomendo mantê-lo um pouco simples e não tentar ir em todo lugar quando você apenas começou. Adicione três ou quatro fios. Tenha a sensação por isso.
+
+Eu não iria passar horas arruinando todos os PDFs que você já colecionou em sua vida nesse folhado antes de você construir e ver isso funcionando. Então, eu recomendo começar com um pouco pequeno e então, implementando e construindo devagar enquanto você vai. Mas, eu vou puxar todos os meus transcritos aqui para que possamos continuar.
+
+Então, eu vou clicar em Puxar Files e depois eu vou puxar todos os meus fios .txt para o meu Google Drive aqui. Eu vou clicar em Abrir e depois vai puxar todos esses. Agora, eu recomendo nomear esses para que você possa organizá-los um pouco melhor não apenas no seu cloud, mas também no seu database de vetores um pouco mais tarde na linha.
+
+Mas, agora que todos esses estão puxados, nós podemos ir para o próximo passo. De novo, eu recomendo começar com um pouco pequeno talvez usando alguns PDFs, alguns fios .txt e então, escalando o que você precisa. Agora, existem outras ferramentas que você pode usar, mas o Pinecone trabalhou bem para mim e eu sei que é altamente escalável e é confiável por muitas grandes empresas.
+
+Então, é por isso que eu gosto de usá-lo. Mas, o que você pode fazer é apenas criar um acounto. É bastante simples e eu estou atualmente usando o Free Plan.
+
+Se você for para o Preço, você pode ver que eles têm um Plano de Começo. É o que eu estou atualmente usando. Então, uma vez que você se inscreve, então vamos para o próximo passo.
+
+Agora que você se inscreve, o que você pode fazer é ir para o lado esquerdo da sua tela e selecionar um database. E então, no lado direito superior, o que você quer fazer é clicar em Criar Index. Isso vai ser onde restauremos todos esses fios que a gente já uploadou para o Google Drive.
+
+Então, eu vou clicar em Criar Index e então, você pode dar o seu nome de index. Você pode fazer isso tão específico quanto você quiser ou, você sabe, quanto mais complexo você quiser. Isso é para o seu caso de uso pessoal.
+
+Então, nomee o que você quiser. Eu vou chamá-lo de Módulos-Tutorial ou, na verdade, eu vou chamá-lo de Exemplo. E então, o que podemos fazer é selecionar a configuração.
+
+Agora, eu não vou entrar em dimensões e métricas e tudo isso. O que eu vou fazer é selecionar o Text Embedding 3 Small Model pela OpenAI. E é importante que você lembre disso porque nós vamos usá-lo mais tarde na linha e você quer manter a consistência quando você está construindo esse databases.
+
+Mas, nós podemos deixá-lo em Serverless. Você pode escolher um Provider de Cloud. Eu vou ficar apenas no AWS.
+
+Eu vou deixar minha região como Virgínia e então, eu vou clicar em Criar Index no canto direito de baixo. Uma vez que eu fizer isso, o nosso index vai inicializar e agora, nós estamos praticamente prontos para ir. Você pode criar recordes manualmente aqui, mas eu vou mostrar para você como instalar uma automação de bônus dentro do N8n para pré-processar todos os seus documentos nesse database Pinecone.
+
+Dessa forma, quando você adicionar um novo PDF, um novo arquivo para o seu drive Google, ele pode automaticamente ser processado nesse index, nesse Index Vector ou nesse Database de Embedding Vector. Então, agora que nós temos o nosso Database Vector criado, nós podemos voltar para o N8n e começar nosso primeiro workflow. Então, quando você está no N8n, o que você quer fazer é clicar em Criar Workflow e isso vai ser a parte de pré-processamento do nosso workflow.
+
+Nós não vamos estar construindo o agente onde podemos falar com o Database ainda. Nós precisamos de um jeito de pular informação para o Database. Então, é isso que nós vamos construir agora.
+
+E isso vai ser um bom sistema para futurizar sua automação também para que você possa automaticamente processar dados quando você quiser. Ou você pode fazer isso manualmente também clicando no botão Test Workflow ou você pode ativá-lo. Realmente, o que você quiser fazer.
+
+Mas o que nós precisamos fazer é adicionar o primeiro passo. E no primeiro passo, nós precisamos verificar o arquivo Google Drive que criamos ou precisamos procurar ele para encontrar todos os arquivos que precisamos publicar para o nosso Database Vector no Pinecone. Então, para fazer isso, nós podemos clicar em Adicionar Primeiro Passo.
+
+E o que nós vamos fazer é ativar manualmente, por enquanto, para testes. De novo, você pode ativar um Programa de Automação que está sempre assistindo o seu arquivo a cada minuto, a cada cinco minutos. E a cada vez que você adicionar um novo PDF, um novo arquivo de texto, você pode automaticamente adicioná-lo para o seu Database Vector.
+
+Daquela forma, você terá um contexto ilimitado quando nós instalarmos o nosso agente AI mais tarde na linha. Então, o que nós precisamos fazer depois de clicar em Testar Programas é adicionar um módulo de Google Drive. Então, eu vou escrever Google Drive.
+
+E aqui, você quer selecionar Google Drive. O que nós podemos fazer depois é fazer apenas pesquisas, arquivos e folhas. Se você quisesse automatizar isso, então você colocaria isso em um ativador quando mudanças se envolvem a um folha específica.
+
+Então, a cada vez que o seu folha vê uma mudança, ele ativará esse Programa de Trabalho. Então, a cada vez que um novo arquivo for publicado, ele ativará esse Programa de Trabalho. Mas o que nós podemos fazer agora é pesquisar arquivos e folhas.
+
+E eu recomendo isso para testes também. Daquela forma, você terá um pouco mais de controle e você pode até pesquisar coisas específicas como quiser. Mas o que nós precisamos fazer agora é instalar nossos credenciais de Google Drive.
+
+Porque agora, você provavelmente não vai ter um acounto de Google Drive conectado. E quando você clica em Criar novo credencial, como você pode ver, você precisa de algo como um ID cliente, um segredo cliente. E instalar isso pode ser bastante desafiante sozinho.
+
+Então, eu vou te mostrar como fazer isso agora. Então, o que você quer fazer para instalar seus credenciais de Google é ir para o console.cloud.google.com e você quer se inscrever no acounto onde seu folha foi criada. Você quer se inscrever no Google Cloud Console aqui.
+
+E uma vez que você está aqui, o que você pode fazer é ir para o lado esquerdo superior e escolher seus projetos. E você quer adicionar um novo projeto. Aqui, você pode dar o nome do seu projeto.
+
+Eu vou apenas chamar esse teste agentec-rag-sistema. Isso foi um pouco innecessário. Mas você pode selecionar sua organização e então clicar em Criar uma vez que você der o nome do seu projeto.
+
+Lembrem-se que o nome do seu projeto não pode ser mudado depois de ter sido feito. Então, uma vez que esteja feito aqui em suas notificações, o que você pode fazer é clicar em Selecionar Projeto. E agora você está dentro do seu projeto, o que é incrível.
+
+O que você pode fazer agora é ir para API e Serviços. Você também pode fazer isso do seu Home Screen. Se você está no seu Home Screen e você não está nessa notificação, tipo, se você está apenas no seu Dashboard, como este, você também pode selecionar API e Serviços aqui em Quick Access.
+
+Mas o que precisamos fazer é ativar o Google Drive API. Dessa forma, podemos conectá-lo ao nosso N8n Workflow. Então, o que eu vou fazer é ir para essa barra de pesquisa em cima e eu vou apenas pesquisar Google Drive API.
+
+E eu posso clicar em Pesquisa. E isso vai me levar para este resultado em cima aqui que diz Google Drive API. Sobre tudo, eu posso selecionar isso e ter certeza de que é do Google Enterprise e ter certeza de que isso é legítimo.
+
+Deve ser, mas sempre double check. E o que você pode fazer é clicar em Enable. E isso vai permitir que o nosso projeto tenha acesso a este Google Drive API.
+
+Agora, há algumas coisas que precisamos fazer aqui para que ele se conecte ao nosso N8n. Precisamos criar credenciais. E isso pode soar meio intimidante, mas, de novo, eu vou te guiar por isso passo a passo.
+
+Então, vamos para este botão de credenciais aqui. E o que nós queremos fazer é, em cima, nós queremos clicar em Criar credenciais. Aqui, nós podemos criar um client ID OAuth.
+
+Quando eu selecionar isso, nós podemos clicar em Configure Consent Screen. E então, nós podemos apenas usar External. Então, isso vai ser disponível para qualquer usuário de teste com o acounto do Google.
+
+E eu posso selecionar isso e clicar em Criar. Próximo, nós queremos dar o nome do nosso app e um e-mail de apoio para o usuário. Então, eu posso dar o nome do meu app.
+
+Eu vou apenas chamá-lo de RAG Tutorial. E então, eu posso selecionar o meu e-mail de apoio para o usuário, que, quando você clicar neste botão, ele vai aparecer com o seu acounto que você está atualmente. E é isso que eu vou selecionar para o meu e-mail de apoio para o usuário.
+
+Então, eu vou clicar neste botão. E então, eu vou selecionar o meu e-mail aqui. Agora, eu posso escrever.
+
+E então, nós temos mais um e-mail que nós precisamos adicionar aqui. Você pode adicionar o mesmo que você fez acima. E se você quiser ser, tipo, realmente seguro e, você sabe, fazer toda essa coisa, você pode também, mas não é necessário para o nosso caso de uso.
+
+Eu vou clicar em Save & Continue. E então, nós vamos adicionar escopos. Agora, você pode fazer isso, de novo, se você quiser.
+
+Você pode adicionar escopos restritos, escopos sensíveis. Faça o que você precisar fazer. Mas o que eu vou fazer é clicar em Save & Continue.
+
+E então, eu vou clicar em Save & Continue, de novo, sob testadores. E agora, nós temos o nosso Summary aqui. E, finalmente, nós podemos desligar e clicar em Volte ao Dashboard.
+
+E então, nós podemos clicar em Publish App e Confirm. E, depois disso, nós vamos ter que criar outro credencial. Então, o que nós podemos fazer é ir para Credências.
+
+E então, nós vamos ter que criar um ID Cliente OAuth. Então, nós podemos clicar em Criar Credências e, então, escolher o ID Cliente OAuth. Tipo de aplicação, tudo o que você precisa fazer é escolher aplicação web.
+
+E então, você pode dar esse nome também. Eu vou fazer RAG. E agora, nós precisamos adicionar algo do N8n.
+
+Aqui, onde diz Autorizado Redireito URIs, nós precisamos adicionar o URL de callback. Então, se eu fechar isso e eu volto para o N8n, como você pode ver, quando nós criamos um novo credencial para o Google Drive, nós temos esse URL de Redireito OAuth. Eu posso clicar para copiar isso, voltar para cá, e, então, nós queremos clicar em AddURI e pastar aquele callback.
+
+E, agora, nós podemos, finalmente, clicar em Criar. E isso pode levar até cinco minutos, mas, uma vez que você completou o seu ID Cliente OAuth, o que você vai receber é um ID Cliente e um Secreto Cliente. Esses, você quer manter secreto, obviamente, especialmente o Secreto Cliente.
+
+Mas você pode usar esses, agora que você criou seu ID, dentro do seu Google Drive, aqui, sob o ID Cliente e o Secreto Cliente. Agora, eu diria, fique atento. Não esteja mostrando isso para as pessoas.
+
+Não esteja, você sabe, estalando eles em público. E fique atento quando você usa o Google API, mesmo que você não tenha nenhuma informação de pagamento. Eu já ouvi algumas histórias de terror.
+
+Então, fique atento quando você usa essa coisa e fique atento a ela. Então, eu vou copiar o ID Cliente, eu vou pastar o ID Cliente ali, e, então, o Secreto Cliente, eu vou copiar isso, e, então, eu também vou pastar ali. E, agora, nós temos a opção de se inscrever com o Google.
+
+Então, isso é o que nós podemos fazer. Nós podemos, agora, se inscrever no acounto onde nossos transcritos de módulos estão guardados ou onde seus fios estão guardados. Então, eu vou clicar em se inscrever com o Google.
+
+E, então, o que você vai notar é que diz Aconto Criado. Então, nós temos, agora, apenas criado a nossa conexão Google Drive. Então, agora, nós podemos acessar o fio com toda a nossa informação grande.
+
+Eu vou X isso. E, agora, o que eu quero fazer é que eu queira setar o meu Google Drive para que eu possa puxar todos esses fios. Para fazer isso, o que eu quero fazer, agora que eu estou inscrito, é fazer com que eu esteja selecionado no meu credencial adequado.
+
+Eu posso deixar um recurso no fio ou folha, operação, procura. Eu posso deixar o método de procura o mesmo. E, então, o que eu posso fazer é que eu posso ir em filtro e clicar em adicionar um filtro.
+
+E eu quero adicionar um filtro de folhas. E, agora, eu quero selecionar o fio que todos os meus transcritos estão guardados. Então, eu posso escrever exatamente o que eu preciso, transcritos de módulos, porque este é o fio que contém todos os meus dados.
+
+Então, em N8n, aqui, onde dizem fio e folha, eu vou escrever transcritos de módulos. E o que vocês vão ver são meus transcritos de módulos que aparecem no meu fio. Eu posso selecionar isso.
+
+E, agora, eu posso clicar em Test Step, porque nós queremos ver se está puxando todos esses transcritos aqui. Nós temos 1, 2, 3, 4, 5, 6, 7, 8, 9 transcritos. Então, vamos ver se retorna todos eles.
+
+Eu vou clicar em Test Step. E o que deveria acontecer é que puxa todos os 9 transcritos com todos os seus nomes também. Lindo, 9 itens aqui.
+
+Então, essa parte está feita. Mas, agora que nós temos os fios, nós precisamos descarregá-los. Então, agora, isso só fez uma pesquisa, certo? Só pesquisei no meu drive do Google, peguei as ids do fio.
+
+Mas a coisa legal de conseguir essa id de fio é que nós podemos usar essa id de fio para descarregar toda essa informação diretamente no nosso workspace N8n. Agora, quando você tem esse dado no seu workspace, quer dizer, as possibilidades são infinitas o que você pode fazer com ele. Mas, por enquanto, nós queremos pré-processá-lo dentro do nosso Pinecone.
+
+Então, primeiro, vamos descarregar isso. Eu vou escrever no Google Drive. Eu vou selecionar isso.
+
+E depois, eu quero clicar em Descarregar Fio. E aqui, eu só posso ir para Schema. E o que eu quero fazer é carregar e descarregar a id para esse fio aqui.
+
+E nós podemos deixar Ressource on File, Operação Descarregar. Eu vou mudar o fio para Expressão. E depois, eu vou carregar a id ali.
+
+Então, agora, quando nós clicamos em Test Step nisso, o que vai acontecer é que vai descarregar todos os nossos transcritos módulos diretamente para o N8n, o que é incrível. Como você pode ver, todos esses fios foram descarregados, todos os nove deles. Então, quando eu clico em Vista, ele realmente traz todo o transcrito de texto.
+
+E isso é ótimo, porque agora que nós temos o fio descarregado, todos os nove deles descarregados, nós podemos, na verdade, movê-los para o nosso database Pinecone, que é como a sopa secreta de tudo isso, certo? A forma como cada recorde é vectorizado e organizado dentro desse database permite que o seu agente de ciência realmente o busque muito mais efetivamente, porque ele o quebra em pedaços para você. Então, ele pode ir encontrar o pedaço, ao invés de carregar todos os nove documentos quando você pergunta uma pergunta. Isso é o que o faz tão grande e tão incrível.
+
+Mas depois, nós precisamos setar o Pinecone, porque nós temos os fios aqui, nós os downloadamos. Então, vamos criar um módulo de Pinecone Vector Store aqui. Eu posso escrever Pinecone.
+
+E quando eu seleciono Pinecone Vector Store, nós temos cinco opções. O que eu quero fazer é adicionar documentos para um Vector Store. Então, quando eu seleciono isso, depois nós vamos precisar conectar o nosso acounto com o nosso database Pinecone, o qual é muito mais fácil do que o Google Cloud Workspace.
+
+O que você pode fazer é clicar em Criar novo credencial e então tudo o que você precisa é uma chave API. Então, quando você volta para o Pinecone, aqui à esquerda, você vai ver as chaves API. Você pode selecioná-las e então tudo o que você tem que fazer é clicar em Criar chave API.
+
+Então, eu vou clicar em Criar chave API. Você pode chamá-la de... Eu vou chamá-la de RagExampleChatBot. Você pode dê-lhe permissões customizadas se você melhorar seu plano.
+
+Por enquanto, eu vou fazer tudo e clicar em Criar chave. E, de novo, isso é algo que você não quer mostrar a ninguém. Você não quer que as pessoas possam contatar seus databases de vetores e usar todos os seus créditos, especialmente em um acounto pagado.
+
+Então, por enquanto, eu vou clicar em Copiar e então eu vou fechar isso. E então você pode apenas escrever sua chave API nesse campo de credência. E quando você clica em Save, ele deve dizer... Crédito sucessivamente criado.
+
+E eu posso apenas fechar isso. Agora você pode escolher um índice. E um índice é aquela coisa que nós criamos, aquela database que nós criamos no começo do vídeo.
+
+Então, eu quero escolher esse índice de exemplos de módulos. Dessa forma, nós podemos pular todos os nossos arquivos do Google Drive para esse índice específico ou database aqui. Então, eu vou voltar para o meu workflow e escolher esse índice.
+
+Eu só tenho três deles aqui. Eu vou escolher o exemplo de módulos. E para essa parte, é isso, certo? Nós queremos inserir documentos para essa loja Pinecone Vector.
+
+Mas agora, vamos continuar descendo. Vamos conectá-lo ao nosso Google Drive. E vamos adicionar algumas coisas mais.
+
+Então, primeiro, nós precisamos adicionar um modelo de embedição. O que nós podemos fazer é adicionar o modelo de Embedding OpenAI. Porque esse é o modelo que nós estamos usando aqui.
+
+Lembre-se, quando nós criamos isso, nós selecionamos Embeddings OpenAI 3 Small ou qualquer outro nome. Nós queremos ter certeza de que usamos aquele mesmo modelo que nós selecionamos para esse índice aqui, porque ele vai processá-lo do mesmo jeito. Então, para o exemplo de módulos, como você pode ver, eu tenho o Text Embedding 3 Small modelo de OpenAI aqui.
+
+Então, esse é o que nós queremos selecionar no nosso workflow também. Eu vou selecionar Embeddings OpenAI. E aqui, você vai ter que conectar uma conta de OpenAI também.
+
+Então, eu vou mostrar para você como fazer isso rapidamente. Você quer ir para o plataforma.openai.com e depois você quer ir para os settings. E aqui, você quer selecionar as chaves API.
+
+Então, no lado direito superior, clique em Criar chave secreta nova e aí você pode dar um nome. Olá. Bem, eu não quero chamá-lo disso.
+
+Eu quero chamá-lo de agente de teste RAG. E aí você pode selecionar um projeto e então clicar em Criar chave secreta. De novo, esse não é um que você quer mostrar a qualquer um.
+
+Você pode clicar em Copiar. Feito. E aí, quando você voltar para o seu workflow, você pode criar uma nova credência ou você pode usar uma que você já tem.
+
+Eu tenho certeza que muitos de vocês já têm uma. E aí você pode escrever sobre a seção de chave API. Clica em Save.
+
+E deve dizer que a conexão foi testada sucessivamente. Eu vou fechar isso. Eu vou ter certeza de que estou em Text Embedding 3 Small porque é isso que combina com a base de dados que criamos no começo deste vídeo.
+
+Então, eu vou selecionar isso e depois eu vou fechar. Esse é o próximo passo feito. Agora, nós precisamos adicionar nosso carregador de dados de default, certo? Esse é o carregador de documentos.
+
+Esse é o que vai carregar os dados do Google Drive. Então, nós estamos conectando o nosso database de vetores, mas agora precisamos de algo que carregue todos os dados. O que podemos fazer é selecionar o carregador de dados de default.
+
+E então, para o tipo de dados, o que podemos fazer neste caso é binário, já que todos os dados que estamos carregando são todos dados binários dos passos anteriores no workflow. E então nós podemos manter isso em Carregar todos os dados de input. Nós podemos automaticamente detectar o tipo de mime.
+
+E então, para as opções, o que queremos fazer é adicionar uma opção e nós podemos adicionar metadados como opção. Aqui, nós queremos adicionar uma propriedade e então fazer FILE-NAME. E agora nós precisamos de um valor para pular dele.
+
+Então, o que nós vamos ter que fazer é que nós vamos ter que conectar esses dois fios. E aqui, nós podemos, na verdade, ir para Mapping e então ir para Schema. E então, você pode pular o nome do seu módulo Google Drive, esse fio de nome, para o valor de FILE-NAME.
+
+Dessa forma, cada FILE-NAME tem aquele label que você deu no Google Drive. E agora, esse módulo está todo preparado para o carregador de dados de default. O que nós queremos fazer agora é adicionar um splitter de texto e isso é necessário.
+
+E, basicamente, o que isso está dizendo aqui, nós queremos adicionar um splitter de texto de personagem recursivo. Porque o que isso vai nos permitir fazer é dividir todos esses documentos em tamanhos de pedaços baseados em seus personagens. Então, se eu tiver um transcripto aqui, deixe-me apenas clicar na sequência de prompta de Bulletproof e copiar tudo isso.
+
+Se eu for para algo como Google Docs e eu pastei todo esse transcripto em Google Docs, como você pode ver, se eu for para Tools, Word Count, eu tenho 15 mil personagens aqui. Então, o que esse splitter de texto recursivo está fazendo é, basicamente, dizer, ok, todos os mil personagens, eu vou dividi-los em pedaços. Eu vou fazer isso um recorde dentro do seu database de vetores.
+
+Então, quando querimos essa coisa no futuro, ela pode procurar pedaços de 1 mil, certo? E eles têm esses pontos de vetores que se conectam em espaços dimensionais mais altos. Então, se eu colocar 250 personagens, 250 personagens do pedaço anterior serão adicionados para o novo pedaço também, para que tenha esse contexto semelhante. Então, por enquanto, eu vou deixar o tamanho de pedaços em 1 mil e mudar o overlap de pedaços para 250.
+
+Eu vou por cada 1 mil personagens, isso vai funcionar para mim. E então eu posso clicar, e agora essa coisa está pronta para ir. Se você colocou assim e você está usando arquivos de texto ou PDFs, isso deveria funcionar.
+
+Então, o que podemos fazer é testar esse fluxo de trabalho e ver se ele pula todos os 9 itens para o nosso índice. Então, é isso que eu vou fazer, vou clicar em Test Fluxo de Trabalho. E lembre-se, estamos pré-processando tudo isso para uma loja de vetores.
+
+E a loja de vetores é o que nos permite queryar nossos dados no futuro. Então, agora está downloadando todos os nossos arquivos de Google Drive. E agora está adicionando-os um por um para a loja de vetores.
+
+E o que você vai notar é que, sim, está adicionando os documentos um por um. Mas no final, você vai ver quantos recordes ele criou com o nosso recurso de textos de personagens. Então, cada 1000 personagens, ele criou um novo recorde.
+
+Então, como você vai ver aqui, depois de todos os 9 itens serem processados, ele vai ter mais do que apenas 9 itens dentro da nossa loja de vetores. Então, vamos dar uma olhada. Como você pode ver, 457 itens.
+
+É isso que ele dividiu isso em dois. E diz que o fluxo de trabalho foi executado sucessivamente. Então, agora, quando voltamos ao nosso índice, nós temos 457 recordes, todos com certos pontos de vetores.
+
+E você pode setar o top K, você pode fazer todas essas coisas com essa loja de vetores. Este é um exemplo muito básico, mas o que nós vamos poder fazer é criar certas partes de nossos dados dentro do próximo agente que nós criamos. Então, quando eu clico em mostrar mais dois aqui, eu só vou mostrar um recorde de exemplo aqui.
+
+Quando eu clico em mostrar mais dois, como você pode ver, ele só pega um bloco do meu texto de um dos meus módulos da minha loja de dados de transcrição aqui. Então, o próximo passo é setar o agente onde nós podemos falar com todo esse dado que nós só importamos para a nossa loja de vetores Pinecone. Então, estamos quase lá.
+
+Nós temos mais um passo para a esquerda, mais um fluxo de trabalho que nós temos que criar. E então, você estará no seu caminho para adicionar mais fios, comunicar de formas diferentes para o seu agente RAG e só dar mais contexto para que ele saiba sobre a sua situação, saiba sobre seus fluxos de trabalho, saiba sobre seus financiamentos, saiba sobre o que você quer que ele saiba sobre. Um ótimo jeito de lidar com dados grandes.
+
+Vamos clicar em criar fluxo de trabalho na esquina esquerda e direito e começar a construir esse agente aqui. Então, o que nós queremos fazer é, por enquanto, quero dizer, você pode ligar isso para Telegram, WhatsApp, Slack, Open Web UI, você pode fazer realmente o que você quiser, mas o que eu vou fazer é manter isso simples e eu vou fazer mensagem de conversa para começar minha automação. E então, uma vez que eu selecionar isso, eu só vou clicar.
+
+E então, o que eu quero fazer é adicionar o nodo de agente AI. Então, eu vou clicar na esquina esquerda e escrever agente AI. Eu vou selecionar isso e aqui nós podemos manter tudo o mesmo.
+
+Agora, você pode ficar louco com as suas instruções e realmente começar a fazer essa coisa absolutamente poderosa e apenas, você sabe, referenciar o seu databases da forma exata que você quiser, sendo capaz de adicionar certas queries. Você pode ter um agente classificador que classifica queries, envia diferentes queries para diferentes databases e, você sabe, você pode ficar louco com isso, mas vamos manter isso simples por enquanto e mostrar para você como construir essa coisa. Então, precisamos conectar um modelo de conversa.
+
+Eu vou usar OpenAI porque nós já temos nossa chave API conectada. Então, eu só posso usar algo como GPT-40 Mini. Você sabe, esse é apenas o modelo que vai agregar uma resposta de volta para você, então você não precisa de nenhuma razão pesada, mas você pode conectar um modelo de conversa para isso.
+
+E então, eu quero dar essa memória de agente AI para que ele possa entender mais contexto dentro do thread de conversa, ao invés de apenas uma mensagem a um tempo. Então, eu seleciono a memória do buffer de janela e posso deixar tudo aqui igual porque nós temos esse nodo de conversa conectado, então, ele já entende isso. Ele sabe que está recebendo memória desse chat para que ele possa manter uma conversa e nós temos ele sendo capaz de ver cinco mensagens de volta.
+
+Agora vem a parte divertida. Nós precisamos adicionar o nosso database Pinecone como um atalho. Dessa forma, quando nós perguntamos uma questão específica em relação ao prompting, nosso agente AI sabe quais ferramentas temos disponível para usar para queryar o nosso database e encontrar recordes que correspondam com o nosso prompt.
+
+Então, o que nós precisamos fazer é clicar nesse botão de mais e adicionar um atalho. E então, o que eu quero escrever é resposta e então nós queremos fazer esse atalho VectorStoreQuestionAnswer. Então, quando eu seleciono isso, quero dizer, vamos ter muitas coisas para enumerar aqui, mas é bem simples e você pode ficar com o N8n para a maior parte.
+
+Então, para o nome de dados, aqui você quer dar um bom nome. Para isso, eu só vou colocar informação de prompting. Dessa forma, ele sabe que eu estou perguntando uma questão sobre prompting e que ele pode ir para esse database de resposta de perguntas aqui.
+
+E então, eu quero dar uma descrição do meu dados. Então, eu só vou escrever prompting, dicas e técnicas, tutoriais N8n, estruturas de prompt, etc. E para o limite, eu posso fazer 5. Eu só vou deixar o limite meio baixo.
+
+E esse é o número de resultados para retornar, o número máximo de resultados. E, muitas vezes, ele nem vai retornar até 4, mas eu só vou movê-lo até 5. Agora, nós podemos clicar nisso. E agora, nós temos esse atalho aqui, mas nós precisamos adicionar algumas coisas.
+
+Nós precisamos adicionar o nosso VectorStore e nós precisamos adicionar um modelo. Então, o que vai acontecer aqui é que esse é apenas o espaço onde o database de dados pula a informação e conversa com ele, com um modelo. Então, eu só vou adicionar um modelo de conversa de OpenAI aqui.
+
+E esse é o lugar onde você poderia usar mais resolução avançada se quiser, porque isso vai interagir com o seu VectorStore de perguntas aqui. Então, quando o seu agente de OpenAI vai e encontra seu arquivo de PDF específico ou um pedaço do seu arquivo de PDF ou seu arquivo de texto, ele vai trazê-lo para cá e começar a resolução com o seu modelo de conversa aqui. Então, é bom ter um modelo de conversa de resolução avançado aqui se você o precisa.
+
+Agora, eu acho que devemos ser bons com GPT-40 Mini, nesse caso. Eu até posso fazer, tipo, GPT-4, apenas o GPT-40 comum aqui.
+ Este arquivo é mais longo que 30 minutos.
+ Atualize para Ilimitado em TurboScribe.ai para transcrever arquivos de até 10 horas.

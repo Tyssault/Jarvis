@@ -1,0 +1,251 @@
+Pare de Perder Tempo! Este MCP Cria Automação no N8N em Segundos
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Criar automações no N8n com um prompt. Fala aí se isso não é incrível, cara. Comenta aqui embaixo, pelo amor de Deus.
+
+Cara, nem acredito que esse negócio funcione desse jeito. Vamos lá. Beleza, vai lá, faz o deploy.
+
+Foi feito o deploy com sucesso, pessoal. Eu vou atualizar a tela. Ele criou e instalou.
+
+Eu sabia, eu sabia que eu ia trazer esse vídeo para vocês aqui no canal. Você vai sair desse vídeo entendendo o potencial do que você pode fazer com o N8n a partir de agora. O vídeo está completasso, daquele jeito que vocês já estão acostumados aqui no canal, com todos os detalhes para não restar dúvida nenhuma.
+
+E a única coisa que eu peço em troca é deixe o seu like para me ajudar, porque deu um trabalho do caramba. Ah, e se você gosta de conteúdo de automação e inteligência artificial, se inscreve para não perder outros vídeos como esse. O vídeo anterior eu trouxe aqui como você cria fluxo no automático, mas um monte de gente falou, ah, não é o N8n, assim não dá, o N8n é melhor e tal, de fato, mas e agora? Aí, agora, com o N8n, meu caro.
+
+Vamos lá, para eu mostrar como funciona, é fácil, mas eu quero que você aprenda a fazer. Para isso, eu tenho que fazer um passo a passo, e para fazer um passo a passo, eu preciso falar um pouco de teoria também, mas eu prometo que vai ser super rápido, beleza? Nesse vídeo, você vai aprender a usar o agente da cloud, a configurar, o que é MCP, como configurar, instalar, você vai apertar um botão e o fluxo vai estar lá, instalado no seu N8n. Então, bora para o vídeo.
+
+Como que vai funcionar então, para gerar aqui o fluxo automático? São quatro passos, o primeiro passo é utilizar o cloud. Se você não conhece, eu vou explicar, vou mostrar como instalar. Ele vai ser o nosso assistente, nós vamos digitar um prompt, cria um fluxo que faz tal tarefa.
+
+Depois, ele vai conectar com o que? Com o N8n MCP, que é o servidor de informações, que é exatamente o que nós vamos instalar ali, que vai passar todas as informações sobre os nós para o cloud. Os nós do N8n, Google Drive, Google Gmail, Planilha, Superbase, Chat APT, enfim, são todos aqueles nós. Ele vai passar essas informações para o agente do cloud, criar o que? No passo 3, um JSON, um arquivo de configuração com todo o fluxo, para na etapa 4, a gente pegar esse JSON gerado, esse arquivo de configuração que tem todos os nós ali conectados, importar lá no N8n, ou até mesmo pedir para o próprio cloud instalar ele.
+
+E a ideia é a gente precisar configurar o mínimo, por exemplo, credenciais. A gente vai lá selecionar, aqui você vai usar essa credencial. Se estiver usando, por exemplo, nó relacionado com planilhas do Google Drive lá.
+
+O que nós vamos precisar? Selecionar qualquer planilha, selecionar qualquer coluna, se for banco de dados, a mesma coisa. Então, são configurações simples, mas todo o workflow foi criado de forma automática. Só reforçando, então, que no final, hoje mesmo, se você pegar lá todo o seu fluxo, você consegue exportar ele e gerar o que? Um arquivo de configuração que é um JSON.
+
+Então, aqui é um exemplo desse arquivo aqui. É isso que nós vamos gerar e nós vamos importar, tá bom? Mas antes, eu preciso mostrar aqui para você porque vai ter muita coisa legal para a gente conseguir colocar a mão na massa, tá? Então, eu tenho que explicar para você algumas coisas, então nós temos esse passo a passo. Primeiro, eu vou explicar para você de forma rápida, poderia ser um vídeo só para isso, mas eu quero ser bem objetivo e explicar o que é MCP.
+
+Isso é muito bom você aprender. O que é o nhn-mcp, que é essa biblioteca, vai, é esse MCP que nós vamos utilizar aqui. O que é o cloud, como configurar, como instalar, porque nós vamos utilizar a versão do desktop e aí sim, colocar a mão na massa para instalar tudo.
+
+O que é o MCP, então? Como eu falei, poderia fazer um vídeo só sobre isso, e eu pretendo fazer, mas aqui já vai ficar muito claro para você o que é. Model Context Protocol. Como o próprio nome já diz, é um protocolo que permite que diferentes inteligências artificiais conversem entre si para resolver tarefas juntas. E para você entender, eu tenho que explicar como que nós chegamos até aqui.
+
+Eu vou separar aqui essa parte de utilização de agentes dentro do nhn em três partes aqui, que é conhecida como os três ciclos, as três ondas. Como que saiu do que era lá na versão 1, a primeira utilização, quando surgiu as LLMs, e o que foi a versão 2 e o que é agora esse tal de MCP. Então vamos lá.
+
+O agente 1.0, que foi a primeira versão que surgiu lá, a gente tinha o que? Um prompt, a gente fazia uma pergunta para ele, ele ia lá no chat ept, que é a LLM, pesquisava, fazia tudo o que você queria lá, e ele retornava para você uma informação. Você tratava essa informação e beleza. Até coloquei aqui, oi, esse é o resultado da sua solicitação.
+
+A primeira versão era muito simples. A gente tinha dificuldade para conectar ferramentas. Como que eu vou conectar aqui no Gmail para pegar os meus e-mails no calendário? Era possível? Sim! Através de HTT-Response, usando APIs.
+
+Se você tem dúvida, API, o que esse cara está falando? Tem um vídeo que eu falo de automação, vou deixar aqui no link, lá eu explico com mais detalhes a API, tá bom? Mas então a gente conseguiria pegar essas informações, tratar com HTT-Response. Mas lembra, a gente quer simplificar. O NHN simplifica, ele cria nós específicos para aplicações específicas.
+
+Então, eu já tenho o nó do Gmail que já pega os meus e-mails. Eu já passo os parâmetros certos, não preciso ficar fazendo HTTP, request, enfim. Então, facilitou.
+
+Aí veio o que? O agente 2.0, ou a segunda onda dos agentes. O NHN olhou e falou, pô, vocês não precisam ficar preocupados aqui em ficar conectando um monte de nó para pegar isso, para pegar aquilo. Então, vamos fazer o seguinte, vamos criar um agente aqui e esse agente vai ter tools, ferramentas.
+
+Então, você vai conseguir, com um agente só, conectar o seu Google Drive, o seu Google Sheet, o seu canal do YouTube, qualquer coisa. Você vai conseguir conectar essas tools, essas ferramentas. Ele vai saber ali tratar o que você quer e vai te dar um retorno.
+
+Aqui no NHN, seria mais ou menos isso. Tem um gatilho aqui de webhook, aí tem um nó de agente, desconsidera aqui os erros, porque é só um exemplo, então não está com as credenciais corretas. Tem aqui o LLM do Chat EPT e tem aqui tools, está vendo? Tools, vem aqui nesse cantinho aqui, tools.
+
+Eu conectei tools aqui e aí eu posso conectar várias outras tools. Então, tem aqui, cria evento, remove evento, está vendo? Banco de dados e assim por diante, depois ele retorna. Então, essa seria a segunda onda dos agentes.
+
+Agora entra o que? O MCP. O que é o 3.0? E aqui vocês vão pirar, porque vai facilitar muito a vida de vocês, tanto se vocês forem usar por conta própria, como a possibilidade de utilizar os MCPs de terceiros. Calma lá, vamos lá, vamos entender isso daqui.
+
+Imagina que você tem um prompt, igual às versões anteriores. Aí nós temos o MCP Client, nós temos um cliente configurado agora no N8n, já já vocês vão ver isso aqui no N8n funcionando. Aí chegou um prompt ali, algum pedido que eu quero para esse MCP Client, ele envia para o MCP Server.
+
+Como eu falei, pode estar na minha própria máquina, pode ser um outro fluxo que está lá, mas também pode estar em outro servidor que eu criei, como também pode ser o MCP de qualquer servidor. Vamos lá, imagina que eu tenho uma empresa e eu estou criando aqui uma API para criar tarefas no banco de dados. E aí eu posso criar uma API, que é toda aquela documentação, manda o GET, manda o PUT, manda isso, manda o DELETE, para você lidar aqui com essas informações.
+
+Só que com o MCP, eu crio um MCP Server e você só passa um prompt, e o meu MCP Server, o meu servidor, sabe o que fazer. O que acontece então? O MCP manda aqui para o server, aí o que ele tem aqui? Digamos que nós temos aqui o MCP do Google, e ele criou um MCP só aqui para a parte de Google Calendar. Então ele já tem lá os eventos CRIE EVENTO, REMOVE EVENTO, ATUALIZE EVENTO.
+
+Eu não preciso me preocupar com o que eu vou lidar com essas informações, porque o Google já programou, o Google sabe o que está fazendo lá do lado deles. Ele só pediu para eu usar o MCP Server, e aí ele vai retornar e vai me dar o resultado. Vamos entender no N8n como vai funcionar.
+
+Antes de mostrar no N8n, só para fixar ainda mais, para vocês verem o potencial, se antes você precisava configurar POST para criar, UPDATE, você usava o PUT, eu quero deletar, tem que fazer um DELETE, passar o ID, agora não. Você pode usar a linguagem do quê? Do PROMPT. Você vai falar assim, cria uma tarefa com a seguinte descrição.
+
+Pronto. Crie uma tarefa com o seguinte título, com a seguinte data, ou remova a tarefa ou o evento do calendário com o ID tal. É isso, você não precisa se preocupar, porque quem vai se preocupar, se vai usar o GET, DELETE, qual TOOL, qual ferramenta vai usar, é o MCP.
+
+Repare aqui que eu tinha o agente 2.0, que nós acabamos de ver, e eu vou clicar aqui no 3.0. Está aqui. Olha só que louco isso. Então nós temos um webhook, tenho aqui o agente, conectado com um LLM, aqui no caso a OpenAI, está até com erro também, porque eu não configurei aqui a credencial, mas olha que no TOOL, nessas ferramentas, eu conectei um MCP CLIENT, um cliente de MCP.
+
+Agora, por que eu mostrei aqui que na tela inicial só tem o 2.0 e o 3.0? Porque o meu MCP está em um outro servidor. Eu quis mostrar o MCP SERVER em um outro servidor. Eu vim aqui, procurei um gatilho do tipo MCP SERVER, MCP SERVER TRIG, conectei quais TOOLS, aqui já com as credenciais, CRIA EVENTO, ATUALIZA EVENTO e DELETA EVENTO.
+
+Concorda comigo que, a partir do momento que aquela TOOL, MCP CLIENT, conecta com essa trigger, ele já tem acesso aqui. Então, além de utilizar MCP de terceiros de outras empresas, você também consegue organizar melhor os seus fluxos. E como que o CLIENT consegue acessar esse SERVER aqui? Se você abrir, você vai ver que é muito parecido com um webhook.
+
+Nós temos o quê? Uma URL. Você vai copiar essa URL e configurá-la no CLIENT. Mas antes, olha, repara, nós temos aqui uma TOOL CRIAR EVENTO, ATUALIZAR EVENTO e DELETA EVENTO.
+
+Então, eu vou acessar aqui o 3.0, que é onde a gente estava, e aqui, nessa TOOL, eu adicionei esse MCP CLIENT. Quando eu abro ele, eu configuro aqui aquela URL. É o ENDPOINT, é como se fosse a URL lá do meu gatilho do MCP, certo? Aqui está todas as ferramentas, mas eu também consigo selecionar a que eu quero.
+
+Se eu clicar em SELECIONAR, ele vai pensar um pouquinho, e olha a mágica aqui, aquelas três ferramentas estão aqui. Entende como que amplia os horizontes aqui, como que a gente pode organizar melhor, reutilizar código. É incrível isso, não é? Então, agora que nós sabemos o que é o MCP e como que ele pode mudar completamente a nossa forma de criar os workflows, vamos entender o que é o N8n MCP.
+
+Basicamente, é um servidor que fornece informações sobre cada um dos nós do N8n para o assistente. Ou seja, ele ajuda a entender melhor e gerenciar os fluxos. Então, aqui está o GitHub do projeto, vou deixar o link aqui embaixo para vocês.
+
+E aí ele explica o quê? Que é uma ponte entre a plataforma de automação e o fluxo de trabalho. Eu traduzi para ficar mais fácil aqui, então pode ter algum errinho de tradução. Mas, basicamente aqui, ele fala que tem 532 nós do N8n.
+
+Ele tem aqui 99% de cobertura com os esquemas detalhados, ou seja, ele sabe as propriedades do nó, 99% de cada propriedade do nó. As operações de cada nó tem uma cobertura de 63%. Documentação tem 90% de cobertura da documentação.
+
+Ferramentas de IA tem 263 nós com capacidade de IA, com a documentação completa. Ou seja, ele passa informações ali para o agente, que é o cloud que nós vamos utilizar, criar a estrutura, criar o workflow. Só que, se você fizesse isso no seu ChatGPT, você poderia chegar ali e falar, cria um workflow para tal coisa, mas ele não tem informações, ele não sabe o que o nó do Google Calendar precisa de tal configuração, ou que um nó específico lá precisa de outra configuração, entende? Então, aqui nós vamos fornecer através desse MCP, esse servidorzinho que vai ficar rodando aqui na nossa máquina, fornecer essas informações para o agente saber ali, cara, eu preciso disso, disso, disso, disso.
+
+A chance de dar errado é mais difícil. Vai acontecer? Vai, não é perfeito, né? Mas você já vai ganhar muito tempo. Se você criasse diretamente ali no ChatGPT, cria um workflow para fazer tal coisa, provavelmente ia dar muito errado, porque faltam informações, que é o que esse MCP faz.
+
+Mas antes, alguns avisos que o próprio criador aqui fala, tá bom? Olha só, aviso importante de segurança. Nunca edite seu fluxo de trabalho diretamente com o IA, beleza? Sempre faça uma cópia do seu fluxo, é importante, pessoal. Faz backup dos seus fluxos.
+
+Teste primeiro no ambiente de desenvolvimento, se possível. Coloca aí um N8n instalado no seu computador. Eu já mostrei aqui no canal como que instala um N8n com Docker sem pagar nada.
+
+Exportar backups de fluxo é importante. Salvar, validar as alterações antes de implantar no servidor de produção. E aí, beleza, feito isso, você está protegendo o seu trabalho, tá bom? Proteja o seu trabalho.
+
+Então, vamos lá. Coloque o N8n MCP em execução em cinco minutos, tá? Aqui, ele mostra duas opções. Tem até três, mas vamos focar em duas.
+
+Primeira opção, usando o NPX, que é mais rápido e sem instalação. O pré-requisito é a gente ter instalado na nossa máquina o Node.js. O que é o Node.js? Basicamente, ele é um servidor para você rodar JavaScript. E aí, vale um detalhe aqui.
+
+Eu lembro, na minha faculdade, que um professor pediu para eu fazer um trabalho. Já tem uns dez anos isso aí. Eu nunca imaginei que seria tão utilizado o Node.js. Naquela época, eu não entendi muito bem.
+
+E depois que eu fui entender, eu falei, caraca, esse professor tinha visão. Por quê? Isso é muito utilizado. Se eu não me engano, até o Twitter utilizava por conta da quantidade de requisições que tem ali no servidor deles.
+
+Então, como que funciona? Tudo que a gente vê na internet, num site, a gente fala de front-end. Se eu estou em um aplicativo, front-end. Estou vendo, estou manipulando aqueles itens.
+
+O back-end é tudo que está rodando ali no servidor. Só que, geralmente, o JavaScript roda no front-end. Principalmente na web.
+
+Até algumas interfaces de aplicativo tem o JavaScript rodando no front-end. Só que o Node.js cria um servidorzinho. Eu consigo criar webapps, aplicações, servidor para rodar JavaScript.
+
+E isso fica muito mais rápido. Pode parecer complicado aqui, mas não é. Vai ser bem rápido a instalação. Mas eu gosto de explicar, como vocês já conhecem o Eli dos outros vídeos.
+
+Eu tento explicar todo o contexto para ficar mais fácil vocês entenderem. Depois que nós instalamos o Node.js, a gente vem na parte de configuração. Eu estou passando por cima, mas depois nós vamos fazer.
+
+Você tem duas opções aqui, basicamente. A primeira, que é só a parte de informações do nó. E a segunda, repare aqui, que a gente coloca duas outras informações na configuração.
+
+Que é a URL do nosso N8n e também uma API key. O que isso significa? Que utilizando essa daqui, você vai conseguir, inclusive, pedir para ele instalar, por exemplo, o Workflow. Remover o Workflow, porque ele vai ter acesso ao seu N8n.
+
+E aí lembra que eu falei que tinham três opções? A primeira nós vimos agora. A segunda seria instalar, ao invés de utilizar o Node.js, instalar num Docker. Eu já mostrei para vocês como instalar o N8n no Docker, tem vídeo no canal.
+
+Mas aqui não é instalar o N8n, seria colocar esse MCP no Docker. Mas nós não vamos por essa linha. E a opção 3, que ele mostra, também é uma instalação local, também aqui com o Node.js. Só que tem mais informações se você é um desenvolvedor, para mudar aqui os dados dessa ferramenta mesmo.
+
+Se você quer contribuir com esse MCP aqui, que é Open Source. Então, qualquer pessoa consegue criar, mudar, enfim. Então, seria uma versão para desenvolvedores.
+
+Então, vamos ficar na primeira. Mas antes, vamos entender o que é o Cloud agora. E o que é o Cloud? Que é onde nós vamos digitar o Prompt.
+
+É um LLM, é um modelo de inteligência artificial criado pela Anthropic, que é concorrente da OpenAI. Beleza? É isso. É um chat EPT, só que lembra que no chat EPT tem um botãozinho de mais lá, que tem todas as tools, as ferramentas.
+
+A gente consegue adicionar algumas ferramentas ali. A gente consegue adicionar o que no caso? Esse servidorzinho MCP, que vai estar rodando no nosso PC. Já, já nós vamos baixar aqui a versão desktop, que eu quero fazer passo a passo com vocês.
+
+Mas está vendo aqui nas configurações? Na versão desktop, você vai ver que a gente consegue adicionar aqui, tools, ferramentas. E aí, ele vai conectar com esse MCP que nós vamos instalar lá no Node.js. Vai ficar muito legal, porque quando a gente pedir algo para o assistente, ele vai... Opa, tem essas tools aqui, ó. Tem essas informações sobre os nós do N8n. Eu vou usar para criar.
+
+É isso. E o legal é que assim como os GPTs lá do chat EPT, no Cloud nós vamos criar um projeto. E nós vamos colocar nas configurações desse projeto algumas informações.
+
+Um prompt, ó. Você é um construtor de workflows do N8n e tem todas essas informações aqui embaixo. Então, vai facilitar ainda mais dele conseguir criar tudo certinho, entende? Olha só, essa aqui vai ser a configuração do projeto. Então, você é um expert em automação do N8n, usando o N8n MCP Tools, que é essa ferramenta.
+
+E aí, tem um monte de informação aqui que vai ajudar ele a construir o fluxo da maneira mais correta possível. E aí, você deve estar se perguntando, tem que ser o Cloud? Não, pode ser o Cloud, o Visual Studio Code, o Cursor, que eu pretendo trazer um vídeo aqui para vocês também, o Windsurf, mas nós vamos utilizar o Cloud. E agora, chegou a hora de colocar a mão na massa.
+
+Vamos lá, já falei demais. Então, no link aqui embaixo do GitHub, você vai rolar aqui até a parte de instalação, na opção 1. E o primeiro passo é instalar o Node.js, tá bom? Repara aqui que ele fala, ó, rode diretamente com o NPX, ou seja, não precisa instalar. O que é o NPX? O NPX é um comando que vem com o NPM.
+
+O que é o NPM? Node Package Manager. É um gerenciador de pacotes que você pode baixar no seu Node. Então, se eu pesquisar aqui por N8n, vão ter vários projetos, várias bibliotecas.
+
+Você pode criar um projeto Node em JavaScript e disponibilizar aqui para as pessoas. Então, é basicamente isso. O NPX é um comando que vem com o NPM, quando você instala o NPM na sua máquina, para baixar pacotes, bibliotecas.
+
+E ele serve para rodar esses pacotes sem precisar instalar eles. Então, você vai clicar aqui em Node.js. Você vai ser redirecionado para essa página. Clica aqui em Download.
+
+Desconsidera essa parte superior aqui. Só seleciona aqui, ó, a versão do seu sistema operacional, no meu caso é o Windows, x64. E aí eu vou clicar aqui para baixar o arquivo.
+
+A instalação é bem simples. Next. Aceitar os termos.
+
+Aqui ele vai instalar lá no C, Programas Files, Node.js. Vamos dar Next. Next mais uma vez. Install.
+
+E aí ele pergunta qual que é o drive. Eu vou colocar que é no C. Install. Pronto.
+
+Ele vai fazer a instalação. Instalação concluída com sucesso. Finish.
+
+Pronto. Agora vamos ver se funcionou. Já abriu o Command.
+
+Se você não sabe como abrir, é só começar a pesquisar Command Prompt. Só que eu tenho o Windows PowerShell, que eu acho um pouco melhor de mexer. Então, eu vou abrir ele aqui e vamos utilizar ele.
+
+É só instalar o Windows PowerShell aí na loja do Windows. O que eu vou rodar aqui para ver se funcionou a instalação do Node. Eu vou colocar Node menos V. Olha só.
+
+A versão 22.17.1 está instalada. Aqui no terminal, eu comecei a digitar NP. Se eu coloco o MTAB para completar, ele já vem o comando NPM.
+
+Beleza. Foi instalado. Se eu coloco NPXTAB, ele também preenche.
+
+Ou seja, instalei o Node, veio o comando Node, MPM e MPX. Está tudo certo. Aqui, eu aumentei a fonte para ficar mais fácil para vocês enxergarem.
+
+O que nós vamos fazer? Rodar o comando que ele pede lá. Qual que é o comando? NPX, espaço, N8N, traço, MCP. Lembra que ele mostra lá.
+
+Sem instalação, sem nada. Vai rodar com o NPX. Vai usar o repositório de aplicações do Node.
+
+Só que quando você der um Enter aqui, vai dar um erro. Outro detalhe. Toda vez que você precisar rodar, você precisa executar isso daqui, porque ele vai criar o servidorzinho aqui.
+
+Então, se você reiniciou seu computador e for usar depois, não vai funcionar. A menos que você crie um BAT. Não vou entrar em detalhes aqui, mas é um script para toda vez que ligar o computador, ele executar isso daqui e levantar esse serviço.
+
+Mas não é o propósito desse vídeo. E é bem simples também. Coloca no chat APT, no próprio cloud, que ele ensina você a fazer isso.
+
+Eu só vou dar um Enter para você ver o que? O erro que nós vamos ter aqui. Olha só. Esse erro é porque o PowerShell está bloqueando scripts locais.
+
+O que nós vamos fazer? Vamos matar isso daqui. Fechei aqui o PowerShell. Vou abrir de novo, só que eu vou clicar com o botão direito e vou rodar como administrador.
+
+Ele vai perguntar se eu dou a permissão. Agora sim. Deixa eu aumentar de novo o zoom.
+
+Só que agora nós vamos rodar esse comando aqui, que é para ele tirar esse bloqueio. Eu vou deixar o comando aqui embaixo. Se eu der um Enter aqui, ele vai perguntar.
+
+Eu vou colocar o Y para Yes. Ele está me dando as opções. Prontinho.
+
+Agora eu vou rodar aquele mesmo comando. npx-n8n-mcp E ele vai começar a levantar o serviço. Ele pergunta se quer continuar.
+
+Por padrão já é o sim. Ele já começa a pensar aqui e começa a fazer o que ele precisa fazer. Ele já trouxe aqui várias informações falando.
+
+Documentação do n8n-mcp serve. Está rodando um stdio-transport. Beleza.
+
+Está rodando. Agora nós vamos fazer o download do Cloud Desktop para configurar ele para usar o MCP. Vou pesquisar aqui.
+
+Cloud Desktop Download. Vou deixar o link aqui embaixo, mas é o primeiro link que aparece. Clica aqui.
+
+Vou baixar, no meu caso, para o Windows. Ele já abriu a instalação aqui. No meu caso, está pedindo para aceitar.
+
+Get started. Pede para continuar com o Google ou criar uma conta de e-mail. Vou fazer esse processo de login.
+
+Fiz o login. Ele vem nessa tela aqui. Eu vou pular.
+
+Ele até mostra que ele adiciona na barra de status. Vou pular. E pronto.
+
+Eu estou no Cloud, mas agora com uma aplicação no meu desktop. E aqui, lembra as configurações? Olha só. Não tem nada de mais aqui, certo? Agora nós vamos fazer a configuração para aparecer os itens lá do MCP aqui.
+
+Quais configurações? Lembra? Tem duas aqui. Uma que eu não coloco, no caso aqui, a URL e a API do meu n8n. Ou seja, se você quer mais segurança, eu recomendo você ir por essa linha aqui.
+
+Por quê? Você não vai ter vínculo nenhum com o seu n8n. Tá bom? O que vai acontecer só? Ele vai utilizar ali as informações dos nós do MCP para criar o JSON que você vai importar depois. Agora, se você confia e, assim, o projeto está aqui, open source, muitas pessoas mexendo.
+
+Aí você quer que ele altere diretamente no seu n8n, coloca essa configuração aqui. Só que aí você vai precisar configurar a URL do seu n8n e a API key. A vantagem é que ele vai ter acesso aos workflows, até mesmo conseguir instalar o workflow diretamente.
+
+Tá bom? Agora, se você utiliza só para teste, beleza. Igual eu aqui. Eu tenho um n8n só para teste e eu vou colocar nele.
+
+Então, eu vou colocar essa configuração inteira aqui. Eu vou copiar. E onde que nós vamos colocar ela? Então, aqui no cloud, eu abro o aplicativo, venho aqui nas configurações, clico no ícone aqui, settings, venho aqui em developer.
+
+Se você estiver no Mac e não aparecer aqui, você vai aqui nas configurações do sistema aqui em cima. Tá bom? Mas, eu vou vir aqui em developer, vou clicar em edit config. Ele vai abrir uma pasta lá onde está as configurações.
+
+Olha aqui, ele abriu essa tela aqui, que é onde está as configurações do cloud. Olha a URL aqui em cima. Meu nome, app data, ou seja, esse arquivo aqui, cloud desktop, eu vou dar um botão direito, abrir com, aí eu vou escolher aqui o editor de texto, bloco de notas.
+
+Ele abriu aqui um bloco de notas vazio. Tá vendo? Olha só. Eu vou colar aquele conteúdo.
+
+Beleza. Vou salvar. Beleza.
+
+Vou fechar. Fecha esse conteúdo aqui. Deixa eu fechar.
+
+E aí, um passo muito importante. Eu vou fechar, reiniciar o cloud. Vou fechar aqui.
+
+Beleza. E vou abrir de novo. Só que você precisa também tirar ele aqui da bandeja.
+
+Eu vou fechar mesmo. Vou dar um botão direito, sair. Beleza.
+
+Fechou tudo. Eu preciso reiniciar o cloud. Agora, eu vou abrir o cloud de novo.
+
+E agora, quando eu clico aqui, olha o que apareceu aqui. NHN, MCP. E aqui, um número 39.
+
+Se eu clicar, olha o tanto de ferramentas aqui. Lista nodes, get node info, ou seja, pega informação do node. Pesquisa nodes, lista ferramentas de IA.
+
+Então, tem um monte de coisa aqui. 39 itens de tools, ferramentas relacionadas ao MCP server que está rodando. Agora, eu não configurei o link API do meu NHN.
+
+Então, vamos lá. Eu fiz errado aqui ainda uma coisa. Vou voltar aqui nas configurações.
+
+Settings. Vou abrir de novo aquele arquivo. Vou vir em Developer.
+
+Ele vai aqui. Já tem até aqui que está rodando, mas eu vou editar o config. Vou abrir de novo esse arquivo aqui com bloco de notas.
+
+Só que o que eu vou colocar aqui? Eu vou pegar lá no meu NHN a URL e uma API key. Então, quando eu entro aqui no meu NHN, que é o meu NHN de teste, essa aqui é a URL dele, correto? Eu vou copiar até o ponto cloud aqui. Eu não vou manter o Home Workflow, não.
+
+Eu vou copiar a URL. Vou abrir o arquivo aqui e vou colar, beleza? Agora, eu vou voltar no NHN. Vou vir aqui em configurações.
+
+Aí, vai ter aqui, ó, NHN API. Vou criar uma API. Vou dar um nome, por exemplo, n8nmcp.
+
+Tem até se eu quero expirar em sete dias, trinta dias. Se não expira, eu vou colocar sete dias aqui. Salvar.
+
+Ele me deu. Eu vou deletar depois, mas é só para uns testes mesmo agora. Aí, nós vamos voltar aqui no arquivo e eu vou colar.
+ Este arquivo é mais longo que 30 minutos.
+ Atualize para Ilimitado em TurboScribe.ai para transcrever arquivos de até 10 horas.

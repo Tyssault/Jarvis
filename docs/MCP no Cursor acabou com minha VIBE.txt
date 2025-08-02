@@ -1,0 +1,196 @@
+MCP no Cursor acabou com minha VIBE
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Fala pessoal, bem-vindo de volta ao meu canal. Meu nome é Lucas Montano e tu tá assistindo o canal Lucas Montano. Então, no dia 25 de novembro de 2024, a Antropa que introduziu o Model Context Protocol e já tem muita empresa utilizando.
+
+Recentemente, eu estava falando com um amigo meu. Olha só, a empresa dele, cara, eu não vou falar o nome da empresa, mas tá exigindo, ou melhor, tá avaliando o quanto tu usa inteligência artificial. Aí tu deve pensar, né, pô, a empresa deve estar querendo que os funcionários não utilizem pra não vazar informação.
+
+Provavelmente, a empresa tá julgando as pessoas que utilizam. Ah, tu fez essa tarefa usando IA? Então, tu não é tão bom assim. Não, cara, é ao contrário.
+
+A empresa tá avaliando o quanto os funcionários, os programadores, estão utilizando inteligência artificial pra que eles utilizem mais. Então, perguntas estão sendo feitas, como, por exemplo, qual MCP tu configurou pro teu time nesse quarter? Olha só que absurdo, cara. Olha que momento a gente chegou.
+
+Será que essa empresa é uma visionária? Será que essa empresa quer caminhar pra substituir os próprios funcionários? E os funcionários estão sendo obrigados a implementar coisas que vão substituir eles mesmos? Não sei, mas isso me despertou algo, cara. Alguns exemplos que ele me deu, por exemplo, de MCP que eles estão utilizando. O primeiro deles, tá, que eu gostei muito, foi de comparação de screenshots.
+
+Olha só que interessante. Então, eles já têm alguns testes que comparam o aplicativo. Então, por exemplo, digamos que o aplicativo aqui tem... Sei lá, tem um botão aqui em cima, esse botão tem que ficar aqui, e ele tá trabalhando num novo componente, certo? Então, o aplicativo... Ele já tem um sistema de teste com base em comparar duas imagens.
+
+Era assim que o sistema tava, é assim que o sistema tá. E aí, basicamente, tu faz um teste de... Como é que é de fala? Regressão, regression test, né? Teste de regression. E esse teste de regressão, basicamente automatizado, vai comparar... Cara, tu quebrou alguma coisa na interface? E como é que eles fazem isso? Eles querem mandar essas dois screenshots pra um modelo, e esse modelo comparar as imagens e falar... O botão tá um pouco mais pro lado agora.
+
+Sei lá, tu foi adicionar uma coisa nova e tu acabou modificando o local do botão. Só um exemplo aqui. E eu comecei a pensar... Cara, interessante isso, né? Então, basicamente, a gente quer conectar testes, resultados de testes ao modelo.
+
+Então, a gente quer tirar as screenshots das telas e mandar isso pro modelo, e o modelo chegar a uma conclusão que vai ser colocada no teu pipeline. E MCP é um protocolo pra que tu possa construir isso. Então, eu não sei, muitos de vocês devem estar utilizando o Cursor, certo? Dentro do Cursor, tu pode cadastrar MCPs.
+
+Então, tem dois tipos de MCPs aqui que ele deixa tu cadastrar. Um deles é o comando e o outro seria um SSE. Um SSE aqui seria, basicamente, eu ter um serviço rodando local, e eu vou fornecer aqui ao URL o meu endpoint SSE, beleza? Então, eu quero criar um SSE hoje pra fazer o seguinte.
+
+Eu quero conectar o meu log de aplicação que tá rodando na minha VPS no meu Cursor. Então, o meu jogo que eu lancei, o Lumberjack vs Zombies. Então, basicamente, tu tem um jogo aqui que tu consegue matar zumbi, tem um PVP.
+
+Então, é um joguinho, tipo Minecraft. E eu quero pegar os logs desse jogo e lançar pro meu Cursor, localmente. Então, imagina o seguinte, tu tá analisando uma coisa em produção, um bug, e tu quer investigar a causa desse bug.
+
+É isso que o meu MCP vai fazer. Lá na minha VPS, eu conecto pro SSH. E aí, eu tenho um PM2 lá, que eu posso fazer PM2 Log Simulator, que é o serviço que tá rodando.
+
+Bem simples. Eu quero que esses logs vão parar dentro do meu Cursor no intervalo de 30 segundos. Porque daí eu consigo ativar, falar pro Cursor... Ó, eu vou testar em produção.
+
+Analisa os erros. E aí, ele vai corrigir os erros pra mim. Vamos ver se funciona.
+
+Então, assim, óbvio, já que a gente tá falando de IA, eu vou utilizar a IA pra criar esse script. E foi aqui que o Lucas Montano do canal. Lucas Montano perdeu a vibe no Coding.
+
+Ó, tá rodando. Unexpected No Whitespaces. Ele tá esperando um Json, tá? Essa IA estúpida não tá fazendo o que eu quero hoje.
+
+Então, voltando aqui pro chat IPT, eu falei, cara, o MCP Client, ele vai esperar um Json. Invalid counter type, expect text event stream. Fá! De chite, eu vou codar eu mesmo na mão.
+
+Deu um probleminha. Cannot set header after they are sent to the client. Invalid counter type, expect text event stream.
+
+Eu juro, eu juro pra ti, cara, eu quase dei um soco no computador. Me deu uma ansiedade, cara, de não conseguir, tá ligado? Não conseguir fazer a IA gerar o que eu queria. A raiva de ter passado uma hora tentando ao invés de ler a documentação e implementar eu mesmo.
+
+Cadê a vibe? Cadê a vibe? Fiquei dependente, basicamente isso. Fiquei dependente dessa merda que definitivamente não vai pra frente. Não vai.
+
+Pode mostrar aí quantos benchmarks vocês quiserem mostrar. Cometendo erros bobo, cara. Coisa como uma chave esfaltando no código.
+
+Uma lib errada. Não sabe ler a documentação do negócio. E fica me passando linkezinho, linkezinho do YouTube.
+
+Sério, meu. Aquele dia ali foi meu limite. Mas eu não preciso da IA.
+
+Não preciso. Eu posso resolver eu mesmo. Basta ler a documentação.
+
+E foi isso que eu fiz. Seguindo a documentação do model context protocol, eu consegui implementar o meu primeiro MCP. É isso mesmo, gurizada.
+
+Cara, são basicamente três passos pra implementar o teu MCP. Você precisa criar uma instância do servidor. Então, você vai adicionar à biblioteca o SDK do model context protocol.
+
+Eles têm SDK agora para Python, JavaScript e Java. Python, Node e Java. Eu não sei se eles já lançaram algum novo, mas enfim... Você pode fazer sem também o SDK, mas você vai ter que implementar muitas outras coisas na mão.
+
+Então, a primeira coisa é você criar o seu servidor. A segunda coisa vai ser... Você pode ter as tuas helpers functions, mas pulando essa parte é basicamente implementar a tua tool, que seria a ferramenta que o teu cliente vai chamar. Então, aqui nesse exemplo, ele está criando uma tool de getWeatherAlerts, beleza? E depois de implementar a tool, aí basta tu rodar o serviço, roda o teu servidor.
+
+Então, foi isso que eu fiz. Eu vou mostrar aqui pra vocês como ficou. Eu fiz um greetings e olha só que legal, eu vou colocar aqui na descrição um link para o repositório.
+
+Porque cara, foi difícil achar na internet um MCP simples. Eu não quero file systems, eu não quero aqueles repositórios que... Nossa, coloca o Google Maps aqui, coloca o teu Google Drive, conecta no teu Slack. Não cara, eu só queria implementar eu mesmo um Hello World.
+
+E depois em cima disso criar o que eu quiser. E foi difícil achar. Então, para te não passar por isso, eu botei todo o meu código no repositório público e o link vai estar aqui na descrição.
+
+Mas antes, deixa eu te falar da parceira aqui do canal, a High Globe, que está patrocinando esse vídeo. A High Globe ajuda profissionais brasileiros a receberem pagamentos dos Estados Unidos em dólar com menor custo garantido. Cara, é só 0,5%.
+
+Sem OF ou taxas extras. Então, deixa eu te falar um feedback de um amigo meu, que ele está usando a High Globe agora. Ele trabalha remotamente do Brasil para uma empresa americana.
+
+E uma das coisas que ele falou pra mim que ele mais curte é que tu não precisa sacar o dinheiro. Olha só. Tu recebe em dólar, mas não necessariamente tu quer sacar todo o teu salário naquele mês.
+
+Cara, daqui a pouco tu quer dar uma controlada no câmbio, tu quer deixar o teu salário dolarizado. Tu tem uma conta em dólar na High Globe e tu não quer sacar 100%. O que tu faz? Tu deixa rendendo.
+
+Então, os valores teu na High Globe, na conta em dólar, rendem 3% ao ano diretamente do teu saldo. Se tu quer usar o teu salário, usar o teu dólar que tu vai recebendo, tu também pode criar um cartão pré-pago da High Globe e utilizar internacionalmente, dentro do Brasil, fora do Brasil, numa loja física ou digitalmente, colocando na tua wallet digital. E se tu quiser sacar o teu dinheiro, o quanto quiser, não, o saldo inteiro, só, digamos, quero converter 2 mil dólares nesse mês, porque o câmbio está legal.
+
+Cara, entra na hora pelo Pix. Então, se tu trabalha ou conhece alguém que trabalha para uma empresa americana e está recebendo em dólar, High Globe é a melhor solução para ti. Confere o link que está aqui na descrição e o meu cupom montando20, que tu ainda garante, meu, 20% de desconto nos primeiros 3 meses fazendo transferências pela High Globe.
+
+Tá, agora voltando aqui para o código, então. Então, primeiro tu precisa inicializar o teu servidor, como a gente viu ali no exemplo da documentação. Depois, definir a tua tool.
+
+A minha é bem simples aqui, eu criei uma tool de greeting, que basicamente seria falar Hey, Lucas Montano, Nice to meet you. Seria um hello oldzinho, né? Aqui está o schema, então a gente vai receber um name, eu estou usando o Zod aqui para o schema. E aí tem uma função assíncrona que vai retornar o conteúdo, seguindo o tipo, retornando o tipo do conteúdo, né, de retorno, que vai ser um texto, e o texto que eu vou retornar.
+
+Aqui dentro é que eu posso colocar os meus helpers e fazer a integração com a minha VPS utilizando o SSH, beleza? Então, essa seria agora a próxima interação que eu quero fazer nesse código. E aí depois tem um StartServer, aqui a gente está suportando os dois tipos que o cursor aceita, que é o STDIO e o SSE, beleza? O SSE, cara, para quem não sabe, tu pode usar essa própria lib aqui que vem dentro do SDK, tá? Então, o SSE, ele vai ser um server, basicamente um server observer, tu vai enviar eventos para um servidor. É server send events.
+
+Então, SSE é uma coisa não específica para o MCP, tu pode utilizar SSE em outros sistemas teus e é o que a gente está utilizando ali. Então, vocês imaginam o seguinte, o server que a gente inicializou lá em cima e adicionou as tools, ele vai também conectar através do transporte que seria aqui ou STDIO ou SSE server e vai ficar escutando as mensagens. Então, as mensagens vão ser postadas e vão ser, então, enviadas para o servidor.
+
+Aqui eu estou fazendo o listening da porta 8765 e aqui os dois tipos que eu recebo por argumento. Agora, se tu quer configurar agora esse MCP no teu cursor, tu vai vir em cursor settings, MCP, e aqui no meu caso, eu estou configurando como comando. Então, a gente poderia nós mesmos, manualmente, digamos assim, inicializar o nosso serviço.
+
+Então, seria basicamente rodar o Node ali, só que ao invés disso, o que eu estou fazendo? Eu estou passando o comando para ele executar. Então, eu quero que ele execute comando Node e aí eu passo o meu index.js que está buildado. Então, como eu estou usando TypeScript aqui, npxtscdisk vai buildar para ti ali e tu vai poder executar.
+
+Simples assim. Agora, se eu abrir uma nova janela de conversação aqui e eu falar para ele usando a tool de greet, dá oi para o pessoal do canal do Lucas Montano. E quando eu enviar isso aqui, o client do cursor vai identificar que eu estou pedindo para ele utilizar a nossa tool greeting e ele está pedindo para rodar aqui o serviço, mas eu não preciso rodar o serviço.
+
+Talvez em inglês, em português, ele não tenha entendido. Using the tool greets and hi to Lucas Montano. Ele falou que eu vejo que tem um servidor com a greet tool definida e aí ele vai pegar um parâmetro, que é o nome, e vai responder então um greetings para o Lucas Montano.
+
+Aqui ele está pedindo para rodar o servidor, mas ele não precisaria, cara. Não precisaria rodar o servidor. I see that the service is running yet.
+
+Ele está tentando rodar o servidor. Isso aqui é o problema do próprio cursor, não tem problema com a nossa implementação do MCP. Para vocês verem como o próprio cursor aqui está com... A IA não é confiável nesse agente deles.
+
+Não funciona o negócio. Então agora o servidor está rodando. Aqui é um endpoint.
+
+Ele vai receber uma mensagem, está o session ID ali. Então ele está rodando e agora é para ele conversar com o MCP. Ele está pirando, cara.
+
+Ele está pirando. Não era para ele fazer isso aqui. Não era para ele fazer isso.
+
+O cursor está bugado. Deixa eu reinicializar o cursor. Eu notei que ele dá uns pau, tá ligado? Precisa reinicializar ele.
+
+E vamos limpar o histórico aqui. Using the tool grid, send a hi to Lucas. Agora sim.
+
+Eu reinicializei, fiz o mesmo prompt e funcionou. Então ele vai agora chamar o MCP tool, passando o esquema que a gente definiu, que é basicamente um nome. Então quando eu rodar isso aqui, ele vai retornar Hey Lucas, nice to meet you.
+
+Então aquele esquema é definido aqui na tool. O esquema recebe um nome, beleza? Então agora basta eu implementar a integração com o SSH. Eu já tinha feito algumas outras tentativas e essa parte de conectar com o SSH, ela está meio que pronta, tá ligado? Então deixa eu dar uma conferida aqui.
+
+Então vamos ver até se o Copilot ajuda aqui. Então define the VPS log extractor extraction tool, tá? Então a gente vai ter aqui uma server tool, extract VPS log, nome, eu posso passar o nome do serviço talvez, né? Talvez a gente possa passar o nome do serviço. Então aqui eu passaria no caso simulator ou qualquer outro serviço que a gente precise.
+
+O que eu vou precisar importar aqui é o nosso serviço de SSH. Então eu vou ter um client aqui do SSH2. O que mais eu preciso? Eu acho que é isso por enquanto, certo? Talvez fs eu vou precisar depois.
+
+Tá, extract log. E aí dentro desse log eu tenho que armazenar o formato dele. Então pera aí que eu tenho que ter uma constante aqui de logs.
+
+Constante de logs é igual timestamp, string, message. É isso aqui que eu quero mesmo. Aí eu tenho que conectar, connect via ssh2vps.
+
+Tá certo isso aqui que ele está me passando? Não. Não é isso que eu quero. Na verdade eu quero importar client sshclient from ssh2.
+
+Aí aqui sim eu vou dar o sshclient. É isso aí. const ssh igual sshclient.
+
+Daí eu preciso da conexão, que é basicamente eu vou observar um evento quando estiver ready e a conexão está estabelecida. E eu vou ter um stream aqui de dados que eu vou estar... Só que isso aqui tem que estar dentro. Cara, é muito bugado.
+
+Então dentro da conexão quando ela estiver pronta eu tenho que executar o meu comando pm2. Então ssh exec pm2 logs. Eu vou botar logs simulator aqui.
+
+Eu vou ignorar a passagem de parâmetro por enquanto. Erro de streaming. Daí sim, aqui eu vou empurrar os dados para o nosso servidor.
+
+Mas cara, esse código dele não está muito bom. Vamos lá, ssh exec, if error, streaming on data, data buffer. Aí as linhas, const lines.
+
+Eu acho que a gente tem que pegar as últimas linhas, tá ligado? Então lines push, eu defini ali o timestamp. timestamp date now, message line. Seria lines for each line.
+
+Aí log, é isso aí. For each line, log, push, timestamp date now, message line. E aí eu posso ter um cutoff aqui, tá ligado? Remove logs older than 10 seconds.
+
+Beleza. Daí aqui tem um serviço então. Stream on data, on data console aqui para a gente dar uma analisada.
+
+E aí aqui um connect passando o host, a porta, o username. Ou na verdade eu poderia usar um private key aqui, tá ligado? E ler do meu IDRSA. Mas eu vou simplificar aqui, vou passar usuário e senha.
+
+Beleza, então aqui está o código que vai conectar no meu ssh. Aí aqui está a minha tool que a gente criou ali. No async eu vou passar a data atual, date.now. Os logs estão sendo colocados ali.
+
+Então eu vou criar uma constante aqui de logs recentes que vão receber os logs que estão ali. Aí finalizei. É basicamente isso.
+
+Daí agora é o seguinte, cara. Só deixa eu pegar... Eu escondi aqui porque eu quero pegar minhas credenciais para testar. E aí por enquanto que eu não estou usando o meu private key.
+
+Aqui, root. Aí, tá. Beleza, o resultado final ficou mais ou menos assim.
+
+Bem simples aqui. Eu não estou usando o nome, como eu falei, porque está meio hardcoded lá em cima, mas depois a gente poderia utilizar. O que eu preciso fazer? Eu preciso fechar o cursor e também rodar o nosso npx disk e abrir o cursor de novo.
+
+E agora é para mim ver o novo serviço que eu criei. Então, settings, cursor settings, mcp, unexpected token, ssh connection is not a valid json. Então tem algum erro ali de unexpected token, do ssh connection.
+
+Deixa eu dar uma verificada. Vamos ver se o próprio agente aqui do cursor consegue resolver. Pedi para ele rodar e verificar se tem algum erro, tá ligado? Vou aceitar aqui as modificações dele.
+
+Ele está basicamente colocando console erro. Agora ele vai rodar. mcp server started running, ssh connection established.
+
+Então a conexão foi estabelecida. Cara, a princípio não tem nenhum erro. A princípio não tem erro.
+
+Vou pedir para ele colocar logs de sucesso. Add some success logs. Tá, ele adicionou alguns logs aqui.
+
+Run and check for errors. Vamos ver se ele consegue rodar e verificar um erro. E aqui é o seguinte, aqui a gente está no Vibe Coding.
+
+Só que o seguinte, ele teria que ter rodado, né? Ó, funcionou. Então assim, a implementação que eu fiz do ssh está funcionando. Agora a gente precisa dar uma olhada no porquê que o cursor mcp não está conseguindo fazer funcionar.
+
+Então deixa eu fechar e abrir o cursor de novo. Deixa eu vir em settings, cursor settings, mcp, unexpected token. Interessante que ele está dando unexpected token.
+
+It's not a valid json. I'm getting unexpected token. It's not a valid json from mcp servers.
+
+Here on cursor. Check our response to see if complies. If it's the response of mcp server.
+
+Então daqui a pouco o formato de resposta do mcp server está errado. Eu vou tentar mais uma vez utilizar IA para isso, cara. Eu vou tentar mais uma vez utilizar ela.
+
+Se ela não conseguir, aí já era. Ó, aqui texto, tem retorno json? Qual que é o tipo de retorno? Nos exemplos deles, eles estão dando só exemplos de texto. Eles estão dando só exemplos de texto.
+
+Eles não estão dando exemplo de json que falou aqui. É, para retornar em texto. Vamos ver se funciona de novo.
+
+Vamos fechar e abrir. Aí, funcionou. Show! Funcionou e depois por último funcionar por causa do extract vps log.
+
+Eu consegui fazer funcionar e sabe o que eu tirei? Eu tirei os logs. Quando eu tirei os logs, funcionou. Então vamos testar.
+
+Check my logs in the vps to see what we have running there. Vamos ver se ele vai conseguir notificar. I will check the logs in the vps using the mcp montano server.
+
+Então ele está chamando o mcp tool. Ele está passando aqui lucas como nome, mas depois a gente poderia passar o nome do serviço que está rodando na nossa vps. Então eu vou rodar e aqui estão os logs.
+
+A conversa ficou muito longa. Então basicamente o log estourou o limite de conversa. Resume para mim os logs.
+
+Então está aqui, pessoal, uma ferramenta que eu criei para me ajudar a basicamente monitorar logs em produção. Então eu poderia investigar algum problema que está acontecendo sem precisar ficar entrando na minha vps manualmente e extraindo os logs para explicar para a IA do que se trata esses logs. Beleza? Esse é um tipo de uso que tu pode ter para o teu mcp.
+
+Tu pode pensar no teu pipeline de colocar projeto em produção, de testes, de validação, de design do Figma. Cara, eu vi gente integrando dentro do cursor, usando mcp, integrando com Figma, integrando com Slack para ver os requisitos de algum sistema que estavam sendo discutidos numa thread, por exemplo. Então tem várias aplicações.
+
+Eu espero que tu tenha curtido o vídeo. Ficou meio tutorial e meio drama ali, que foi um drama. Lucas montando versus a IA.
+
+No Vibe Coding Anymore. Não esquece de conferir também o link aqui na descrição para criar a tua conta na High Globe, que é a melhor solução que tu tem aí se tu trabalha no Brasil para uma empresa americana recebendo em dólar. Beleza? É isso.
+
+Hidrate-se que vocês são melhores que a IA. Basta ler a documentação às vezes.
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.

@@ -1,0 +1,173 @@
+7 AI Agent Tools for n8n you MUST have! (Insane Results)
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Neste vídeo de hoje, eu vou lhes dar 7 ferramentas de agente de AI que se conectam muito bem com o N8n. Isso vai ajudar a acelerar seus funcionamentos, supercarregar seus funcionamentos, e todas essas ferramentas se integram super bem com o N8n e fazem sua experiência de construir agentes de AI, em geral, um melhor tempo. E, por acaso, eu quero que você compreenda, eu não estou afiliado com essas ferramentas, de forma alguma.
+
+Eu estou usando elas nos últimos 7 a 8 meses, construindo agentes em Make, N8n, Zapier. Eu estou usando essas ferramentas por um tempo, então, são ferramentas que eu gosto de usar, pessoalmente, como construtor de agentes, e eu espero que você as encontre úteis também. A ferramenta de agentes de AI número 1 é Open Router.
+
+Essa ferramenta te permite selecionar modelos diferentes e intercambiá-los muito rapidamente, e você não precisa ir a essas diferentes plataformas e se inscrever para eles e fazer tudo isso. Tudo o que você faz é se inscrever no Open Router e você tem acesso a todos os modelos de língua maior. Você pode conectar qualquer um deles para seu agente de AI.
+
+Isso faz o teste de split muito fácil e também é uma experiência divertida. Então, esse é o site do Open Router, e a coisa que eu gosto dele é que é muito fácil de instalar. Tipo, se eu for para meus créditos aqui em cima, você apenas carrega um pouco de dinheiro.
+
+Eu carreguei 30 dólares há 3 meses, e eu estou usando bastante, e eu não estou nem no meio disso. Mas, quando você está carregando créditos, o que isso permite você fazer é ter acesso a qualquer modelo de língua maior, praticamente no planeta. Então, se eu for para esse botão de modelos no meio direito, o que eu tenho acesso a é uma tela onde diz modelos.
+
+Como você pode ver, 428 diferentes modelos de língua maior que eu posso escolher. Eles tem o novo Gemini 2.5 Pro aqui, que se você está assistindo isso há alguns anos depois, você vai estar tipo, Drake, isso é notícia antiga. Mas a AI está mudando tão rápido, então o fato de que eles têm esses modelos aqui tão rapidamente é incrível.
+
+E isso te dá um bom corte de custo também, o que é excelente. E outra coisa que eu gosto sobre isso é que você consegue customizar os modelos e encontrar o exato que encaixa com o seu uso com o seu agente de ciência. Então, você pode ir para o Pronto Preço, e você pode encontrar os modelos mais baratos possíveis.
+
+Então, é incrível, com os filtros aqui na esquerda, você pode ir para as janelas de contexto grandes, então parece que os Geminis vão ser tomados. Você pode procurar modalidades de input. Então, esses são apenas filtros, então você pode encontrar o modelo exato para o seu uso.
+
+Eles têm categorias aqui, então se você quiser um bom modelo de ciência, você pode procurar aqueles bons modelos de ciência. E você pode desligar a janela de contexto para encontrar os melhores para a ciência, e desligar o Pronto Preço, certo? Mas é isso que faz isso tão legal, você tem todos esses filtros que você pode ajustar. Você pode até ter parâmetros de apoio, então talvez as saídas estruturadas sejam importantes para você.
+
+Você pode desligar isso e descobrir qual é o melhor modelo de ciência que apoia as saídas estruturadas. E também você pode escolher os providers aqui também. Então, um monte de diferentes opções de filtro que você pode usar.
+
+O que isso parece em N8n? Então, eu tenho um pequeno fluxo de trabalho aqui para demonstrar OpenRouter, mas uma das coisas que eu quero que você note sobre OpenRouter é o quão legal ele se conecta. Então, se eu quisesse adicionar outro agente aqui, eu posso apertar esse botão de mais e adicionar um agente de ciência. E uma coisa que você sabe sobre um agente de ciência é que a única featura requerida é um modelo de chat.
+
+Então, o que eu posso fazer é apertar esse botão de mais e no fundo esquerdo, atrás da minha cabeça, o que você vai notar é que temos algo chamado OpenRouter aqui. E essa é a mesma aplicação que eu estava mostrando para você. E a coisa legal sobre OpenRouter, como eu disse, é que eu gosto de como você pode adicionar créditos quando quiser.
+
+Você não tem nenhuma inscrição, você não tem nenhuma coisa estranha acontecendo, você pode até usar criptomoedas. Tipo, vamos lá, você poderia criar um bot de comércio se você quisesse. Mas você pode selecionar esse modelo de chat de OpenRouter e você consegue conectar seu aconto com um botão de API que é muito fácil de fazer.
+
+Você aperta criar novo credencial, como esse, e então seu botão de API aparece. Você pode obter esse botão de API apenas por ir para as chaves no seu profilo. Tipo, isso o faz super simples de se conectar.
+
+Mas uma vez que você aposta isso lá, você consegue selecionar seu aconto e então você tem acesso a todos os modelos. Apenas assim. Então, quer dizer, olha isso.
+
+Quem não gostaria de fazer isso, certo? Eu tenho acesso a todos os modelos do mundo aqui. Apenas com uma aplicação. Então, ao invés de ir aqui e conectar todos os meus credenciais para Anthropic, para OpenAI, para DeepSeek, para Gemini, todas essas diferentes aplicações, tipo, apenas use OpenRouter.
+
+Especialmente se você está em uma fase de testamento e você só quer ver como diferentes modelos reagem. Agora, deixe-me mostrar essa coisa em ação. Eu vou deletar isso.
+
+E esse é um agente que eu construí aqui chamado de agente de roteiro. E o que esse agente de roteiro faz, sem palavras com o OpenRouter, mas o que esse agente de roteiro vai fazer é, baseado no meu código aqui, eu tenho instruções nesse primeiro, dizendo-o para escolher o meu modelo para mim. Então, esse é todo o trabalho desse agente, o agente de roteiro é escolher qual modelo é melhor.
+
+E então, eu posso usar OpenRouter, aqui, para mapar dinamicamente um modelo. Então, o modelo vai mudar baseado na pergunta que eu pergunto. Então, eu tenho três modelos aqui.
+
+Perplexidade Sonar, OpenAI03mini e Entropic Cloud 3.5, que eu provavelmente poderia mudar para 3.7. Mas eu digo que cada modelo tem forças e quando usar um certo modelo. Então, ele passará a minha pergunta ou minha declaração e o modelo que eu preciso usar para o agente que está completando essa tarefa. Se você está interessado nisso, eu tenho um vídeo completo sobre isso.
+
+Eu vou deixá-lo no lado direito superior, para que você possa ver como eu construí isso e como funciona. Mas deixe-me mostrar um OpenRouter em ação. Eu só testarei uma mensagem rápida.
+
+Eu diria, tipo, me ajude a encoder Snake. E já que eu disse que Cloud é melhor para encoder, ele provavelmente escolherá o modelo Cloud. Então, eu vou enviar isso.
+
+Não encontrou credência. Então, eu vou mostrar o que isso parece realmente rápido. Eu vou criar uma nova credência.
+
+Vou para minhas chaves. E então, eu posso criar uma chave API, deletar, e então eu vou fazer, tipo, um limite de 3 dólares. Eu vou clicar em criar.
+
+E então, você pode copiar sua chave secreta aqui. Copiar, clicar em salvar, e então você está conectado. Então, estou um pouco feliz que eu passei por essa errada.
+
+Agora você sabe como conectar uma conta lá. Mas eu vou mudar isso. E então, eu vou reutilizar essa promessa.
+
+Então, me ajude a encoder Snake. Agora que ele tem isso, ele vai poder me ajudar a decidir qual modelo usar. Isso é tudo o que esse agente está fazendo.
+
+E então, a coisa legal do OpenRouter é que você pode colocar seu modelo dinamicamente aqui. Então, ele vai selecionar dinamicamente. E eu posso ter o quanto eu quiser, certo? Eu posso ter ele olhando por 10 diferentes modelos, se eu quiser.
+
+Mas ele deveria ter usado Cloud. A gente pode ir aqui e verificar qual modelo. Sim, veja.
+
+Então, ele passou aquele modelo para o verdadeiro OpenRouter aqui. Então, meu modelo mudou baseado na minha pergunta. Como você pode ver, ele usou o nome do modelo de Anthropic aqui sobre o meu modelo de conversa do OpenRouter.
+
+E ele me deu uma resposta usando Cloud. Então, lindo. A próxima ferramenta de agentes da AI que eu estou usando há alguns meses é o Firecrawl.
+
+Isso permite que você esqueça qualquer site na internet e transformá-lo em dados estruturados. Eu vou andar por seu site, mostrar o que é sobre eles e depois eu vou entrar em um teste de automação N8n. Então, esse é o Firecrawl.
+
+De novo, um aplicativo muito simples de usar. Você pode colocar alguns créditos. Você pode usá-lo grátis.
+
+Mas eles têm tantas coisas diferentes que você pode fazer aqui. Se eu for para o Playground, que eu recomendo que as pessoas começem, tipo, vá para firecrawl.dev.com.br .app.com.br .playground.com.br e tente isso por um pouco. Tipo, você pode escorregar sites, websites, mapas, sites de pesquisa, tudo aqui.
+
+Você nem precisa fazer nada em N8n. Tipo, isso é só um bom instrumento ao redor. E eles também têm essa função de extração que permite você extrair coisas muito específicas com um comando específico.
+
+Então, se eu tentar extrair, você pode ver o seu exemplo. De todas as páginas dentro de firecrawl.dev, eu quero extrair a missão de nome da empresa e se é oficial. Tipo, você pode ficar hyperspecífico com o que você quer fazer quando você está escorregando web.
+
+Eu vou voltar para o Playground e eu vou mostrar o que isso parece. Então, eu acho que eu vou fazer o seu exemplo. Eu vou só fazer docs.firecrawl.dev e depois eu vou clicar em correr.
+
+E então, muito rapidamente, ele vai escorregar aquela única página. Se você quiser fazer uma escorrega, isso escorrega todo o site. Mas veja o quão rapidamente me deu essa informação.
+
+Essa é toda a informação da docs.firecrawl.dev no Markdown. Você também pode fazer isso no JSON, HTML, screenshots, bastante o que você quiser. Então, aqui eu tenho um trabalho rápido que eu queria mostrar a você.
+
+Isso seria usando o Firecrawl. Como você pode ver, eu estou chamando o API Firecrawl aqui. E eu vou precisar colocar o meu token de autorização ali.
+
+Mas eu vou fazer a escorrega. Então, tudo o que eu preciso fazer é usar esse objeto JSON. Eu coloquei um limite de 300 e enviar uma URL que eu quero completamente escorregar.
+
+Então, agora eu vou mostrar isso em ação. Muita vezes, quando eu estou construindo agentes de AI, uma coisa que eu realmente gosto de fazer é eu gosto de pegar as aplicações que eu estou tentando usar no meu agente. Eu gosto de pegar sua documentação e ir para o chat GBT e dizer, Ei, estou construindo um agente em N8n.
+
+Aqui é a documentação que eu estou usando. Me ajude a descobrir X, Y ou Z. E essa é a maneira mais atual para obter a versão mais acurada de qualquer documentação. Então, digamos que eu estou em Airtable e estou construindo algo com Airtable.
+
+Eu só posso pegar a URL até o ponto do API e então eu posso ir para o Firecrawl aqui. E isso vai escorregar toda a documentação para mim. Eu posso testar esse fluxo de trabalho.
+
+E então eu posso pastear a minha URL para a minha forma aqui e então clicar em Submit. E depois que eu clico em Submit, vai começar. Começou o trabalho em Firecrawl.
+
+Você pode até ir para seus logs de atividade de Firecrawl e ver. Faz um minuto para atualizar, mas você pode até baixar seus documentos em Firecrawl se você quiser fazer manualmente. Mas o que eu estou fazendo aqui agora é um pequeno loop, apenas verificando, Ei, este é o trabalho de escorregamento feito? Se não, vamos esperar mais 60 segundos.
+
+Então, como você pode ver, ele passou por esse loop e ele não foi feito. Então agora ele vai esperar mais 60 segundos. Você tem que ter em mente que ele está passando por todas essas páginas.
+
+Então, ele está passando pelos campos, os comentários, as tabelas, as bases, os webhooks, as vistas. Ele está escorregando cada palavra de cada página desta documentação aqui. Então, é por isso que pode levar um ou dois a três minutos.
+
+Então agora ele está verificando se o trabalho foi feito. Foi feito. Então ele limpou usando um código e um marco.
+
+Isto não é necessário. Eu só gosto de limpar o marco que está saindo de tudo isso. Então, se eu clicar aqui, ele escorregou 140 páginas e me deu o conteúdo de cada uma.
+
+Você pode fazer isso no seu próprio site. Você pode fazer isso em outro site. E este é apenas um formato.
+
+Você sabe, você pode até levar imagens de cada página usando o Firecrawl e usando praticamente o mesmo método que eu te ensinei. A agente de A.I. Número três é Lama Parse. Isto é ótimo para parsear seus dados e limpar-os para prepará-los para um sistema de rag ou para usá-los mais tarde e mais tarde no caminho na sua automação.
+
+Lama Parse tem tantos casos de uso e é um destes ferramentas que eu sempre me lembro. Principalmente para limpar PDFs ou não limpar PDFs, mas para tirar conteúdo de PDFs nas minhas mãos. Então este é o site de Lama Index e Lama Parse é como um subproduto de Lama Index, mas este é o único ferramento que eu usei deles e eu realmente gostei até agora.
+
+Como você pode ver, você pode pegar documentos originais e transformá-los em dados estruturados. Então se transforma estes gráficos em tabelas reales que são legítimas de máquina e que você pode colocar em um sistema de rag mais tarde na linha ou que você pode usar na sua automação de N8n. Então se você tem conteúdo de PDF que você quer, por qualquer motivo, usar em N8n ou colocar em um database de rag, este é um bom primeiro passo para fazê-lo legítimo para a máquina.
+
+E eles têm um monte de tipos de arquivos de arquivos de suporte diferentes. Você pode fazer isto para qualquer coisa. Se eu for a este documento, veja tudo o que eles podem fazer.
+
+Veja todos estes tipos de arquivos. Absolutamente louco. Eles podem até fazer áudio até 20 MB, o que é bem louco.
+
+Então no fundo, este é o que parece. Eu estive no FreePlan o tempo todo porque eu realmente não o usei tanto como eu provavelmente deveria ou poderia, mas eles têm um Parse Playground que você pode testar antes de realmente levá-lo para N8n. E como eu disse, eu não usei a extração ou a ferramenta de índice.
+
+Eu só usei Parse, mas você pode colocar um URL de arquivo, upload um arquivo, selecionar seus setores de parse e selecionar o que parse, como que páginas para parse. E você pode fazer tudo isso programaticamente também usando a documentação e o seu API. Então, como você pode ver, você tem uma seção de índices de API e eles têm um Docs.
+
+Então este é bem simples, mas é muito poderoso. Então eu tenho a minha automação N8n conectada a um drive Google para que quando eu upload qualquer PDF novo, o que ele vai fazer é que ele vai ativar esta automação para começar e então ele vai começar um trabalho sobre LamaParse, esse site que eu estava mostrando. E então, como este aqui nesta caixa azul, isso é praticamente todo o setup de LamaParse.
+
+Na verdade, a única ação que está sendo feita é aqui. Isto, similar a FireCrawl, é apenas verificar se o trabalho está feito, se o trabalho está feito e nós temos um pequeno loop para verificar isso e então ele vai ter o último marco uma vez que o trabalho estiver completo. Então, deixe-me botar um arquivo aqui para mostrar como isso funciona.
+
+Eu só tenho este pequeno folha de exemplos. Eu vou adicionar um arquivo. Eu só botei este arquivo de segurança NLP.
+
+É apenas um bom papel branco em Natural Language Processing Security e Ethics in the Wild feito por estas pessoas aqui. E quanto tempo é isso? Isto é 33 páginas. Então, um PDF bastante grande.
+
+E agora eu posso ir para a minha automação. Eu vou apenas deletar isso. Isso está ficando um pouco irritante, honestamente.
+
+E então eu posso apenas ativar manualmente isto por enquanto, mas eu vou clicar em Test Workflow e então ele vai começar a funcionar. E como você pode ver, ele está postando este arquivo agora e agora ele vai passar por este loop de verificação. E então vamos continuar loopando até que ele seja completo.
+
+E então ele vai me dar este marco limpo aqui. Isso o faz super útil para usar conteúdo de PDF dentro do N8n ou qualquer conteúdo, como os tipos de arquivos que eu mostrei, por exemplo. Como você pode ver, ele acabou de terminar, foi para baixo, apenas fez este loop 4 vezes.
+
+É por isso que diz 4 itens aqui. Mas ele me deu o marco limpo para todas as 33 páginas. Então, se eu abrir isto, vai ser um item enorme aqui na direita, mas completamente transformou este PDF em texto.
+
+E como você pode ver, ele até tem tabelas aqui, significado por isso, que os sistemas RAG vão gostar porque eles precisam ser capazes de ler toda essa coisa. E Markdown é um ótimo idioma legítimo para eles e para os humanos. Então isso é o Llamaparse, uma automação muito simples que eu construí para isso, mas é uma ferramenta que eu frequentemente volto quando eu preciso de informação extraída de PDFs ou outros tipos de arquivos.
+
+O próximo item te permite criar e gerar PDFs e imagens. Então, ao invés de extrair informação deles, isso te permite criar com o N8n, usando estruturas. E você pode fazer isso para enviagens, como eu disse, revistas de clientes, relatórios de pesquisa, que eu vou mostrar esse exemplo no final desta seção.
+
+Mas a ferramenta que eu estou falando é chamada APITemplate.io. Vamos entrar nela. Este é o site deles. Um site muito simples.
+
+Mas, como eu disse, ele te permite gerar esses PDFs e imagens. Você pode até criar templatos todos com o seu API. E, como você pode ver, ele até tem Zapier, Make e N8n, tudo aqui na frente.
+
+Mas você pode fazer relatórios de venda anual. Há alguns testemunhos que você pode autocriar do N8n. Então, se você receber revistas do Google, você pode criar essas cartas de informação das suas revistas.
+
+Muito legal. E um monte de outras coisas diferentes. Deixe-me logar para que eu possa mostrar.
+
+Então, eles têm este dashboard. Eu estou em uma inscrição de 35 dólares por mês, só porque eu gosto de ter acesso a isso. Na verdade, eu não usei muito nos últimos meses, mas, quando estou fazendo minha pesquisa profunda, eu sempre preciso desse.
+
+Você tem templatos. Então, se eu for para Managem Templates, você pode criar um novo template PDF ou um novo template de imagens. Se eu escolher um novo template PDF, como você pode ver, eles têm um monte de diferentes templos que você pode usar.
+
+Então, se eu fizer Sample Invoice, aqui na direita, no APITemplate.io, eu vou poder criar um custom invoice. E a coisa legal sobre isso é que você pode adicioná-lo para o N8n e programadicamente ou agenticamente filrar os itens dentro do invoice. Então, eles têm um para cartas Apex.
+
+Então, se você está fazendo relatórios de venda, isso é ótimo. Se você tem o dados, você pode criar esses tipos de PDFs ou você pode fazer um custom completo. Deixe-me mostrar um exemplo no N8n de como eu estou usando eles.
+
+Então, vamos começar. Esta é a minha automação de pesquisa profunda, bastante intimidante, mesmo para mim, mesmo que eu a construí. Mas, aqui, no final, eu estou usando este template de API para criar um PDF.
+
+Então, o que este agente de automação faz, é que faz um monte de pesquisa para mim. Começa com, você sabe, criando questões de pesquisa, estabelecendo um desenho e depois passando por este grande agente de operações de pesquisa Loop, onde ele faz toda a pesquisa e depois o traz de volta e o transforma em um bom PDF com citação. Então, isso vai ser muito poderoso quando fazendo coisas como esta, como pesquisa ou coisas que precisam parecer bonitas.
+
+Deixe-me mostrar um exemplo de como isso funciona, para que você possa ver estas duas coisas surgindo no final aqui. Eu vou clicar em Test Workflow aqui, e este é um tipo de automação legal que eu criei para a minha comunidade e para mim mesmo. Eu adoro fazer pesquisa sobre coisas estranhas.
+
+Então, deixe-me fazer alguma pesquisa sobre como fotobiomodulação, algo que eu estou muito interessado em, cura o corpo e o tempo que normalmente leva para ver resultados. Talvez eu esteja interessado nisso. Eu posso fazer um tipo de pesquisa.
+
+Eu vou fazer pesquisa exploratória. Eu vou fazer compreensão de nível de colégio e talvez eu faça de longo a médio. Eu provavelmente deveria fazer compreensão de nível de considerando não o melhor com vocabulário, mas vamos começar essa pesquisa.
+
+Eu vou clicar em Comece a pesquisa e então, de lá, eu quero dizer, esta coisa só funciona sozinho. Esta coisa leva um tempo, especialmente se eu fazer reportes de pesquisa longos. Esta coisa vai levar, eu não sei, 10 a 15 minutos, mas é incrível o que acontece com o resultado e o que realmente coloca tudo junto é isso aqui, API template.io. Então, eu vou esperar para isso ser feito e eu voltarei uma vez que é completo.
+
+E assim que isso, a automação está terminando sua última perna. Ele passou por nove diferentes seções de pesquisa, criando citações para isso agora e depois de passar por isso, ele vai subir esta ruta, criar o PDF com toda a pesquisa que ele acabou de coletar e também criar esse PDF e enviá-lo para minha tabela de ar. Então, isso foi usado API template.io para gerar algo incrível e eu quero mostrar o que isso parece.
+
+Então, aqui é o relatório que ele realmente gerou um PDF de 14 páginas. Não só eu estou impressionado com essa automação ou esse sistema agêntico toda vez que eu o uso, mas também essa ferramenta, essa ferramenta de template API, que pode gerar esses incríveis templates na N8n. Então, como você pode ver, eu o tenho gerando um papel de pesquisa com essas pequenas citações aqui também e ele meio que passa por todo o processo de fotobiomodulação, algo que é muito complexo de entender, especialmente quando eles começam a jogar todos esses termos selvagens aqui, mas algo que eu estou muito interessado em.
+
+Então, como você pode ver, é um papel enorme fazendo toda essa pesquisa para mim e ele até vai para saúde digital, novas tecnologias, tratamentos personalizados e então, no final, ele me dá um gráfico de referência de todas as fontes que ele usou. Ele até usa vídeos no YouTube aqui, então muito legal, mas é o que esse template API IOTool permite você fazer, é criar esses PDFs agenticamente usando N8n e eu adoro isso. Vamos entrar no próximo produto aqui, mas antes de eu entrar nisso, se você está gostando destes e você quer continuar aprendendo conosco em construção de agentes e apenas tudo sobre AI em geral, como transformar agentes em apps, como fazer dinheiro com inteligência artificial, bem, nós AI Foundations, um lugar onde as pessoas podem vir, nós temos um fórum de comunidade, nós temos cursos para te levar rápido sobre tudo sobre AI, um módulo de 40 mais construindo curso de agentes de AI com N8n, onde nós vamos sobre, você sabe, bastante tudo aqui, e nós também temos um calendário com chamadas onde nós realmente discutimos o que está acontecendo hoje, como podemos usar AI e aplicá-lo, estes são como workshops ou eventos de redação, então, se isso interessa você, eu vou deixar um link na descrição ou o comentário de cima AI agente módulo número cinco é AirTable, isso vai ser essencial para qualquer criador de agentes, especialmente se você está apenas começando e você não está confortável passando para databases relacionais, isso ainda é um database relacionado, mas o que isso vai permitir você fazer é ligar recordes, armazenar dados, criar tablas, criar visões, é como um lugar central para toda sua informação fluir para e fora quando usando N8N, ter algo como isso é essencial, especialmente se você está apenas começando, mas deixe-me mostrar para você um pouco de diferentes formas que eu estou usando AirTable e N8N, então, se você lembra da última automação, meu agente de pesquisa profunda, onde eu passei pelo template API, eu estou usando AirTable o tempo todo, então, como você pode ver, eu estou procurando recordes aqui, eu estou adicionando recordes, isso é um AirTable em essa automação sozinho, e é porque me permite agregar informação em um lugar com uma automação, e é apenas um lugar para guardar tudo, então, como você pode ver, isso é como eu guardo todos os meus relatórios de se você não está familiar com coisas como AirTable, você pode pensar sobre isso como uma folha de google em esteroides, certo, você tem funcionalidades database e funcionalidade, você pode criar essas funcionalidades e você pode criar uma folha de google em esteroides, você pode criar uma folha de google esteroides, você pode criar uma folha de google em esteroides, você pode criar uma folha de google você pode criar folha de google em esteroides, certo, você pode criar uma esteroides, folha de google certo, você pode criar folha de google em certo, você pode você pode criar folha de google esteroides, certo, você pode criar folha de google certo, você pode criar uma folha de google você pode criar folha de google esteroides, certo, você pode folha de google em esteroides, você pode criar folha de google esteroides, você pode criar uma folha de google em esteroides, certo, você pode criar folha de google esteroides, certo, você pode uma esteroides, você pode criar uma folha de google em esteroides, certo, você pode criar folha de google você pode criar uma folha de google em uma folha de google esteroides, certo, você pode criar uma folha de google você pode criar folha de google em esteroides, uma folha de google certo, criar uma folha de google esteroides, você pode uma folha de google esteroides, você pode criar uma folha de google em esteroides, você pode criar uma folha de google em esteroides, certo, você pode criar uma folha de google certo, você pode criar uma folha de google em esteroides, certo, you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can you can i want for the next three days so i could type in something like this what's the weather looking like in las vegas beautiful i hope you enjoyed those typing sounds and then i can send that off and what this is going to do is determine the longitude and latitude of las vegas input it into this open weather api and then generate me a chart that fast so here's the weather data and how it's trending over the next three days in las vegas and the cool thing is i can even save this image to my desktop i could keep on going with this automation embed it in a pdf send it in an email if i'm doing some financial reports put it in an invoice use it for youtube analytics i could do whatever i want and it's all because uh i knew about quick chart.io the last ai agent tool that i highly recommend that you begin to use is super base now super base gets a little bit more complicated it's like a souped up air table and when you think about it air tables like a souped up google sheets so it kind of keeps on extending itself but i want you to understand that super base is going to be amazing for retrieval augmented generation otherwise known as rag and also long-term memory so if you're sick of your agents forgetting about you know what you talked about in your certain chat thread on telegram whatsapp the normal chat node with n8n then using super base for a long-term memory is amazing because you can connect it to any agent and it will remember everything that you said a day ago on any of your automations you know if you're talking with agents a lot this is going to be a good tool to get used to because it can retain context from any agent from any time let me show you a few examples of where this might be useful and this is going to be super basic i have full tutorials in the community if you guys want me to do a full super base tutorial showing you how to process thousands of documents with rag let me know and i vou fazer isso mas sem mais delongas deixe-me mostrar um pouco do que tem para oferecer então o que eu fiz foi realmente usar o chat gpt para criar um pdf personalizado sobre mim que não é muito personal mas como o chat gpt já sabe tudo sobre mim eu tive que criar um pdf de tudo que ele pegou então eu só posso baixar isso e a razão por que eu estou fazendo isso é porque isso é personal ok como isso é coisa personal que você não vai encontrar em lugar nenhum então sobre a profissionalidade profissional de drake sriracha e eu consulto um empreendedor fundador da comunidade de fundações de ai que gerencia um canal no youtube isso é tudo que ele tem em sua própria memória de database para eu escrever nele então tem dois gatos bobo que é amarelo uh kianu laranja prefere a bíblia primeiro é na forma kjv absolutamente eu acabei de comer iogurte grego mas vamos fazer isso eu vou postar isso na minha database de rag então o que eu posso fazer é que eu posso baixar isso bem eu já baixei isso então eu vou deixar ele no meu drive google que usamos antes para testar e agora eu tenho sobre drake sriracha aqui eu vou apenas deletar aquele nós não precisamos disso mais e então eu vou ir para a minha automação n8n e o que isso faz é que usa a ferramenta lama parse novamente porque eu tenho um pdf que eu queria parcear e ele assiste o meu drive google parceia todo o conteúdo desse pdf ou qualquer novo pdf e então adiciona-o à minha super base então o que isso faz é que isso vai embedir esse documento usando o super base módulo na n8n então vai criar um memória a longo prazo essencialmente ou um sistema de geração de retribo aumentado de todos os meus dados que eu quero inserir que é personal dessa forma quando eu estou falando com o meu agente ele tem acesso à informação que não está encontrada em lugares além dos meus documentos pessoais se você quiser ou outro exemplo disso é que eu posso postar todos os meus transcriptos de vídeo youtube todos os meus transcriptos de comunidade e então eu posso falar com um agente sobre essa coisa então isso é um pouco como um cérebro prolongado para o seu agente para pegar mais informação sobre mais das coisas pessoais que ele não tem no seu setor de dados atual que ele foi treinado no que eu posso fazer é que eu posso apenas começar essa automação esse deveria ir bem rápido eu vou apenas clicar em testar o fluxo de trabalho como você pode ver ele está checando pegando o marco e agora ele está embedindo documentos para a minha super base então quando eu volto para a super base como você pode ver agora colocou na minha data base a informação sobre Drake Sriracha então agora eu posso referenciar isso quando eu quiser se eu conecto para um agente de ciencia então deixe-me mostrar o que isso parece você pode conectar o seu agente de ciência para aquela loja de vectores então como você pode ver há essa longa coisa estranha que parece um ovo aqui embaixo o que esse agente de ciência vai fazer é que ele vai procurar a minha loja de vectores primeiro para responder minhas perguntas então se eu pedir uma pergunta muito personal como quantos gatos Drake tem ele vai poder ir e responder essa pergunta na minha loja de vectores agora se eu for para o meu agente de ciência eu quero que você entenda que não há, você sabe, coisas sobre mim aqui dizendo quantos gatos eu tenho a maneira que ele vai descobrir é pela procura da minha loja de vectores então eu vou abrir esse chat e eu vou perguntar quantos gatos Drake Sriracha tem isso vai fazer você se sentir como uma celebridade especialmente se você publicar
+ Este arquivo é mais longo que 30 minutos.
+ Atualize para Ilimitado em TurboScribe.ai para transcrever arquivos de até 10 horas.

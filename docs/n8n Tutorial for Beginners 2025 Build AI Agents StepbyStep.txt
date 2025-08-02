@@ -1,0 +1,190 @@
+n8n Tutorial for Beginners 2025: Build AI Agents Step-by-Step
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Neste vídeo, mostrarei passo a passo como construir seu primeiro agente de AI usando o N8n. Em vez de contratar um equipe de desenvolvimento caro, este tool permite que você comece a construir workflows de automação e agentes de AI que podem completar tarefas para você 24 horas a dia, 365 dias, sem experiência anterior necessária, e você pode até começar a usá-lo gratuito. Vamos cobrir a construção de um simples agente de AI no N8n, dar os ferramentas do agente para expandir suas capacidades, setá-lo a funcionar autonomamente, adicionar uma base de conhecimento para que ele possa aprender e crescer com o tempo, enviar briefs de e-mail automáticamente, e como usar templatos para começar rapidamente seus próximos workflows.
+
+No final deste vídeo, você saberá exatamente como criar seus próprios agentes de AI custom usando o N8n. Mas antes de começarmos, você precisará de um acounto N8n. Para se inscrever, clique no link na descrição para obter o preço melhor disponível e um trial gratuito de 14 dias para o N8n Cloud.
+
+Se você planeja usar o N8n a longo prazo, eu recomendo instalar-o em seu próprio servidor. Vai custar muito menos tempo. Você encontrará um link para um vídeo de instalação passo a passo no cartão à direita e na descrição.
+
+Também discutiremos isso em mais detalhes mais tarde no vídeo. Para esta demonstração, eu só vou se inscrever para o trial gratuito do N8n Cloud. Para começar o processo de se inscrever, clique no botão de se inscrever na página de casa do N8n.
+
+Entre sua informação pessoal para criar um acounto, então complete o survejo de on-boarding. Você terá a opção de assistir um vídeo de introdução, que pode dar contexto adicional, se desejado. Uma vez terminado, clique em Comece automação para começar.
+
+Esta ação te dirigirá para o dashboard do N8n, onde você pode começar a construir seu primeiro fluxo de trabalho. Quando você chegar na página de overview do N8n, clique em Comece de novo. Depois disso, vamos clicar no ícone de mais para adicionar nosso primeiro passo, um trigger.
+
+Vamos setar nosso trigger para ser uma mensagem de conversa, depois voltaremos para o canvas. A seguir, vamos clicar no pequeno botão de mais no lado direito do node de trigger para adicionar ações para o nosso fluxo de trabalho. Daí, vamos selecionar AI, depois AIAgent.
+
+Aqui você pode ver todos os blocos básicos de construção de um AIAgent. Há o node principal de AIAgent e um conector para proporção de input. Há também conectores de sub-node para um motor de pensamento ou razão, memória e ferramentas.
+
+Finalmente, há um lugar para adicionar passos depois do AIAgent para que possamos automaticamente utilizar os resultados do trabalho do AIAgent. Vamos começar colocando o cérebro para que possamos conversar com o agente. Você pode usar a maioria das grandes LLMs, como Anthropic, Azure, AWS, DeepSeek, Gemini, Grok, Olama, OpenAI e mais.
+
+Para este vídeo, vamos ficar com OpenAI, mas você pode usar qualquer LLM que preferir. Clique no plus, depois vamos precisar adicionar credências para conectá-lo com nosso acounto de OpenAI. Você pode já ter uma inscrição para o ChatGPT, porém, usando OpenAI em um funcionamento automático utiliza APIs e, portanto, usa uma estrutura de pagamento de tokens de papel em vez de uma ficha mensal.
+
+Para acesso ao API, vamos precisar carregar nosso acounto de OpenAI com um pouco de dinheiro e pegar uma chave de API para começar. Vá para platform.openai.com, depois ligue-se ou crie um acounto. Se você nunca usou esta parte do site de OpenAI antes, o fluxo de abastecimento lhe guiará através de configurar tudo o que você precisa.
+
+Você fará um projeto, pegar uma chave de API e carregue seu acounto com um mínimo de 5 dólares para começar. Sua chave de API é essencialmente um passaporte. Ela é destinada a ser guardada em segredo.
+
+Se alguém mais aprender sua chave de API, eles podem acessar seu acounto de OpenAI e, potencialmente, usá-lo por motivos nefariosos ou usar seus credênciais para obter acesso à OpenAI enquanto você paga o imposto. OpenAI só compartilhará essa chave de API com você uma vez. Então, copie-a e guarde-a em algum lugar seguro, como um aplicativo de gerador de passaporte.
+
+Uma vez que você tenha escrito isso, retorne à N8n e pinte sua chave de API de OpenAI, depois, save. Agora, o chat GPT da OpenAI está conectado como o cérebro do nosso agente. Vamos tentar isso dizendo olá.
+
+Clique no botão de conversa aberto e escreva uma mensagem simples de olá para confirmar que as coisas estão conectadas. Se tudo está funcionando corretamente, você deve receber uma resposta para sua salvação e uma mensagem de sucesso da N8n. Próximo, vamos adicionar memória para que nosso agente possa lembrar de interações recentes.
+
+Clique no botão de mais abaixo em memória e então adicione memória simples. Agora o agente da OpenAI tem a habilidade de olhar as últimas interações para obter o contexto para sua próxima resposta. Próximo, vamos dar ao agente algumas ferramentas.
+
+Vamos criar um agente de análise diária e eu quero que o agente encontre fatos divertidos para mim como parte do análise. Então, vamos conectá-lo à Wikipédia. Clique no botão de mais abaixo para adicionar uma ferramenta, depois, procure por e adicione a Wikipédia.
+
+Não há nada especial necessário para instalar a ferramenta da Wikipédia, então você pode simplesmente clicar em Volte à Canvas. Próximo, vamos dar ao agente a habilidade de procurar por Google para que ele possa encontrar histórias de notícias atuais para incluir no análise. Clique no botão de mais abaixo e procure por e adicione a SerpAPI.
+
+Clique em Criar novo credencial. Próximo, você vai precisar pegar uma chave de API da SerpAPI. Vá para serpapi.com e registre para um acounto.
+
+Após se inscrever, você terá 100 chamadas de API gratuitas que você pode usar antes de ter que pagar por qualquer coisa. Uma vez registrado, copie sua chave de API privada da página de overview do seu acounto principal. De novo, mantendo-a secreta e segura.
+
+Entra na chave de API em N8n, então clique em Saver. Agora que temos todos os blocos de construção principais de um agente AI conectado, vamos tentar. Vamos enviar mensagem para o agente, pedir que nos dê uma história de notícias de hoje, e que ele nos diga um fato divertido sobre um animal rápido retirado da Wikipédia.
+
+Você pode assistir o agente AI pegar o pronto, pensar nele com a OpenAI, procurar na internet por uma história de notícias e usar a Wikipédia para encontrar um fato divertido, e então, finalmente, retornar uma resposta para o chat. O agente AI oficialmente foi criado, mas agora estamos limitados a conversar com ele dentro de N8n, e o agente é limitado a um número pequeno de ferramentas. Então, como podemos aumentar isso para que ele funcione sozinho, sem ser prompto? Para transformar o agente de um botão de conversa com ferramentas para um trabalhador autônomo que pode nos enviar um briefing diário, precisamos dar-lhe mais ferramentas, um trigger esgotado e uma memória aumentada, para que ele possa crescer e aprender com o tempo.
+
+Também precisamos enviar os resultados do trabalho para um lugar onde podemos o ver sem entrar em N8n. Começamos dando-lhe a capacidade de ver o clima. Clicamos no botão Plus para adicionar outra ferramenta.
+
+Procure e selecione OpenWeatherMap. De novo, isso requer uma chave API. Vá para openweathermap.org e crie um acounto.
+
+Então, uma vez que você está assinado, pegue uma chave API da seção de chaves API do seu profilo. Então, retorne para N8n e pinte sua nova chave API para conectar seu acounto. Próximo, precisamos adicionar um local para o relatório do clima.
+
+De volta para openweathermap.org, vamos procurar uma cidade, abri-la dos resultados da busca, depois copie o nome da cidade exatamente como está escrito e pinte-a no campo da cidade, de volta para N8n. Para testar que está funcionando, podemos clicar em Execute Step no topo direito dos setores dos nodos. Se estiver configurado corretamente, você verá a informação de clima detalhada retornar no painel de saída de direita.
+
+Próximo, vamos adicionar outro trigger para o agente funcionar ao mesmo tempo todos os dias. Vamos pular para o nodo de mensagem de conversa, depois clicar no ícone de traseira para o deletar. Vamos clicar no plus no topo direito para adicionar um novo nodo de trigger, depois selecionar On a Schedule.
+
+Isto abrirá os setores para o trigger de horário, para que possamos setá-lo a funcionar todos os dias às 8 horas da manhã. Depois, podemos clicar em Execute Step para obter alguns dados de teste. De volta no canvas, podemos ver que o trigger foi adicionado, mas não está ligado a nada.
+
+Então, vamos clicar e apertar o botão do plus do nodo do lado esquerdo do agente AI para adicionar o segundo trigger. Agora temos um trigger que vai iniciar o agente AI todos os dias às 8 horas da manhã. Mas como ele sabe o que fazer? Próximo, vamos lhe dar algumas instruções.
+
+Se você abrir o nodo do agente AI, você pode usar o primeiro botão de abaixo para mudar a fonte de prompt do trigger de conversa conectado para, em vez disso, definir um prompt custom nos setores do nodo. Próximo, vamos criar um template de prompt. Vamos escrever um prompt que será enviado para o LLM cada vez que este fluxo de trabalho funcione.
+
+Vamos dizer isso. Toda manhã, coloque o clima para San Francisco, leia 2 a 3 histórias de notícias positivas, e encontre um fato divertido da Wikipédia. Não repita nada dos dias anteriores.
+
+Formate como uma mensagem de e-mail mini em Markdown. Esta é a base do nosso template de prompt. Agora, também podemos usar variáveis, também chamadas de fios de entrada, para inserir informações dinâmicamente no prompt.
+
+Então vamos adicionar o texto de hoje para o fim do prompt. Agora, vamos adicionar o tempo do trigger de horário no lado esquerdo do painel. Próximo, vamos clicar no botão Execute Step para lançar este nodo e obter alguns dados de teste.
+
+Ops, isso espalhou um erro que diz Erro em subnodo, memória simples, não encontrado ID de sessão. Quando começamos um agente sem um trigger de conversa, precisamos provider manualmente a memória com um ID de sessão. Em equipamentos mais complexos, você pode precisar encontrar um jeito de gerenciar o ID de sessão dinâmicamente.
+
+Mas para um agente simples como este, podemos provider um ID de sessão dinâmica, ou simplesmente um ID que não muda. Podemos apenas fazer este ID subir. Então, por enquanto, no nosso nodo de memória simples, vamos mudar o ID de sessão para Define abaixo, e entrar em algo como meu ID de teste para a chave.
+
+Vamos voltar para a canva e testar nosso agente de novo. Agora, depois de um pouco de pensamento, você pode ver que o agente expõe uma resposta em formato marcado. Agora temos o agente recebendo instruções em um tempo escolhido, e depois decidindo o que fazer com o instrumento.
+
+Nós lhe demos um objetivo, mas não lhe dissemos como alcançar a tarefa. Ele está usando as ferramentas disponíveis para encontrar informação da internet, e depois decidindo qual é a melhor informação para nos apresentar de volta para a nossa análise diária. Agora vamos pegar os resultados do trabalho e enviá-lo para o nosso e-mail.
+
+Vamos clicar no botão de mais após o nodo de agente de AI, selecionar Ação em uma app, depois procurar e selecionar Gmail. Você pode ver que há um monte de ações que você pode fazer no Gmail. Vamos usar a ação de enviar uma mensagem.
+
+Agora precisamos conectar um aconto de Gmail. Se você está usando o N8nCloud, a maneira mais fácil é clicar em Siga-se com o Google. Mas se você está hostando sozinho, essa opção não será disponível.
+
+Nesse caso, você vai precisar conectar seu aconto de Google usando um método chamado OAuth2. Seguir OAuth2 leva alguns passos e é fora do escopo deste tutorial. Porém, eu coloquei um link na descrição para que você passe o processo, incluindo um vídeo ajudante da documentação oficial.
+
+Depois de conectar seu aconto de Google, entre em seu próprio e-mail no fio de 2. É aqui que o Briefing diário será enviado. Podemos setar o assunto dinamicamente baseado no dia do Briefing. Vamos dizer Briefing diário, depois pegar o variável da data legítima do Output Schedule Trigger do lado esquerdo.
+
+Depois, pegue o variável de Output do agente de AI e passe para o fio de mensagem. Vamos testar este passo sozinho para ver como o e-mail parece com todos os dados presentes. Vamos clicar em Execute Step no topo direito.
+
+Depois podemos abrir o nosso inbox para ver como ele parece. Bem, aí está. É uma mensagem, mas não é muito bonita.
+
+Vamos atualizar nossa abordagem para que não recebamos apenas um bloco de texto para nosso Briefing, e ao invés recebamos um e-mail de estilo jornalista formado lindamente. Depois, vamos adicionar um passo de transformação de dados para converter o Output do AI para HTML, já que o gmail pode lidar com mensagens de HTML. No canvas, vamos clicar no ícone de cana de lixo na linha de arroz para desligar o gmail do fluxo temporariamente.
+
+Agora, vamos adicionar uma nova ação de pós-processamento. Sob a transformação de dados, vamos selecionar Markdown. Vamos ajustar nosso modo para Markdown para HTML.
+
+Depois, vamos pegar o variável de AI Output para o fio de Markdown. Vamos clicar em Execute Step para testar. O resultado está parecendo promissor.
+
+Agora, vamos embelezar o HTML. Depois do passo de HTML, vamos adicionar um nodo de OpenAI Standalone. Vamos selecionar a ação de enviar um modelo e escolher um modelo da lista.
+
+Em seguida, vamos mudar o papel de mensagem abaixo de User para Sistema. Um prompt de sistema é o que é enviado antes de qualquer mensagem de usuário. E ajuda a primeirar o LLM em relação ao seu propósito intenso e a resposta esperada.
+
+O prompt de sistema de default é, você é um assistente ajudante, mas você pode mudá-lo para especificar como o LLM deveria responder a qualquer input adicional que passar. Em seguida, para o nosso prompt, vamos dizer, embelezar o HTML abaixo usando CSS in-line para um e-mail. Formata-o como um jornal de notícias moderno.
+
+Apareça apenas os resultados sem nenhum elemento de header. Em seguida, vamos clicar em Addresso, manter o papel de User, e depois pegar o variável que contém os resultados da transformação de Markdown para HTML para o fio de mensagem de usuário. Depois, vamos testar esse passo.
+
+Parece bom. Finalmente, vamos conectar o Gmail novamente para ver como a mensagem parece. Vamos precisar atualizar o variável para a mensagem de Gmail.
+
+Então, vamos deletar a antiga mensagem, pegar o variável para o conteúdo gerado pelo passo OpenAI Email Beautifying, e depois executar esse passo para testá-lo. Vamos testá-lo no Inbox. E aí está! Está parecendo ótimo agora.
+
+Agora nós já fizemos muitos dos passos para o agente individualmente, mas vamos testar o todo o workflow para ver o que vai acontecer às 8 da manhã. De volta no Canvas, vamos clicar em Execute Workflow e ver o que acontece. O full AI Agent Workflow vai funcionar, você verá os vários passos de processamento, e, finalmente, você verá uma mensagem de sucesso quando tudo terminar.
+
+Funciona! Agora, finalmente, vamos conectar um spreadsheet para esse workflow para que o agente saiba quais tópicos evitar quando tentando encontrar notícias e fatos divertidos. O objetivo é localizar as notícias e fatos divertidos de cada dia de entrevista, para que o agente possa olhar o logo e saber exatamente o que evitar escrever. Primeiro, vamos criar um spreadsheet com três colunas de entradas.
+
+Dados, notícias e fatos divertidos. Depois, voltaremos para o N8n. Próximo, vamos precisar adicionar um nodo do spreadsheet dentro do N8n.
+
+Você pode pensar que devemos apenas conectar spreadsheets como outra ferramenta para o nosso agente, mas aqui está a parte mais difícil. Você vê, como humanos, agentes AI funcionam melhor quando você lhes dá um trabalho claro para fazer. Se você colocar mais trabalho neles e lhes pedir para fazer outro trabalho ao mesmo tempo que o primeiro, eles podem não criar bons resultados com um ou dois desses trabalhos.
+
+Então, para não incomodar nosso agente, precisamos delegar. Pedindo para ele criar uma saída inteira e separada, o nosso logo, provavelmente distrairá-lo do seu trabalho primário, ou pode ignorar esse segundo trabalho completamente. Então vamos virar outro nodo do AI para lidar com o logging.
+
+No final do nosso workflow, vamos adicionar uma nova ação. Vamos clicar no plus, depois selecionar a categoria de AI. Você pode usar qualquer das maiores LLMs que o N8n integrou para realizar essa tarefa, mas vamos ficar com OpenAI de novo.
+
+Depois vamos clicar na ação de enviar um modelo. Vamos escolher um modelo da lista, depois clicar em um prompt. Vamos configurar o prompt do sistema para algo assim.
+
+Seu trabalho é logar as notícias e os fatos divertidos do jornal diário nas colunas relevantes dentro do documento Google Sheets que você tem acesso. Um AI irá ler os resultados do seu trabalho, então tenha certeza de formatá-lo de forma concisa e detalhada, que será fácil de parsar e sumar com um pequeno número de tokens. Agora vamos adicionar uma mensagem do usuário.
+
+Vamos escrever Daily Briefing para dar ao LLM um pouco de contexto, depois vamos adicionar uma variável com a marcação ou a versão HTML do Daily Briefing da saída de passos anteriores. Agora vamos adicionar o LLM Google Sheets para usar como ferramenta, depois faça com que suas credências Google sejam selecionadas. Vamos mudar a operação de GetRow para AppendRow para que possamos adicionar informação nova.
+
+Depois vamos adicionar o logo Google Sheets que criamos antes do drop-down e escolher a folha com nossos headers. Depois vamos pegar a variável TimeStamp do Trigger Schedule e dragá-la para o campo para o valor do dia. Para as outras duas colunas, vamos clicar no botão AI para deixar o AI decidir qual informação adicionar para as notícias e fatos divertidos.
+
+Agora que temos tudo conectado para criar um logo, vamos executar o passo do AI para testá-lo. Se funcionar corretamente, veremos uma nova linha aparecer em nosso spreadsheet com as colunas cheias com a informação certa. Agora que estamos adicionando informação a um logo, precisamos adicionar um passo antes do workflow para analisar o logo antes de procurar notícias e gerar um relatório.
+
+Vamos fazer isso da mesma forma que fizemos com o último nodo de AI. Vamos clicar no botão Plus entre o Trigger Schedule e os nodos de agentes de AI para adicionar uma nova ação. Depois vamos selecionar o AI, depois o OpenAI.
+
+Para a nossa ação, vamos selecionar o Messagem de Modelo. Os setores de ação vão carregar e podemos selecionar um modelo do drop-down. Agora vamos escrever um pronto, algo assim.
+
+Seu trabalho é revisar a lista do Google linkado para ver o que os anúncios diários anteriores contavam. O objetivo não é repetir fatos divertidos ou histórias de notícias. Generar uma descrição para o próximo AI na linha para entender que tópicos evitar com o anúncio.
+
+Se usamos um sistema ou um prompto de uso, não importa tanto para este nodo pois estamos apenas dando um único prompto e não proporcionando outros inúmeros inúmeros. Dessa forma, selecionei o Messagem de Modelo para esta demonstração. De volta no Canvas, clique no botão Plus para adicionar uma ferramenta para o nosso nodo de AI.
+
+Depois busque e selecione o Google Sheets. Deixe a operação setada para Get Rows, depois selecione o documento e o Sheet onde os anúncios anteriormente logados vivem. De volta no Canvas, você pode clicar no botão Play em cima do novo nodo de AI para testar este passo e gerar dados de sample output.
+
+Finalmente, precisamos atualizar as instruções para o nosso nodo de AI principal para que ele entenda o que fazer com esta nova informação que estamos dando. Abra o nodo de AI, depois adicione algo assim para o final do prompto. Evite os tópicos seguintes.
+
+Depois, entregue a variável de conteúdo gerada como saída do novo Messagem e Modelo de AI. Depois, rue o nodo de AI para testar que está funcionando corretamente com os novos inúmeros e instruções que está recebendo. Depois de um pouco de processamento, você deve obter uma mensagem de sucesso confirmando que tudo está instalado corretamente.
+
+E você poderá ver o que o agente de AI escreveu olhando para a secção de saída no botão inferior do Canvas ou no lado direito do painel de ajustes do nodo de agente de AI. Agora, teoreticamente, nosso agente está completamente instalado, mas antes de ir ao live, ainda precisamos testá-lo. No Canvas, clique no botão Execute Workflow Como sempre, isso levará um tempo para o processo.
+
+Você verá cada nodo do workflow funcionando em tempo real e você pode assistir enquanto o nodo de agente pensa, depois usa ferramentas, depois pensa novamente antes de criar uma saída para o próximo passo a usar. Se você obter uma mensagem de sucesso quando está terminado de funcionar, isso significa que está pronto para ir. Clique em Save no topo direito para preservar seu trabalho duro.
+
+Depois, para ajustar seu agente a funcionar automaticamente todos os dias, clique no botão Toggle no topo, labelado Inactive, para ativá-lo. Depois disso, você obterá uma mensagem de sucesso indicando que seu workflow está agora ao vivo. Agora temos um workflow de agente de AI completamente funcionando que nos envia um brief diário e leva notas sobre o que ele escreveu em briefs anteriores, então não envia informação dupla de dia para dia.
+
+Agora o agente de AI vai funcionar todos os dias às 8 da manhã e decidir o que devemos ver no nosso inbox para começar o dia. Antes de lançar seu agente para o wild, aqui são alguns dicas para mantê-lo funcionando suavemente. Primeiro, coloque guardas.
+
+Apenas porque seu agente pode fazer decisões, não significa que deve ter total liberdade. Seja claro e específico em seus prometos de sistema. Escreva o que deve e não deve fazer e mantenha seu foco escuro.
+
+Você pode até adicionar passos de validação depois que o agente funcione para servir como um cheque de qualidade simples. Segundo, limite suas ferramentas. Apenas dê acesso ao agente para as ferramentas que realmente precisa.
+
+Mais ferramentas podem fazer as coisas mais complexas e isso geralmente significa mais chances de que a coisa saia do caminho. Terceiro, use templates. Templates ajudam a manter suas saídas consistentes e fazem com que seja mais fácil trabalhar quando algo erra.
+
+Você pode injetar variáveis como datas, resultados anteriores ou outros dados de trabalho para manter as coisas flexíveis sem perder estrutura. E, finalmente, espere algum teste e erro. Bugs e erros são parte do processo.
+
+Se algo não está funcionando, comece pelo cheque dos inputs e revisar os setores dos nodos. Você também pode perguntar ao assistente do N8n por ajuda. Muitos erros incluem um botão de ação rápida para sugestões geradas pela AI.
+
+E se isso não o resolver, a maioria dos nodos tem links diretos para a documentação relevante. Você não precisa construir tudo de novo. Uma das maneiras mais fáceis de começar é usando um template.
+
+O N8n tem uma grande biblioteca de templates de trabalho, perfeitos para set-ups comuns, como summarizadores de conteúdo, respondentes de e-mail ou assistentes da AI. Para usar um, vá para a tabela de templates do N8n e procure algo parecido com o que você quer construir. Você pode prever o trabalho, então clicar em Usar para Grátis e copiar o template.
+
+De volta no seu N8n Workspace, abra um trabalho vazio e imprime-o. Comande V on Mac ou Control V on Windows. Isso importará o set-up inteiro, incluindo todos os nodos e conexões.
+
+Daí, apenas conecte suas chaves de API, modifique os promtos ou mude o trigger. É uma ótima maneira de aprender por exemplo. Ou, conseguir algo funcionando sem começar de zero.
+
+Você pode até exportar e compartilhar seus próprios trabalhos como templates. Então, se você construir algo útil, você pode pagar para isso. Você viu como templates guardam tempo.
+
+Agora vamos falar sobre guardar dinheiro. Se você ama o N8n, mas quer controle completo e um imposto mais baixo mensal, então o self-hosting é o caminho. Quando você se inscreve no site do N8n, você está pagando por algo chamado N8n Cloud, que bunda duas coisas.
+
+Primeiro, o software N8n, que é o que estamos usando. E, segundo, hosting. O hardware que está funcionando.
+
+Então, o que é self-hosting? Self-hosting significa funcionar o N8n em seu próprio sistema. Tecnicamente, você poderia usar seu computador pessoal, mas seus processos de trabalho pararam no momento em que você fechou. Também alimenta recursos e posiciona riscos de segurança, já que a maioria das máquinas não são construídas por 24 horas.
+
+Uma melhor opção é um servidor privado virtual, ou VPS. Com o VPS, você recebe um sistema de computador remoto dedicado que funciona sem parar, fica seguro e mantém seus fios pessoais separados, tudo enquanto usa o N8n grátis. Self-hosting tem grandes vantagens.
+
+É mais barato, cerca de 5 dólares por mês para um VPS, e o N8n é grátis. Sem limites em funcionamento ou execuções, controle completo sobre hardware e atualizações. Instale todos os nodes customizados que você quiser.
+
+Seu dados ficam privados, e você pegará algumas habilidades de DevOps úteis ao longo do caminho. Mas não é tudo um voo suave. Setup e manutenção estão em você.
+
+Isso significa atualizações, segurança e escalação. Não há suporte oficial, e se seu servidor cair, o seu funcionamento também. Até você fixá-lo.
+
+Pense nisso como um café. Self-hosting é como cozinhar em casa. É mais barato e customizável, mas você tem que fazer o trabalho e manter o café-fazer.
+
+O N8n Cloud é como comprar café de um café. É mais barato, mas alguém mais controla tudo, então você pode focar em coisas mais importantes, como a automação. Se você está interessado em self-hosting, eu tenho um vídeo separado sobre como estabelecer isso em menos de 5 minutos por menos de 5 dólares por mês.
+
+Vá e clique no thumbnail do vídeo na sua tela ou no link na descrição para começar.
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.

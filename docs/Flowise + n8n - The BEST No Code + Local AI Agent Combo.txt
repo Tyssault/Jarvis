@@ -1,0 +1,221 @@
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)
+
+Antes de começarmos com o vídeo principal, tenho dois anúncios que estou muito emocionado de compartilhar com vocês aqui rapidamente. O primeiro, em nossa comunidade do Automator Think Tank, estou abrindo seções para ambos o N8n e o AI local. Obviamente tocando muito bem nesse vídeo, coisas que vou continuar focando muito no meu canal.
+
+O segundo anúncio, estou fazendo um colab com o Zuber e seu canal do YouTube, AI Workshop, onde ele faz um monte com o N8n. Mais sobre isso em breve, mas estou muito ansioso para esse colab. Então com isso, vamos para o vídeo principal.
+
+O futuro do AI vai ultimamente estar rolando tudo localmente. Suas LLMs, sua pipeline REG, suas automações de trabalho, e o listo continua. Há alguns meses, eu cobrei o starter kit localizado do AI, desenvolvido pela equipe do N8n, que oferece um incrível conceito de provas de rodar todos os seus necessidades de AI localmente.
+
+E esse vídeo completamente explodiu no meu canal. Ainda é o meu mais visto até agora, e eu acho que a maior razão por isso é, como eu, você percebe que o AI local é o caminho para o futuro. E esse paquete é uma demonstração muito poderosa de que rodar tudo localmente e ter toda a potência que você precisa no seu computador não é tão longe da realidade.
+
+O maior bloqueador agora é apenas que as LLMs abertas não são tão poderosas quanto as LLMs próximas agora, mas esse gapo está diminuindo muito rapidamente. Mais recentemente, eu adicionei OpenWebUI no starter kit localizado do AI, para fazer possível interagir com seus agentes do N8n em uma linda UI localizada. E agora, eu estou adicionando outra plataforma para a mistura, FlowWise.
+
+FlowWise é um atalho de automação sem código de AI. Ele é completamente gratuito, aberto a fonte e construído em cima da Lanchain, que eu também adoro. E a melhor parte é, ele combina muito, muito bem com o N8n, e é isso que vamos cobrir neste vídeo.
+
+O N8n ainda é a minha plataforma de automação sem código de AI favorita, especialmente por conta de como bem se integra com centenas de aplicações. Mas há definitivamente uma curva de aprendizado mais escura para o N8n, especialmente quando você está construindo seus agentes de AI. FlowWise, por outro lado, é tão simples quanto pode parecer, e se tornou a minha plataforma favorita para rapidamente prototipar agentes de AI para o que eu estou construindo.
+
+E eu a integro com o N8n, porque eu uso os workflows do N8n como minhas ferramentas de agentes para interagir com coisas como Slack e Google Drive. É a combinação perfeita para construir agentes de AI super rápido que podem realmente fazer qualquer coisa. E neste vídeo, vamos construir um agente juntos usando FlowWise e o N8n para demonstrar o poder dessa combinação e realmente mostrar por que você quer usar ambas as plataformas juntas e não apenas ficar com uma.
+
+E vamos fazer tudo isso dentro do starter kit local de AI. Vamos entrar direto. Então vamos começar com uma overvista do FlowWise.
+
+A fase de prototipação é muito crucial e você quer fazer isso rápido, e isso é o que FlowWise, combinado com o N8n, faz muito, muito bem. E FlowWise é apoiado pelo Y Combinator. Um monte de pessoas estão usando.
+
+É super fácil de instalar. Eles têm o seu repo do GitHub aqui, então você pode ver todo o código para o FlowWise. Eles têm instruções em como funcioná-lo, tanto com o NPM quanto com o Docker, que, por acaso, o Docker é o que vamos usar para o starter kit local de AI.
+
+E se a gente for para o seu folder docker aqui, eles têm instruções em como funcionar tudo com o Docker. Então, realmente, os únicos requisitos que você precisa para o FlowWise e o starter kit local de AI são o GitHub Desktop e o Docker Desktop. E eu vou ter um link para ambos desses no descrição deste vídeo.
+
+Então você tem esses instalados e você vai poder seguir e fazer tudo que estamos vendo aqui. Então eles até têm instruções em como funcioná-lo, incluindo instalar o .env. Há muitas variáveis de ambiente que eu não estou trazendo para o starter kit local de AI, porque eu quero mantê-lo simples, mas você pode adicionar coisas como autenticação do usuário para o FlowWise também. Então, definitivamente, cheque isso se você quiser olhar um pouco mais para o que está disponível para variáveis de ambiente.
+
+Mas, sim, este arquivo do Docker Compose aqui, que define o serviço FlowWise, é o que eu uso para trazê-lo para o starter kit local de AI. E é isso que eu vou mostrar para você como funcionar agora. Então, vamos adiantar para realmente ter isso funcionando todo o pacote junto com este starter kit de AI que eu extendi com o FlowWise.
+
+E então, se a gente pular aqui neste README, nós temos instruções em como instalar isso. E eu vou ter este link na descrição também. Mas é super básico.
+
+Você literalmente só precisa de, tipo, 3 comandos para conseguir esta coisa inteira funcionando. Porque, primeiro de tudo, você tem que fazer uma clonagem de Git para este repo. É por isso que Git é uma requerência.
+
+Eu, obviamente, já tenho uma clonagem, por isso eu tenho este erro. Mas, uma vez que você tenha isso, você só precisa cd para o repositório, aqui, local-ai-package. E então, se eu fizer o código . e eu tiver o Visual Studio instalado, isto vai abrindo diretamente dentro do meu código VS e aqui está o meu arquivo do Docker Compose.
+
+Então, você pode ver aqui que a minha adição recente é o serviço FlowWise, com OpenWebUI sendo a última coisa que eu adicionei antes. E então, isto está só funcionando no port 3001. Na verdade, FlowWise, por default, gosta de funcionar no port 3000, mas é onde nós temos OpenWebUI agora.
+
+Então, só funcionando no port 3001, adição super fácil. E então, instalar seus variáveis de environmento é também muito, muito fácil. Você só pega seu arquivo .env.example no repositorio, o nomeá-lo para .env, como eu fiz aqui, e então você pode mudar os setores de postgres que você quiser ou deixá-los como o default.
+
+E então, para o seu N8n de encritação, você pode ter isto como um conjunto de caracteres alfa-números aleatórios. Não importa o que você tem aqui, isto é só para o N8n debaixo da cabeça. E então, uma vez que você tem isto nomeado para .env, você pode ir em frente e, diretamente, executar o último comando aqui, que é usar o Docker Compose para iniciar isto.
+
+E então, eu só vou escrever isto aqui. Também, por acaso, para o Linux, eu acredito que é docker-compose, então, mantenha isso em mente. Mas, docker-compose, e então, eu estou iniciando com o meu GPU NVIDIA.
+
+Há também instruções para como iniciar isto com o Mac, e então, se você está só iniciando com o CPU, se você não tem um GPU poderoso para seus locales LLMs. E então, eu vou iniciar isto aqui. Vai virar tudo para mim, e então, vai puxar todas as imagens, se eu não tiver elas já.
+
+E então, uma vez que tudo esteja feito, vamos lá e abrir o FlowWise e o N8n. Então, deixe-me pausar e voltar, uma vez que isto esteja instalado. Tudo bem, uma vez que você tenha tudo instalado com o comando docker-compose, você pode ir para o seu desktop docker e ver o seu stack compose aqui, com todos os serviços funcionando.
+
+Eu tenho o N8n, Quadrant, Postgres, FlowWise. Eu não estou funcionando o OpenWebUI agora, porque eu não estou usando neste vídeo. Eu também vou estar usando o Ollama, que está gerado no meu computador, então, eu não tenho que reinstalar meus LLMs, por isso, eu não tenho isto aqui também.
+
+Mas, se você ativar o comando que eu te dei, você terá tudo isso funcionando aqui, pronto para você usar no browser. E uma coisa que eu quero cobrir muito rapidamente antes de eu entrar no browser, é que se você clicar em qualquer um destes contêineres aqui, você pode ver os logs em tempo real. E você pode ir ao tab Exec e executar qualquer comando dentro da imagem aqui.
+
+E então, há tantos ferramentas poderosas para você aqui para debugar seus contêineres em tempo real, enquanto você está construindo seu stack local de AI. Então, eu só queria chamá-lo muito rapidamente aqui, porque é super importante que você saiba como conseguir a visibilidade que você precisa para realmente debugar coisas enquanto você está construindo. E então, com isso, nós podemos ir para o browser aqui, e, sim, para acessar Flowwise, tudo que você tem que fazer é ir ao localhost port 3001.
+
+Então, você pode referenciar seu arquivo Docker Compose que eu tenho no repo para ver qual port você precisa ir para para cada um dos diferentes serviços. Então, 3001 para Flowwise, para N8n é localhost port 5678, para OpenWebUI é localhost port 3000, você tem a ideia, apenas referência o arquivo Docker Compose. E então, dentro de Flowwise, aqui, eu já tenho um chatflow que eu criei, mas para essa demonstração, só para mostrar o quão fácil é fazer tudo, eu vou fazer meu agente Flowwise completamente de novo.
+
+E então, vamos lá e entrar direto nele. Então, enquanto eu construir esse agente, eu vou cobrir outras partes da plataforma, como ferramentas, credenciais e variáveis. Mas, eu quero entrar direto no set-up do chatflow, então, vamos fazer isso.
+
+A única coisa que eu não vou cobrir aqui é o agente Flow. Isso é uma nova featura beta dentro de Flowwise, um novo nível de agentes que você pode construir na plataforma, mas eu quero começar bem simples aqui, então, eu vou com o chatflow clássico, onde você ainda pode construir agentes AI realmente poderosos e integrar com N8n, como vamos fazer. E então, o agente que vamos construir, eu vou fazer completamente de novo, só para que você possa ver quão fácil é fazer.
+
+Vamos dar a ele a habilidade de procurar no web, interagir com os workflows de N8n para criar docs do Google, summarizar conversas no Slack, enviar mensagens no Slack, toda aquela coisa boa. Então, vamos lá, clicar em adicionar novo, e nós temos uma lista vazia aqui, onde nós podemos agora adicionar todas essas componentes diferentes do Lange Chain. E, de uma vez, você pode ver, olhando para todas as opções que nós temos aqui para agentes e para coisas como carregadores de documentos, há um monte aqui que é um pouco mais difícil de setupar no N8n.
+
+Tipo, eu só posso carregar direto do API Brave Search. Você não pode fazer isso no N8n sem um bom número de trabalho. E eu diria, isso é super importante para saber, qualquer coisa que você pode fazer no Flowwise, você pode, tecnicamente, fazer no N8n.
+
+É por isso que eu ainda prefiro o N8n. E, como eu disse, eu não sei se Flowwise é a aplicação mais produtiva, mas é tão fácil de construir coisas tão rápido, e é por isso que Flowwise é linda. E então, o que nós vamos fazer é começar com o nosso nodo de agente de ferramentas.
+
+E então, se eu só procurar por ferramenta, nós podemos ver que nós temos esse agente de ferramentas. Eu vou carregar isso e aí vamos nós. E você pode ver que é como um shift vector aqui, onde nós só temos que carregar para diferentes nodos para conectar todas as coisas que precisamos para o nosso agente.
+
+E então, realmente básico, nós podemos começar com a nossa memória aqui. Então, se eu derrubar os agentes e ferramentas e limpar minha busca, vamos para a memória aqui. Então, há muitas opções diferentes que nós temos aqui.
+
+Eu vou começar com algo realmente básico. Eu vou ir com a memória de buffer. Mas você também pode usar Postgres se quiser, porque é parte do kit do local AI Starter.
+
+Eu só vou começar simples e fazer isso, mas só saiba que você pode usar as outras coisas que nós temos no local AI Starter Kit, que é a beleza dele. Então, aqui está a memória de buffer. E agora nós queremos usar Olama para o nosso modelo de conversa.
+
+E então, de novo, super fácil. Eu só tinha que procurar por Olama. É isso aí.
+
+E aí nós vamos. Nós temos o nosso modelo de conversa Olama. Boom.
+
+Tudo bem. E então, você pode até configurar um cache também. Olha quão fácil é apenas configurar todas essas coisas.
+
+Eu vou derrubar isso aqui e ir para o cache. Oh, isso está bem aqui. Então, deixe-me ir para o cache.
+
+E então, muitas opções para isso também. Tantas coisas que... Sim, como configurar um cache Reddish. É absolutamente lindo.
+
+Eu vou ficar simples aqui, mas Reddish é provavelmente o que eu recomendo se você realmente quer construir algo robusto. Mas sim, eu vou usar um cache de memória por enquanto. E então, nós conseguimos setar todos os parâmetros que você quer setar para Olama.
+
+Então, primeiro de tudo, nós temos a nossa base URL aqui. E a base URL é um pouco difícil, porque depende se você quer usar Olama funcionando no conteineiro para o local AI Starter Kit ou se você quer usar Olama funcionando no seu próprio computador. Então, agora, para mim, eu realmente quero usar Olama funcionando no meu computador.
+
+E a razão para isso é que eu não quero reinstalar todos os modelos que eu tenho para Olama no meu computador no meu conteineiro Olama no Starter Kit. E então, a base URL, quando você está dentro do conteineiro FlowWise, apontando para o seu computador, é host.docker.internal. Isto é apenas a notação standard docker para referenciar a máquina de host, ou seja, meu computador que está atualmente funcionando Olama. Se você quiser, em vez, referenciar a instância Olama funcionando no conteineiro, você tem que referenciar o nome do conteineiro que você recebe do arquivo docker.compose. Então, o serviço de Olama que está no arquivo docker.compose que nós funciona é apenas chamado de Olama.
+
+Então, você literalmente apenas replaça localhost ou host.docker.internal com Olama e então, boom! Isso referência Olama dentro do conteineiro. Então, quando eu estava cobrindo o local AI Starter Kit em alguns outros vídeos, as pessoas estavam confusas por isso. Isto é como você refere seu computador e então, referenciar o nome do conteineiro é como você refere o serviço funcionando lá.
+
+Então, super importante. Eu queria passar um minuto só falando sobre isso, só que estamos todos na mesma página lá. E então, para o nome do modelo, isso é onde eu posso referenciar, como quando 2.5 Coder 32B e a forma que você recebe esse nome aqui é que você vai para o seu terminal, liga o comando Olama List e isso lhe dá todos os modelos que você instalou com Olama e eu estou apenas levando 2.5 Coder 32B, que, por acaso, este modelo tem funcionado o melhor para mim como um agente AI.
+
+É meio engraçado que é um modelo Coder que eu estou usando, não para codar, mas na verdade funciona o melhor, o que é bem interessante. E eu posso ajustar a temperatura aqui para fazê-lo mais determinista abaixando a temperatura, entrando em parâmetros adicionais. Há tudo o que você gostaria de instalar em um Olama.
+
+Uma coisa que eu recomendo mudar é o tamanho da janela de contexto, porque, por algum motivo, você pode ler isso aqui, todo modelo de Olama default para 2048 tokens para o tamanho da janela. Então, qualquer coisa além disso vai ser cortada do contexto atual na chamada para o Olama, o que é bem ruim, porque se você tiver uma história de conversa mais longa ou ferramentas como WebSearch que retornam um monte de texto, vai começar a truncar o que você envia para o LLM, o que não é bom. Então, você quer truncar esse número, algo como 32 mil é o que eu geralmente faço.
+
+A especificidade do número não importa um monte, apenas faça isso maior, senão seus modelos Olama não performarão muito bem, eles perderão nas chamadas de ferramentas e halucinam coisas, então, sim, é muito importante manter isso em mente. Então, passamos um bom tempo no node chat Olama aqui, mas esse leva o mais tempo porque de tudo que estamos estabelecendo para o nosso modelo aqui. Então, eu vou jogar a chamada de ferramentas e o modelo de conversa para o chat Olama aqui, e bum, nós estamos conectados, tudo bem.
+
+E então, a última coisa que temos que setar antes de testar nosso agente pela primeira vez, é que temos que dar-lhe uma ferramenta. Como é um agente de ferramentas, você pode ver com o asterisco vermelho aqui que as ferramentas são necessárias. Então, vamos lá e adicionar uma das nossas ferramentas.
+
+E então, o que eu vou começar com aqui, não estamos integrando com N8n ainda, isso vai vir em um segundo. Eu quero começar com uma ferramenta de pesquisa web. Então, eu vou usar o Brave Search API, que eu absolutamente amo.
+
+E então, nós vamos conectar a ferramenta aqui para o Brave Search API. E então, é aqui que nós setamos nosso primeiro credencial. Então, neste caso, eu já tenho o credencial setado.
+
+Você pode setá-los fora do Builder workflow também. Há um tab dedicado para isso que eu mostrei antes. Mas você também pode clicar no botão e clicar em Criar novo aqui, dar-lhe um nome e então dar-lhe a sua ferramenta de pesquisa Brave API.
+
+E isso vai ser salvado, então você pode usá-lo dentro de outros workflows que você está construindo dentro do FlowWise também. E de novo, um lugar dedicado para manejar isso também. Então, nós agora temos o Brave Search API, tudo está desenvolvido aqui e nós podemos testá-lo pela primeira vez.
+
+Então, eu vou clicar em Save aqui e apenas chamá-lo de meu agente do YouTube. Apenas dê-lhe um nome aleatório. Tudo bem, clique em Save e então, se eu clicar no ícone de conversa no topo aqui, é por isso que eu movei o meu rosto, porém, então você pode ver o full chat widget aqui do lado direito.
+
+Agora eu posso testá-lo. Então, eu diria, searque o web e me diga o valor net do Elon Musk. Tudo bem, então o tipo de coisa que eu não vou conseguir sem realmente searcar o web por causa do corte de treinamento para esses modelos de línguas maiores.
+
+Então, vai demorar um pouco aqui porque ele está funcionando o Quen 2.5 Coder na minha máquina. Eu posso ouvir o fone girando agora. Não demorou muito, mas sim, em novembro de 2024, que é o mês atual, seu valor neto é de 348 bilhões de dólares.
+
+Então, ele tem um pouco de mudança extra para seguir aqui. E então, também muito legal dentro do FlowWise é que ele te diz a ferramenta que ele usou. Então, ele me disse que ele usou o Brave Search.
+
+Aqui é a entrada e então este é o saído que foi dado ao Quen para me dar a resposta aqui. Então, absolutamente lindo. Agora, nós finalmente conseguimos integrar o N8n com o FlowWise e nós vamos fazer isso através de fazer os workflows N8n como ferramentas que nós atachamos ao nosso agente de ferramentas aqui assim como fizemos com o Brave Search API.
+
+Então, há duas partes a este. Primeiramente, nós temos que criar nossos workflows N8n, que serão nossos ferramentas. Então, nós vamos de volta para o FlowWise e com algum código custom.
+
+Eu vou fazer isso muito fácil para você, não se preocupe. Nós vamos criar ferramentas custom aqui que usam requestos API para nossos workflows N8n para usá-los como ferramentas. E então, ambos os workflows N8n e todos os custom tooling FlowWise isso tudo vai estar nos repositórios.
+
+Deixe-me mostrar para você aqui. Então, dentro do nosso folder FlowWise aqui, este é onde nós temos o arquivo do Docker Compose para o starter kit local AI. Nós temos o JSON para o todo o flow chat.
+
+Você pode importar para o FlowWise você mesmo. E nós temos o JSON para todo o código para as ferramentas custom que estão fazendo aquelas requestas API para N8n. Então, se você fica preso em qualquer coisa aqui, apenas traga para você mesmo.
+
+Estou fazendo isso o mais fácil possível para você. E então, dentro do nosso folder workflow de ferramentas N8n, nós temos o JSON para você importar todos os pequenos workflows de ferramentas que nós vamos estar construindo aqui. E eu não vou construir esses de pé como eu fiz com o FlowWise, porque eu quero criar e fazer isso muito legal e simples para você.
+
+Então, indo para o nosso N8n, aqui está o nosso primeiro workflow de ferramentas. E então, porque nós estamos interagindo com N8n através de chamadas API e FlowWise, nós precisamos ter um Webhook Trigger aqui. E é assim que todos os nossos N8n ferramentas vão começar.
+
+Nós só temos um GET ou uma requesta de posto, dependendo do que estamos fazendo. E então, eu tenho apenas este teste de autenticação header instalado aqui para o meu token de guarda. Você não precisa usar a autenticação se você não quiser.
+
+Mas, sim, há muitos outros vídeos no meu canal onde eu desço para estabelecer esse tipo de workflow. Então, eu não vou entrar em detalhes enormes aqui, mas apenas saiba que eu tenho um Webhook e então um Webhook Responder para cada um dos meus N8n tools. E este tool, especificamente, é apenas um básico, rendendo um host local no meu instante N8n no meu kit de iniciador de AI local.
+
+Mas eu só query as tabelas que estão no meu database Postgres que também é hostado localmente. Então, eu tenho tudo isso preparado, referenciando o serviço Postgres. Então, eu estou usando o database Postgres dentro do meu kit de iniciador de AI usando o password e o database de nome que são todos definidos no meu .env. Então, eu coloquei isso como um bom e simples tool para começar só porque está mostrando usando outro serviço dentro do kit de iniciador de AI local.
+
+Então, isso é o que nós temos no N8n. Tome cuidado de ter seu workflow salvado e que esteja ativado também, para que possamos usar este URL de produção para chamar este ponto de fim do API dentro do FlowWise. E agora, voltando para o FlowWise, este é onde podemos trazer... Então, se eu procurar para custom tool, nós temos um node custom tool aqui.
+
+Então, eu vou pular isso e então, para o tool que eu quero selecionar... Bem, primeiro, deixe-me conectar isso aqui. Então, tools vai para custom tool e o tool que eu quero usar aqui é GetPostgresTables. Então, eu já fiz isso.
+
+Então, uma vez que você selecionou, essa é a única coisa que você tem que fazer aqui para a configuração. Mas se eu entrar para ver o código para isso aqui, você o dá um nome e você o dá uma descrição. E a descrição, na verdade, diz ao modelo de linguagem grande quando usar este tool.
+
+Então, é super importante ser descrito aqui. Eu provavelmente poderia ser muito mais descrito se eu quisesse do que apenas usar este tool para conseguir o PostgresTable, mas isso definitivamente vai fazer por agora. E então, para a esquema de input, este é onde você define todas as propriedades que precisam ser dadas para o tool, seu tipo e sua descrição.
+
+De novo, isto também é usado pelo LLM. Então, ele não sabe apenas quando chamar o tool, isso é o que a descrição é para, mas também como chamar o tool. Estas são as propriedades que ele tem de criar um valor para, como o nome do database, ou quando chegamos no Slack, qual mensagem enviar.
+
+Tudo isso é definido aqui. E então, este é onde temos o código grande e assustador. Mas não se preocupe, é muito, muito simples.
+
+É um JavaScript extremamente básico só para fazer uma requesta de API para o nosso workflow N8n. Este é o tipo de coisa que você poderia literalmente apenas usar o Windsurf ou ir para o 01 e apenas pedir para ele escrever este código para você. Muito, muito básico.
+
+Existem algumas coisas específicas para o flow, como como você refere as variáveis de input e também como você trabalha com as suas variáveis que você colocou fora da plataforma. Mas isso também é muito fácil. É por isso que estes comentários estão aqui só para ajudá-lo a entender isso.
+
+Então, eu tenho a URL do workflow aqui e você pode ver que está referenciando o meu conteúdo N8n. De novo, vá ao seu arquivo docker compose e veja qual é o nome do meu conteúdo para N8n. Neste caso, é apenas N8n.
+
+Então eu faço isso e então está gerado no porto 5, 6, 7, 8. E então isso vai referenciar o que nós temos aqui com o nosso N8n gerado localmente no starter kit local AI. E então a URL do webhook. Isso é tudo que nós temos aqui se você clicar na URL de produção.
+
+Então, tenha em mente que N8n lhe diz para usar o localhost aqui para a URL, mas isso não é verdade quando você precisa de um conteúdo para falar com outro. Você tem que referenciar o nome do conteúdo. Então, eu estou apenas batendo isso porque essa é a maior confusão no meu vídeo original para o local AI starter kit.
+
+E então a última coisa que eu quero cobrir aqui é este variável que eu tenho configurado para o token de carregador. Você não quer esse tipo de coisa encodado no seu conteúdo porque então quando você exportar o seu conteúdo e compartilhar com alguém mais, eles vão receber seu credencial. E então a forma que nós configuramos isso... Deixe-me salvar e sair aqui.
+
+Você só vai para seus variáveis aqui e então você pode configurar qualquer variável que você quiser. Então, neste caso, eu estou expostando o meu valor aqui porque eu vou desligar isso uma vez que o vídeo estiver feito, mas você só adiciona o nome, o tipo que é e então o valor. E este é o que seria o meu token de carregador aqui.
+
+E então, uma vez que você setou isso, então você pode voltar para o seu fluxo aqui ou ir para o seu tool. E então você pode referência-lo apenas com as barras de dólar com o nome da sua variável. Então é assim que você setou coisas customizadas para credenciais e coisas dentro do fluxo.
+
+E então agora, deixe-me salvar isso aqui e nós podemos testá-lo. Então eu vou entrar no meu widget de conversa aqui. Eu vou clicar neste botão para completamente clarear a história de conversa.
+
+E então eu vou dizer que tablas de Postgres eu tenho. E então isso vai ativar o meu fluxo de trabalho aqui. Então nós podemos realmente assistir para isso aqui.
+
+Se eu for para execuções, agora nós não temos uma execução na história recente, mas, boom, aí vamos nós. Nós vimos em tempo real. Aí vamos nós.
+
+Ele retornou todas as tablas que eu tenho aqui. E agora nós vamos receber uma resposta do modelo de língua grande. Tudo bem, então aí vamos nós.
+
+Eu chamei a função duas vezes por algum motivo. Eu não tenho certeza por que o Quinn decidiu fazer isso. Você pode até ver essa segunda execução aparecer aqui.
+
+Mas, eu peguei a resposta certa. Ele pastou todas as diferentes tablas que eu tenho aqui. E se eu for para o meu fluxo de trabalho e olhar para a resposta, aí vamos nós.
+
+Ele concatenou todos os nomes de tablas juntos e isso parece exatamente certo. Então aí vamos nós. Nós estamos agora interagindo com o N8n para o nosso primeiro fluxo de trabalho.
+
+Agora vamos setar alguns mais fluxos de trabalho do N8n como ferramentas apenas para realmente fazer isso um agente robusto. Eu vou passar por este bem rapidamente aqui porque não é o foco do vídeo todas essas diferentes fluxos de trabalho. Mas, nós vamos setar isso bem rápido aqui.
+
+Então, eu vou adicionar um outro fluxo de trabalho como este. Tudo bem. Bum.
+
+E então o fluxo para isto eu quero sumarizar uma conversa em Slack. Então, deixe-me dragar fluxos de trabalho para um fluxo de trabalho. Eu vou zoomar um pouco também.
+
+E então para este, de novo, muito, muito similar. Sumarizar uma conversa em Slack, dar uma descrição, um esquema de input. Nós estamos apenas fazendo este requerimento de fetcha aqui para o nosso fluxo de trabalho.
+
+Este aqui, eu estou realmente usando uma instância de produção N8n que eu tenho gerado com um domínio real. E a razão por que eu tenho que fazer isso, eu desejo que eu pudesse usar o meu N8n starterkit AI local para tudo. Mas, isso não é gerado com HTTPS.
+
+Então, você não pode realmente setar credenciais Google Drive e Slack quando você está funcionando apenas em localhost. Então, para o postgres tool eu poderia, mas para todos esses outros com Google Drive e Slack, eu tenho que ter um nome de domínio. Então, se você quiser ter ele funcionando totalmente localmente, mas usando Slack e Google Drive, você precisa ter ele gerado em um domínio.
+
+Então, mantenha isso em mente. Eu não vou passar por isso agora. Então, é por isso que eu estou apenas usando o que eu tenho aqui com o meu gerado N8n que eu tenho gerado sozinho dentro do Oceano Digital com um nome de domínio.
+
+Então, ainda está local nesse ponto em que eu não estou usando o N8n Cloud. Mas, de qualquer forma, um fluxo de trabalho muito similar aqui, onde nós temos um webhook e um responde para webhook, eu pego mensagens de uma conversa de Slack e eu sumário com um chamado LLM básico para GPT-40 Mini e então eu pego essa resposta de volta e isso é o que eu dou ao meu agente aqui dentro do FlowWise. Então, realmente, realmente legal e simples.
+
+Essa é a ferramenta número dois. Então, agora eu vou adicionar outra ferramenta custom aqui e essa vai ser realmente criar um doco Google. Então, essa é muito, muito similar, documento, texto e título para as propriedades aqui, faz um pedido de postagem para, vamos ver esse fluxo de trabalho aqui, apenas um único nodo espalhado entre o webhook e responde webhook para criar um arquivo Google Drive baseado no texto e o título que eu dei através do AI.
+
+o agente AI determina ambas dessas coisas aqui. Então, essa é a ferramenta número três. Vamos apertar isso aqui.
+
+E então, finalmente, nós vamos adicionar uma quarta ferramenta aqui. Então, nós estamos realmente fazendo essa coisa legal e robusta. Então, última ferramenta aqui.
+
+Enviar uma mensagem em Slack. Então, vamos conectar isso aqui, apertar isso bem aqui. Tudo bem, está parecendo um pouco confuso aqui.
+
+Eu provavelmente poderia organizar isso melhor, mas isso tudo é bom. Então, vamos zoomar um pouco. Tudo bem, e então, sim, o que eu quero fazer aqui é enviar uma mensagem através do Slack.
+
+Esse aqui, ele apenas pega a mensagem e chama minha quarta ferramenta aqui, que eu mostro muito bem. Então, o que eu tenho aqui, eu vou mostrar meu Slack. Eu tenho essa conversa muito básica e que eu disse, estou fazendo alguma pesquisa sobre Elon Musk, mas tenho problemas encontrando seu valor neto, só para ter algo para o LLM procurar o web por aqui.
+
+Então, eu abro minha janela de aqui, e eu vou pastar uma pergunta que eu tenho. Sumariza uma conversa de Slack e faça alguma pesquisa sobre o problema dado lá. Então, o objetivo aqui é fazer ele chamar o Sumariza Slack Tool e depois chamar o Web Pesquisa Tool depois.
+
+E então, uma coisa que eu preciso clarificar aqui é o canal que eu quero para sumarizar. eu vou dar o canal, e agora, como isso está funcionando localmente, vai levar um pouco para ele fazer tudo. Então, deixe-me pausar e voltar uma vez que ele tem a resposta para mim.
+
+Tudo bem, aí está, ele chamou a conversa de Sumariza Slack, e depois ele chamou o Brave para fazer algo mais aqui. Então, eu diria ótimo, agora, crie um Doc Google conciso com seus encontros. Tudo bem, então, continue a conversa, faça-o invocar mais ferramentas requerendo para razoar ainda mais sobre parâmetros para o título do documento e o texto para colocar coisas.
+
+Então, sim, deixe-me pausar de novo e voltar uma vez que ele está terminado com isso também. Bom, tudo bem, na verdade, só demorou 5 a 10 segundos. Estou bastante impressionado, então, até me deu um link aqui, o que é super legal, então, deixe-me copiar isso e então ir para meu outro browser, onde estou logado para este Google Drive especificamente.
+
+E sim, vamos abrir isso, então, vou abrir um novo tab, paste este documento e aí está, ele o fez em Markdown, o que é bem legal, mas sim, aqui é um documento muito conciso ilustrando sua pesquisa. Então, isso está funcionando absolutamente bonitamente, é tão legal como podemos integrar fluente com N8n juntos para todos estes ferramentas e até fazer algumas coisas não-triviais com parâmetros de input e combinando diferentes ferramentas juntos. O último passo aqui, vamos ter que enviar uma mensagem no Slack com este link e a suma de seus encontros.
+
+eu vou dizer envia uma mensagem no Slack e o canal é código difícil, então, eu não tenho que especificar o canal aqui, eu vou dizer envia uma mensagem no Slack com este link e uma suma de seus encontros. Tudo bem, vamos ver se pode fazer minha última pedida aqui e boom, aí vamos nós, enviou a mensagem no Slack, se eu for para a história de execução aqui para mensagem postada no Slack, você pode ver que temos nossa execução recente e podemos ver todo o status de trabalho, tudo que aconteceu dentro de N8n e então, quando eu vou dentro do meu canal Slack, vamos ver isso, boom, aí vamos nós, aqui é um Google Doc com toda a informação, este é o link certo, está indo bem e envia a suma, isso é exatamente o que eu disse fazer, isso está funcionando perfeitamente, e é apenas uma demonstração linda de como você pode usar N8n e Flowwise juntos para construir alguns ótimos agentes e protótipos muito, muito rápido, eu espero que, como eu, você pode ver o valor de usar Flowwise e N8n juntos para criar alguns realmente poderosos agentes de AI no olho de um olho, é por isso que eu adicionei para o local starter kit AI, que, por exemplo, muito mais conteúdo vindo no local starter kit AI muito cedo aqui, e se você tem algumas ideias de o que você acha que deve ser adicionado para o paquete próximo, por favor, me diga nos comentários abaixo, se você apreciou esse conteúdo e você está olhando para mais coisas local AI, eu realmente apreciaria um like e um inscrever-se, e com isso, eu te vejo no próximo vídeo.
+
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)

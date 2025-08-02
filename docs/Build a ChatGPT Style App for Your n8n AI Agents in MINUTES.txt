@@ -1,0 +1,165 @@
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)
+
+Eu tenho uma oferta de comércio para você. Se você me dar apenas 15 a 20 minutos do seu tempo, eu ajudarei a levar seus agentes do N8N para o próximo nível e faça isso com muito esforço. O que eu quero dizer com isso? Bem, geralmente, quando você está trabalhando com um agente de A.I. em um workflow N8N, vai parecer algo assim, e você terá um botão de conversa no começo do seu workflow, e isso te dá esse botão de conversa no meio inferior.
+
+É muito conveniente para você usar isso para falar com seu agente, direto dentro do Builder de Workflow. No entanto, é muito limitado, não parece o melhor, e você não pode ver conversas passadas se você quiser continuar uma delas. E quando você vai para o seu chat trigger, e você faz a conversa publicamente disponível, essencialmente recebendo essa página web para ela, fica ainda pior, porque é assim que parece.
+
+É muito feio, não há muito espaço para customizar essa página, e você ainda não pode ver conversas passadas como você pode com algo como chatgbt.com. E não me engano, eu absolutamente adoro o N8N. No meu cérebro, ele é a melhor ferramenta NoCode para construir automações e agentes de AIs. Mas, claramente, para a sua UI, há algo muito, muito melhor.
+
+Não seria legal se, em vez de ter algo que parecesse isso, nós pudéssemos ter uma UI para nossos agentes que parecesse isso? Agora estamos conversando. Nós temos uma interface como chatgbt para conversar com nossos agentes de N8N. Se isso parece ótimo para você, algo que você sempre desejou, então eu sou agora o seu gênio, porque neste vídeo, eu vou mostrar para você como setar tudo.
+
+Com alguns recursos disponíveis, você pode setá-lo tudo para si mesmo em apenas minutos. Este é o tipo de interface que nós sempre esperamos que os providedores de LLM tenham, como OpenAI, Anthropic, DeepSeek, e agora nós temos este mesmo tipo de set-up para nossos próprios agentes. E nós nem precisamos codificar nada ou construir uma aplicação customizada, porque isso tudo usa o poder de uma incrível plataforma aberta, chamada OpenWebUI.
+
+Isso é o que nos dá a UI aqui, muito bonita, e há um monte de ferramentas muito poderosas abertas nisso também. Nós podemos usar a voz para conversar com nosso agente de N8N diretamente agora, e tantas outras coisas que eu nem tenho tempo para descer neste vídeo. Mas veja isso.
+
+Eu vou enviar uma promoção muito básica, apenas o clássico, construa o jogo-chave para mim com Python, e pode parecer que isso vai para um normal LLM. Isso só parece chatgbt.com, mas embaixo da cabeça está conectando-se a um agente de AI que eu tenho direto em N8N. E nós podemos até ir para este fluxo de trabalho que eu tenho aqui.
+
+Vamos para as execuções e podemos ver isso acontecendo em tempo real. Este é o que acabou de ser executado. Eu até ouvi o ding que eu recebi a resposta de volta em OpenWebUI.
+
+Vou clicar no agente, e claro, a saída que recebemos é o jogo-chave. E depois, voltando para a nossa UI, nós temos essa resposta do nosso agente, e veja quão legal isso é. Ela tem o marcado completo e tudo para Bash e Python. Ela tem texto acentuado. 
+
+Isso só parece tão, tão legal. E nós temos a história da conversa. Eu posso continuar a conversa aqui.
+
+Eu posso voltar para conversas antigas, como onde eu anteriormente tinha que encodear o jogo-chave em um tempo diferente. E eu posso continuar essas conversas. Há muito que nós temos aqui que não temos com esta interface, ou com esta interface aqui.
+
+Então, aqui está o plano do jogo. Primeiro, eu vou mostrar para você como setar OpenWebUI por si mesmo. É um projeto de fonte aberta, então você pode acessá-lo do GitHub gratuitamente.
+
+Eu vou mostrar para você como começar muito facilmente. Depois, eu vou mostrar para você como importar o código customizado que eu criei para você, que você pode importar para sua instância de OpenWebUI para setar a integração do N8n. E isso tudo usando uma função em OpenWebUI chamada Funções.
+
+E a última coisa que eu quero falar com você é como nós podemos construir agentes de AI no N8n que integram de uma forma muito semelhante com tudo o que nós estamos setando aqui. Há algumas considerações, coisas que nós temos que adicionar para nossos workflows para fazer isso funcionar optimalmente. Incluindo, nós estamos usando um LLM em dois lugares diferentes, mesmo que isso seja só para um único agente de AI.
+
+Então, eu vou cobrir tudo isso. Não é realmente tão ruim no geral. Eu quero dizer, isso é um fluxo de trabalho bem pequeno.
+
+E há um link para isso na descrição deste vídeo. Se você quiser acessar esse fluxo de trabalho do N8n como um ponto de partida para construir seus próprios agentes que podem se conectar muito facilmente com a OpenWebUI. Primeiro de tudo, nós temos que instalar a OpenWebUI.
+
+Eu já cobri o que é. É a nossa própria interface hostável para conversar com nossos próprios LLMs e agentes de AI. E a beleza da OpenWebUI é que você pode instalar ela completamente offline no seu computador. Então, isso é meio que fora do escopo deste vídeo, mas você pode usá-la para conversar com seus LLMs OLAMA.
+
+Você pode usar o N8n completamente hostado e conectá-lo para a OpenWebUI. Você pode instalar tudo no seu próprio computador. Então, eu tenho um link na descrição para esta reposição para a OpenWebUI.
+
+Você pode acessar o Readme para ver as instalações. Há duas opções diferentes que nós temos. Primeiro, nós podemos instalar com Python.
+
+Então, se você tem Python na sua máquina, esse é o único requisito. Você pode então instalar a OpenWebUI com pip e então usar o comando OpenWebUI serve para virar a aplicação no seu computador. E aí você pode acessá-la no seu browser com este URL aqui.
+
+Apenas localhost port 8080. A segunda opção é com o Docker. É muito fácil de instalar com apenas um único comando.
+
+E há algumas opções diferentes de comandos aqui, dependendo da sua máquina e configuração. Eu apenas escolheria o primeiro caso, caso você tenha dúvidas. Se não tiver dúvidas, você pode ler estas opções diferentes e escolher o que é certo para você.
+
+É muito simples para nós, porque estas opções diferentes dependem de se você está usando OLAMA ou OpenWebUI. Nós temos um caso único em que nós vamos conectar diretamente a um agente N8n. Nós não estamos usando nenhum destes providers.
+
+Então, este comando de cima é apenas um bom default. Então, estas são as opções que estão disponíveis no README para OpenWebUI. Há uma outra opção que eu quero cobrir muito rapidamente, porque nós temos o pacote LocalAI, que eu já cobri bastante no meu canal.
+
+Esta é a minha coleção de serviços LocalAI, como o seu databases, você tem o N8n, OLAMA e OpenWebUI. Então, todos estes serviços estão pacotados para você instalar. Eu vou ter um link para um vídeo aqui, onde eu tenho instruções para fazer isto funcionar.
+
+Mas tudo o que eu estou cobrindo neste vídeo pode ser feito com os serviços incluídos no pacote LocalAI. Então, honestamente, esta é provavelmente a maneira mais conveniente de conseguir tudo funcionando de pé para você. Então, eu vou ter um link para isto na descrição também, se você quiser conseguir N8n e OpenWebUI, ou apenas OpenWebUI através do meu pacote LocalAI, completamente livre e aberto.
+
+Depois de você ter OpenWebUI funcionando com ou Python, Docker ou o pacote LocalAI, você pode então ir ao seu browser e acessar a interface. Tipicamente, a URL vai ser ou localhost port 3000 ou port 8080, dependendo de como você instalou. E depois você terá esta interface após você criar seu acounto de administração local quando você instalar OpenWebUI pela primeira vez.
+
+E então, direto, você pode ir e começar a conversar com os seus OLAMA LLMs ou OLAMAI LLMs. Mas o que nós nos importamos neste vídeo é conectar com nossos agentes N8n. E há duas maneiras de fazer isto em OpenWebUI, tanto através de estabelecer esta função custom que eu criei para a integração do N8n.
+
+Então eu vou linkar esta função na descrição deste vídeo. Este é o nosso paquete para tudo. Eu não vou entrar nos detalhes de todo este código Python aqui, mas apenas saiba que eu definitivamente salvou-lhe um grande sofrimento criando tudo isto para que a integração seja algo que você pode apenas conectar para sua OpenWebUI em minutos.
+
+E então, a primeira forma de fazê-lo é simplesmente ir para esta URL e clicar neste botão Get aqui. E aí você apenas escreve a sua URL atual para a OpenWebUI, como localhost port 3000. E aí você clica em Import para WebUI.
+
+A outra forma de instalar isto, se você quiser fazer isso manualmente, talvez até mudar um pouco o código para você mesmo, se você for mais técnico. Você pode clicar no botão de copia aqui para copiar todo o código da função. E então, de volta para a OpenWebUI, você pode ir para o painel de administração na esquerda inferior, clicar no botão de funções, clicar no ícone de mais no topo direito para adicionar uma nova função.
+
+E aí você pode apostar todos os códigos que você copiou da página da função. E então, a única outra coisa que você tem que fazer é adicionar uma ID de função e descrição. Você pode fazer isto sozinho e então clicar em Save.
+
+E então, boom! De qualquer forma, você vai ter esta função para o agente N8N Connector. Isso é pelo menos o que eu chamo. Você terá isto disponível para você agora.
+
+E então, quando você vai para seu espaço de trabalho aqui e você começa um novo chat, você pode selecionar isto como um dos LLMs. Então, eu tenho todos estes outros LLMs que eu só tenho através do Ollama. Mas agora eu tenho este, apenas ao lado de todos estes, que é a função customizada para conectar ao N8N.
+
+E ainda não estamos prontos porque ainda temos que configurar a função. Então, eu vou voltar para isto aqui. E então, dentro do ícone de settings para os alvos, é aqui que você coloca os pedaços específicos de informação que são customizados para você, que a função precisa.
+
+E eu vou cobrir como nós colocamos cada um destes quando eu falo sobre como nós construímos o nosso agente para a integração do OpenWebUI. Mas nós vamos precisar do nosso URL para o agente, um token guardador para que possamos manter nosso agente seguro e somente acessá-lo através do OpenWebUI. E então, nós temos os fios de entrada e saída para determinar o valor específico que estamos esperando para entrar no nosso N8N Workflow e o que nós estamos saindo.
+
+E então, para o intervalo de emitição, você pode, tipicamente, deixar isto como o default. Você pode ver que é o intervalo de segundos entre as emissões de status. Então, recebendo um atualizado sobre como a função está funcionando quando nós estamos conversando com ela na interface.
+
+Construir seus próprios agentes de automação e AI em plataformas como o N8N é uma ótima maneira de criar soluções customizadas e alinhadas para os problemas que você está tentando resolver. Mas é tão legal como é construir tudo sozinho. Há muito que acontece atrás das cenas para fazer automações e agentes que são realmente escaláveis, configuráveis, robustas e seguras.
+
+E muitas vezes, se você é um proprietário de um negócio que tem muitas requerências em torno destas coisas, você não tem o tempo ou o desejo de realmente investir nisso. Você quer uma solução preparada para a empresa que é mais fora da caixa. Isso nos traz para o sponsor do vídeo de hoje, que é o ZAMS.
+
+O ZAMS é uma plataforma de emprego para construir agentes de AI para automar o trabalho de oficinagem. E faz com que os agentes de AI sejam muito desesperados, seguros e poderosos. Agentes de AI hoje são tipo o que a internet era em um ponto.
+
+Bastante poderosos, mas também muito inacessíveis. Deu para o webbrowser realmente fazer a internet acessível para a pessoa média como você e eu. E o ZAMS está fazendo a mesma coisa apenas com a AI.
+
+Eles estão dando aos agentes um layer de UI para fazê-lo realmente funcionar para os negócios. Em vez de forçar as empresas a unir todas as suas automações, ferramentas e bases de conhecimento para a AI, o ZAMS lida com tudo isso. Você tem a AI de conhecimento para a compreensão ou dados, a AI de processo para conseguir coisas feitas e a AI predictiva para ajudar você como proprietário de um negócio a fazer decisões mais inteligentes.
+
+E tudo isso é construído para uso de empresas com controle, governança e segurança cozido em toda a plataforma. E eles têm um conjunto de tecnologias impressionantes para processar bilhões de pontos de dados instantâneamente, construir modelos predictivos com facilidade e transformar a língua natural em automações inteiras. Então, eu tenho um link na descrição se você quiser enviar uma demo do ZAMS e ver como ele pode transformar o seu negócio com agentes de AI de nível de empresa.
+
+Então não se preocupe se tudo isso não deu sentido para você ainda, eu vou mostrar como setar cada um desses valores enquanto passamos pelo template do agente N8n. Falando nisso, vamos fazer isso agora. E isso vai ser um recurso downloadável para você, que eu vou deixar o link na descrição.
+
+Eu sinto que eu já disse isso 4 ou 5 vezes. Eu realmente estou tentando fazer um vídeo valorizado para você com um monte de recursos para te fazer começar. Então eu quero cobrir esse agente, eu fiz o mais simples possível só para demonstrar as peças principais que você tem que ter para essa integração Open Web UI.
+
+Então, sim, um agente muito básico, ele só tem um único ato para procurar o web com o Brave API, só para que eu tenha pelo menos um ato aqui. Mas as grandes coisas que eu quero cobrir são principalmente no começo desse trabalho, começando com nosso Webhook Trigger. Então ao invés de ser um chat trigger, como tivemos no começo do outro trabalho no começo deste vídeo, eu estou usando um Webhook Trigger, porque isso vai nos dar um URL público que podemos usar para nos comunicar com esse trabalho e assim nos comunicar com nosso agente AI.
+
+Então você quer ir para o URL de produção e copiar isso, e você pode seguir o caminho sozinho para o que você quiser. Então você copia o URL de produção, faça com que seu trabalho seja conectado ao ativo, e então isso é o que você escreve aqui para o valor do N8NURL. Então esse é o primeiro.
+
+Mas a outra consideração com isso é que quando nós temos um URL público para nos comunicar com nosso trabalho, isso significa que qualquer um pode, teoreticamente, ligar para isso e gastar nossos créditos LLM. E então nós queremos proteger esse ponto final com a autenticação do header também. Agora um caveat para isso é que se você está funcionando no paquete local do AI ou apenas funcionando com o N8N completamente localmente, então você não precisa disso porque as pessoas não podem ir para o seu computador.
+
+Mas se você tem o N8N funcionando no cloud ou self-hosted ou algo como DigitalOcean, então você quer proteger todos os pontos finales do seu webhook. E então você pode fazer isso selecionando a autenticação do header e então criando créditos customizados. E eu vou te mostrar como fazer isso em um segundo.
+
+Mas eu só quero dizer, realmente rápido, que você definitivamente precisa disso se você não está funcionando com o N8N na sua própria máquina. Caso contrário, as pessoas vão ser capazes de chamar esse funcionamento um número infinito de vezes e você pode ver uma enorme espalha no seu bilhete OpenAI ou qualquer provider que você está usando. E então para setar seus créditos aqui, o nome vai ser autorização.
+
+E então o valor, eu vou escrever nesta caixa porque esta caixa esconde o valor. O valor vai ser Bearer e então espaço, qualquer token que você quiser setar. Então Bearer e então um espaço e então seu token customizado.
+
+E então eu vou deletar isso e então eu vou escrever aqui. Então Bearer, espaço e então test-off. E então o que você setou para seu token, você vai voltar para OpenWebUI e você vai adicionar isso aqui.
+
+Então a função assume que você está prefixando com Bearer, espaço. Então você não inclui isso aqui. Você não diz Bearer, espaço, test-off.
+
+Você só tem o token que você setou no N8N. Então eu espero que isso faça sentido. Eu vou fechar com isso porque eu já tenho isso setado.
+
+É assim que você adiciona autenticação. Então agora seu agente está protegido e ele só pode ser chamado em OpenWebUI ou onde você está invocando e você tem o token Bearer certo usado. Então esse é nosso Webhook Trigger para desligar tudo com nosso agente.
+
+Então eu acho que a última coisa, bem rápido, duplicando e voltando para o Webhook. Se você está ativando localhost ou você não precisa de autenticação header por qualquer motivo, você pode apenas setar isso para NONE e então deixar o valor em branco em OpenWebUI ou apenas o setar para qualquer valor que você quiser. Se você não precisa de segurança em seu agente.
+
+Obviamente eu faço no meu caso. Então eu vou ter certeza de que eu tenho isso setado porque eu estou funcionando com N8n em um agente em um oceano digital no cloud. Eu preciso ter certeza de que eu tenho meus pontos de fim protegidos.
+
+Eu não estou funcionando em localhost. Eu tenho OpenWebUI através do pacote local AI. Isso está funcionando em localhost, mas só para o que eu estou usando para esse vídeo, eu tenho N8n funcionando no cloud.
+
+Então eu tenho isso setado. Eu tenho minha segurança setada. E então as duas próximas coisas que queremos setar é o campo de entrada e o campo de resposta.
+
+E esses dois valores são determinados pelo que nós esperamos para entrar no nosso N8n Workflow e então o nome do campo que estamos saindo no final. E então para fazer isso muito concreto para você, eu vou para a minha última execução. E então começando com a entrada, eu vou clicar no webhook e você pode ver que o mensagem do usuário que entra no nosso N8n Workflow, o nome desse campo é input de conversa.
+
+E isso é determinado exatamente pelo que temos escrito aqui. Input de conversa. E então você só quer ter certeza de que o que você está esperando no N8n, como nesse caso, eu estou esperando o valor ser chamado do input de conversa.
+
+Eu quero ter certeza de que é o que eu escrevi em OpenWebUI. E eu até posso mostrar isso para você aqui. Se eu clicar no meu nodo de agente, você pode ver que estou esperando o prompto do usuário para entrar do valor de input de conversa do corpo do webhook.
+
+E então para a saída aqui, a razão pela qual eu chamo de saída é porque se eu for até o fim dessa execução no N8n, você pode ver que a resposta do agente de AI está no campo de saída. E então eu preciso ter certeza de que isso se mapeia com esse valor aqui. Porque dessa forma, minha função em OpenWebUI sabe onde olhar para encontrar a resposta de AI.
+
+Se isso estivesse setado para algo diferente, então não funcionaria, não encontraria a resposta de LLM e então eu não teria uma resposta na minha UI. Então é muito importante ter certeza que esses valores se mapeiam com o que você está esperando para entrar no workflow e o que você está saindo. E então voltando para o agente de AI, eu só quero mostrar para você que além dessa parte inferior que eu vou cobrir em um pouco, o resto disso é apenas um agente de AI muito simples N8n.
+
+Então nós temos o nosso LLM conectado, você pode usar qualquer provider que você quiser. Eu tenho Postgres para minha memória de chat, eu tenho esse único atalho que eu não vou cobrir em detalhes aqui, mas isso é apenas nos conectando para o Brave API, então nós estamos dando a capacidade para o nosso agente para procurar o web, apenas com esse pequeno workflow no fundo aqui como um atalho. E então eu nem tenho um problema de sistema.
+
+Então eu deixei isso muito, muito simples, porque isso é apenas um template para te fazer começar. Você pode construir qualquer agente de AI que você quiser no N8n, e conectá-lo enquanto você tem essa primeira parte do workflow, e então a coisa no final, onde você apenas mapeia o campo de saída do que você está esperando em OpenWebUI. É tão fácil.
+
+Você pode usar servidores de MCP, você pode fazer um doze de diferentes ferramentas, você pode usar muitos agentes nesse workflow, você pode fazer o que você quiser. Eu só estou te dando um ponto de partida muito básico. A última coisa que temos para cobrir aqui, é por que diabos eu tenho o segundo LLM chamada nesse workflow? E para mostrar para você por que precisamos disso, vamos primeiro ir e conversar com o nosso agente outra vez.
+
+E então eu vou abrir um novo chat, e eu só vou dizer o que você pode fazer para mim? Então eu só vou perguntar uma pergunta muito simples, e então se a gente vai para as execuções para o nosso workflow aqui, nós veremos que há várias que foram desativadas. Olhe para todas essas aparecer. E por que isso? Nós temos essa no começo, onde recebemos a resposta inteira do nosso agente, onde está nos dizendo o que pode nos ajudar, mas então nós temos essas outras três.
+
+Por que nós temos três outras execuções? A razão para isso é que o OpenWebUI chama o LLM várias vezes para a primeira mensagem em uma conversa, para fazer um par de coisas diferentes. Primeiro de tudo, ele usa o AI para dar um título para a conversa. Ele não usa apenas o meu mensagem ou usa o início da resposta do AI ou qualquer coisa.
+
+Na verdade, ele gera, baseado nas duas primeiras mensagens, uma descrição da conversa. Ele também usa o AI para gerar tags para essa conversa. Então se eu clicar nos setores aqui, você pode ver que ele decidiu para essa conversa, especificamente, a educação e a tecnologia são as duas tags que ele decidiu aplicar aqui.
+
+Então ele está usando o AI para fazer isso. Então se você olhar para essa chamada para esse LLM básico que eu coloquei, você pode ver que ele gerou o título. E então se eu olhar para a próxima execução, ele chamou o AI novamente para gerar as tags, tecnologia e educação.
+
+Então é apenas uma boa featura no OpenWebUI onde ele usa o AI para fazer outras coisas na conversa, além de apenas nos dar a resposta, ele cria essas tags, esse metadata extra, como o título da conversa também, o que é super legal. E se você não quiser fazer isso, você sempre pode apenas deletar essa parte do funcionamento. Então você pode deletar esse nodo, esse nodo e esse.
+
+E então você pode ter o Webhook conectado diretamente para os agentes. Você pode fazer isso se você não quiser usar créditos extra AI, como mais créditos OpenAI para gerar essas coisas. Mas eu acho que isso é uma featura realmente bonita e útil.
+
+E você sempre pode usar um LLM muito rápido e barato. Tipo, eu poderia usar GPT-40 Mini para gerar essas coisas e então usar Clod 3.7 SONNET para um LLM mais caro, mais poderoso para o meu agente primário. E então você pode fazer isso muito, muito barato, mesmo que esteja usando quatro chamadas de LLM para a primeira mensagem em uma conversa.
+
+Você pode fazer isso para que não seja realmente tão caro. Ou é só que vai ser totalmente gratuito se você está fazendo coisas locais com o LLM, de qualquer forma. E então a forma que nós temos este equipamento, onde para o resto da conversa irá ir para esse caminho e então para apenas a coisa do metadata, como o título, irá ir para esse caminho, é porque, veja isso.
+
+Se eu for para uma dessas execuções, clico no Webhook, o ID da sessão, o ID específico para essa conversa é NONE quando nós estamos gerando o metadata. Mas, de outra forma, para qualquer outra mensagem que está realmente se comunicando com o nosso agente primário, o ID da sessão é definido. Este é o nosso identificador único para a conversa que o OpenWebUI nos dá e é o que nós usamos dentro do node de memória de chat de Postgres também, para o, de novo, o identificador único para essa conversa.
+
+E então este if statement é muito simples, é apenas verificar se o ID da sessão é NONE ou não. Se é NONE, isso significa que nós estamos gerando metadata, então vamos para este LLM muito simples, barato e rápido. Se não for, vai para o nosso agente primário.
+
+Então, espero que isso faça sentido. Se isso não é 100% claro, não se preocupe, é por isso que eu tenho este template para você apenas acessar e usar. Você pode construir o que quiser como seu agente primário, apenas faça com que você mantenha isto aqui para gerar essa metadata, como as tags e o título de conversa, se você se importa com ter isso.
+
+E então, me demorou um pouco para perceber isso. Eu até cobri a pipeline no meu canal anterior para conectar OpenWebUI com N8n, mas eu não tinha essa peça antes e isso, além de umas outras coisas é por isso que estou fazendo este vídeo de novo, ou não realmente de novo, mas eu fiz algo bem parecido antes, mas é muito melhor agora e eu tenho este recurso para você trabalhar com. Então eu espero que você tenha achado isto realmente útil, faça isto e corra com ele, faça esta pipeline, faça este agente, você pode subir e correr com o que eu tenho mostrado aqui em OpenWebUI tão facilmente.
+
+Então eu espero que este vídeo tenha realmente ajudado você a levar seus agentes N8n para o próximo nível com esta integração OpenWebUI. E por favor, deixe-me saber nos comentários se você tem qualquer pergunta, eu estou sempre nos comentários respondendo tudo. Também, eu tenho muito mais conteúdo chegando em breve para o pacote LocalAI, que é onde eu estou atualmente rolando minha OpenWebUI e N8n, então fique atento para isso.
+
+se você apreciou este vídeo e está olhando para mais coisas N8n, agentes AI e LocalAI, eu realmente apreciaria um like e um se inscrever. E com isso, eu vejo você no próximo vídeo.
+
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)

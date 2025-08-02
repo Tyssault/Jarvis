@@ -1,0 +1,96 @@
+n8n ??( VAI DESTRUIR SISTEMAS PAGOS ) ?? Aula 1 - CURSO COMPLETO
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+O mundo inteiro está falando desse N8n. O que é esse N8n, Edu? Preciso entender de programação, preciso ser um mestre em programar, preciso saber código, nada disso. E deixa eu te falar o porquê que todo mundo está querendo saber sobre esse N8n.
+
+Ele nada mais é... Vou te dar um exemplo, o main chat. Quando você faz uma programação de fluxo, seleciona exemplo. Primeiro, a pessoa vai receber uma mensagem.
+
+Depois, ela vai receber a mensagem 1. Se ela responder A, ela vai ter a resposta X. Se ela responder B, ela vai ter a resposta Y. Não acontece isso em main chat, em diversos tipos de sistemas? Então, o N8n vai acabar... É isso mesmo que você está entendendo que eu estou falando. Ele vai acabar com diversos sistemas caros que você que trabalha com marketing, que você que trabalha com produtos, você que organiza toda essa estratégia de marketing e acaba tendo custo de ferramentas absurdo. O N8n consegue capturar o seu lead.
+
+Você pode programar. Programar, que eu falo, é arrastar e soltar. Essa é a grande vantagem.
+
+Não é nada de código, não. Então, você consegue pegar e fazer o seguinte. Primeiro, o lead captura o e-mail.
+
+Um exemplo. O lead captura o e-mail. Depois, o que vai acontecer? Você joga um outro bloco aqui.
+
+Depois que capturar o e-mail, ele vai entrar para uma sequência de e-mail. Ok, perfeito. E depois? Ao mesmo tempo que ele está na sequência de e-mail, ele vai também receber mensagens por WhatsApp, Telegram ou a forma que você achar melhor.
+
+E o jeito de mexer nele é arrasta e solta. É como se você estivesse criando um site arrasta e solta. É muito fácil.
+
+Aquele negócio de fazer aquelas programações de linha de código, pagar caro o programador. Isso está acabando. Inteligência Artificial está acabando com isso.
+
+Já é uma realidade você criar programas com o Prompt. Então, você coloca lá como você quer o seu sistema em Prompt e ele vai criar o programa para você. Nesse caso aqui em específico, que eu vou te mostrar no computador do N8n, ele é muito bom para quem? Para quem trabalha com marketing digital, para quem tem fluxo de trabalho.
+
+Ah, eu vou oferecer um produto a cada 10 dias. Ah, eu vou oferecer um upsell através do WhatsApp, através de e-mail. Enfim, eu vou trabalhar em cima de remarketing gratuito.
+
+Utilizando ferramentas ou plugins de envio de e-mail ou WhatsApp ou qualquer outra coisa Telegram. Então, isso você reduz muito até mesmo a sua equipe. Ah, eu tenho equipe que faz isso, faz aquilo.
+
+Você reduz a sua equipe, você reduz com programas, você reduz com sistemas de disparos. E você cria da sua cabeça, ou seja, você não depende de um sistema. Nossa, qual sistema vai fazer o que eu quero? Não.
+
+No N8n você faz. Eu vou falar uma coisa importante para você aqui, você que não tem VPS ainda e não quer errar na VPS. Porque quando você erra na contratação de uma hospedagem de site, é como se você rasgasse o seu dinheiro.
+
+Se você não quer rasgar o seu dinheiro, aqui embaixo, no link aqui embaixo desse vídeo, ele tem um desconto máximo da Hostinger em todo o mundo, é isso mesmo. Em todo o mundo, independente do país que você está vendo esse vídeo, você vai ter o desconto máximo da Hostinger aqui embaixo. O próprio nome do domínio vai estar hostinger.com.br barra desconto máximo.
+
+Eu, Eduardo, não tenho poder de ir até a Hostinger e criar um link específico desse cupom máximo. Então, ele é o cupom máximo. Ah, mas será? Não, ele é, ele é o cupom máximo, ok? E embaixo dele, além do link, tem o cupom desconto máximo, para você ter realmente a certeza que é o desconto máximo que está embaixo o nome.
+
+Porém, eu vou te falar uma coisa aqui. Quem entrar pelo canal motivando por esse vídeo que você está me assistindo aqui agora, vai ganhar um sistema de cursos. Está vendo o que está aparecendo aí na sua tela? Um sistema de cursos com vários cursos atualizados.
+
+Curso de inteligência artificial, curso que eu ensino a vender com influenciador digital, que é a coisa mais incrível que eu descobri, e foi quando colocou muito dinheiro no meu bolso. E você que quer explodir de vender, então você tem que utilizar o método EVR, tá? Só que aí, se você tiver um produto físico, tem que tomar cuidado, porque você pode vender muito de uma vez e depois não ter logística, tá? Então, agora se é digital, não. Você pode vender horrores, tá bom? E o queridinho do papai aqui, o queridinho das pessoas que estão entrando na Hostinger através do canal motivando, é o curso Caminho das Pedras.
+
+O que é esse curso Caminho das Pedras? Eu ensino você a criar um infoproduto, e esse infoproduto, em minutos, horas, você cria um infoproduto bem feito, bem elaborado. Nada de enganação, de mentira, não. Conteúdo bom, porque você vai realmente resolver o problema das pessoas, tá? Porque se você não sabe, hoje, no dia de hoje, está assistindo esse vídeo aqui agora, existem bilhões de buscas mundialmente, mundialmente.
+
+Todos os dias, bilhões de pessoas estão com o celular na mão, fazendo buscas no Google. E se a pessoa faz uma busca, que ela está com problema, você pode resolver aquele problema dela com... Ah, mas como, Edu? Com PDF? Com infoproduto? Com infoproduto, sim. O que é um livro? Um livro nada mais é que um produto impresso.
+
+Por que vende livro? Por que livro vende absurdamente? Por que a Amazon começou com livros e vendia para o mundo inteiro? Tem livros aí que, nossa, as pessoas têm um xodó, um carinho. O livro nada mais é que um produto, que ele é físico, porque você toca, mas ele é um conteúdo. Então, o que eu vou te ensinar é criar livros digitais que resolvam o problema das pessoas.
+
+E todos os dias as pessoas buscam, todos os dias, bilhões de pessoas buscam resolver o problema. Vou te dar um exemplo. A moça, a mulher, quer saber se o marido está traindo ela, ou se o namorado está traindo ela.
+
+Como que ela pode saber isso, descobrir isso, entender isso? Você pode criar um produto sobre isso, utilizando o chat GPT com a inteligência absurda do chat GPT. Você consegue criar um produto, por exemplo, que tem muita dor nas costas e que ela... Se você passa um exemplo, ela escreve desse jeito. Como parar a dor nas costas? É algo que está prejudicando a vida dela.
+
+Ela não está buscando isso porque é legal, porque ela quer ver um vídeo, porque ela quer fazer um bolo de cenoura de chocolate em cima. Não. Como eliminar a dor nas costas? Ela está com dor, ela está com problema.
+
+Então você consegue puxar... Vou te dar um exemplo. Você ir lá no chat GPT e fazer um prompt assim. Me puxa em 100 anos todas as técnicas já criadas de forma natural, para você não ter que oferecer nada para a pessoa.
+
+Então de forma natural, com chás, com movimentos. Até os movimentos você consegue ilustrar com inteligência artificial de forma perfeita. E aquela pessoa que tinha tanta dor nas costas, às vezes ela precisava só de um alongamento.
+
+Um alongamento feito de forma correta. E aí cura a dor nas costas da pessoa de forma natural. Não é incrível isso? Você ajudar as pessoas é incrível.
+
+E você ganha dinheiro. Então imagina você ganhando em real, ganhando em dólar, ganhando em euro, vendendo em todos os países do mundo, porque todo mundo busca as coisas. Todo mundo está com o celular na mão buscando coisas, ok? Então você entrando pelo canal, motivando pelo link aqui abaixo na Hostinger.
+
+Depois você volta, tem um link para você falar com a equipe ou mandar um e-mail. Você vai ter o acesso completo a esse sistema de cursos. Combinado? Edu, eu não sei como contratar a VPS, como ter desconto.
+
+Se você quer o desconto máximo em todo mundo, é isso mesmo, todo mundo. Qualquer lugar, qualquer país que você estiver. Aqui embaixo, na primeira linha da descrição, eu já vou estar falando passo a passo de como você conseguir o desconto máximo da Hostinger em todo o mundo, independente do país que você estiver.
+
+Edu, eu quero saber mais sobre a VPS da Hostinger. Aqui em cima no card tem a playlist que eu mostro tudo sobre a VPS. Porém, agora eu vou criar uma playlist sobre o N8n.
+
+Então, esse é o primeiro vídeo. Você vai ver que é facinho. É tudo arrasta e solta, são blocos.
+
+São nós que chamamos. Edu, o que é nós? Nós nada mais é exemplo. Ah, eu quero colocar o meu Instagram junto com o WhatsApp, junto com o envio de e-mail.
+
+Enfim, cada um desses é um nó. Se você não deu um like no vídeo, deixa um seu like aqui que esse vídeo está sensacional. Um dia eu aprendi com o rapaz o seguinte.
+
+Você tem que fazer as coisas com inteligência. Ele falou isso para mim. Na época eu comecei como social media.
+
+E quando ele falou que eu tinha que fazer as coisas com inteligência, eu achei que ele estava me chamando de burro. Mas não é. Quando você cria um sistema desse, um fluxo desse, o que acontece? Você elimina um monte de ferramentas. Você não precisa de mexer em um monte de coisa.
+
+Você vai centralizar em um lugar só. Vai fazer um marketing efetivo, inteligente. Você pode cercar as pessoas de diversas formas.
+
+Então, a pessoa que não comprou na hora, você pode fazer um marketing. Ou se a pessoa comprou, você pode enviar um WhatsApp para ela. Mandar no WhatsApp automaticamente, mandar por e-mail, mandar por Telegram.
+
+Onde essa pessoa estiver, ela vai receber uma mensagem sua. Então, você ter um controle disso é algo surreal. Para quem trabalha com marketing, para quem até mesmo sua empresa.
+
+Quem tem empresa hoje e pensa, ele tem um sistema desse. Por quê? Porque vai ter um controle total. E você consegue, olha só que loucura.
+
+Tem um nó ali que você consegue os dados do seu cliente. Ele vai ficar salvos no Google, em uma tabela do Google. Então, tudo isso automaticamente.
+
+Tudo funcionando automaticamente. Ao invés de você ter vários sistemas, ele vai deixar tudo automático para você. Envio de mensagem, salvar os dados do lead, disparo, enfim, tudo.
+
+E é muita coisa, não é pouca coisa. Dá para fazer muita coisa aqui. Muita coisa mesmo.
+
+É só a introdução desse vídeo aqui. Obrigado pela sua atenção. Se você não deixou um like, deixa um like aqui embaixo.
+
+Preciso de você. Preciso que você deixe um like. Não vai custar nada, não vai cair o seu dedo.
+
+E você vai estar me ajudando também a criar mais conteúdos assim para você. Tá bom? Se inscreva no canal, se não é inscrito, que vai ter mais novidade incrível aqui sobre o N8n. E tudo sobre VPS, hospedagem de site, marketing digital.
+
+Obrigado pela sua atenção. E até o próximo vídeo.
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.

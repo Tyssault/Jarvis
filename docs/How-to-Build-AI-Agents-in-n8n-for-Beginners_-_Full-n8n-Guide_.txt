@@ -1,0 +1,229 @@
+How to Build AI Agents in n8n for Beginners! (Full n8n Guide)
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Ao final deste vídeo, você terá construído um agente de operação completamente sozinho. Porque hoje eu vou te dar tudo o que você precisa saber para construir esses agentes de AI usando uma ferramenta chamada N8N, do iníciante para o melhor. Agora, não importa qual indústria você está em.
+
+Muitas pessoas pensam que só porque são trabalhadores de cor azul ou porque não têm nem um trabalho que não deveriam pensar nisso. Mas eu vi isso ajudar em todos os caminhos da vida. Eu personalmente ensinei milhares de alunos através de centenas de chamadas ao vivo, ajudando-os a construir seus funcionamentos agênticos.
+
+E cada um deles está recebendo os benefícios só porque eles estão escolhendo tomar o tempo de aprender isso. Mas sem mais delongas, vamos entrar no que é o N8N e por que estamos usando ele. Como eu disse, estamos usando o N8N para construir agentes de AI.
+
+Então vamos aprender o que é o N8N. Bem, o N8N é um instrumento que te permite conectar suas aplicações e automatizar tarefas boas e repetitivas. É de código baixo a código não, cheio de AI e construído para supercarregar seus funcionamentos.
+
+Eles até têm uma versão aberta que você pode acessar no seu computador e usar grátis. Então, isso é incrível. Mas vamos entrar nos benefícios de usar o N8N.
+
+O primeiro é a construção de agentes. Você vai poder construir agentes que performam tarefas enquanto você dorme. O segundo benefício é eficiência.
+
+Você pode construir funcionamentos hiper eficientes que não perforam literalmente qualquer humano. Número três, temos a facilidade de uso. Alguém pode aprender, especialmente se você está assistindo a este tutorial.
+
+No final deste vídeo, você vai ter um agente que você criou sozinho, com um pouco de guia, é claro. Mas quais são os passos para aprender o N8N? Muito simples. Você aprende a terminologia.
+
+Então você aprende como certas palavras são ditas. Você aprende quais ferramentas você pode usar nesta aplicação. O passo número dois é construir pequenos funcionamentos.
+
+Estes podem ser automações em vez de agentes. Vamos entrar na diferença entre eles em um segundo. O passo número três, você integra a AI nesses pequenos automações ou funcionamentos.
+
+E quando você integra a AI, faz isso agêntico. E o passo número quatro, você tem que continuar aprendendo e construindo. Você não pode apenas assistir a este vídeo de 30 minutos a 1 hora e esperar que tenha masturbado tudo, certo? Vai levar você puxando as fronteiras e você resolvendo problemas.
+
+E eu vou mostrar a você como você pode usar a AI para ajudar você a fazer isso neste vídeo e algo que eu faço todos os dias para me ajudar a construir esses agentes de AI. Mas primeiro precisamos entender o que devemos aprender antes de tentar construir agentes. Como eu disse no começo deste vídeo, nós treinamos milhares de pessoas sobre como construir agentes de AI.
+
+E isso é provavelmente onde a maioria das pessoas vão errado. A maioria das pessoas ficam muito animadas e espalham as bases. Mas vamos ser honestos.
+
+Você não deveria estar construindo agentes se você não sabe o que os empodera. Muitas pessoas só querem pular para a construção de agentes de AI, mas não entendem o mecanismo por trás disso. E este é um caso em que entender o mecanismo é muito importante.
+
+Então, o que você deveria aprender primeiro para estar bem preparado para construir agentes de AI? Bem, isso é engenharia de propósito. Aprendendo como criar propósitos, instruções e perguntas para um modelo de linguagem grande vai ajudar você imensamente. E se você não conhece nenhuma dessas palavras que eu acabei de dizer, como modelo de linguagem grande, instruções e propósitos, então este é um bom começo.
+
+Você deveria aprender engenharia de propósito primeiro. Eu tenho um vídeo completo que eu criei no meio esquerdo. Aprenda como criar um propósito em um modelo de linguagem grande, porque é isso que está empoderando um agente de AI quando nós instalamos o agente e transformamos a automação em um agente, é claro.
+
+Então, isso é o que nós ensinamos na comunidade privada da Fundação AI. Nós temos quatro cursos sobre as bases de AI e recomendamos a todos os nossos alunos ir através destas categorias. Nós os chamamos de cursos de pilar antes de lutar um dos nossos cursos de pedra-chave, que neste caso está criando agentes com N8n.
+
+Então, se você quiser saber mais sobre isso, vá para o link na descrição ou o comentário de cima. Eu vou deixar dois links lá em cima e você pode vir ver o que isso é sobre e onde as pessoas estão fazendo resultados massivos. Mas vamos descer para a fase 1. O que é um agente? Temos que aprender o que é um agente antes de começar a criá-los e como isso difere de uma automação, porque automações foram por anos.
+
+Quero dizer, anos e anos. Mas agentes são uma nova coisa e eles adicionam um extra layer para uma automação, o que o torna muito mais dinâmico e customizável. Então, simplesmente colocar um agente é uma automação integrada de AI e o conceito básico de automação e conceito agêntico.
+
+Se você está criando um agente ou uma automação, esses conceitos permanecerão os mesmos. Você tem um trigger, algo que começa o fluxo de trabalho. Você tem uma ação que acontece e essa informação do trigger é passada para a ação e aí você recebe um resultado.
+
+Você sabe, o resultado pode ser um resultado tângilo ou pode ser mais um resultado subjetivo. Então talvez, tipo, um resultado feliz para o cliente. Ou, você sabe, talvez você receba um resultado específico para uma certa lista do Google.
+
+Isso pode ser outro resultado. Agora, o conceito agêntico é o mesmo, exceto que estamos apenas reemplazando a palavra ação com a ação de AI. Então, a AI vai, na verdade, dinamicamente levar informação.
+
+Ela pode acessar ferramentas, ela pode acessar librarias. Ela pode olhar para seus spreadsheets, olhar para suas tabelas, seus databases, falar com seus databases. Mas a grande coisa que eu quero que você compreenda é que uma automação é predefinida e fixada, enquanto um agente é adaptável a situações únicas.
+
+E quando nós criamos esse agente perto da parte de trás deste vídeo, você vai ver, ok, uma automação faz a mesma coisa a cada vez. Ela faz o que é dito para fazer. Mas um agente é, tipo, não-determinado desse jeito, onde ela pode se adaptar a situações únicas.
+
+E ela pode lhe dar resultados que são diferentes a cada vez, porque a informação que entra será diferente a cada vez. Então, agora, vamos descer para a interface N8n. Uma vez que você se inscreve, novamente, você pode usar isso em um trial grátis por mais de 14 dias e conseguir, eu acho, 1.000 execuções.
+
+Então, se você ainda não se inscreveu na N8n, eu recomendo criar um acount e usar o seu trial grátis de 14 dias para ver se é algo que você quer continuar. Mas uma vez que você se inscreveu na N8n, o que você vai notar é que temos algo aqui à esquerda chamado Projetos. Você pode criar um novo projeto clicando nesse botão de mais e indo para o projeto.
+
+É aqui que todas as suas automações e agentes são sortadas. Então, se eu for para o meu Life of Drake projeto, o que você vai ver é que cada um destes é um agente único ou automação. E quando você está em seus projetos, o que você pode fazer é que você pode até criar folhas específicas dentro de projetos selecionados.
+
+Então, se eu estou no meu folha de tutoriais do YouTube, eu poderia criar uma para este vídeo. Eu poderia dizer Full Guide para N8n. Eu poderia clicar em Criar.
+
+E agora eu tenho um folha pronta para ir. Então, eu poderia clicar aqui. E sempre que eu quero criar um novo trabalho, eu poderia clicar neste botão de Trabalho para Criar no lado direito superior.
+
+Ou, quando eu estou neste folha, eu poderia clicar neste botão. Criar um trabalho. E um trabalho é o que mantém seus agentes e suas automações.
+
+Mas aí você vê algo aqui e diz Ad First Step. E isso pode ser um pouco intimidante, porque quando você clica em Ad First Step, você só vê um monte de opções diferentes aqui na direita. Mas isso é um conceito importante, porque todas essas coisas aqui na direita, essas são chamadas de Nodes.
+
+E há diferentes tipos de Nodes em N8n. Se você se lembra do nosso exemplo de automação na tela branca. Lembre-se, nós temos um Trigger, nós temos uma Ação e nós temos um Output, que também pode ser uma Ação.
+
+Estes são como seus Nodes em N8n. Então, você sempre precisa começar sua automação com algo. Isso é chamado de Trigger Node.
+
+Então, você precisa ter algo acontecendo nessa automação, que é considerada Ação. E então, os resultados também podem ser considerados Ação. Mas vamos entrar nos tipos de Nodes de N8n.
+
+Então, você pode entender todas as ferramentas que você pode usar para criar algumas coisas legais. Então, eu criei este pequeno dashboard para nós, para que possamos ver todos os tipos de Nodes diferentes. Primeiro, deixe-me passar pelas categorias, e então eu vou ficar um pouco mais específico dentro de cada um.
+
+Então, começando, nós temos os Nodes de Trigger. Estes são Nodes que começam sua automação em N8n. Você sempre precisa começar uma automação ou um agente com um Trigger.
+
+Algo precisa acontecer que diga, Ei, acorde, é hora de correr. É o que estes fazem. E sempre precisamos começar com um destes.
+
+E há mais do que o que eu coloquei nesta caixa, mas esse é o conceito. Próximo, temos os Nodes de Ação. E estes são Nodes que performam ações em aplicações externas que você conecta.
+
+Como você pode ver, eu tenho Gmail, Airtable e Google Sheets aqui como exemplo. Próximo, temos os Nodes de Utilidade. Estes são Nodes que são nativos para N8n, que vão te ajudar a transformar dados uma vez que você o tenha no seu canvas.
+
+E temos dois outros tipos de Nodes, que são os Nodes de Código. Nodes que ajudam você a enviar um pedido, usar código e adicionar customização extra. Vamos entrar em uso de um destes hoje.
+
+Na verdade, dois destes hoje, quando formos construir nossa automação. E temos os Nodes de Agentes. E estes são Nodes que integramem AI na sua automação para a construção de agentes.
+
+Há muito mais do que estes dois, mas eu só queria mostrar o Node de Agente principal que é sempre usado, e um legal que é nativo para N8n. Então, o que temos aqui em Trigger é um monte de diferentes formas de começar sua automação. Então, como você pode ver, nós temos apenas um começo manual.
+
+Então, sempre que a gente clicar em Test Workflow, aqui embaixo, no centro inferior da minha tela, isso começará o que seguir. Nós temos um Input Formal. Nós podemos fazer coisas como um Schedule, então podemos rumar em um dia específico, tempo, minuto, hora, dados Webhook.
+
+Então, isso está ficando um pouco mais complexo, mas você pode ouvir eventos acontecendo em outros sites, como Slack usa um Webhook. Então, talvez se você quiser ver mensagens em um certo canal Slack e começar uma automação em uma certa mensagem Slack, você pode fazer assim. Você tem uma Receita de Chat, então você pode começar uma automação quando você escrever algo neste chat, assim, isso pode começar uma automação.
+
+E então nós temos coisas como Executado por Outro Workflow. Nós também temos outras coisas aqui, que são nativos de aplicações. Então, quando certos eventos acontecem em apps como Telegram, Gmail, AirTable, praticamente qualquer app que você possa pensar, esse é outro jeito que a automação pode começar.
+
+Então, há muitas maneiras de começar a nossa automação e também há muitas ações que podemos tomar depois. Então, como eu disse, as Nodes de Ação são aquelas nodes que performam ações e aplicações externas que você conecta. Eu usei três exemplos aqui, mas há centenas de apps que você pode conectar.
+
+Então, se eu for para o painel aqui e seleciono essa ação em uma app, veja todas essas apps que você pode conectar. Você provavelmente já viu algumas que são um pouco tentativas de se conectar. Nós temos Calendly aqui, temos ClickUp, Coda, temos Convert API, temos um monte de ferramentas diferentes aqui, DHL, Elasticsearch, Figma, Facebook, temos Freshdesk, todo o ecossistema Google, todo o ecossistema Microsoft.
+
+Temos literalmente qualquer ferramenta que você possa pensar. E quando você clica em uma dessas ferramentas, vou clicar em Stripe, por exemplo, há diferentes ações que você pode tomar. Então, você pode criar uma carga, você pode criar um cliente.
+
+Como você pode ver, eles têm 149 triggers. Então, você pode começar a automação em 149 diferentes maneiras usando apenas Stripe, baseado em coisas acontecendo dentro do seu acounto. E o que é legal sobre isso é que quando um trigger acontece em algo como Stripe, ele vai tomar o dados que ele tirou desse evento.
+
+Então, como no PayoutCreated, ele provavelmente teria algumas informações sobre o PayoutCreated. Então, há um monte de diferentes maneiras que você pode começar a sua automação no passo de trigger e um monte de diferentes ações que você pode tomar após a automação ter sido triggerada ou após ter começado. Então, se quiséssemos, nós poderíamos até fazer algo tão simples quanto isso.
+
+Eu poderia pegar uma forma, eu poderia ter uma nova carta criada. Se você quiser conectá-las, o que você pode fazer é apenas pular e conectar. E agora eu poderia criar uma pequena forma aqui.
+
+Digamos que eu queira essa forma para criar uma nova carta Google para mim. Então, a cada vez que eu estou no N8n e eu quero uma nova carta Google criada, eu posso apenas escrever na minha forma. Então, nós podemos dar um título de forma.
+
+Este é apenas um exemplo rápido. Eu vou apenas chamá-la de nova carta Google. E para a descrição, eu coloquei Criar uma nova carta Google para o meu espaço de trabalho.
+
+Eu vou chamá-la de nome de carta. E então eu posso colocar, para o espaço de trabalho, nome de carta aqui. E isso seria o suficiente para fazer a nossa automação funcionar.
+
+Eu vou ir em detalhe e explicar automações e agentes quando nós estamos realmente construindo o fluxo de trabalho customizado. Mas, agora, eu só estou tentando mostrar um exemplo de como o N8n está estruturando seus dados e como funciona. Então, o que eu quero fazer agora é, na verdade, desligar isso da carta Google.
+
+E então, eu só quero testar essa forma. Então, eu vou clicar em Testar. Como você pode ver, vai pular um campo de forma onde eu posso entrar meu nome de carta.
+
+Talvez eu só queira chamá-lo de Guia de agentes do Drake. Eu posso clicar em Submit. E o que você vai notar é que toda essa informação está na direita da minha tela agora como uma saída.
+
+Então, ele tem Guia de agentes do Drake. E isso está em algo que nós gostamos de chamar de campo dinâmico. Então, eu posso usar o nome de carta e mapeá-lo para o meu novo nome de carta Google.
+
+Então, a cada vez que eu escrevo um nome único para o campo de forma, ele vai atualizar de acordo com o Google Sheets. Deixe-me mostrar um exemplo do que isso parece. Então, quando eu clico nesse node Google Sheets, o que você vai notar é que nós temos três seções, mais ou menos, em cada node de ação.
+
+Nós temos um Input, que está na esquerda. Isso é onde todas as informações vinculadas e todas as variáveis vêm. Então, isso vem do nosso node de trigo de forma, certo? Se eu clicar nesse botão, nós podemos ver o nome de carta aqui.
+
+Então, nós temos uma seção de Configuração. Isso está no meio, e é aqui que você configura todos os dados que você está usando do seu Input. E, finalmente, nós temos uma seção de Output.
+
+Isso é o resultado dessa configuração com o uso dos dados de Input. Então, se eu estou usando o Create New Sheet node no meu Google Sheets, que é muito fácil de conectar, o que eu poderia fazer é selecionar a operação Criar um Spreadsheet, e então eu poderia, dinâmicamente, usando uma expressão, mapear um novo título. Então, se eu puxar o nome da minha carta aqui, como você pode ver, ela vai criar uma nova carta chamada Drake's Agent Guide.
+
+E não só Drake's Agent Guide todo o tempo, mas o que eu coloquei nesse campo de nome de carta. Então, se eu testar esse passo, o que você vai ver é que o Output será um novo Spreadsheet. Ele até me dá a minha ID do Spreadsheet, e me dá um monte de informação diferente que eu até posso continuar usando ou continuar me adaptando a outros nodes de ação.
+
+Mas ele até me dá uma URL do Spreadsheet aqui. Então, eu vou copiar essa URL do Spreadsheet, e depois vamos testá-lo. Eu vou mapeá-lo aqui e enviar.
+
+E como você pode ver, nós temos um novo Spreadsheet criado com esse nome de carta, Drake's Agent Guide. Então, esse é um exemplo de como ações podem acontecer com um node de ação no N8n. E eu poderia vir aqui agora e eu poderia testar isso e eu poderia criar qualquer nome de carta que eu quiser.
+
+Olá, com um monte de O's, Submit. E agora que eu tenho ele instalado, ele vai criar um novo Spreadsheet a cada vez que eu escrever aquela forma. Você pode até ficar louco atualizando as linhas desse Spreadsheet, mas agora nós temos essa URL que está sendo criada no fundo automaticamente para nós, então eu posso ir e usar isso em qualquer lugar, e como você pode ver, meu Spreadsheet é chamado assim.
+
+Então, esse é um exemplo de uma automação rápida, e não é realmente nada automado, mas, em vez de mostrar como ações podem acontecer no N8n. Próximo, nós temos os nodes de utilidade, e como eu disse, esses são nodes que ajudam a transformar dados. Então, nós poderíamos unir dois inputs usando esse merge, nós poderíamos agregar dados juntos, nós poderíamos separar dados.
+
+Essas são coisas que eu não vou entender muito. Quando você chega ao ponto onde você vai precisar delas, você vai entender, tipo, ok, eu quero que essa automação pegue duas ruas, então talvez eu precisasse usar um switch node. Essas são as coisas que você, tipo, pega em seguida e não é algo completamente importante para aprender direto do portão.
+
+Você vai entender, uma vez que precisar, quando o tempo chegar. Próximo, nós temos esses nodes de código, e, como eu disse, você pode criar funções de JavaScript ou scripts de Python dentro desse node de código aqui, então você pode até selecionar uma língua. Então, isso fica muito poderoso, porque, se você lembra, nós ainda temos a mesma configuração de tela de input-output, então nós poderíamos agregar dados dinâmicos para uma função de JavaScript, e isso poderia ser atualizado dinâmicamente, que eu vou te mostrar como fazer hoje.
+
+Nós temos uma requesta HTTP, então você pode chamar e obter dados de serviços, similarmente a como esses estão funcionando na ação, mas isso permite mais chamadas custom e mais ações para serem tomadas. E nós também temos webhooks, novamente. Próximo, nós temos nossos nodes de agentes, e é aqui que tudo o divertido acontece.
+
+Nós vamos, na verdade, usar o agente de ferramentas hoje, dentro de uma automação, mas a coisa legal desses agentes é que você pode lhes dar memória, e você também pode lhes dar ferramentas para usar. Então, eles estão agindo como um cérebro, e tudo o que você tem que fazer é lhe dar instruções custom sobre como ele deveria agir, e adicionar algumas informações dinâmicas, e então, ele vai usar todos os ferramentas que tem disponível para fazer decisões em seu nome. É claro que você pode instalar ferramentas de guarda e limites, mas esse é o conceito de um agente de ferramentas na N8n.
+
+É um node bem legal, e nós vamos entrar nisso, mas esse foi um breve, um breve cobertura de agentes, nodes, e como usá-los na N8n. O que eu vou fazer agora é que eu vou voltar ao meu projeto do YouTube, e então, eu vou clicar em Full Guide para a N8n. O que eu quero fazer é que eu quero construir o nosso primeiro agente juntos, e eu quero que isso seja um agente de reporte de clima.
+
+Então, primeiro, vamos construir uma automação para que possamos usar um monte de diferentes nodes e entender a diferença entre uma automação e um agente quando nós construímos o agente, e então, nós podemos, na verdade, adicionar aquele nodo de AI e fazê-lo divertido, adicionar ferramentas e adicionar outras coisas legais. Então, como eu disse, vamos construir nossa primeira automação, e isso vai ser uma automação para obter um reporte de clima de uma localidade específica. Então, passo um, nós precisamos instalar nossos nodes de trigo.
+
+Lembre-se, toda automação deve ter algo que diga, Ei, acorda, é hora de ir. E esse é o passo um, nós usamos os nodes de trigo. Então, os dois nodes que nós queremos usar são um trigo manual, apenas para testar.
+
+Eu sempre uso o manual, especialmente se eu estou construindo uma automação, então eu posso dizer, teste o fluxo de trabalho e ele começa para mim. E eu também quero um trigo de horário que comece a automação uma vez a cada 24 horas, para que todos os dias, eventualmente, eu possa receber um e-mail com um reporte de clima específico baseado na minha localidade. Então, vamos tirar o passo um do caminho e pegar esses nodes de trigo no canvas.
+
+Dentro do meu guia completo para o folha N8n, eu vou clicar em criar um fluxo de trabalho e eu vou fechar o meu lado para que nós tenhamos essa boa visão de tela. E o que eu quero fazer é, eu posso clicar em adicionar o primeiro passo aqui, ou eu posso ir para o lado direito superior e adicionar o node de trigo dessa maneira. Então, eu vou fazer assim e depois eu vou adicionar o trigo manualmente.
+
+Então, agora, a cada vez que eu clico em testar o fluxo de trabalho, ele vai começar a funcionar e completar as ações tomadas depois. Eu até posso renovar isso se eu quiser para manualmente testar. Lindo.
+
+E agora eu preciso adicionar esse node de trigo para que ele possa funcionar em um trigo ao invés de eu estar aqui e ter que clicar em funcionar a cada vez. Então, eu posso escrever trigo e, como você pode ver, esse trigo de trigo aparece. Eu posso clicar nisso.
+
+Eu posso selecionar um intervalo. Por enquanto, vamos fazer cada dia em, digamos, 6 horas da manhã. Então, eu vou clicar e, assim, temos nossas duas formas de começar a nossa automação.
+
+Eu posso chamar isso de 6 horas da manhã. Schedule. Lindo.
+
+Então, eu sei qual hora está funcionando. E então, antes de entrarmos no passo número dois, adicionando nosso node de ação, o que eu posso fazer é renovar isso para WeatherReportAutomation. E, como eu disse, estamos construindo essa automação primeiro para que possamos entender como um agente é benéfico para nós.
+
+E eu espero que você esteja seguindo, porque tudo nesses passos, especialmente para a automação, você pode fazer grátis. Então, você pode fazer em um teste grátis de N8n. Você pode usar o dados de clima grátis que eu vou mostrar como pular.
+
+E eu recomendo seguir esse passo. Então, o passo número dois é que precisamos adicionar uma ação. Então, o que acontece depois de selecionar um teste manual ou todos os dias, às 6 horas da manhã, no nosso horário? O que vai acontecer? Bem, como é que nós começamos apenas pulando todos os dados de clima que possamos? Onde você conseguiria dados de clima? Bem, isso é algo que você tem que pesquisar, mas eu encontrei esse site chamado openmedio.com e ele tem dados públicos gratuitos disponíveis para qualquer localidade sobre o clima.
+
+Então, nós podemos usar isso para essa automação. E então, nós vamos usar um pedido de HTTP para fazer isso. Então, antes de entrarmos, vamos aprender o que é um pedido de HTTP.
+
+Bem, em N8n, um pedido de HTTP parece assim. Eu vou escrever HTTP e ele vai parecer assim. Isso é um nodo de ação.
+
+Então, ele vai nos dar algumas informações após acertarmos esse botão de teste manual ou todos os dias, às 6 horas da manhã. O que podemos fazer para conectá-los é apenas apertar e desligar esse fio aqui. Como você pode ver, eu posso movê-lo ao redor da tela.
+
+Eu posso conectá-lo para si mesmo. É meio estranho, mas eu posso conectar esse fio para o fundo do pedido de HTTP. Então, agora há duas formas que esse pedido de HTTP pode tomar uma ação.
+
+Então, deixe-me voltar para a apresentação e mostrar o que realmente é um pedido de HTTP. E o jeito mais fácil de descrever isso é apenas pensando em um pedido de HTTP como um centro de chamadas de apoio. Quando você quer informação, imagine isso.
+
+Digamos que você queria informação sobre o clima de uma localidade específica, em um momento específico, e havia um número de telefone que você poderia chamar para obter essa informação sobre esse dado. Pense em um pedido de HTTP como um número de telefone único que você está chamando e pedindo informação específica, como, olhe, eu quero o dado do clima em Chicago, e eu quero isso em um avalio diário. É o mesmo conceito, certo? Apesar de você não estar usando um número de telefone, mas, em vez disso, você está usando um URL único.
+
+Então, para o nosso exemplo de reporte do clima, podemos usar openmedio.com para criar essa URL especial que nos dá informação sobre o clima. Então, vamos criar essa URL agora, porque, no lado do N8n, nesse pedido de HTTP, como você pode ver, ele está apenas pedindo por uma URL. Pense nisso como o número de telefone do seu centro de chamadas de apoio que você está introduzindo.
+
+E quando a gente clica em Test Step, vai pegar essa informação que a gente criou e essa URL vai poder passar esse dado de volta para o N8n. Então, vamos fazer isso agora. Vou ir para openmedio.com, e, como você pode ver, temos um API de clima grátis.
+
+Então, se você está procurando por um pedido de HTTP, procure por APIs abertas ou apenas documentação de API. Muitas das suas grandes aplicações terão elas. Você pode ter que se inscrever para um acounto de desenvolvedor, mas são bem simples de usar.
+
+Então, vamos para os docs de API, e agora só queremos procurar por uma URL de API. Como você pode ver, essa URL é construída por latitude e longitude. Então, se queremos o clima de um local específico, primeiro, vamos ter que encontrar a latitude e a longitude para aquele local.
+
+Então, podemos acessar e procurar por uma URL de API. Oh, aí está. Então, essa é a URL única que vamos ter que escrever e copiar para a nossa aplicação.
+
+Então, podemos até apenas escrever essa URL em um novo tab. E o que isso vai fazer é que vai nos mostrar toda essa informação. Então, isso vai nos dar o tempo diário com a temperatura aqui também, mas queremos esse dado em N8n.
+
+Então, vamos fazer isso. Primeiro, precisamos construir essa URL. Então, digamos que nós vivemos em Chicago e queremos encontrar o clima em Chicago.
+
+Então, a latitude é 41.87. Eu posso copiar isso. E então, para a latitude, eu posso escrever 41.87. E então, eu posso ir e copiar a longitude também, que é 87.62. E isso é só para que eu possa pegar dados de clima de um local específico. Dias de previsão.
+
+Quanto tempo queremos? Bem, eu posso ir até 3 dias. Não precisamos de 7 dias agora. Mas agora, quando vamos para a URL, na verdade, eu vou mudar a temperatura para Fahrenheit 2 e o vento para MPH.
+
+Desculpe para todos que estão usando Celsius e quilômetros por hora. Eu vou usar a ruta americana e não vou fazer isso. Mas agora a URL mudou e foi atualizada de acordo com a localização que queremos, os dias de previsão que queremos, a velocidade de vento e a temperatura.
+
+Então, o que eu posso fazer é copiar isso. Agora que nós criamos e fizemos exatamente como queremos, que esse API de clima é legal, você pode adicionar coisas como sol, sol, neve, chuva, tem tantos dados que você pode adicionar à sua URL, mas o que nós temos agora vai ser suficiente para nos dar o que precisamos para essa automação de relatórios de clima. Então, agora o que eu quero que você faça, depois que você criou sua URL em OpenMedia, é que eu quero que você paste isso em sua requesta HTTP.
+
+Então, eu vou pastar isso ali. E, por enquanto, podemos deixar o método em Get e depois podemos testar esse passo. E devemos ter uma saída baseada na nossa entrada desse dado aqui.
+
+Então, isso é lindo. Temos todos esses dados únicos sendo puxados. Então, agora, todos os dias às 6 da manhã, isso pode funcionar se eu ativar o meu workflow.
+
+E o que isso vai parecer é isso. Então, vai funcionar e vai saír todas as dadas baseadas na nossa localização específica que queremos. Então, agora estamos recebendo informação para o nosso canvas.
+
+Pode estar funcionando em um horário. Então, o que vem a seguir? O que queremos fazer com essa informação? Bem, se queremos um relatório de clima diário, talvez queremos criar uma mensagem customizada. Então, para fazer isso, podemos usar algo como um código para transformar dados raros em uma mensagem de relatório de clima.
+
+E depois que criamos essa mensagem de relatório de clima usando código, então podemos enviar um e-mail para nós mesmos com a mensagem criada. Então, eu não sou um desenvolvedor, mas eu vou mostrar a você como você pode pegar o seu dado de saída e criar coisas legais usando AI, como ChatGPT ou Cloud, para escrever o código para você. Então, isso é algo que eu faço o tempo todo.
+
+É um ótimo método de debug. É um ótimo jeito de resolver problemas. Quando você sabe qual nodo você precisa usar e então você sabe como perguntar as perguntas certas, você pode resolver 80% a 90% dos seus problemas apenas fazendo isso.
+
+Então, depois desse pedido de HTTP, se queremos adicionar o código, podemos clicar nesse botão de mais e podemos escrever o código na esquina direita superior. E vamos fazer um pouco de JavaScript para levar essa informação aqui à esquerda. Lembre-se, a informação de entrada, nós temos a configuração de entrada e saída por nodo.
+
+Então, pedido de HTTP, toda essa informação está na seção de saída. Nodo de código está na seção de entrada porque está vindo depois do pedido de HTTP. Está recebendo a entrada na frente do nodo de código.
+
+Então, como podemos transformar esse dados raros, toda essa coisa louca em uma mensagem que podemos enviar a nós mesmos em e-mail? Então, já que eu não sou um desenvolvedor, o que eu posso fazer se eu quiser fazer código para levar dados raros e criar uma mensagem customizada para mim? O que eu posso fazer é ir para o chat GPT e eu posso escrever um pronto como esse. Como você pode ver, eu digo, criei um nodo de código N8N que parsa esse JSON de clima e retorna uma mensagem com, e então eu coloco qual mensagem eu quero. Em Chicago, o alto hoje é, e então eu, dinamicamente, quero uma mensagem de temperatura alta vindo.
+
+O baixo hoje é, e então eu quero temperatura baixa. Talvez essa seja a mensagem que eu quero enviada a mim todos os dias de manhã. Obviamente, você pode fazer isso mais customizado e mais divertido, mas vamos entrar em como fazer isso e o passo do agente disso.
+
+Então, como você pode ver, eu disse que parsa esse JSON de clima. Então, a informação que está vindo é considerada JSON. Então, eu preciso dar aquela informação para que ele saiba como está vindo para esse nodo de código.
+
+Mas a coisa legal do chat GPT é, você pode ativar a busca e terá informações atualizadas sobre o que é um nodo de código N8N e ele fará essa busca para você. Então, deixe-me agora pastar a forma de que esse dado está vindo para o meu nodo de código. Então, eu posso voltar para a nossa automação N8N.
+
+Eu posso clicar nesse botão de edição no canto direito superior e isso vai permitir que eu copie e paste facilmente todo esse código. Então, eu posso apenas puxar tudo para baixo ou você pode clicar no controle mais A. Eu vou clicar no controle C. Então, eu vou para o chat GPT e vou pastar aquele código. Então, essa é uma estrutura, e o chat GPT...
+ Este arquivo é mais longo que 30 minutos.
+ Atualize para Ilimitado em TurboScribe.ai para transcrever arquivos de até 10 horas.

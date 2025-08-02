@@ -1,0 +1,164 @@
+Mini Curso de N8N - COMO FAZER AUTOMAÇÕES na sua Empresa! (FLUXO COMPLETO)
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Automatizar processos na sua empresa pode economizar muitas e muitas horas de trabalho. Horas essas que você pode usar pra ir pra praia, pra assistir um filme, pra dormir, pra fazer o que você quiser. E olha, você não precisa ser um expert em tecnologia ou automação pra conseguir automatizar processos.
+
+Vamos pegar um exemplo bem simples. Você recebe lá um formulário no seu site, e dependendo do que o cliente digita no assunto, a automação sabe pra qual departamento o e-mail precisa ser enviado. Tudo isso de forma automática.
+
+Claro que é um exemplo extremamente simples, mas você pode criar na sua empresa dezenas de outras automações com N8n, seguindo essa mesma lógica. Então vem comigo que eu vou te mostrar como você pode usar o N8n, uma ferramenta de automação que pode transformar a sua empresa, otimizando o seu tempo e aumentando a sua produtividade. Fala galera, beleza? Eu sou o Darlan Evandro, seja muito bem-vindo pra mais um vídeo aqui do canal.
+
+Hoje nós vamos falar sobre como criar automações simples, mas poderosas usando o N8n. Ferramenta incrível e que você precisa começar a usar o quanto antes. Se você não tem ideia do que eu estou falando, o N8n é uma ferramenta poderosa pra criar automação, criar fluxos de trabalho, é uma ferramenta muito legal mesmo.
+
+Esse daqui é o segundo vídeo do canal sobre esse tema. Se você caiu de paraquedas nesse vídeo, eu recomendo que você também assista o vídeo 1, pra que você possa entender o que é o N8n, como instalar, como ter o N8n praticamente de graça. Eu vou deixar esse vídeo aqui na descrição pra você conferir depois.
+
+E agora a gente já vai colocar a mão na massa, vamos começar a criar nossa automação. Então vamos lá pessoal, vamos criar aqui a nossa automação. Eu fiz um gráfico extremamente simples, só pra exemplificar o que essa automação vai fazer.
+
+Então eu quero que sempre que o meu site, o site da minha empresa, sempre que eu receber um formulário de contato, e que esse formulário de contato contenha alguma palavra-chave específica que você mesmo vai definir, essa palavra pode ser palavra orçamento, ou assistência técnica, ou suporte, independente de qual seja a palavra que você defina, eu quero que esse formulário de contato envie um e-mail, esse e-mail será enviado pra mim, porque eu sou o responsável pelo site, o responsável pela empresa, e ao mesmo tempo eu gostaria que esse e-mail fosse enviado pra um departamento específico. Qual departamento é esse? Depende de qual é a palavra-chave. Então se a palavra-chave for, ah, eu quero um orçamento, então eu quero que esse e-mail seja enviado pro departamento comercial, ah, a palavra-chave é assistência, então esse e-mail deve ser enviado pro departamento de assistência técnica, ou então seja enviado pro departamento de suporte, pra alguém que está com dificuldade com o produto, enfim.
+
+Então preencher o formulário no meu site, de acordo com a palavra-chave eu vou enviar um e-mail pra mim e também pro departamento específico, é isso que a automação vai fazer. E como que você cria essa automação na prática? Dentro do N8n você precisa desses nós aqui, com quatro nós você consegue criar essa automação. Você primeiro tem aqui um webhook, que é um mecanismo que vai se comunicar com o seu site, com o seu formulário, ou qualquer outra ferramenta também.
+
+Então quando um evento específico acontecer, esse webhook, né, o formulário de contato aconteceu, ele vai enviar informação pro webhook que conecta com o N8n que vai fazer o fluxo. Recebi a informação do formulário, o que vai acontecer? Eu coloco um nó de if. Se aconteceu a informação verdadeira, se o usuário enviou a palavra-chave X, vai enviar um e-mail, que daí no caso esse e-mail é lá pro departamento específico.
+
+Se não aconteceu, ele vai pelo caminho falso que volta aqui o webhook pro início e a automação fechou, completou o ciclo. Como que você vai montar esse fluxo aqui dentro do N8n? É o que eu vou te mostrar agora, lembrando que se você caiu de paraquedas aqui, esse aqui é o segundo vídeo sobre o N8n aqui no canal, é muito importante que você assista o primeiro pra entender aqui os passos básicos, como instalar a ferramenta e tudo mais. Essa primeira aula vai ficar aqui na descrição do vídeo pra você assistir depois.
+
+Então o que você precisa fazer pra criar um novo fluxo? Lá na página inicial, você vai clicar aqui no maizinho e vai clicar novo workflow. E a primeira coisa, primeira etapa que você vai adicionar é um webhook. Você vai clicar aqui em mais e no campo de pesquisar, você vai procurar por webhook.
+
+Essa opção aqui, você vai clicar em webhook. Esse webhook, a configuração que você precisa fazer aqui é mudar esse HTTP método de GET para POST. Você vai selecionar aqui o POST.
+
+Por quê? O método POST, ele é mais seguro pra gente trabalhar com esse tipo de informação no caso do formulário. O método GET, ele vai colocar todas as informações do seu formulário em uma URL. Então é fácil pra outras pessoas descobrirem esse tipo de informação.
+
+Claro que não é nada extremamente restrito, né? Mas se a gente usa o método POST, ele é mais seguro. Usando esse método, ele envia as informações no corpo da requisição. Ele fica mais seguro pra gente trabalhar.
+
+E daí, aqui em webhook URL, nós temos duas opções. Test URL e Production URL. Nesse momento, você vai selecionar aqui o Test URL e vai copiar essa URL.
+
+Clicou, já copiou. Agora você precisa conectar esse webhook com o formulário de contato do seu site. Eu já estou com o meu site aberto.
+
+O meu site é criado na plataforma WordPress, mas você também consegue conectar com outras plataformas. Não tem problema nenhum. Eu uso um plugin chamado Contact Form Set.
+
+Esse aqui é um plugin de formulário de contato que eu instalo dentro do meu WordPress e eu consigo criar um formulário de contato. Esse aqui é um dos plugins mais básicos que existem pra formulário de contato. É gratuito, inclusive, é só baixar e instalar.
+
+Você já deixa rodando dentro do seu site WordPress. Só que eu preciso que o meu formulário se conecte via webhook. Esse plugin Contact Form Set, ele não tem essa integração nativa.
+
+Por isso, eu instalei esse outro plugin que se chama CF7 para webhook, que ele faz essa conexão. Então ele pega o formulário do Contact Form Set e torna ele um formulário interativo, que ele vai mandar essa informação via webhook. Esse aqui também é um aplicativo muito bom.
+
+Ele é gratuito, é só baixar e instalar. Ele já vai ficar rodando aqui dentro do seu site. Eu não vou entrar em detalhes aqui na instalação, porque pode ser que você tenha um site em outra plataforma e daí vai ficar um pouco diferente.
+
+Então, isso aqui é uma informação um pouco mais básica. Eu só estou mostrando o que eu estou fazendo para que você tenha uma ideia de qual caminho você pode seguir também. Depois disso, você pode criar aqui o seu formulário de contato.
+
+É só clicar em Add Contact Form. Você vai criar um novo ou você pode também editar um formulário que você já tem. O formulário de contato, ele é assim, tem esse visual aqui dentro da ferramenta.
+
+Então, está aqui o seu nome, seu e-mail, o assunto e a mensagem. Ele fica nesse formato, mas quando você publica ele na página, ele fica bonitinho. Eu abri aqui a página, ele fica dessa forma.
+
+Fale comigo, seu nome, seu e-mail, o assunto e a mensagem. E o botão enviar. Então, aqui você consegue fazer modificações.
+
+Você pode adicionar aqui também o número de telefone, uma área de texto, uma caixa de seleção. Você consegue personalizar o seu formulário. Mas a gente veio aqui e copiou a URL do webhook, onde a gente cola essa URL.
+
+Assim que você instala esse plugin aqui, o CF7 para o webhook, aqui dentro nós temos essa guia webhook. Você vai clicar aqui. Aí o que você vai fazer? Tem que ativar essa opção, enviar para o webhook.
+
+E aqui você vai colar a sua URL, que é a URL de teste. Beleza, colou. E daí aqui você vai salvar.
+
+Agora, a gente precisa voltar aqui para o N8n e falar o seguinte. Assim que você recebeu o formulário, se o formulário tiver a palavra X, você vai enviar um e-mail. Então o que a gente precisa fazer? Adicionar um novo nó aqui.
+
+Deixa eu dar um zoom aqui. Vamos adicionar um novo nó. Esse nó se chama IF.
+
+Então, se acontecer determinada coisa, você vai seguir esse caminho. Clica aqui no IF. Eu vou voltar aqui para a tela.
+
+Você pode ver que o IF tem dois caminhos, o verdadeiro e falso. E a gente consegue ligar outros caminhos dependendo do que aconteceu aqui. E é isso que eu vou fazer agora.
+
+Vou dar dois cliques aqui no IF, para a gente primeiro configurar ele. Aqui eu preciso instruir ele para que a informação que estiver chegando lá do webhook, do e-mail, se ele tiver a palavra X, por exemplo, a palavra orçamento, ele vai seguir um caminho. Então, para isso, eu preciso fazer uma configuração.
+
+Eu vou colocar um valor aqui. Eu já vou explicar para vocês esse valor. Se esse valor que chegar, se o conteúdo que tiver dentro do campo assunto do meu e-mail, aqui eu vou em String, vou selecionar a opção Contém.
+
+Se esse valor conter a palavra orçamento, aí sim vai ativar. Qual é o valor que você precisa colocar aqui? Esse aqui é o valor. Isso aqui é um código JSON, que é o código que o N8n utiliza.
+
+Você consegue pedir ajuda para a inteligência artificial gerar esse código para você também. Mas basicamente, esse código aqui está falando o seguinte. Esse JSON aqui é padrão.
+
+Ele vai começar todo o código, ele vai começar assim. E daí ele está falando o seguinte. Se a informação que está vindo dentro do body, body é o corpo do e-mail, se a informação que está vindo dentro do e-mail e dentro do campo assunto, your subject, se eu volto aqui no formulário de contato, você pode ver que eu tenho o your, que é o assunto do e-mail.
+
+Então, esse campo tem que estar no mesmo nome que esse nome aqui, porque daí a informação que está vindo do formulário de contato, o N8n está lendo. Então, se a informação que está vindo dentro do corpo e dentro do assunto contiver a palavra orçamento, aí sim você vai seguir o caminho X. Essa opção to lowercase e trim, to lowercase é para ele identificar a palavra maiúsculo ou minúsculo, ele vai identificar da mesma forma. E esse trim é caso tenha algum espaço na frente ou atrás da palavra orçamento, ele vai identificar da mesma forma.
+
+Mas basicamente é isso aqui que você precisa ter no seu código. Beleza, então eu já coloquei aqui, fiz a condição, inclusive você pode adicionar outras condições, condição A, B, C, você pode adicionar aqui. Eu vou apagar, eu só quero a condição aqui de orçamento, por exemplo.
+
+E daí, se for verdadeiro, eu vou adicionar aqui o mais, eu quero que seja enviado um e-mail. Se contiver a palavra orçamento, vai enviar para o departamento de vendas. Então, eu vou adicionar aqui o envio de e-mail, que é o send e-mail.
+
+Vou adicionar aqui o enviar e-mail, vou clicar fora, você pode ver que ele já ligou aqui no verdadeiro. Eu posso também deletar aqui, depois você faz a ligação, isso aqui é tranquilo de fazer. Deu dois cliques aqui no send e-mail, você precisa colocar aqui sua credencial.
+
+Esse envio será feito via SMTP account, isso eu expliquei no vídeo anterior também, se você tiver algum tipo de dúvida, é só clicar aqui no editar. E daí, você vai colocar o nome do seu e-mail, que você vai usar para enviar essa mensagem, a senha dele e o endereço do servidor de e-mail. Nesse caso aqui, eu uso a Hostinger, então eu já coloquei aqui as informações.
+
+Ele já deu aqui que a conexão funcionou, então vou fechar aqui. O e-mail está configurado. A operação é de envio, você vai usar o send.
+
+Aqui, from e-mail, qual e-mail vai enviar essa mensagem? Então, é o meu e-mail, eu.erdanoevandro.com.br. Para quem será enviado esse e-mail? Quem é o responsável pela área específica que eu estou criando essa condição? Ah, é o e-mail lá do departamento de vendas. Então, você vai colocar lá, vendas, arroba, tal, tal, tal. Eu vou colocar um outro e-mail meu, só para a gente fazer o teste aqui, você vai ver que o e-mail vai chegar.
+
+Mas nesse caso aqui, na automação, seria o e-mail do departamento de vendas. Depois disso, nós temos aqui o assunto do e-mail, que você pode colocar lá, por exemplo, orçamento. E aqui, o HTML, que é o formato do e-mail, o conteúdo do e-mail.
+
+Você pode mudar aqui para o formato texto, ou os dois também, mas aqui você pode personalizar o seu e-mail em formato HTML. Por exemplo, aqui eu tenho um código simples, nova solicitação de contato pelo site, coloquei aqui dentro de um H2, para ele ficar com título maior. Daí, aqui ele vai puxar o nome da pessoa que mandou a mensagem, o e-mail da pessoa, o assunto, e também a mensagem, ele vai puxar de forma automática lá do webhook.
+
+Então, todas essas informações serão enviadas para o e-mail lá do departamento específico. Aí, beleza, você vai clicar fora aqui, ele vai voltar. E a gente está com o fluxo praticamente pronto.
+
+Nós temos o webhook, que se a palavra contiver orçamento, ele vai enviar um e-mail. Agora, a gente precisa fazer o seguinte. Caso for falso, o que precisa fazer? Ele precisa fechar o fluxo aqui também.
+
+Ele vai falar, não, não tem a palavra orçamento. Tudo bem, volta aqui para o começo. E daí, o loop vai ficar acontecendo toda vez que alguém enviar um formulário de contato.
+
+Então, agora a gente precisa fechar esse ciclo, fechar esse webhook. Então, vou clicar aqui em mais e adicionar webhook novamente. Só que é o responder para webhook.
+
+Adicionei essa informação, você pode ver que ele fica solto aqui. A gente vai ligar. Se for falso, você vai responder a webhook.
+
+E também, depois, enviou o e-mail, beleza. Então, acabou o fluxo. Então, você vai ligar aqui no webhook também.
+
+Esse webhook, ele vai falar assim, basicamente, ó, deu tudo certo, tá, já enviei o e-mail ou não tinha a palavra orçamento. Então, volta aqui para o início. Responde do webhook, como que você configura? Dá dois cliques.
+
+Aqui você vai responder com, você vai colocar a opção texto. E basicamente é o seguinte, vamos colocar aqui um texto, sucesso. Ele meio que vai responder, ó, deu tudo certo, sucesso.
+
+Então, é basicamente isso. Clica fora, tá configurado. Detalhe importante, você precisa voltar aqui para o primeiro webhook.
+
+E aqui em responde, em vez de deixar aqui em imediatamente, você vai colocar using respond to webhook node. Essa é a configuração que você precisa fazer. Clica fora, beleza.
+
+Agora a gente precisa testar esse fluxo. Eu vou clicar aqui em salvar, aqui na parte superior. E agora é o seguinte, eu vou abrir aqui o meu formulário.
+
+Vou deixar aqui ele desse lado. E vou abrir aqui também o n8n. Vou deixar aqui.
+
+Então, beleza. Como que a gente vai testar? Eu dividi aqui a tela. Aqui tá o meu formulário de contato.
+
+E aqui tá o n8n. Primeiro de tudo, eu preciso clicar aqui em executar workflow. Eu vou clicar em executar.
+
+Ele vai ficar esperando essa informação. Que informação? O formulário de contato. Então, eu vou vir aqui e vou preencher.
+
+Aqui é o Darlanzão. O e-mail é o darlanzao.hotmail.com Qual é o assunto? Orçamento. Já vou colocar aqui o assunto, né, para ativar a nossa automação.
+
+Me envie logo o orçamento, por favor. E daí vou clicar em enviar. Você pode ver que já funcionou aqui a automação.
+
+Tá vendo? Ele tá rodando aqui. Ele vai fazer o envio do e-mail, né. E deu aqui, ó. Workflow executado com sucesso.
+
+Agradecemos a sua mensagem. Ou seja, o formulário foi preenchido. Se tiver a palavra orçamento dentro do assunto, ele ativou, enviou o e-mail e respondeu tudo certo.
+
+Tá funcionando a nossa automação. A única coisa que você precisa fazer agora é o seguinte. A gente já testou, só que agora a gente precisa de fato colocar no ar.
+
+Então você precisa trocar um pequeno detalhe. Aqui dentro do webhook, a gente usou a URL de teste. A gente precisa pegar a URL de produção, tá.
+
+Como você pode ver aqui do lado direito, a gente tem as informações de output. Então ele pegou as informações, ó. Quem preencheu o e-mail, né, foi o darlanzao, darlanzao.hotmail com a palavra orçamento. Me envie logo o orçamento.
+
+Então ele já puxa todas as informações. Pra colocar de fato pra funcionar, você vem aqui na URL de produção. Copia essa URL.
+
+Volta no seu formulário, porque já tá tudo certo, já tá tudo testado. Dá um Ctrl V e salva. Prontinho, agora essa automação está funcionando, já tá salva.
+
+Sempre que um formulário de contato for enviado com aquela palavra-chave específica, essa automação será ativada. Darlan, tem como melhorar esse fluxo? Obviamente tem. Você pode colocar já no seu formulário de contato vários departamentos.
+
+Você não precisa esperar a pessoa preencher a palavra orçamento. Dentro do formulário, você pode colocar, ah, eu quero falar com o departamento de assistência técnica, de venda, de suporte, enfim. Coloca lá as opções definidas previamente.
+
+A pessoa enviou o contato pra uma área específica, você já vai ativar a automação dentro do N8n. Com vários departamentos, o que você poderia fazer? Volta aqui em overview. Eu tenho aqui um outro exemplo que eu já preparei pra exemplificar mesmo esse outro formato aqui com mais opções.
+
+Então basicamente é o seguinte, a gente tem o mesmo webhook, só que ao invés de usar o if, se acontecer uma coisa é positivo ou se não acontecer é negativo, a gente tem esse switch, que ele meio que divide mesmo as coisas. Então esse switch você pode adicionar quantas você quiser, quantas regras você quiser. É só vir aqui em adicionar regra, você clicando dentro do switch, você consegue adicionar regras.
+
+Então eu coloquei, se tiver a palavra orçamento, vai pro caminho X. Se tiver a palavra manutenção, vai pra manutenção. Se tiver a palavra dúvida, vai pro suporte. Se tiver a palavra tal, vai pra determinada área.
+
+Então você pode adicionar valores. Nesse exemplo eu adicionei só três. Aqui, se selecionou lá a palavra orçamento, vai pra vendas, se não vai pra assistência técnica, se não vai pro suporte.
+
+Daí você vai ligar as categorias que tem no seu formulário, você liga com a sua automação. Depois a mesma coisa, responde to webhook, que daí ele enviou o e-mail, completou e basicamente é isso. Quer melhorar ainda mais o fluxo? Dá pra melhorar muito mais, você pode por exemplo adicionar aqui um nó do CRM, o CRM que você usa, seja o Zorro, CRM, HubSpot, enfim.
+
+Aí você pode, assim que chegou o e-mail, você já cadastra isso dentro do seu CRM. Eu só precisaria deletar isso daqui, colocar aqui o CRM antes disso, coloco o CRM aqui e depois você finaliza respondendo o webhook. Então ele vai fazer todo o processo, adiciona no CRM e depois ele finaliza.
+
+Então dá pra você fazer dessa forma também, implementando, incrementando cada vez mais a sua automação e deixando muito mais produtivo aí pra sua empresa. Detalhe bastante importante, tá? Depois de você criar toda a sua automação e salvar, você precisa ativar ela aqui na parte superior, beleza? Clicou em ativar, aí sim o fluxo estará ativado pra rodar lá dentro do seu site, de onde você tiver montado, beleza? Lembre-se sempre de ativar. Viu só como é fácil e legal automatizar processos no seu negócio com o N8n? Com apenas alguns cliques, você vai criando, vai montando automações inteligentes pra você economizar muito o seu tempo e daí você pode focar o seu tempo em outras coisas na sua empresa.
+
+Se você gostou dessa ideia e você quer aprender mais sobre como automatizar tarefas, como melhorar a eficiência, não deixa de assistir o vídeo 1, onde eu trago mais detalhes sobre o N8n. E se você quiser contratar uma VPS pra rodar o seu N8n praticamente de graça, eu recomendo a Hostinger. Vou deixar o link da VPS aqui na descrição do vídeo com um desconto especial, é só você usar o cupom DARLANEVANDRO para garantir 10% de desconto extra.
+
+E eu vou ficando por aqui, comenta aqui no vídeo quais tarefas do seu negócio você gostaria de automatizar que quem sabe esse pode ser o assunto do próximo vídeo, beleza? Então eu vou ficando por aqui, um grande abraço e nos vemos no próximo vídeo.
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.

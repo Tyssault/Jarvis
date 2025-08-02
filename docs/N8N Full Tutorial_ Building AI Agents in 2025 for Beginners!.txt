@@ -1,0 +1,225 @@
+N8N Full Tutorial: Building AI Agents in 2025 for Beginners!
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Hoje eu vou ensinar a você como construir agentes de A.I. de começo até o fim em NAN. Vamos começar com as básicas e depois trabalhar nosso caminho para algumas das técnicas mais avançadas. Antes de começar a pular e aprender como construir isso, precisamos entender o que é e por que é importante primeiro.
+
+Então, o que são sistemas agênticos? Sistemas agênticos são environmentos construídos de agentes e workflows. Então, o que são esses agentes e workflows? Workflows são automações ou sistemas em que a saída é predefinida pelo modelo de língua grande e outras ferramentas. Você pode pensar em um workflow como uma automação de compras pós-produtos.
+
+Quando alguém compra um produto, talvez você crie uma automação de workflow que lhe envia um e-mail com os detalhes do seu pedido. Esse é um workflow. Agora, agentes, por outro lado, trabalham um pouco de maneira diferente.
+
+Essas são automações ou sistemas em que o modelo de língua grande dinamicamente decide quais ferramentas e saídas são necessárias. Então, você pode pensar nisso como um agente de apoio ao cliente que tem acesso a ferramentas específicas. Talvez essas ferramentas sejam coisas como criando títulos de apoio, coletando histórias de pedidos ou até mesmo distribuindo recompensas.
+
+Basicamente, você dá o modelo de língua grande ou o agente acesso a usar essas ferramentas. Se essa conversa se tornar, eles podem decidir qual é o melhor para esse cenário. Então, não há um jeito que essa automação pode ir.
+
+O agente tem que decidir quais ferramentas usar para alcançar pedidos feitos por um usuário. Visualmente, isso seria um workflow, certo? Você tem uma entrada, seja de um usuário, em um horário, de uma certa aplicação, e então essa entrada passa por um workflow de automação e te dá uma saída consistente. Agora, o dado pode mudar na saída, mas você sabe que a saída vai para o mesmo lugar.
+
+Você sabe onde vai, porque você o predefiniu dentro de construir sua automação. O exemplo do agente parece um pouco diferente. Então aqui, o modelo de língua grande recebe uma entrada.
+
+Nesse modelo de língua grande, dependendo da entrada, tem um par de ferramentas ou várias ferramentas diferentes que ele pode usar para alcançar uma saída dinâmica. Então, um agente é como um modelo de língua grande com ferramentas, e nós podemos até colocar agentes nestados em outros agentes, para que um agente possa chamar outro agente, que tem acesso a um certo número de ferramentas também, e vamos entrar nesse conceito um pouco mais tarde no vídeo, mas foi importante entender o que são sistemas agênticos e visualmente vê-lo por si mesmo. Agora, se você gostou desse vídeo e quer continuar construindo automações e agentes conosco, então eu recomendo se unir à nossa comunidade para AI Foundations.
+
+Nós temos essa comunidade gerada na plataforma de escola, e nessa comunidade, nós focamos nas três Cs. Número um, cursos. Número dois, chamadas.
+
+E número três, salvando o melhor para o último, comunidade. As pessoas que fazem essa comunidade são melhores do que qualquer conteúdo dentro. Mas deixe-me lhe dizer, se você quer ficar à frente da curva em agentes, automações, os fundamentos da AI, então este é o lugar para ser.
+
+Nós fazemos a AI fácil de entender aqui. Nós temos um curso de construção de agentes completo N8N. Nós temos um calendário com um monte de chamadas ao vivo, e, é claro, os lindos membros que fazem essa comunidade.
+
+Nós acabamos de deixar esse curso há cerca de 20 horas, e as pessoas estão amando. Anthony aqui diz que essa comunidade é uma mina de ouro para qualquer um que a encontre. Melhor investimento de 2025.
+
+John aqui concorda com Anthony. Esta comunidade é realmente uma mina de ouro para qualquer um que a encontre. E é verdade.
+
+É uma espécie de comunidade de buraco na parede. Nós temos 580 membros. Nós adoraríamos te ver lá dentro.
+
+Vou deixar um link para se juntar abaixo. Então, uma vez que você crie seu espaço de trabalho N8N no cloud, você vai estar em uma tela ou algo assim, exceto que você provavelmente não terá todas essas automações diferentes aqui. Isto é basicamente como sua página de casa.
+
+E aqui você pode ver workflows, credências e execuções. Credências são coisas como suas chaves de API e seu acesso ao acounto que você dá dentro das suas automações. E execuções são na verdade o funcionamento do seu funcionamento agêntico.
+
+Então, quando você clica em Funcionar, ele o trata como uma execução, ou um passo de teste, ou quando ele funciona, então é uma execução. Você tem seu domínio, que é o espaço de trabalho que é criado para você após criar um acounto. E então, seus workflows aqui são organizados em projetos aqui à esquerda.
+
+Então, eu posso selecionar projetos específicos e eu tenho diferentes workflows, diferentes automações dentro de cada um, como você pode ver. Para criar um workflow, é muito simples. Tudo que você tem que fazer é, no lado direito superior, clicar nesse botão vermelho que diz Criar um Workflow, e então você vai estar dentro do editor UI.
+
+O que você também pode fazer é selecionar um projeto específico e clicar em Criar um Workflow se você quiser que este workflow esteja dentro de um projeto específico. Agora que você está no seu workflow de projeto, o que você quer fazer é entender os tipos de nodes antes de criar agentes de AI dentro do N8n. O N8n vem com tipos de nodes diferentes.
+
+Agora, pessoalmente, eu gosto de colocar tipos de nodes em cinco categorias diferentes. Agora, nodes são qualquer coisa que você coloca aqui na tela. Então, eu poderia ter um node que começa com uma mensagem de conversa.
+
+Ok? Então, a cada vez que eu falo, essa automação começará. Este seria um exemplo de uma dessas cinco categorias de nodes. Então, as cinco categorias de nodes no N8n são os triggers.
+
+Estes são os nodes que começam a sua automação. E isso determina onde, quando e como seu framework agêntico começará. Nós temos os nodes de ação.
+
+Então, estes nodes permitem que você faça algo dentro de uma app ou serviço. Por exemplo, Google Sheets, AirTable, Notion, WhatsApp, Telegram. Você pode importar Gmail, Outlook.
+
+Estes são os nodes de ação. Você tem milhares de diferentes ações que você pode tomar entre todas as apps e serviços disponíveis para você no N8n. Próximo, nós temos os nodes de utilidade.
+
+Estas são as pequenas caixas que poderão transformar seu dado. Coisas como sementes, filtros, ferramentas de conversão de dados, ferramentas de armazenamento de dados. Estes ferramentas são nativos do N8n e podem ajudar você a organizar, modificar ou enviar dados para outros lugares.
+
+Nós também temos os nodes de código. Então, você pode executar código, fazer requestos HTTP, setar webhooks, JavaScript e mais. Isto leva seu agente para o próximo nível.
+
+Nós também temos o node de agente AI avançado. Este é o que faz seu agente autonômico. Isto é o que transforma seu fluxo de trabalho em um agente dentro do seu sistema agêntico.
+
+Você pode adicionar funcionalidade de procura e recuperação, armazenar memórias, começar caixas de modelos de linguagem grande, realizar análises de sentimentos e muito mais. Estas são as cinco categorias de nodes e, praticamente, a cada vez que você adiciona uma nova parte do seu fluxo de trabalho, você pode pensar dentro destes tipos de categorias. Quando você está começando em automação, você sempre começa com um trigger.
+
+Então, é isso que precisamos fazer agora. A coisa legal dos nodes de trigger é que você pode fazer múltiplos. Você não precisa ter apenas um jeito de começar em automação.
+
+Você pode ter dez maneiras diferentes de começar em automação, se quiser, mas precisamos adicionar o nosso primeiro passo. E o que você vai perceber é que, quando adicionamos o nosso primeiro passo, ele automaticamente nos pergunta o que triggera seu fluxo de trabalho. Este é o onde, o que, quando, como da sua automação, o interrogativo da sua automação.
+
+Então, o que podemos fazer, por simplicidade, é fazer uma mensagem de conversa. Existem múltiplos tipos de nodes diferentes que você pode selecionar, especialmente quando se trata de eventos no app. Sabe, dentro destas aplicações, você pode começar automações em certos eventos acontecendo.
+
+Se a gente for para o Google Drive, por exemplo, você pode começar uma automação em uma mudança de arquivo específica ou em mudanças envolvidas em um folhamento específico. Então, há diferentes maneiras de começar a sua automação, mas, por enquanto, podemos fazer apenas uma mensagem de conversa. Eu vou fazer esta conversa publicamente disponível.
+
+E isto é se a conversa deve ser publicamente disponível ou apenas acessível através da interface de conversa manual. Por enquanto, podemos fazer isto publicamente disponível e podemos ter esta URL de teste aqui. Vou deletar as mensagens iniciais.
+
+E isto é apenas coisa preliminar. Isto é meio legal. Você tem a habilidade de mudar isto de conversa hostada para conversa embedida, o que é meio legal.
+
+Vou voltar para o Canvas. E agora temos o nosso primeiro node aqui, o que é ótimo. Temos o nosso primeiro fluxo de trabalho.
+
+E este fluxo de trabalho aqui é um sinal de que isto é o que está começando a automação. E o que você vai notar é que, no fundo da tela, temos um botão de conversa. Então, quando selecionamos este botão de conversa, podemos escrever o que quisermos, o que é legal.
+
+E é assim que vamos nos comunicar com a nossa automação para o motivo deste tutorial. Isto é, na verdade, um node muito útil para ter. Vamos adicionar o nosso próximo node aqui.
+
+E, para começar, eu gosto de apenas adicionar o node de agente de ciência. Então, vou abrir o painel de nodes. E depois vou para o AI avançado.
+
+E depois vou adicionar o agente de ciência. E este é o secreto da N8n. Isto é o que o faz tão incrível.
+
+Então, podemos deixar tudo o mesmo agora, porque, agora, o prompt, ou o mensagem do usuário, está apenas olhando para este node de conversa anterior. Então, isto é como o cérebro do seu fluxo de trabalho, sua automação ou seu sistema agêntico. Existem tantas coisas que podemos fazer com este node de agente de ciência.
+
+Podemos até apenas conversar com ele, como se fosse um chat GPT, e poderíamos ter nossa própria versão de chat GPT dentro da N8n. Vou mostrar um exemplo. Agora, para poder acessar este node de agente de ciência, você sempre vai precisar adicionar um modelo de conversa.
+
+Você precisa de algo para acessar o cérebro, certo? Você precisa de algo que pumpe sangue para o cérebro. Então, podemos usar apenas um modelo de conversa, e eu vou fazer apenas o modelo de conversa de OpenAI. Você pode selecionar um modelo aqui, e eles têm todos os modelos de OpenAI, o que é muito legal.
+
+Vou fazer apenas GPT 4.0, e depois vou clicar aqui. Mas existem tantos modelos diferentes que você pode selecionar. Não precisa ser apenas este modelo de conversa GPT.
+
+Você pode selecionar Anthropic, AWS Bedrock, Grok, Lama. Quer dizer, existem tantas coisas diferentes que você pode selecionar aqui, mas eu gosto de mantê-lo simples. Eu já tenho minha chave de API conectada com OpenAI, e vou apoiá-la com um modelo de conversa.
+
+Agora, as chances são que você não tenha suas credências conectadas com o GPT de conversa para fazer isso, ou qualquer aplicação que você queira usar para poder conectar seu agente de AI. Então, se isso for o caso, o que você pode fazer é ir para o plataforma.openai.com, e aí você pode ir para o botão de settings aqui, e dentro do botão de settings, o que você pode fazer é ir para as chaves de API. E essa é a tela que você quer criar uma nova chave secreta, e uma vez que você cria uma chave secreta, vai levar cerca de 30 segundos para criar uma, e uma vez que você fizer isso, você copia a chave secreta, você volta aqui, e você tem a capacidade de criar uma nova credência, e aposta ela aqui, e aí você está todo conectado.
+
+É tão simples. Você pode carregar 5 a 10 dólares em seu acounto de OpenAI, e vai ter bastante para testes. Então, uma vez que você tem um modelo conectado com seu agente, e você tem um jeito de começar sua automação, por exemplo, agora estamos conversando com esse agente para começar esse processo de automação, o que você pode fazer é falar com essa coisa como se fosse um chat GPT, ou qualquer outro modelo de língua.
+
+Então, eu poderia perguntá-lo, Ei, como você está? E aí eu poderia enviá-lo, e agora ele está apenas usando o chat GPT, e ele me traz uma resposta. Ele diz, olá, estou aqui e pronto para ajudar. Como posso ajudá-lo hoje? Mas o problema é que, agora, esse agente AI só pode entender essa query, e aí ele não mantém nenhum contexto anterior no chat.
+
+Então, para fixar isso, precisamos adicionar uma memória para que ele possa entender o que foi dito anteriormente, para que possamos ter uma conversa com ele, e ele possa usar nossa conversa como contexto para nos ajudar. Por exemplo, sem memória, coisas como essa acontecem. Eu posso dizer, continue a sequência para mim cada vez que eu responda, um, dois, três, e então eu vou colocar ... Então, deve dizer quatro, cinco, seis.
+
+Então, se eu enviar isso, o que ele fará é dizer quatro, e talvez ele só vá um número a vez. Então, se eu copiei, e eu vou cinco, o que ele fará é não entender o contexto anterior, então ele não vai continuar. Ele só diz que minha mensagem parece incompleta, mas se tivesse memória, ele poderia fazer isso.
+
+Então, podemos adicionar memória temporária a essa conversa selecionando esse ícone de memória, e então selecionando memória de buffer de janela. Isso guarda a memória em NAN, não há credenciais necessários, é a maneira mais fácil de ir. Então, aqui está o seu longo de janela de contexto, e isso é quantas interações anteriores o modelo recebe desse contexto.
+
+Por enquanto, está conectado pelo nodo de conversa, então já tem a chave de sessão guardada desse, geralmente com essa memória, o que você precisa fazer é mapear um ID específico. Então, se você conectar algo como Telegram, se você conectar algo como WhatsApp, você precisa guardar esse ID de conversa aqui, para que ele saiba onde pular o contexto, mas agora está mapeado para nós desse nodo aqui, isso é ótimo. Então agora, se nós tentarmos isso de novo, e nós, digamos, continuamos a sequência para mim a cada vez que eu responda, lembre-se, nós temos uma memória de buffer de janela de 5 agora.
+
+Eu posso salvar isso, e então, se eu mapear isso aqui, e nós passamos por isso, vai dizer 4, e quando eu escrever 5 dessa vez, vai continuar indo na sequência, porque lembra as conversas anteriores, porque nós damos aquela janela de contexto para fazer isso. Então, agora nós podemos ter conversas inteiras com isso, 4, 5, 6, 7, 8, isso é o que a memória de buffer de janela faz, e você não só precisa usá-lo com esse nodo de conversa, mas você pode usá-lo com outros nodos também. Agora que sabemos que podemos conversar com essa coisa, como é que nós começamos a fazê-la um pouco mais poderosa? Vamos adicionar nosso primeiro ato para esse agente AI.
+
+Agora, quando nós adicionamos um ato, o agente AI vai poder decidir se eu devo usar esse ato ou não, dependendo do que eu disser das mensagens. Então, o que eu escrevo, vai determinar se eu preciso usar esse ato ou não. Então, o que nós podemos fazer, é clicar nesse pequeno botão de mais abaixo, e dentro desses atos, nós podemos fazer algumas coisas bem legais.
+
+Nós podemos chamar outros workflows. Então, agora, nós estamos em um N8n workflow. Nós podemos adicionar um novo workflow inteiro como um ato.
+
+Nós podemos escrever código, fazer uma requesta HTTP, nós podemos chamar todos os tipos de lojas de vectores, e então, nós podemos usar outras ferramentas também, como nós podemos adicionar Gmail, Google Calendar, nós podemos dar um calculador, Wikipédia, para que ele possa procurar Wikipédia, WooCommerce, Wolfram, Slack, tantas ferramentas diferentes que nós podemos usar. Mas, por enquanto, o que eu quero fazer, é selecionar AirTable. Digamos que nós tenhamos um inventário de casa, onde nós temos todos os nossos itens de groceria, nossos itens de casa, tudo em uma lista, com um threshold de ordem, para que nós saibamos quando precisarmos ordenar mais.
+
+Eu vou selecionar AirTable, e o que nós podemos fazer é, nós podemos procurar databases de AirTable dentro deste ato aqui. Então, se eu clicar neste ato, como vocês podem ver, nós temos várias opções diferentes aqui que nós vamos chegar a, mas eu quero apoiar sua atenção na operação, porque dentro deste ato de AirTable, nós podemos fazer tantas coisas legais. Nós podemos criar recordes, nós podemos atualizá-los, eliminar recordes, pegar recordes, e nós podemos procurar recordes, que é o que nós queremos fazer agora.
+
+Então, eu vou selecionar Procurar, e agora isso estará pronto, mas primeiro eu quero mostrar o database. Então, aqui está o meu database de inventário de casa. Agora, se você não está familiar com AirTable, é como Google Sheets em esteróides.
+
+Você pode gerar automações muito facilmente, você tem a habilidade de ver seus dados de várias formas diferentes. É como se Google Sheets e Notion tivessem um bebê, você conseguiria AirTable aqui. Mas, como você pode ver, eu só tenho alguns nomes de itens, como papel de banheira, shampoo, sopa de mãos, toalhinha, saco de lixo, saco de ziploc, então, é basicamente como um inventário de casa inteiro.
+
+Nós até temos alguns itens de comida aqui embaixo. Nós temos a quantidade atual, como o quanto nós atualmente temos desse item específico, e então nós temos o threshold de inventário. Então, quando chega a esse nível, nós sabemos que precisamos ordenhar mais.
+
+Então, se nós tivermos apenas 4 sodas restantes, vamos dizer, então eu acho que nós precisamos ordenhar mais sodas. Ou se for saco de lixo, se nós chegarmos a 3 caixas de saco de lixo restantes, então nós precisamos ordenhar mais para aumentar essa quantidade. Então, esse é o nosso database que nós vamos dar acesso à NAN para que esse agente de ciência, quando nós estamos conversando com ele, possa utilizar essa ferramenta.
+
+Então, o que nós podemos fazer é, dentro do AirTable aqui, nós podemos ir lá embaixo e clicar em criar um novo credencial, e aqui nós precisamos dar um token de acesso com os seguintes escopos. No AirTable Builder Hub, você pode criar tokens de acesso pessoal. Eu vou clicar em criar um novo token e eu vou dar o nome de teste, casa, inventário.
+
+Eu vou adicionar alguns escopos. E isso é basicamente apenas dizendo o que N8n pode fazer. Bem, nós queremos que ele possa ler os dados, nós queremos que ele possa escrever os dados, e nós também queremos que ele possa ler a estrutura do nosso database e ver coisas como nomes de mesa e tipos de campo.
+
+Então, nós podemos selecionar o escopo de base Schema Read, e agora nós precisamos dar acesso a essa base de inventário de casa. Nós precisamos dar acesso a isso. Então, nós podemos clicar em adicionar uma base e então escolher o teste de inventário de casa e selecionar isso.
+
+E agora nós podemos clicar em criar token. Nós então recebemos um token de acesso secreto que você só vai poder ver uma vez. Então, quando você clicar em copiar, faça certo que você coloque isso em um lugar seguro para que ninguém mais possa vê-lo.
+
+E agora nós podemos conectar o nosso credencial de volta à N8n. Então, eu posso escolher esse token de acesso e então nós podemos clicar em salvar. E agora, nossa conexão com o AirTable foi testada sucessivamente.
+
+Então, agora nós temos acesso com esses parâmetros para o nosso database de AirTable. Lindo. Então, agora nós precisamos dar uma descrição de ferramentas.
+
+Isso vai descrever o que esse ferramento é. Agora, a cada vez que você adiciona um novo ferramento para o seu agente de ciência, você quer deixar seu agente de ciência saber, Ei, isso é o que está acontecendo com esse ferramento. E essa é a descrição do ferramento. Então, nós vamos setar isso manualmente e nós podemos apenas dizer, procura, casa, inventário e AirTable.
+
+Então, nós estamos dando essas palavras, como casa, inventário, AirTable, para que ele saiba que se eu perguntar sobre o meu inventário de casa, que ele pode procurar dentro desse nodo AirTable Tool. Você tem que ser específico dentro da descrição. Você quer explicar para o LLM o que esse ferramento faz.
+
+Uma descrição específica permitiria que o modelo de língua maior produzia resultados esperados mais oftens. Essa é a ideia dele. Agora, nós podemos manter o recurso em recorde.
+
+Operação é procurar, porque nós queremos procurar o nosso database. Então, nós podemos selecionar o nosso database aqui. Então, eu posso selecionar o inventário de casa.
+
+Então, nós podemos selecionar a nossa mesa também. Então, eu vou selecionar a mesa, e depois eu vou fazer as coisas. A mesa está dentro do inventário de casa, porque você pode criar múltiplas mesas dentro de uma base certa.
+
+Nós não precisamos de nenhum filtro, e nós podemos apenas retornar tudo. Isso é tudo bem. Então, agora isso está pronto para ir.
+
+Então, agora eu posso ter uma conversa sobre o meu database, porque agora está conectado como uma ferramenta. Então, antes, nós só podíamos falar com ele como se fosse um chat GBT. Nós ainda podíamos falar com ele como se fosse um chat GBT.
+
+Eu poderia pedir para ele me dar 20 fatos sobre Paris. Eu poderia pedir para ele me criar um plano de negócio. Eu poderia fazer o que quiser, mas agora ele tem acesso a um produto que conhece informações mais profundas sobre mim.
+
+Então, agora ele está agindo de uma forma mais agêntica. Então, eu vou salvar essa automação, e depois eu vou testá-la. Vamos perguntar sobre o meu inventário de casa.
+
+Primeiramente, eu vou vir aqui e eu vou fazer algo fora de stock. Então, eu vou fazer a manteiga fora de stock. Eu vou dizer que o inventário, a quantidade atual que eu tenho é de zero.
+
+Agora que nós temos isso de zero, nós podemos perguntar uma pergunta como, hey, tem alguma coisa fora de stock dentro do meu inventário de casa? Eu nem preciso dizer inventário de casa. O agente da A.I. é muito bom em pegar no contexto, mesmo sem nenhuma instrução. Eu poderia dizer, tem alguma coisa fora de stock em minha casa? E eu poderia enviar isso.
+
+E como você pode ver, está procurando a nossa tabela de ar para nós, e depois voltando para mim o que está fora de stock. Diz que atualmente você está fora de stock no item seguinte em sua casa, manteiga, quantidade atual de zero. E se você se lembra, essa é a única coisa que mudamos para zero dentro da nossa tabela de dados.
+
+Eu poderia perguntar, tem alguma coisa chegando perto do nível de ordem? E eu poderia enviar isso para ver se estamos chegando perto de precisar ordenar alguma coisa de novo. E ele vai procurar a minha tabela de dados, procurar o meu inventário de casa que nós acabamos de adicionar como uma ferramenta, e então me dá tudo que eu preciso aqui. Ele até está colocando o ID de recorde, um pouco estranho, mas, você sabe, essas são coisas que podemos ajustar com instruções.
+
+Diz que gelo, limão, folha de alumínio, manteiga e canela estão todos chegando perto do nível de ordem deles. Então, o que você vai notar é que esse agente AI, eu estou tendo uma conversa com ele sobre coisas que ele não sabia antes. Ele não tinha esses itens como contexto dentro da conversa.
+
+E como ele não tem, ele usa meus ferramentas para ir encontrar esses itens e depois levá-los de volta para a conversa. Então, isso é ótimo. Agora, estamos procurando a nossa própria data base, tendo uma conversa sobre isso.
+
+Como adicionar outra ferramenta? Vamos adicionar uma ferramenta onde podemos atualmente atualizar esses recordes. Agora, tudo o que podemos fazer é procurar a nossa data base. O que acontece se nós quisermos atualizar algo? Talvez nós tivéssemos comprado algo, estávamos no caminho, dizemos para o nosso chatbot, nós podemos, eventualmente, conectar voz para ele e conectá-lo aos nossos iPhones ou Androids.
+
+E nós poderíamos ter uma conversa com esse chatbot. Então, no futuro, talvez eu esteja comprando e eu estou dizendo, Ei, eu apenas peguei mais duas caixas de pasta, meu detergente de lavagem. Eu apenas peguei X, Y e Z. Esse agente precisa ser capaz de não somente procurar os recordes para encontrar o ID do recorde que precisa ser atualizado, o que ele fará, mas também precisa ser capaz de atualizar esses recordes.
+
+Então, nós podemos adicionar outra ferramenta Airtable. Eu vou clicar nesse botão de mais sobre ferramenta e depois eu vou acelerar e selecionar Airtable. Aqui, é um processo muito similar.
+
+Nós já temos o nosso credencial conectado com Airtable, então não temos que fazer isso de novo, mas o que podemos fazer é setar uma descrição de ferramenta. E essa descrição de ferramenta precisa ser uma descrição muito acurada do que essa ferramenta faz. Eu posso dizer, atualiza itens de inventário do meu Airtable.
+
+Lindo. Agora, podemos deixá-lo para o recorde e precisamos mudar a operação de Get para Update. Depois de tê-lo atualizado, precisamos selecionar nossa base novamente, que é o inventário de casa.
+
+E agora, temos alguns fios que podemos atualizar se quisermos. Então, essa é a parte divertida, porque como a AI sabe o que colocar nesses fios? Bem, ela realmente não sabe até que enviamos algo e o output vai ser diferente a cada vez. É aí que a N8n adiciona essa expressão incrível da AI.
+
+Nós temos a habilidade de mapear uma expressão dinâmica para o nosso produto. Então, vamos entrar em cada um desses fios e pedir para a AI adicioná-lo para nós baseado no chat que temos com ela aqui. Então, baseado no nosso chat, ela vai adicionar os fios para nós sem nenhuma instrução.
+
+Agora, adicionar instruções realmente faz isso, certo? Faz muito mais consistente. Mas ID, ID é a ID do recorde, o nome do item. Cada item tem sua própria ID e a ID é encontrada dentro da URL.
+
+Então, como com qualquer item, a mesma coisa com suas e-mails, a mesma coisa com Notion, a mesma coisa com quase tudo que tem vários fios, recordes, tablas, tudo tem uma ID conectado a ele. Então, o que podemos fazer é usar essa expressão. Eu copiei ela daqui de cima e estamos basicamente pedindo para a AI encontrar a ID para nós.
+
+Então, eu vou fazer essa expressão. Um fio fixado vai permitir que você escreva dados fixados, enquanto uma expressão permite dados de mudança dinâmica. Então, agora, podemos dar esse ID um nome.
+
+Estamos pedindo para a AI encontrá-lo para nós e vai nesse ordem, Key, Descrição, Tipo e Valor Default. Elas estão separadas por cometas e cada uma precisa ser colocada em quotas. Então, basicamente, você está definindo sua própria Key.
+
+O que você quer chamar isso? Bem, já que estamos atualizando recordes no Airtable e precisamos encontrar o ID para aquele recorde, podemos apenas chamar isso algo como Record ID. E então, temos que dar uma descrição sólida descrevendo o que esse campo é que queremos chamar. Então, essa é a coisa que queremos chamar.
+
+Agora, vamos descrever o que queremos chamar. Podemos colocar uma cometa e depois duas apostrofas ou quotas. Isso funcionaria também.
+
+E eu posso dizer o ID do Airtable do item que precisa ser atualizado. Então, agora, ela sabe que precisamos encontrar o item que precisa ser atualizado e precisamos usar esse Record ID. E agora, a AI vai encontrar tudo isso para nós.
+
+De novo, não temos nenhuma instrução. Estamos apenas dizendo à AI com valores de descrição clave o que queremos que ela faça para nós. E então, agora, eu posso copiar essa expressão e fazer a mesma coisa para todos esses campos que eu quero editar.
+
+Então, digamos que eu só queira editar a quantidade. Eu não realmente quero mudar o nome do item. Eu nem me importo com mudar o threshold de inventário.
+
+Talvez eu só queira ser capaz de atualizar a quantidade de um item específico do meu database. Talvez eu vá para a loja e eu compre algo. Eu posso deletar esses outros campos.
+
+E então, eu posso fazer uma expressão aqui. E dentro dessa expressão, eu posso pastear o nome do placeholder novamente. E então, eu posso dizer para a chave algo como nova quantidade.
+
+E então, eu posso deletar essa descrição que eu atualmente tenho. E eu posso dizer a nova quantidade do item sendo atualizado. Lindo.
+
+Agora, o que precisamos fazer aqui é descrever qual é o tipo desse valor. Sempre que queremos um número sendo puxado em um campo, precisamos descrever e dizer Ei, esse é um número. Então, para o tipo aqui, vamos precisar adicionar outro coma para mais apostrofias.
+
+E então, vamos precisar colocar um número. Então, isso não retorna um valor de corda ou texto, mas, em vez disso, um número. E isso é como usar a expressão do From AI.
+
+É muito legal porque a AI está procurando para esses campos para nós. Nós nem precisamos nos preocupar com isso. Olha isso.
+
+Isso é incrível. Então, eu posso voltar para o Canvas agora e nós podemos realmente tentar isso. Você pode nomear seus campos clicando direto neles e então clicando em Nomear Searches Inventório ou eu até posso colocar Searches Inventório e então eu posso nomear esse Update Inventório.
+
+Isso é só para você ver. A AI não vê isso. Eu vou clarear minha história em breve com essa linha de conversa para que possamos começar com algo novo.
+
+E então, o que eu posso fazer é dizer Eu só comprei mais duas coisas de toalha ou mais duas tubas de toalha. Vamos ver o que isso faz. Eu só comprei mais duas tubas de toalha.
+
+Então eu posso dizer Update Inventório e então eu posso enviar isso. E como você pode ver o que isso vai fazer é na verdade primeiro procurar o meu inventário e então ir e atualizar porque ele entendeu. Ok, eu tenho que primeiro procurar o inventário antes de eu ir e atualizar e como você pode ver a toalha vai de 2 a 4. Então, nós na verdade não precisamos das instruções ali e ele descobriu sozinho.
+
+Agora, muitas vezes isso vai acontecer, certo? Ele sabe as ferramentas que ele tem que usar, mas às vezes pode ser inconsistente e é aí que precisamos começar a adicionar instruções para como queremos esse agente agir e como queremos que ele passe por certos processos. Mas nós podemos continuar tendo conversas sobre nosso inventário agora. Eu poderia dizer você pode adicionar duas coisas de toalha também? E porque ele tem memória ele pode pegar no que eu estou falando.
+
+Então ele sabe que eu só comprei 2 tubos de toalha e também provavelmente 2 coisas de toalha porque ele vai usar isso como contexto com o meu prompt. Então eu posso enviar isso e ele vai procurar meu inventário para encontrar esse objeto de toalha e então também atualizar meu inventário. Então agora em vez de 1 coisa de toalha eu deveria ter 3 aqui embaixo.
+
+Então eu quero que você pegue o que você acabou de aprender e pense sobre esse processo inteiro como 1 ferramenta para o seu funcionamento. Porque quando você está lidando com várias tarefas e você está realmente tentando criar um ecossistema agêntico não vai tudo acontecer com 1 nodo de agente AI como a gente acabou de criar. Você vai precisar aprender como criar instruções de sistema para classificar tarefas específicas em áreas da sua vida ou áreas do seu negócio ou áreas do seu trabalho e então chamar essas pequenas ferramentas para ajudar ao longo do caminho.
+
+Então você poderia olhar isso como oh, isso é um agente de AI que tem acesso a 2 ferramentas mas o que eu gosto de olhar isso como é o meu agente de inventário minha ferramenta de inventário. Isso pode fazer tudo que eu preciso dentro do meu inventário de casa e é 1 ferramenta porque o que nós temos a capacidade de fazer é que nós podemos adicionar um trigger a isso e então nós podemos adicionar esse trigger quando chamado por outro funcionamento e o que vai acontecer é quando outro funcionamento chama esse agente de AI ele pode enviar o dados ou minha query do usuário para esse input e então começar a gerar esse agente de AI então não tem nem que começar em uma mensagem de conversa mas em vez disso quando eu falo com outro agente e o jeito que isso acontece em outro funcionamento é por eu adicionar um instrumento como esse e então chamar um N8n Funcionamento então você pode realmente dar funções inteiras para o seu agente chamar e uma vez que ele o chama ele pode executar um funcionamento inteiro como nós acabamos de construir e então retornar os dados para o funcionamento original então é realmente onde começa o poder é quando você está chamando outros funcionamentos com seu agente baseado na sua query então qualquer pergunta que você pergunte talvez tenha um melhor funcionamento para isso um funcionamento inteiro como esse com um nodo de agente de AI completamente diferente envolvido e você também pode carregar esses nodos de agente de AI juntos e talvez você passe a informação através desse e diga você sabe o que esse agente é melhor para o trabalho isso foi um guia para inovadores uma introdução para construir agentes de AI e você está pronto para acelerar tudo o que você precisa saber
+ Este arquivo é mais longo que 30 minutos.
+ Atualize para Ilimitado em TurboScribe.ai para transcrever arquivos de até 10 horas.

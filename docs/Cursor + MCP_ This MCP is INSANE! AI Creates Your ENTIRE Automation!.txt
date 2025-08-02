@@ -1,0 +1,55 @@
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)
+
+Zapier é realmente uma das melhores plataformas de automação AI que te permite facilmente conectar apps, automatizar workflows, aumentar a produtividade sem escrever uma única linha de código. E realmente tem tudo, dos workflows de AI até agentes de AI, até chatbots, tablas, interfaces. Você pode praticamente automatizar tudo por suporte a mais de 8000 apps. 
+
+E eu não sou o único que faz vídeos no Zapier, tem tantas pessoas no Youtube fazendo esses vídeos, porque há uma verdadeira demanda por ele, pois ele pode automatizar quase qualquer coisa para você. E ele pode realmente te ajudar em tantas fronteiras, do apoio do cliente, até campanhas de marketing, até simplesmente ajudá-lo com código. Ele é capaz de automatizar todos esses processos. 
+
+Mas aqui está o pegamento, há uma enorme curva de aprendizagem, com milhares de apps e integrações, inúmeros triggers, ações e filtros. Há um número de opções e é algo que pode se sentir incomodante, especialmente para um iniciante. Mas é por isso que Zapier criou seu próprio Zapier MCP. 
+
+MCP significa Model Context Protocol, que é algo que você pode ter ouvido falar, e foi criado por Anthropic para conectar sistemas de AI para diferentes tipos de integrações e fontes de dados. E essencialmente, o MCP transforma Zapier em uma plataforma completamente controlada por AI. Em vez de instalar Zapier manualmente, seu assistente de AI, como Cursor, que é algo que falarei em breve, ou Klein, pode agora falar diretamente com o Zapier e ativar ações reais. 
+
+É aqui que ele pode instalar todos os Zapier, como enviar e-mails, e criar todos esses processos de automação com um único prompt, com a ajuda do agente de AI. E é algo que vai ajudar você a automar qualquer tipo de construção e, praticamente, ter isso para que sua vida inteira seja muito mais fácil com essas automações criadas com o MCP. E depois que o assistente de AI tem o MCP, ele vai ser capaz de instalar autonomamente tudo com o prompto de língua natural que você pode enviar. 
+
+Agora, no meu caso, eu vou usar o Cursor, porque eu acredito que é o melhor para esse caso particular, mas você também pode usar o Klein. E você pode começar facilmente com o Cursor completamente gratuito, assim como com o Zapier. Então, todo esse processo vai ser completamente gratuito para começar. 
+
+Então, agora que tudo isso está fora do caminho, eu vou mostrar como você pode instalar o Zapier MCP com um assistente de código como o Cursor. Então, para começar, vá em frente e crie um acount com o Zapier, que é algo que eu vou deixar um link na descrição abaixo, e então vá em frente e instale o Cursor localmente. Você também pode usar o Klein, mas para esse caso particular, eu vou mostrar como usar com o Cursor.
+
+Depois que você criou um acount com o Zapier, assim como instalou seu assistente de código de AI, você vai ser enviado para esse dashboard para o Zapier, e esse é essencialmente onde você vai conseguir criar seu servidor MCP. Então, clique nesse botão aqui e o que você quer fazer primeiro é selecionar um cliente de MCP. Esse é o lugar onde você tem muitas opções que você pode usar, mas no nosso caso, nós vamos usar o Cursor. 
+
+E você quer ir em frente e criar o servidor MCP para isso. Depois de criado, você pode configurar as ferramentas que você quer que o servidor MCP acesse. Esse é o lugar onde você tem a capacidade de acessar mais de 8000 aplicativos. 
+
+E para adicionar essas ferramentas, é na verdade bastante fácil. Apenas clique na ferramenta que você quer adicionar e selecione todas as ferramentas específicas que você quer adicionar. Agora, nesse caso, para a ferramenta Gmail, eu cliquei em adicionar todas as ferramentas Gmail e então eu adicionei as ferramentas Gmail através da configuração. 
+
+Agora, do mesmo modo, você pode fazer isso com todas essas outras ferramentas. Agora, aqui há alguns ferramentas que eu recomendo adicionar. Você pode adicionar Postgres, SQL para gestionar seu databases. 
+
+Você também pode adicionar algo como Webhooks e, essencialmente, com Webhooks, é um jeito para você enviar mensagens automadas ou informações para outras ferramentas. Então, eu recomendo que você adicione isso. Outro é WebParser por Zapier.
+
+Isso é, essencialmente, para pessoas que escravizam conteúdos das páginas web. Você pode adicionar esse ferramento para sua lista de configurações. E depois que você configurou todas as ferramentas que você quer que seu servidor MCP use, você pode ir para o Connect. 
+
+Agora, antes de eu até chegar a isso, dentro do Tab História, você vai poder gestionar todas as ferramentas recentes que seu servidor MCP usou. Agora, voltando para o Connect, é aqui que você pode facilmente configurar o Zapier MCP dentro do nosso assistente de código, que é o Cursor. E para fazer isso, você pode copiar os conteúdos direto para seu arquivo JSON ou você pode simplesmente adicioná-los para o Cursor clicando nesse botão, o que vai fazer o processo super fácil de fazer.
+
+E você pode ver direto que eu tenho ele para que ele vai instalar o servidor MCP. Depois de verificar a URL, eu posso clicar em instalar. E depois de instalado, ele vai carregar todas as ferramentas que eu tinha instalado dentro da primeira seção, dentro desse Tab de configurações.
+
+E você pode ver que há 13 ferramentas que ele já adicionou e lista todas as ferramentas que eu adicionei. Agora, lembre-se que o API que você viu é algo que você deveria manter secreto. Eu vou estar rotando depois, mas faça certo de compartilhar isso.
+
+Caso contrário, se alguém tiver acesso a isso, ele pode usar todo o uso do seu acounto MCP. Próximo, feche tudo e depois volte para o Cursor. E o que você quer fazer é usar o comando I ou a função Ctrl I se você está no Windows. 
+
+E isso vai abrir o agente Composer. Isto é essencialmente onde você agora pode trabalhar com o assistente AI para criar o seu Zap usando o Zapier MCP. Então, ao invés de criar manualmente a nossa automação Zapier com esse interface drag and drop, eu posso simplesmente descrever o que eu quero construir dentro do Cursor usando o assistente AI, assim como tê-lo conectado ao nosso MCP. 
+
+Então eu posso dizer que eu quero criar uma automação AI que lê receitas ou envagens vinculadas do Gmail, extrair os dados, a quantidade, o dia, o vendedor e os logos e depois eu vou colocá-lo em um cartão Google ou um Ocean. Use o Zapier MCP. Agora eu posso simplesmente ir em frente e escrever isso e agora vai trabalhar em criar essa automação autonomamente sem eu fazer nada.
+
+E assim como isso, a partir desse envio que foi enviado para o meu Gmail, ele foi capaz de processá-lo usando o MCP Tool e ele foi capaz de parsear esse envio aleatório que foi enviado para o meu Gmail. E neste caso, você pode ver que ele foi capaz de logar o nome da pessoa que enviou o e-mail, o dia, a quantidade, como bem como a fonte. E ele foi capaz de expor isso como um .txt, o que é algo que eu pedi para fazer depois. 
+
+Aqui é outro exemplo, isso é onde eu posso automarizar o processo de enviar um e-mail baseado no trabalho que eu tenho dentro do meu diretório. Neste caso, eu estou pedindo para fazer pesquisa no meu canal. Neste caso, ele fez isso bem rapidamente e ele vai ser capaz de enviar uma cópia desse logo, que foi salvado localmente e você pode ver que agora ele está chamando o Gmail enviar um tool, que é o Zapier MCP e eu deveria receber um e-mail em alguns segundos. 
+
+E aí está, nós temos agora recebido o e-mail sobre a memória do que é o mundo do canal AI, graças a esse servidor MCP que estava criando essa automação inteira para nós. Se você gostou desse vídeo e gostaria de apoiar o canal, você pode considerar donar para o meu canal através da opção de super agradecimento abaixo. Ou você pode considerar se juntar ao nosso Discord privado, onde você pode acessar várias inscrições para diferentes ferramentas de AI grátis em um mês, além de notícias de AI diárias e conteúdo exclusivo, além de muito mais.
+
+Então pense nisso, ao invés de trabalhar manualmente nesses apps, apertando e baixando esses componentes diferentes que você pode ter um tempo difícil de configurar tudo sozinho, você pode usar algo como o cursor para ajudar você a processar todos esses tools e criar a conexão, assim como automar o processo em alguns segundos, baseado na linguagem natural que você enviou. Agora pessoal, eu só fiz um exemplo bastante básico para trabalhar com o Gmail. Você tem tantas outras coisas que você pode usar e é por isso que eu recomendo que você dê uma olhada nesses diferentes setos de ferramentas que você pode configurar e apoiar seu agente de AI, para que você possa automar quase qualquer coisa.
+
+Mas isso é praticamente tudo para o vídeo de hoje no Zapier MCP apoiado com o cursor. Eu recomendo que você dê uma olhada nisso, porque é possível automar quase qualquer coisa e é super fácil de fazer, o que vai fazer sua vida super fácil. Mas com isso, pessoal, obrigado a todos por assistirem.
+
+Espero que vocês tenham gostado do vídeo de hoje e ganhem algum tipo de valor disso. Vou deixar um link para todas essas coisas que usei no vídeo de hoje na descrição abaixo. Assine o segundo canal, se unir à nossa notícia e ao nosso Discord, me siga no Twitter, assim como se inscrever no canal do YouTube, ativando a campainha de notificação, gostando desse vídeo e por favor, dê uma olhada nos nossos vídeos anteriores, porque há um monte de conteúdo que você realmente vai se beneficiar.
+
+Mas com isso, pessoal, obrigado a todos por assistirem, tenham um dia incrível, espalhem a positividade e vejo vocês em breve. Tchau, pessoal!
+
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)

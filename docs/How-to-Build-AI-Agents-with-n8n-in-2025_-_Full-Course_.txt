@@ -1,0 +1,165 @@
+How to Build AI Agents with n8n in 2025! (Full Course)
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+No final deste vídeo, você terá as ferramentas, conhecimento e confiança para construir agentes de A.I. totalmente autônomos sozinho. Vou levar você de um início completo, alguém que não sabe absolutamente nada sobre agentes de A.I. para um agente de A.I. que está construindo pro. A verdade é que as pessoas estão tomando advantagem desta onda de agentes de A.I. nos últimos seis meses.
+
+Tive alunos na minha comunidade que completamente substituíram o trabalho de 9 a 5 porque eles entendem como construir agentes de A.I. Tive também pessoas que criam novos negócios a partir de vender agentes de A.I. e sistemas de A.I. para outros negócios ou outros indivíduos. E deixe-me lhe dizer, a demanda para esses agentes está super alta agora, mas a suplência de criadores de agentes é muito baixa porque as pessoas não têm sido propriamente ensinadas em como construí-los. As chances são que você pode até ter visto alguns vídeos no N8N e na construção de agentes em que as pessoas estão construindo esses trabalhos complexos, mas não estão realmente explicando passo a passo e falando sobre por que as coisas estão acontecendo.
+
+É por isso que estou criando esse curso completo. Não importa se você não tem experiência técnica ou habilidades de construção de agentes anteriores ou se você é um desenvolvedor ou não desenvolvedor. A coisa linda dessas ferramentas é que é tudo sem código.
+
+Então, se você entende como usar a língua natural e se você pode seguir em um vídeo, então, no final, você vai ser um criador de agentes sucessivo. Você vai ter o conhecimento e a confiança para construir esses sistemas. E se você está se perguntando onde eu passo a maior parte do meu tempo, eu o passo na comunidade da AI Foundations.
+
+Eu vou deixar um link na descrição e no comentário acima para você se unir a essa comunidade. E eu recomendo muito isso. Isso vai aumentar seu crescimento de 5 a 10X porque o que esse grupo faz é que agrega conhecimento de todos de diferentes indústrias.
+
+E todo mundo aqui está construindo agentes. Todo mundo aqui está vendendo agentes. As pessoas aqui estão fazendo dinheiro real e vendo resultados reais.
+
+Então, se você quer perguntar essas perguntas às pessoas e você também quer um salão cheio de muito mais conteúdo do que o que você vai ver neste vídeo, então eu recomendo muito se unir porque, se você gosta do meu estilo de ensino, nós temos mais cursos e nós temos muitos mais módulos em construção de agentes da AI também. Nós até temos agentes pré-construídos aqui, coisas como agentes do YouTube Shorts, agentes de blogging, agentes de transcriptos do YouTube, agentes de pesquisa profunda que você pode apenas baixar e implementar hoje. Então, eu recomendo muito verificar isso depois de assistir esse curso porque o aprendizado só fica ainda mais profundo em se envolver com pessoas que estão vendendo esses agentes por milhares e milhares de dólares, implementando eles no seu negócio, recebendo chamadas com essas pessoas, que nós temos um calendário com pelo menos, geralmente, três chamadas por semana.
+
+Isso vai dramatizarmente te deixar a frente de qualquer outro. Então, eu recomendo muito se unir. Eu vou deixar isso na descrição e no comentário aberto no topo se você quiser conferir.
+
+Mas, com isso dito, vamos entrar no secção um do treinamento de agentes. Bem-vindos ao curso completo de agentes da AI. Eu, especificamente, criei esse vídeo para o YouTube.
+
+Eu não peguei nenhum material do meu curso premium. Eu criei isso para levar um iniciante a um pro. E se essa é a sua primeira vez assistindo esse vídeo, eu recomendo assistir isso em velocidade 1X.
+
+Eu recomendo tomar notas e não esquecer de nada porque, como eu disse, eu criei esse vídeo, especificamente para o YouTube, gratuitamente, para ajudar você e lhe dar tudo o que você precisa saber para sair e construir agentes sozinho. Sem fome, eu só quero que você consiga. Então, se você está assistindo isso pela primeira vez, eu recomendo assistir duas ou três vezes.
+
+Mas, se você está assistindo isso pela primeira vez, não esqueça de assistir em velocidade 1X e apenas preste atenção e tome notas. Dessa forma, você pode assistir uma vez e ser bom para sempre. Isso não vai ser um vídeo rápido, mas, em vez disso, um vídeo lhe dando todo o conhecimento que você precisa para sucessivamente construir agentes AI.
+
+Então, vamos para a secção 1, que é a básica. Agora, precisamos começar pequeno. Eu vou estar construindo múltiplas automações e agentes neste vídeo, mas tudo o que vem antes disso vai ser importante para você entender.
+
+Eu vou estar passando por terminologia, eu vou estar passando por ferramentas e, bastante, tudo o que você precisa saber para subir a velocidade sobre por que agentes são importantes e como construí-los. Então, vamos começar com as básicas e, o mais importante, definir o que é um agente AI. Então, o que são eles? Bem, agentes são sistemas que podem agir autonomamente e usar ferramentas para realizar tarefas complexas.
+
+Agora, no caso de agentes, eu vou definir uma tarefa complexa como uma tarefa que requer razão humana. Então, em outras palavras, agentes AI são bons em substituir a necessidade de um humano estar no loop. Eles são muito dinâmicos e podem se adaptar a situações diferentes ou casos de frentes.
+
+E isso é o que faz essas coisas tão poderosas, é que eles podem se adaptar a situações únicas. Então, você não construí-lo apenas uma vez para uma situação única e tê-lo funcionado. Isso seria considerado automação.
+
+Agentes pegam novas informações a cada vez. É um cenário diferente a cada vez, mas você pode obter um bom resultado se você construí-los corretamente. Então, há diferenças importantes entre agentes e automações, e eu quero olhar essas diferenças e só dar um pequeno cenário para que você possa se juntar.
+
+Qual é a diferença entre um agente e uma automação, mas como eles são meio semelhantes também? Essa é uma distinção importante para fazer, a diferença entre agentes e automações. Então, automações são trabalhos predefinidos que performam tarefas estruturadas, algo que acontece exatamente o mesmo a cada vez. Você predefine isso, você pode construir isso no mesmo software que vamos usar hoje.
+
+E automações são ótimas porque elas são super consistentes. Mas agentes, por outro lado, são não deterministas e podem se adaptar a situações em tempo real. Então, você não precisa se preocupar com uma situação única ou algo pequeno sendo diferente porque o agente pode se adaptar muito bem.
+
+E você pode pensar em agentes como um cérebro humano. Quando estamos apresentados com um problema, nosso cérebro consciente vai usar nosso cérebro subconsciente para descobrir como tratamos esse problema no passado, quais são algumas ferramentas que usei no passado, quais são todos os recursos que tenho disponíveis para fazer uma decisão sobre esse problema ou sobre a situação que estou apresentado. É um pouco como um agente está agindo.
+
+E, na verdade, é assim que estamos treinando para a AGI, são essas lopas de feedback de aprendizagem de si mesmo. Mas ainda não chegamos lá. Vamos pensar em um agente.
+
+Então, como eu disse, quando estamos apresentados com um problema, o cérebro consciente vai usar o subconsciente para determinar como podemos resolver esse problema e quais ferramentas precisamos para fazê-lo. Então, eu quero que você imagine isso em agentes contra automação. Digamos que você tenha um jardim e você fica doente de aquecer esse jardim sozinho.
+
+Talvez você tenha criado uma automação de aquecimento de si mesmo. Agora, seu jardim vai ser aquecido por si mesmo ao mesmo tempo todos os dias. Digamos que você apenas coloque um timer.
+
+Você diz que, neste tempo, todos os dias, eu quero que meu jardim aqueça sozinho. Então, isso é ótimo, porque agora você não tem mais que sair e aquecer seu jardim. E você sabe que seu jardim vai receber água todos os dias.
+
+Isso leva você fora da equação, mas pode haver alguns problemas que você tem que cuidar. Talvez você receba um monte de chuva. Bem, sua automação não vai saber melhor.
+
+Ela vai continuar produzindo o mesmo quanto de água que antes, o que poderia levar a aquecer suas plantas. E isso poderia, bem, danificar seus resultados se suas plantas estiverem recebendo muito água, certo? Sua automação de água, em que está aquecendo suas plantas, não sabe quanto chuva você vai receber no futuro. Ela realmente não sabe quanto chuva você tem.
+
+Ela só vai continuar a correr ao mesmo tempo todos os dias, porque é predefinido e você colocou assim. Ou talvez você não receba o suficiente chuva. De novo, sua automação não sabe melhor.
+
+Ela vai continuar produzindo o mesmo quanto de água que antes. E isso pode levar a aquecer seu jardim ou pode causar suas plantas morrerem. Bem, aquecer isso poderia causar suas plantas morrerem.
+
+Então, se você está passando por um espelho seco e você precisa manter a terra linda e moída para essas plantas, então sua automação de água não sabe melhor. Ela está produzindo o mesmo quanto de água que ela teria em condições normais. Mas agora eu quero que você imagine isso.
+
+Imagine que você tem um agente de ciência cozido nesse sistema de água. Em vez de apenas estabelecer uma automação onde ela corre ao mesmo tempo todos os dias, imagine o agente de ciência que dinamicamente controla o fluxo de água, dependendo dos patrões de clima atual e futuro. Imagine que também pode tomar em conta o quão alto suas plantas são, a zona na qual você está criando suas plantas, a moída do terreno, o tipo de planta, e então fazer decisões sobre quando adicionar água às suas plantas, baseado em todos esses fatores mudançados.
+
+Essa é a diferença entre um agente de ciência e uma automação de ciência ou automação em geral. O seu agente poderá tomar em conta um monte de fatores dinâmicos e poder fazer decisões baseadas na sua situação exata hoje. Ela pode se adaptar a certas situações, que neste caso levaria a um jardim épico que é muito liso.
+
+Então agentes e automações, eles têm suas diferenças, mas eu diria que automações são muito mais consistentes, o que pode ser bom para certas situações. Enquanto que, por outro lado, agentes de ciência podem responder e agir como um humano usando suas ferramentas para determinar o que precisa ser feito. E essa é a razão exata por que agentes de ciência estão se tirando agora.
+
+Eles estão trocando humanos em muitas tarefas diárias. E não só estão fazendo um trabalho melhor, mas também estão trabalhando horas mais longas, porque essas coisas não ficam cansadas, não precisam dormir. Eles não fazem erros se estão tendo um dia ruim, certo? Eles não têm fatores de vida que afetam suas decisões.
+
+São máquinas que têm inteligência humana. Então é por isso que eles estão se tirando agora e estão se tirando por uma boa razão. Não é como um flash em uma panela.
+
+É tipo, não, isso é na verdade melhor do que humanos. Então você as constrói uma vez e aí você relaxa. E é isso que vamos aprender como fazer hoje.
+
+Como construir, não apenas automações, porque isso é super importante para aprender antes de você construir agentes, mas também como construir esses agentes de ciência. Então vamos dar uma olhada no fluxo de dados de agentes e automação. Dessa forma, podemos ver como a informação será passada através de agentes e automações.
+
+E isso vai realmente ajudar você a entender o que estou falando hoje. Então, todas as automações e agentes seguem esse framework similar. Temos um input, que eu vou estar referindo como um trigger.
+
+Muitas vezes, como o que começa essa automação? Você precisa de algo que desperte a automação ou o agente e diga, Ei, é hora de começar. Isso pode ser em um horário. Isso pode ser quando um artigo de notícias é postado.
+
+Isso pode ser quando você posta em mídia social. Talvez você tenha um fluxo de trabalho que passa por e faz reciclamento de conteúdo para você. Um trigger pode realmente ser qualquer coisa, mas é como essa automação vai começar.
+
+E então nós temos configuração, que é o passo número dois. E nós chamamos dessas ações também. Então, é aqui que você configura o dados do input, ou você pega dados do input, ou espalha novos dados depois que o trigger acontece.
+
+Então, as ações são onde o divertido acontece nos workflows de agentes e automação. Mas se configurarmos nossas ações bem o suficiente, então nós recebemos um resultado ou uma boa saída customizada. E a saída customizada pode ser como uma coisa física que você recebe, como, ok, agora eu tenho novos dados nesse databases, ou pode ser uma sensação que as pessoas recebem, certo? Então, tipo, porque as ações ocorreram depois do input, talvez você tenha clientes felizes.
+
+Então, nós vamos descer nisso, mas a diferença entre uma automação e um agente acontece na secção de configuração. Então, aqui na fase de ação, isso aqui é a diferença entre um agente e uma automação e como o dado está sendo configurado. Porque em uma automação, vai ser o mesmo a cada vez.
+
+Mas no agente, ele vai decidir dinâmicamente como configurar uma saída baseada na situação. Então, além disso, pode até atuar nas instruções de língua natural que você dá sem o uso de ferramentas. Então, baseado no input, o agente AI decide qual ferramenta vai usar, e pode usar essas ferramentas que você dá ou apenas instruções, certo? Não precisa usar ferramentas, mas é isso que faz o agente AI tão poderoso, porque ele pode usar sua ferramenta Google Calendar, pode usar sua ferramenta e-mail, pode usar qualquer ferramenta que você dê.
+
+Você pode até instalar uma ferramenta customizada com uma requesta HTTP, que vamos entrar nisso no futuro. Mas você vai começar a entender isso muito mais enquanto nós construímos o vídeo. Não se sinta que você tem que entender todos esses termos agora, todo o set-up.
+
+Isso é apenas uma compreensão básica de como isso vai funcionar. Então, a próxima coisa que precisamos entender, rapidamente, quem são os agentes AI? Então, os agentes AI são para todos, e quando eu digo todos, eu quero dizer todos. Eu treinei milhares de pessoas em uma comunidade pagada, aquela que eu compartilhei com você antes, e, você sabe, eu me surpreendo com quantas pessoas diferentes estão vendo os benefícios dos agentes AI.
+
+Quando eu comecei, eu estava tipo, ok, talvez apenas para pessoas online, pessoas que estão na indústria tecnológica, mas, quando começamos a ensinar mais e mais pessoas, começamos a ver todos os caminhos da vida beneficiando-se dos agentes AI. Então, se você quer se tornar mais eficiente, se você quer guardar um monte de tempo, se você quer criar um novo fluxo de rendimento, se você quer guardar mais do seu rendimento, então os agentes AI são para você. Como eu disse, eu, pessoalmente, treinei equipamentos de marketing, funcionários de venda, trabalhadores de construção, analistas de dados, agentes, advogados, CEOs, criadores de conteúdo, líderes de e-commerce, consultores e todo mundo sob o sol.
+
+Eu ajudei eles a encontrar um caso de uso para a linha de trabalho deles sobre agentes AI. Todo mundo tem um caso de uso. Então, se você está se perguntando, tipo, eu tenho um caso de uso para a minha vida? Você tem, e eu prometo.
+
+E, no final deste vídeo, você vai ser inundado com ideias. Então, não só as pessoas estão encontrando esses casos de uso, mas alunos de meus foram vender seus agentes AI por milhares de dólares. Alguém na comunidade realmente vendeu um agente por 59 mil dólares, um funcionamento de agentes AI.
+
+Então, você pode ver o quão poderosos essas coisas são, porque o dinheiro fala, certo? Quando as pessoas estão pagando milhares de dólares para ter essas construções constantemente em pequenas e pequenas comunidades, então, sim, tipo, é uma coisa bem grande. Além disso, nós ajudamos empresas mais grandes e estabelecidas a salvar milhares de dólares com agentes de AI também. Então, agentes de AI literalmente para todo mundo.
+
+Se você quer salvar dinheiro, você quer salvar tempo, você quer fazer dinheiro ou você quer se tornar mais eficiente, então eu recomendo prestar atenção. Vamos descer para a próxima seção das básicas, que é o stack de ferramentas de construção de agentes. Vamos mantê-lo bem simples e vamos usar outros ferramentas ao longo disso, mas, tipo, a principal coisa que você precisa construir agentes de AI são esses dois ferramentas.
+
+E o segundo é intercâmbio, mas vamos mantê-lo simples e só para que estemos todos na mesma página, estes são os dois ferramentas que vamos usar para este curso. Então, número um, nós temos N8n, difícil de dizer, mas este é o ferramenta sem código que vamos usar para construir nossas automações e agentes. E a boa notícia é que você pode começar grátis.
+
+Então, eu vou deixar um link afiliado na descrição. Então, se você acabar comprando um plano, eu recebo um pouco de retorno. Eu gostaria muito de ver se você usou esse link, mas se não, não se preocupe com isso.
+
+Vá para n8n.io e você recebe um trial de 14 dias grátis. Então, este é o momento perfeito para criar seu acounto se você ainda não o fez. Próximo, nós temos OpenAI e OpenAI são os criadores de ChatGPT.
+
+Então, nós precisamos integrar a AI para nossas automações e agentes. E a forma como fazemos isso é dando um modelo de língua grande para usar. Então, nós podemos falar com ele, assim como fazemos com o ChatGPT.
+
+Nós podemos quase criar nossa própria versão de ChatGPT com o n8n, que é muito especializado em fazer qualquer tarefa que quisermos, se você quisesse pensar nisso assim. Você também pode fazer isso com Claw, Gemini, quase qualquer modelo que está aí agora. E nós podemos facilmente conectar e usar esses modelos no n8n para supercarregar como estamos transformando nossos dados.
+
+Agora, geralmente, para uma chave API ou para usar esses modelos fora da plataforma física, você vai precisar de cerca de 5 a 10 dólares para encher para que você possa acessar esses modelos por causa do custo computacional. Então, agora nós fizemos o passo 1. Parabéns! Nós vamos passar para o passo 2, onde na verdade vamos adentrar-nos nas básicas do n8n para que possamos aprender mais sobre o nosso produto, analisar o preço e tudo o que você vai precisar saber para começar a construir automações e agentes. Então, vamos fazer isso agora.
+
+Espero que você esteja me seguindo e estou animado porque estamos um passo mais próximo de construir essas automações e aprender as técnicas em detalhe. Então, vamos entrar nas básicas do n8n. Então, primeiro de tudo, o que é o n8n, certo? Bem, este é o atalho sem código que vamos usar para construir nossas automações e agentes.
+
+Ele será o pinhão para o sucesso de sua construção de agentes. Eu testei várias plataformas para construir agentes e o n8n ganha a cada vez. Pense nisso como uma interface onde você pode conectar e integrar A.I. para mais de 500 ferramentas na internet.
+
+E dentro de cada ferramenta, você pode tomar várias ações diferentes. Então, você pode se conectar ao ecossistema Google, todo o ecossistema Microsoft, todos os seus ferramentas CRM favoritas, AirTable, Notion, Superbase, Slack, Stripe, contatos de e-mail, qualquer modelo de A.I. que você queira. E isso te permite trazer todos esses ferramentas e conectá-los em um setor como Canvas.
+
+Então, você pode conectar seu e-mail a uma ferramenta Microsoft, para que quando uma coisa acontece no seu e-mail, ele triga outro evento para acontecer no Microsoft. Então, é louco como você pode conectar todos os seus ferramentas favoritas e tê-los a fazer ações. E você pode ligá-los para A.I. para que A.I. ajude você a fazer ações enquanto você está dormindo.
+
+Então, vamos entrar em um pouco de coisas sobre o n8n. Então, a gente pode, de fato, sair dessa apresentação e começar a construir agentes. Então, vamos falar sobre o preço, que pode mudar dependendo de quando este vídeo for lançado, certo? Geralmente, a funcionalidade fica bem similar, mas coisas como o preço e a interface do usuário podem mudar um pouco.
+
+Mas vamos falar sobre o preço, vamos falar sobre como se inscrever, e depois vamos adentrar-nos na interface e nos setores. Dessa forma, você é um mestre de navegar seu caminho em torno do n8n. Agora, este passo é muito importante para prestar atenção, porque se você quer ser um mestre em o que você faz, você tem que entender suas ferramentas melhor, certo? Se você é como um ninja samurai, você tem que entender o movimento da espada, dentro e fora.
+
+Você tem que saber sua arma se você quer ser um mestre dela. Então, é isso que vamos fazer. Vamos aprender como navegar em torno do espaço de trabalho.
+
+Vamos aprender sobre o preço, como se inscrever, e essas coisas que você precisa para a sua fundação de construir agentes e automações nesta plataforma. Tudo bem, então, primeiro, vamos passar pelo preço do n8n. Então, se você está no n8n.io, você pode ir para o tabular de preços se você quiser seguir, mas eu vou passar por ele.
+
+Agora, nós temos três planos aqui. Nós temos Starter, Pro e Enterprise. Se você quiser mudar este tabular para Mês, você pode ver que o Plano de Começo vai começar a $24 por mês.
+
+O Plano Pro começará a $60 por mês, e se você for anualmente, você recebe um pouco de desconto. No meu aconto principal, eu acredito que estou no Plano Pro, o Plano Pro Anual, então eu recebo tudo no Plano de Começo, além de tudo isso, mas o Plano de Começo é bem bom para começar, com certeza. Você pode até começar grátis, como eu disse, em um teste grátis de 14 dias.
+
+Então, tudo isso não vai realmente importar agora, até você se inscrever e ver o que eu estou falando, mas é aqui que o preço começa, e obviamente, nós temos a Enterprise, mas a coisa legal do n8n é que se você quiser entrar um pouco mais no lado técnico das coisas, há uma versão gratuita local que você pode usar no seu computador. Então, você pode descarregar isso para o seu computador, essencialmente, e você pode usá-lo gratuitamente, porque o n8n é um produto aberto. Então, a cada vez que eles lançam um atualizador, eles também fazem um atualizador aberto, e você pode atualizá-lo do seu terminal e fazer tudo isso, mas isso te permite usá-lo completamente gratuitamente, mas isso faz o set-up muito mais difícil, e há definitivamente uma janela de habilidades que você tem que ser parte de.
+
+Tipo, leva um pouco de tempo se acostumando e aprendendo, então, eu sempre ensino no cloud. Se você quiser ir para a rota self-hosted e você é uma pessoa mais técnica, eu recomendo muito porque você consegue usá-lo gratuitamente e é local, então você tem um pouco mais de controle de seus dados, mas, com isso dito, eu vou estar ensinando no cloud, já que é o jeito mais fácil de começar. Então, no canto direito superior, você pode clicar em Comece, e isso vai levar você a uma tela onde você pode, basicamente, criar um acounto como qualquer outra aplicação.
+
+Então, eu vou escrever o meu nome, e então eu posso escrever um e-mail de teste, eu posso confirmar aquela adesão de e-mail, e então eu posso dar isso um pouco de passaporte, e então você pode dar um nome de acount. Então, eu posso apenas chamar isso de um teste e ver se está disponível, e então o que você pode fazer é clicar em Comece um teste gratuito de 14 dias para começar esse processo, mas tenha em mente que, uma vez que você clicar em Comece um teste gratuito de 14 dias, seu teste gratuito vai começar. Então, você quer ter certeza de que você recebe o máximo nesses 14 dias para ver se é algo que você quer continuar.
+
+Agora, como você pode ver, diz que está procurando o Self Host, e você pode obter a versão de comunidade através de Self Hosting N8n na sua própria máquina local, que você pode usar gratuitamente. Então, você pode abrir os docs de instalação e você pode ir verificar e ver se isso é algo para você e algo para ver se você poderia instalá-lo. Eles tem guias de instalação aqui que são bem bons e bem direto, mas isso leva um pouco mais de experiência técnica.
+
+Por enquanto, eu vou clicar em Comece um teste gratuito de 14 dias e então nós vamos ir ao redor do dashboard para que eu possa mostrar para você por aí. Tudo bem, você pode filmar o survejo rapidamente. E agora, como você pode ver, diz que seu espaço de trabalho está pronto, então eu posso apenas pular e clicar em Comece automação e então vai carregá-lo e levá-lo para o nosso espaço de trabalho.
+
+Então, como você pode ver, nós temos um espelho bem limpo. Pode parecer um monte no início, mas não se preocupe, eu vou quebrar tudo e o que nós podemos fazer é começar no lado esquerdo superior. Então, como você pode ver no lado esquerdo superior do nosso lado, que você pode colapsar e expandir, nós temos um botão Plus.
+
+Esse botão Plus vai nos permitir criar coisas novos no nosso espaço de trabalho. Então, se eu clicar em Plus, nós podemos criar novos workflows, nós podemos criar novos credenciais e nós podemos criar um novo projeto. Agora, workflows são coisas que seguram suas automações e seus agentes.
+
+Então, cada novo workflow é uma nova automação ou um novo agente. Então, se eu clicar em Novo Workflow e eu posso criar isso no meu folhamento pessoal agora, se eu clicar em Personal e criar um novo workflow, vai me levar a um canvas completamente aberto, onde eu posso, então, construir meus agentes. Eu posso adicionar o meu primeiro passo, eu posso conectar a todas essas ferramentas no lado esquerdo.
+
+Se eu for para OnAppEvent, como você pode ver, eu tenho todas essas aplicações que eu posso conectar direto fora do portão. E isso seria um workflow, ok? Então, workflows estão dentro dos seus folhos e dos seus projetos. Então, eu vou ir para essa seção de overview de novo, e isso é basicamente como sua página de casa, ela mantém todos os seus workflows e projetos.
+
+Eu posso clicar nesse botão Plus de novo e credenciais que vamos entrar no futuro, então eu vou pular sobre isso agora, mas projetos, o que você pode fazer é adicionar projetos para, bem, diferentes projetos que você está trabalhando. Então, eu vou clicar em novo projeto, e para esse projeto, o que eu vou fazer é que eu vou chamar esse projeto Full Agents Guide, só para que eu possa colocar todos os meus workflows e automações de tutorial aqui. Eu poderia dar um nome de ícone, você pode até chamar isso como um projeto de teste, mas você só tem tantos desses projetos.
+
+Então, eu recomendo ter certeza de que você quer manter esse projeto indo ou ter certeza de que o nome é algo bem geral se você quiser adicionar um monte de automações aqui. Então, eu vou fazer Full Agents Guide com aquele ícone de A, e de lá nosso projeto foi criado. Então agora, nessa seção de projetos, eu posso alugar folhas, eu posso alugar workflows, e é assim que tudo é bem organizado.
+
+Você tem projetos, folhas e então workflows. Então, eu poderia criar um folha realmente rápido, então talvez eu queira criar um folha e apenas chamar como Seção 1, as básicas, e então clicar em Criar. Agora, eu posso clicar nesse folha e eu posso criar um workflow dentro do folha, então eu poderia criar uma automação nesse folha ou um agente nesse folha.
+
+Eu recomendo organizar isso bem do início porque pode ficar muito confuso e eu tenho que passar agora provavelmente horas limpando meu espaço de trabalho original porque eu não organizei isso no início, eu fiquei um pouco mais cedo do que eu. Então esse é o projeto e esse é o nosso folha, você pode até criar folhas dentro de folhas dentro de folhas, como você quiser organizá-lo, mas essencialmente são as básicas de organização na interface do N8n, e você pode ir para a sua overview e ver todos os workflows que você criou. Agora, nós não temos workflows criados, então nós não temos nada para ver, mas se eu estivesse indo aqui e criar um workflow que não esteja nesse folha e só eu poderia renomeá-lo no meio esquerdo, como Workflow 1, e uma vez que eu o salvo, quando eu vou para a secção de overview, você pode ver que agora eu tenho o Workflow 1 e também dentro do projeto de guia de agentes inteiros.
+
+Eu também posso clicar, segurar, e dragar os workflows para outros folhas, então agora está no folha das básicas, eu poderia criar outro folha, como eu disse, e sim, essas são as básicas de organização. Agora, no meio esquerdo aqui, você vai ver algumas coisas diferentes, você tem o painel de administração, esse é onde você vai atualizar seu espaço de trabalho N8n, o que você tem que fazer manualmente. Temos a secção de templates, onde você pode ir e acessar templates pré-feitos, agentes e automações, então, como você pode ver, eles têm um monte de workflows pré-feitos aqui que você pode clicar, você pode procurar um se quiser, talvez você queira uma automação de Gmail, você pode ir ver o que todo mundo na comunidade está criando, alguns destes são pagos, alguns destes são grátis, mas há algumas automações bem legais para você começar lá.
+
+Próximo, temos variáveis, insights, ajuda, e também temos settings dentro da nossa interface, isso é diferente do painel de administração, então, eu posso clicar nos setings aqui, e aqui você pode mudar seu nome, você pode mudar seu e-mail, você pode ativar 2FA, você pode adicionar usuários para seu espaço de trabalho aqui na esquerda, então, se você está trabalhando com um time, você pode fazer assim, você tem segredos externos, que são somente disponíveis no plano de empresa, ambientes, também a empresa, e então, o resto também são apenas features da empresa, que não vamos cobrir neste vídeo de hoje. Agora, o que você pode fazer, é, como eu, você pode criar um novo workflow, isso não precisa estar dentro de qualquer projeto se você não quiser, mas eu só quero mostrar para você ao redor do canvas, para que você se sinta confortável com adicionar algo que a N8n chama de nodes, e nodes são o que te permite realmente construir automações e agentes, então, se eu selecionar o workflow 1 aqui, o que você vai notar, é que nós temos este canvas, eu posso colapsar a parte de cima aqui, e, direto do meio, eles te dão algo que diz adicionar primeiro passo, nós podemos selecionar esse botão de mais, e agora, todas essas coisas vêm, e diz o que triga este workflow, então lembre-se, como eu disse no começo, quando estávamos falando sobre o fluxo de dados em uma automação ou um agente, nós sempre tínhamos um trigo, algo que iniciou o workflow, ou um input, algo que disse, Ei, agente, automação, acorde, é hora de correr. Bem, isso é o que precisamos adicionar primeiro, e estes são todos chamados de nodes dentro desta seção aqui, todos estes pequenos rectângulos, círculos e quadrados que você vai ver no canvas, nós chamamos destes de nodes, então precisamos masterizar os nodes da N8n, eu posso clicar em adicionar primeiro passo, e vamos adicionar nosso primeiro nodo, eu posso fazer um trigo manualmente, você pode clicar nisso, e agora, o que for depois disso, nós vamos poder conectar um monte de apps diferentes e um monte de ferramentas diferentes, nós podemos conectar AI a esta coisa, nós podemos fazê-la fazer coisas específicas, nós podemos runar certos props, muito o que nós podemos fazer, mas quando eu clico em executar o workflow, já que nós adicionamos um trigo manualmente, isto vai runar o workflow, lindo, então agora, o que for depois disto, teria começado, agora os nodes são ótimos, há tantas coisas diferentes que você pode fazer com estas pequenas caixas, neste canvas aberto, que podem fazer com que você tenha muito dinheiro, você tenha muito tempo, e no geral, fazer sua vida muito mais eficiente, então, nós precisamos aprender estas coisas dentro e fora, primeiro, o que eu vou fazer, é mostrar-lhe como renovar estas, então,
+ Este arquivo é mais longo que 30 minutos.
+ Atualize para Ilimitado em TurboScribe.ai para transcrever arquivos de até 10 horas.

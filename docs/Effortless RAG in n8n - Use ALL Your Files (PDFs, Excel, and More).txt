@@ -1,0 +1,121 @@
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)
+
+Fazer RAG AI Agents com o N8n é super fácil. O nodo de agentes de AI, combinado com os instrumentos de retratação e insertação de documentos do VectorStore, faz isso incrivelmente intuitivo para criar uma simples pipeline RAG e usá-la para conversar com seus documentos. A parte mais difícil do todo o setup é realmente só extrair o texto dos documentos que você quer colocar em sua base de conhecimento, especialmente se você quiser usar PDFs ou outros tipos de documentos que não se convertem tão facilmente em texto raw.
+
+No mês passado, no meu canal, eu criei um desses agentes de RAG AI, e um monte de rockstars, talvez você mesmo incluído, extenderam o meu workflow para fazer isso funcionar para seus casos de uso. E tudo com o verdadeiro database de vetores, usando SuperBase, parecia funcionar fenomenalmente para todos. A parte mais difícil apareceu quando eles queriam extender o seu workflow para trabalhar com outros tipos de documentos, como PDFs ou documentos Excel.
+
+Então hoje eu vou te mostrar como trabalhar com diferentes tipos de arquivos para RAG e N8n, para que você possa começar a usar seus documentos PDFs em apenas minutos. N8n, infelizmente, não tem um único nodo que você pode usar para extrair texto de qualquer tipo de arquivo, então o problema não é trivial, mas eu vou desmaiá-lo para você para que ainda seja um setup bem simples, e eu até vou mostrar para você como extender o que eu construí para trabalhar com literalmente qualquer tipo de arquivo. No final deste vídeo, você poderá levar seus PDFs e documentos Excel e upload-os para seu drive Google, junto com um monte de outros tipos de arquivos, e tê-los em sua base de conhecimento, prontos para o seu agente RAG AI em apenas minutos. 
+
+Então vamos lá e adiantar. Tudo bem, então eu queria começar mostrando para você o workflow que eu já tenho para o agente RAG AI e N8n, e este é o que nós vamos extender para trabalhar com documentos PDF e Excel para RAG. Eu já construí isso em outro vídeo no meu canal, então eu vou referenciar isso aqui, e você pode ir lá e ver se você quer adiantar como eu construí isso em um monte de detalhes.
+
+Eu só vou dar uma revisão breve desse agente, e depois vamos para os mudanças necessárias para trabalhar com diferentes tipos de arquivos. Então aqui, este é o antigo workflow, e eu vou mostrar para você o novo agora. Então eu vou clicar nele, e boom, vai parecer quase o mesmo, mas a grande diferença aqui está no fundo direito. 
+
+Então vamos voltar para o antigo, nós estamos extraindo do documento todo o texto com este único nodo aqui, e então no novo workflow, nós temos alguns brancos acontecendo. Então baseado no tipo de arquivo, nós vamos ir a um tipo de extração diferente no N8n para trabalhar com esses tipos de arquivos diferentes, e eu vou mostrar o que isso parece em um pouco aqui. Mas primeiramente, o que eu quero fazer é zoomar e ir para o topo do workflow, para que eu possa mostrar para você em breve o que realmente acontece para nós conversarmos com este agente. 
+
+E então, no começo aqui, nós temos dois triggers. Nós temos um para a entrada de conversa, e isso é o que nos dá esta opção de conversa no meio inferior, onde nós podemos falar com nosso agente dentro da interface do N8n. E então o outro trigger aqui é um Webhook, e é assim que nós podemos usar nosso agente N8n como um API. 
+
+Eu tenho conteúdo sobre isso no meu canal também. Então você pode ter algo como uma aplicação Streamlet ou uma aplicação Next.js construída com cursor ou V0 ou algo que usa este agente através do API. E então o que nós fazemos é que nós temos este agente de ferramentas, e este é onde nós definimos o prompt do usuário, a mensagem do sistema, e nós conectamos nosso modelo. 
+
+Eu estou apenas usando GPT-40 Mini neste caso. Há muitos modelos diferentes que você pode usar no N8n, como através de Grok ou Mixtrol, ou se você quiser usar Clod, você pode fazer isso. E então nós temos um database Postgres super base para a nossa história de conversa. 
+
+E então a única ferramenta ligada a este agente é a ferramenta Retrieve Documents que é dada para nós pelo N8n, que nos permite realizar RAG. E nós temos um Superbase Vector Store para se cuidar disso, e de novo, nós estamos apenas usando OpenAI para nossos modelos aqui para as embedidas, e também para processar os documentos, os pedaços que recebemos do RAG. Então tudo isso juntos é o que nos permite interagir com nosso agente para o RAG. 
+
+Agora, a parte inferior aqui é o workflow onde nós realmente colocamos documentos na base de conhecimento para o agente aqui ter esse contexto. E então, começando com os triggers para este workflow aqui, eu vou passar por estes um passo a vez, porque isso vai nos levar para o final do workflow, onde nós vamos se dividir entre essas opções diferentes aqui, baseadas no tipo de arquivo. Então eu vou clicar aqui. 
+
+Nós temos um trigger para quando um arquivo é criado, nós vamos trigar este workflow, e isso é especificamente dentro de um folhado que eu tenho aqui no meu drive Google. E então nós temos um trigger muito similar para quando um arquivo é atualizado neste mesmo folhado. Então o N8n vai puxar este folhado a cada minuto para qualquer arquivo que for criado aqui, ou se eu mudar qualquer um destes arquivos de qualquer forma, como renombrá-los, ou adicionar ou eliminar conteúdo no arquivo, tudo isso. 
+
+E então, o que eu vou fazer aqui é realmente pegar um evento de teste. E então, dessa forma, nós podemos ver a entrada que nós recebemos para o nosso workflow quando um arquivo é criado. E vai parecer muito similar para quando um arquivo é atualizado também.
+
+E então, eu vou agora ir para o próximo nodo aqui, e você pode ver que nós temos a entrada. Então, isso é exatamente tudo que nós recebemos quando o workflow é triggered, quando um arquivo é criado. E isso é muito importante. 
+
+Eu vou referenciar isso mais tarde, porque há informação aqui que nos diz qual tipo de arquivo nós estamos ingerindo. E dessa forma, nós podemos dividir para o nodo correto de extração para trabalhar com esse tipo de arquivo. E você verá isso em um pouco.
+
+E então, eu vou realizar esse passo também. Nós vamos receber a saída, incluindo o ID do arquivo e o tipo de arquivo. E agora, olhe para isso. 
+
+O tipo de arquivo é aplicação.vnd.googleapps.document. Essa é a notação estándar que denota que o arquivo que nós estamos trabalhando com aqui é um Google Doc. Agora, se fosse um documento PDF, por exemplo, isso seria aplicação.pdf. E a forma que nós recebemos esse tipo de arquivo é através do parâmetro MIME-TYPE da nossa saída de trigger. Então, olhe para isso. 
+
+Quando um arquivo é criado, há um monte de atributos diferentes aqui nesse arquivo. É conteúdo, quando foi criado, quando foi atualizado, a lista continua. Um dos parâmetros aqui é chamado MIME-TYPE. 
+
+É um nome engraçado, mas isso basicamente te diz qual é o tipo de arquivo. De novo, seria algo como aplicação.pdf se fosse um documento PDF. Nós veremos isso também depois, quando eu ativar o mesmo workflow com um documento PDF.
+
+Então, isso é o que nós usamos. Isso é realmente importante, porque é isso que vai determinar como nós branchamos, mais tarde, para o nodo de extração correto. Então, nós recebemos o tipo de arquivo aqui, e a próxima coisa que fazemos é que queremos deletar todos os antigos recordes na nossa loja de vetores para esse documento. 
+
+Porque dessa forma, nós vamos obter um novo conjunto de vetores para esse documento para ter certeza de que não temos versões antigas dele na base de conhecimento, porque isso confunde muito com o LLM. E então, a próxima coisa que nós vamos fazer, depois de fazer esse deletar, é que nós vamos descarregar esse arquivo para o nosso instante N8n, para que ele esteja pronto para nós extrair o texto dele. Porque, neste ponto, nós só temos um arquivo binário que foi descarregado, e então o próximo passo é onde fazemos a extração. 
+
+Agora, chegamos à parte divertida. Isso é onde realmente é diferente do workflow antigo que nós temos aqui, porque no workflow antigo, nós temos um único nodo que extrai o texto do documento. Agora, o problema com isso é que só funciona com tipos de arquivos onde você pode apenas extrair o texto rápido, como um arquivo de texto, um Google Doc, ou, você sabe, um arquivo de marcando, ou um CSV, todos esses tipos de arquivos mais simples. 
+
+Quando nós temos tipos de arquivos mais complexos, como documentos Excel ou documentos PDF, não é tão simples. Então, eu vou mostrar algo muito rápido. Você clica no ícone de mais aqui para adicionar um novo nodo para o workflow, e você procura para extrair. 
+
+Se eu clicar em extrair do arquivo, boom, nós temos todas essas opções aqui para diferentes variações desse nodo de extração que trabalham com tipos de arquivos diferentes. Então, isso é como você dá o poder para trabalhar com um monte de tipos de arquivos diferentes, como HTML, JSON, PDF, Excel, bastante tudo que você poderia precisar, você tem aqui. Então, você também pode extender isso para ter mais branchas para lidar com algo mais, como se eu quisesse incluir HTML também, eu posso adicionar outra brancha. 
+
+E a forma como nós determinamos qual nodo de extração nós vamos para é baseado nesse tipo de mime. Então, o tipo de arquivo aqui que nós recebemos, lembre-se, voltando para o nodo Edit Fields aqui, nós setamos o tipo de arquivo baseado no tipo de mime que está disponível para nós agora nesse parâmetro de tipo de arquivo. Então, é exatamente o que eu estou referenciando nesse nodo Switch aqui. 
+
+Então, se o tipo de arquivo é igual a aplicação e PDF, então nós vamos para essa parte superior aqui para extrair especificamente de um documento de PDF. Agora, o próximo passo que nós queremos fazer é se o tipo de arquivo é equivalente a, essa é a notação exata para uma folha de Google, ou na verdade não uma folha de Google, um documento de Excel, essas são duas coisas diferentes. Se é um documento de Excel, então nós vamos para esse caminho meio aqui, onde nós estamos extraindo de um documento de Excel SX. 
+
+E então, finalmente, se é um documento de Google, nós vamos para essa rota inferior que só extrai o texto raw, porque esse é um formato mais simples onde nós não temos que ter um nodo especial. E também, eu quero chamar que nós temos um valor de default aqui. Então, a opção de recolher, se o tipo de arquivo é nenhum desses três, nós vamos só ir para a rota inferior. 
+
+Então, se é algo como um CSV, ou um readme, ou um texto raw, todos esses também podem ser extraídos desse nodo, então nós vamos usar esse também como uma opção de recolher. Agora, um recurso realmente legal que eu quero apoiar, e eu vou ter um link para isso na descrição. Aliás, eu também vou ter um link para esse funcionamento na descrição também. 
+
+Veja esse recurso aqui. Então, no Google Workspace, eles têm essa documentação que lhe diz a exata linha para cada tipo de mime. Então, se você está curioso, tipo, qual é o tipo de mime para um arquivo de texto rico? Bem, é só aplicação e RTF. 
+
+PDF é aplicação e PDF. Deixe-me zoomar um pouco aqui. Então, é assim que você pode dizer exatamente qual vai ser o tipo de mime para os diferentes arquivos que você pode querer processar e recolher. 
+
+Então, use isso como um ponto de referência para você. Se você quiser extender isso para ter até mais linhas para diferentes tipos de arquivos, use isso para saber qual é o tipo de mime. Claro, a outra solução é também apenas para, você sabe, uploadar um desses tipos de arquivo para o seu Google Drive aqui, ativar o workflow, e aí você vai ver, só entrando aqui, você sabe, qual é o tipo de mime assim. 
+
+Então, você também pode fazer assim, mas essa é uma boa mesa para usar como referência lá. Então, sim, isso é tudo. Então, eu vou ligar esse botão aqui e veremos que vai ir para o Output 2, ou seja, vai para essa linha de baixo. 
+
+Então, o índice está começando com 0, então o PDF é Output 0, o Excel é Output 1, e então a opção de recolher também para o Google Docs é Output 2. Então, saímos daquele dados, e então, aqui, nós só extraímos o texto. Essas são algumas notas de encontro falso que eu só tenho no meu Google Drive, e então nós inserimos essas notas no Vector Database com esse passo final aqui. Então, isso é tudo para um documento, como um Google Doc, e agora eu quero, na verdade, uploadar um documento PDF. 
+
+Então, eu uploadei um documento PDF para um novo folder que eu criei no meu Google Drive. Eu vou ter um folder separado para cada um desses arquivos aqui. Eu vou demonstrar o arquivo Excel também, só porque NaN não necessariamente tem o arquivo mais recente uploadado quando você faz um evento de teste, e eu quero demonstrar desse jeito. 
+
+Então, eu vou garantir que ele tem o arquivo que eu quero através de tê-lo através de um novo folder. Então, dentro da NaN aqui, para os triggers, eu mudei o folder para o PDF, e então, agora, quando eu clico no evento de teste, eu sei com certeza que ele vai puxar o meu PDF. E, com certeza, o meu tipo de memória é Aplicação.pdf agora. 
+
+Eu diria, então, que, sim, você tipicamente quer mantê-lo em um único folder, obviamente, e então, quando você tem esse funcionamento em modo ativo, esses triggers vão ativar para qualquer arquivo que você crie ou atualize no seu Google Drive, sem você ter que ativar esses passos manualmente. Então, não pense que você sempre vai ter que ativar esses passos manualmente. Eu só estou fazendo isso aqui porque eu quero demonstrar a saída a cada passo do caminho para fazer isso realmente claro para você.
+
+Então, agora, o que eu vou fazer é ir para o botão. Eu vou clicar no evento de teste, e isso vai ativar tudo que leva até esse nodo aqui. E, com certeza, o folder que ele escolheu agora é o primeiro folder, porque o meu tipo de memória é Aplicação.pdf. E, então, agora, você pode ver esse arroz verde aqui. 
+
+Deixe-me zoar. Esse arroz verde pinta para o topo Extract from PDF agora, porque ele fez essa decisão baseado no tipo de memória. E, então, agora, quando eu ativar isso, ele vai extrair o texto do PDF. 
+
+Agora, uma coisa a manter em mente é que essa saída é diferente da saída do texto de documento extraído. A saída desse nodo vai para um fiel chamado Data, mas a saída do PDF vai para um atributo chamado Text. E, então, algo super importante para se manter em mente. 
+
+Isso é como um grande arroz verde que me atropelou, mesmo quando eu comecei a estabelecer isso. Quando você vai para o seu loader de documento de default, é aqui que você loa o texto para depois dividir em pedaços. Seu Data tem que corresponder ao fiel de saída do nodo Extract. 
+
+Então, se você está extraindo de um arquivo de texto RAW, ou como um doc do Google, seja o que for, vai ser json.data. Porque, de novo, voltando para esse nodo, ele sai para o fiel Data. Mas, então, se você está extraindo de um documento de PDF, vai ser json.text. Então, de novo, voltando para esse nodo aqui, ele sai para o atributo chamado Text. E, então, a forma que você pode fazer isso, dentro do double-squiggly-bracket JavaScript aqui, é que você pode dizer, eu quero acessar esse atributo. 
+
+Se ele não existe, então eu vou para esse atributo. E, então, se ele não existe, como se fosse um arquivo de Excel, então eu quero usar o atributo que foi extraído para o arquivo de Excel. Porque um pequeno pequeno pequeno aqui para o... Sim, isso vai sumarizar aqui. 
+
+O passo final para extrair um documento de Excel, é ir para um fiel chamado concatenado de dados. Então, é realmente importante manter em mente, você tem que setar isso para trabalhar com os diferentes atributos que podem ser extraídos desses diferentes nodos. Então, eu posso, então, usar isso para inseri-lo no nosso database de vectores. 
+
+E, vamos ver. Bum, aí está. Nós inserimos quatro itens, porque separou nosso PDF em quatro partes diferentes aqui. 
+
+Tudo bem, então, está indo bem. Então, agora, a última coisa que queremos fazer muito rapidamente é só um documento de Excel. Então, eu vou postar isso e volto quando estiver pronto para testá-lo também. 
+
+Tudo bem, então, eu tenho um arquivo de Excel neste novo fiel chamado Excel. De novo, só para garantir que este é o evento de teste que foi extraído. Então, se eu clicar no evento de teste extraído, nós agora temos um arquivo de Excel. 
+
+Então, eu vou pular para o tipo MIME e aqui vamos nós. Nós temos esse formato específico. E, se eu voltar para essa folha que a Google dá e eu faço uma pesquisa, com certeza, este é exatamente o tipo MIME que lhe diz esperar para um arquivo .xlsx. Então, agora, eu vou fazer a mesma coisa em que eu apenas vou para a folha e vou fazer tudo que liga para ela e vamos ver o que ela escolhe esta vez.
+
+E aí vamos nós. Sim, ela escolheu a segunda folha para os arquivos de Excel. Então, agora, é um pouco mais específico com como você processa esses tipos de arquivos. 
+
+E isso é algo que provavelmente farei um vídeo sobre depois em meu canal, porque há muitas formas diferentes de dividir recordes em um arquivo CSV para RAG. O que eu vou fazer aqui é que eu vou mantê-lo bem simples. Eu vou extrair tudo em um formato de mesa, aqui, e depois eu vou agregar cada um desses recordes juntos em um único item. 
+
+E então, basicamente, eu vou pegar o inteiro arquivo Excel e tratá-lo de texto RAW para colocar-o de acordo. E então, eu vou sumarizar aqui, que é basicamente só vou pegar este array e transformá-lo em um único fio. E este é o fio que eu vou colocar no meu database para RAG. 
+
+Há um milhão de maneiras diferentes de fazer isso. Você pode querer criar um recorde para cada rota no seu database de vetores, ou talvez você queira ter 10 recordes por rota. Há muitas coisas diferentes que você pode fazer para brincar com como você ingere documentos em um formato de mesa como este. 
+
+Eu diria que muito disso depende do seu caso de uso. Então, de novo, eu provavelmente farei um vídeo sobre isso no futuro, mas, agora, eu vou fazer algo realmente, realmente simples, onde eu apenas transformo o documento inteiro em um único fio que eu coloco, como eu faria com um fio de texto RAW. E, com isso, nós temos tudo que precisamos para inserir este documento no database de vetores. 
+
+E, com certeza, ele só inseriu um único recorde aqui, porque, sim, como eu disse, eu essencialmente só tratei isso como um fio de texto RAW pequeno, em vez de, você sabe, um monte de diferentes recordes em uma folha de Excel. E, então, com isso, nós podemos agora passar para a nossa tabela de documentos. Ele será populado agora com todos esses diferentes recordes aqui. 
+
+E, sim, nós temos o nosso Google Doc aqui, e então nós temos todos esses diferentes vetores para o nosso documento de PDF. E, então, nós temos o documento de Excel aqui também. E, então, o que eu vou fazer é abrir a minha janela de conversa aqui e apenas perguntar uma pergunta que ele só saberia baseado no meu, vamos apenas fazer o meu documento de PDF. 
+
+Então, eu diria, quais são os itens de ação para Chris ou de Chris? Vamos ver o que ele diz sobre isso. Então, ele vai ir e procurar os vetores aqui. Isso vai ser algo no meu documento de PDF. 
+
+E, sim, Chris tem dois itens de ação. Finalizar o teste de beta para o Space Rangers, apresentar uma proposta de gráfico para horas de trabalho flexíveis. E nós podemos até ir para o nodo de Superbase aqui e ver o que ele pegou da nossa base de conhecimento.
+
+E aí vamos nós. Ele pegou quatro diferentes partes aqui, ou eu acho que três diferentes partes aqui. E isso deu tudo que precisava para responder a pergunta. 
+
+Então, isso está funcionando perfeitamente. Então, eu espero que esse foi um bom seguimento para o vídeo anterior, em que eu criei um agente de A.I. para que você possa levar isso para frente com qualquer tipo de documento que você queira ter em sua base de conhecimento. Se você tem alguma pergunta, apenas me diga nos comentários. 
+
+Eu adoro ajudar você enquanto você está tentando descobrir como ingerir diferentes tipos de documentos, como você melhor quer dividi-los para sua base de conhecimento e toda aquela coisa boa. Se você apreciou esse conteúdo, eu realmente apreciaria um like e um inscrevimento. E com isso eu vejo você no próximo vídeo.
+
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)

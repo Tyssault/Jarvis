@@ -1,0 +1,114 @@
+The Easiest Ways to Run LLMs Locally - Docker Model Runner Tutorial
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Há agora um jeito ainda mais fácil de gerar modelos de AI localmente, além de usar o Olama. Agora, a Docker acabou de lançar o seu modelrunner, e este é um mudador de jogos completo para gerar modelos localmente, então eu quero mostrá-lo a você neste vídeo. Agora, como o Olama, você pode gestionar, gerar e deplocar modelos localmente com APIs compliantes com OpenAI.
+
+Mas o real mudador de jogos é que tudo isto é construído direto no desktop do Docker, então você não precisa instalar o CUDA, você não precisa instalar um driver, você pode apenas ativá-lo e começar a usá-lo direto. Agora, você pode puxar modelos diretamente do Docker Hub ou do Hugging Face, e então você pode gerá-los da linha de comando ou dos seus contêineres e deplocar aplicações de GenAI muito rapidamente. Então, nos próximos minutos, eu vou mostrar exatamente como setá-lo e como construir duas aplicações reais, de uma simples aplicação de conversão Python para um dashboard streamlit contêinerizado.
+
+Isto tudo vai ser usado com o modelrunner do Docker. Vamos adentrar-nos nele. Agora, antes de adentrarmos, deixe-me rapidamente cobrir o que você precisa ou as requerências para poder gerar o modelrunner do Docker.
+
+E também vou rapidamente disclô-lo que eu timei com o Docker para este vídeo, mas tudo o que você vê aqui é completamente grátis. Certo, então se você está no Mac e está usando os chips Apple mais novos, então como o M1, o M2, o M3, etc., então você está no topo, isto vai funcionar perfeitamente, e está na verdade capaz de utilizar o GPU e não apenas o CPU. Porém, se você ainda está usando o legacy Intel Macs, então infelizmente não há suporte para isto, então você não vai poder usar isto.
+
+Agora, para os usuários do Windows, você pode usar isto em ambos o CPU e o GPU, só que você tenha um GPU Nvidia no seu sistema. Agora, ele vai de fato usar o CPU, mas se você tiver um GPU disponível, então ele automaticamente usará isto, de novo, só que seja um cartão Nvidia. Agora, se você está no Windows ARM e está usando um GPU Qualcomm, então isto vai funcionar também.
+
+Ok, e para os usuários do Linux, isto funciona em ambos os set-ups apenas para o CPU, assim como configurações para o GPU Nvidia, o que é na verdade muito legal, o que significa que você pode utilizar modelos pequenos em um pequeno VM Linux no CPU, ou, se você quiser usar modelos grandes, então você pode, é claro, ter um GPU Nvidia, e isso vai funcionar no Linux. Agora, ao contrário de muitas das outras soluções, você não precisa instalar drivers CUDA, você não precisa enganar qualquer configuração de GPU, o Docker maneja tudo isto para você, e ele automaticamente escolhe o GPU, se estiver disponível no seu sistema. Ok, então com isso dito, deixe-me mostrar como instalar isto, vamos para o computador.
+
+Ok, então estou no computador agora, e vou mostrar-lhe os set-ups muito simples para fazer isto funcionar no seu computador, e depois vou mostrar-lhe como funciona. Então, o que você vai precisar para que isto funcione, é o desktop do Docker instalado na sua máquina. Isso é basicamente tudo.
+
+Uma vez que você tenha o desktop do Docker instalado, então você precisa abri-lo, e você precisa ir para o botão de set-ups, ok, ou a página de set-ups. De set-ups, você vai aqui para onde diz Beta Features, e você vai ver que tem Enable Docker Model Runner. Aqui, vamos selecionar isto, e vamos ter certeza de que enablamos o suporte de TCP do lado de host, para que possamos usar isto de algo como o código do Python.
+
+Depois, se você quiser, você pode enablar a inferência de GPU também. Ok, então isso é literalmente tudo. Uma vez que você enabou isto, apenas clique em Aplicar, e depois você pode usar o Model Runner para interagir com modelos diretamente do desktop do Docker, ou você pode fazer isso pela linha de comandos.
+
+Então, se a gente fechar isto aqui, você vai ver agora no desktop do Docker que você deveria ter este botão de modelos aparecendo, uma vez que você tenha enablado o Model Runner. Daqui, você pode clicar em Modelos, e então deve mostrar vários modelos que você pode instalar. No meu caso, eu já tenho os dois pequenos instalados, e você pode ver que são 300 megabytes aqui, ou 360 megabytes, mas o que a gente pode fazer é puxar modelos diretamente do Docker Hub, então você pode ver que há algumas opções aqui, e a gente pode descarregá-los, ou a gente pode puxar deles do Hugging Face.
+
+Ok? Então escolha qualquer modelo que você quiser, eu só fiz o pequeno dois, então eu só pressei em Puxar nisso, descarreguei para a minha máquina, demorou um segundo, e eu estou só usando isso porque é muito pequeno para este vídeo. Ok, então uma vez que você tem um dos modelos puxados, então o que você pode fazer é apenas pressionar em Run, e então você será levado para este interface, onde você pode diretamente conversar com ele. Então, oi, o que está acontecendo, certo? E a gente pode enviar isto, e a gente pode receber uma resposta, obviamente extremamente rápido, localmente no meu próprio computador, e neste caso, está usando o meu GPU.
+
+Ok, então é assim que você pode fazer isso diretamente do seu Desktop do Docker, você também pode inspecionar e ver o que está acontecendo com o modelo aqui, mas se você quiser, você pode, é claro, fazer isso da linha de comando também. Então, se abrimos um terminal, ou vamos abrir CMD aqui, então tudo o que temos que fazer é escrever docker model, assim. Quando você faz o comando docker model, deixe-me fazer este fullscreen para que vocês possam vê-lo, você vai ter uma lista de como usar este comando, assim como todas as outras opções.
+
+Se você já usou o Lama antes, isto é muito similar. Então, se você quisesse puxar um modelo, por exemplo, você pode dizer docker pull, ou, desculpe, docker model pull, e então você pode especificar o nome do modelo que você quer. Agora, de novo, você pode puxar estes modelos diretamente do Docker Hub, então você pode ver aqui que os modelos estão representados como artefatos OCI dentro do Docker Hub, se isso significa alguma coisa para você.
+
+Se não, não se preocupe muito com isso, mas você pode ver que há um monte de opções diferentes e você pode executá-los. Agora, o que também é interessante é que você pode puxar modelos e você pode paquetear seus próprios modelos e depois reutilizá-los mais tarde. Ok, então, se quisermos puxar um modelo, podemos dizer docker model pull, podemos encontrar um.
+
+Então, vamos aqui e vamos puxar, talvez, o AI Gemma 3. Então, vamos para o AI slash Gemma 3, assim. Vai levar um segundo e vai puxar esse modelo para nós. Enquanto isso está funcionando, também vou mencionar que há várias versões diferentes que você pode usar.
+
+Você pode especificar o número de parâmetros que você quer quando você está puxando estes modelos. Ok, então, o modelo foi puxado. Então, agora, se quisermos puxar isso, podemos fazer docker model e, se quisermos listar os modelos que temos atualmente, podemos clicar em listar e podemos ver as opções.
+
+Ok, então, aqui temos Gemma 3. Então, vamos para docker model run e depois vamos apagar o nome do nosso modelo, fazer com que ele se pareça exatamente com o que você tem aqui. Vá em frente e clique em entrar e depois você pode começar a conversar com ele. Então, você pode dizer, Ei, qual é o significado da vida? Ou algo assim, certo? E devemos receber uma resposta bem rapidamente aqui.
+
+Ok, e então você pode ir. Está gerando os tokens e vai nos dar a resposta. Ok, então, eu vou desistir disso.
+
+A propósito, depois que você está neste chat interativo, se você quiser sair, você pode escapar ou sair dele clicando em CTRL C no seu teclado ou você pode escrever slash buy e isso vai te exigir de fora. Agora, é claro, há muitos outros comandos que você pode usar aqui. Por exemplo, pacote, puxar, remover, correr, status.
+
+Eu não vou passar por todos eles. O que eu vou fazer agora é mostrar um exemplo de como podemos usar o model runner de código porque, claro, é interessante lançar isso em um chat interativo, mas muitas vezes queremos o nosso código para poder interagir com os modelos que temos no nosso computador localmente. Primeiro, eu vou passar um pouco de informação importante e depois vamos entrar nessas demonstrações.
+
+Você verá os timestamps no jogador de vídeo. Tudo bem, então, ao contrário das aproximações tradicionales containerizadas, os modelos eles mesmos, do model runner do Docker, estão funcionando diretamente no sistema de operação de host. Ok? Eles não estão funcionando dentro de um container.
+
+Isso significa que eles recebem acesso direto para os recursos do seu sistema, como seu GPU, por exemplo, e sua memória, para que você possa utilizar o máximo de performance desses modelos. Agora, quando você pula um modelo para baixo, ele não é pacoteado como uma imagem de contêiner. Em vez disso, ele é downloadado como um arquivo de modelos e ele está guardado no seu diretório do Docker.
+
+Agora, os modelos podem usar inteligentemente tanto o seu CPU quanto o seu GPU, dependendo do que está disponível. Agora, o benefício dessa arquitetura é que você tem a velocidade de execução nativa enquanto mantém a simplicidade do workflow do Docker. Então, a coisa importante para entender é que isso está funcionando na máquina de gerador, não em um contêiner.
+
+Se isso não significa nada para você, não se preocupe, mas para aqueles de vocês que são um pouco mais avançados, isso é uma coisa importante que você deve saber. Ok, agora, rapidamente, eu também só quero ir sobre como isso se compara com o Ollama, porque muitos de vocês provavelmente já estão usando o Ollama e estão se perguntando qual é o ponto do modelo de Docker de roteiro. Agora, a maior diferença aqui é a arquitetura.
+
+Então, com o Ollama, seus modelos estão funcionando dentro do serviço de gestão de Ollama, mas com o modelo de roteiro de Docker, eles funcionam diretamente no seu sistema de gestão, então você acaba recebendo melhor performance. Agora, integracionalmente, quando você usa o modelo de roteiro, ele é construído direto no desktop de Docker e funciona semelhante com Compose e vários outros ferramentas de desenvolvimento, então o enteiro ecossistema do Docker, enquanto o Ollama é realmente mais um ferramento stand-alone. Agora, ambos estes oferecem APIs compliantes com OpenAI, mas eles usam portos diferentes.
+
+Agora, o Ollama faz seu serviço disponível no porto 11434 e o modelo de roteiro usa o porto 12434, então note essa distinção importante. Agora, se você já está profundo no ecossistema do Docker e você está usando muito e quer integração nativa, então isso realmente é a melhor coisa para usar porque vai integrar já no seu funcionamento, faz muito mais fácil de desempenhar aplicações de GenAI. Enquanto se você usasse o Ollama, por exemplo, tipicamente o que você faria é virar sua própria instância de servidor de Ollama e aí você precisaria manejar isso independentemente comparado aos seus conteúdos de Docker.
+
+De qualquer forma, essa é a distinção principal, essa é a diferença entre Ollama e o modelo de roteiro de Docker. Se você já está usando o Docker, você pode usar isso e, efetivamente, faz a mesma coisa que o Ollama, a exceção da diferença de arquitetura e faz com que seja muito fácil acessar os modelos. Então, com isso, vamos entrar em algumas demonstrações de código aqui e eu quero te mostrar como você pode acessar o modelo de roteiro localmente no seu próprio computador e como você pode usá-lo dentro de um conteúdo em uma configuração de Docker.
+
+Então, agora que já passamos por isso, eu estou de volta no computador e eu vou te mostrar como você pode interagir com esses modelos de algo como código Python. Agora, o modelo de roteiro de Docker expõe todos os modelos e o serviço que ele está providendo no porto 1, 2, 4, 3, 4. Então, como o Ollama, o que você pode fazer é simplesmente interagir com essa URL. Você pode ir para slash engines slash llama.cpp slash v1 slash chat slash completions.
+
+Existem alguns outros também que ele provide e você pode gerar completões baseadas em várias mensagens. Agora, isso é o que se chama um API compliante para o OpenAI, o que significa que ele segue a mesma prática como algo como OpenAI ou GPT. Então, como você já interagiu com modelos antes, você pode fazer a mesma coisa, só que agora você está usando isso aqui como sua base URL.
+
+Então, eu só tenho um script bem simples aqui em Python que mostra como isso funciona. Importamos pedidos, então eu só tenho algum dados. Então, neste caso, eu especifico, opa, vamos fechar isso, o modelo que queremos usar e então eu especifico as mensagens que queremos enviar.
+
+Então, temos uma mensagem de sistema e então uma mensagem de usuário. E então você pode ver aqui que nós geramos um pedido, nós dizemos, pedido.post para esta URL, passamos o nosso dado, esperamos para obter a resposta e então o que fazemos é simplesmente imprimir o conteúdo da resposta. Então, daqui, eu vou escrever uv run e então main.py, este é o script que estou rendendo aqui.
+
+Você verá que vai demorar um segundo e então ele vai gerar esses 500 personagens para nós. Ok, então aqui vamos nós, podemos ver que recebemos os 500 palavras que pedimos para gerar, que é o que eu coloquei no prompto aqui. Agora, eu só quero mostrar para você que, porque isso é compliante com OpenAI, isso também significa que você pode usar outras bibliotecas que o Python tem para interagir com este, o que você chama? ModelRunner.
+
+Então, aqui, o que eu fiz é que eu simplesmente usei a biblioteca OpenAI. Então, há uma biblioteca que você pode instalar no Python chamada OpenAI. E o que eu fiz é que eu simplesmente mudei a base URL de ser a base URL OpenAI para ser a base URL ModelRunner do Docker e agora vamos começar a interagir com ela apenas usando esta biblioteca.
+
+Então, esse é o vantagem de isso ser compliante com OpenAI. Você pode ver que eu criei este cliente OpenAI, eu mudei a base URL, a chave API precisa estar aqui, mas pode ser qualquer coisa, não importa o que seja. Eu especifico o modelo, eu preparo a mensagem e então eu posso criar uma resposta, novamente, usando esta biblioteca em vez de enviar um pedido manual.
+
+Apenas para provar isso para você, podemos ir para uv run e então, novamente, OpenAI version.py. Isso vai demorar um segundo e então deve explicar para nós como funcionam os transformadores. Ok, então você pode ver que recebemos a resposta e novamente, eu só quero clarificar a razão pela qual isso é realmente importante é porque isso é compliante com OpenAI, todos os módulos, tipicamente, que você está usando no Python já sabem como interagir com este tipo de API. A única coisa que você precisa oferecer a eles para começar a usar o Docker ModelRunner em vez de Olama, por exemplo, é apenas esta nova base URL onde você está especificando onde a API mora.
+
+Então, novamente, isso é um grande vantagem e isso significa que você pode usá-lo com librarias existentes, como a do OpenAI, como o LangChain, como o LangGraph, etc. Então, agora eu mostrei para você como fazer isso de seu próprio computador local. Agora, eu quero mostrar para você como podemos interagir com isso de um conteineiro docker.
+
+Então, para este próximo exemplo, eu vou mostrar a você a mesma coisa, exceto em uma aplicação containerizada usando o docker, para que você entenda como este todo o funcionamento se junta se você for usar isto em um conteineiro docker. Agora, o que eu fiz é eu setei uma aplicação muito simples de streamlet, ok? Então, isto é apenas uma UI simples que te permite conversar com um LLM. É isso, ok? E perceba que o que eu fiz aqui é que eu inicializei um cliente usando uma base URL que eu vou obter deste arquivo backend.env. Agora, deste arquivo env.
+
+eu especifico a base URL, o modelo, e então é apenas um tipo de chave API dupla. Não importa qual é a chave API, nós só precisamos dela para esta libraria particular, porque se você não tiver uma, ela vai jogar um erro. Ok.
+
+Então, aqui o que eu faço é especificar a base URL desta vez igual a host.docker.internal. Então, da última vez, você teria visto que eu estava usando localhost. Então, eu estava usando localhost port 12434 para comunicar com a API. Neste caso, eu o trocei para host.docker.internal. Então, este é o principal mudante que você vai precisar fazer se você quiser interagir com o modelrunner de um conteineiro docker.
+
+Agora, lembre-se, a forma como isto funciona é que o modelrunner vai estar funcionando na máquina operacional do host. Portanto, este host.docker.internal. Então, isto é o que você precisa mudar a URL para, para que o conteineiro saiba ir e, essencialmente, navegar para a máquina do host, em vez de procurar outra instância ou aplicação conteineirada. Ok.
+
+Então, isto é o que nós fizemos. Nós apenas mudamos essa URL. E, claro, nós precisamos fazer algumas coisas no nosso .docker.compose e .docker.file. Então, do nosso .docker.compose, você vê que eu tenho uma configuração muito básica aqui, e eu especifico uma aplicação.
+
+Estou construindo isto no diretório .slash-app. Ok. Eu tenho o meu arquivo de variáveis de ambiente. Este é o portão que a minha aplicação vai funcionar, que é 8501 para o Streamlet.
+
+E, então, eu apenas adicionei isto. Eu disse que depende do LLM. A razão pela qual eu preciso disso é porque nós vamos estar comunicando com o runner do docker.
+
+Então, eu tenho que dizer, Ei, nós precisamos disso. Nós vamos estar olhando para o LLM ou tentando falar com ele. Então, eu simplesmente especifico o serviço do LLM.
+
+Então, para o serviço do LLM, eu diria, ok, este é o LLM. Temos um provider. O tipo é modelo.
+
+E, então, as opções são este modelo específico. Agora, isto pode ser carregado do seu arquivo .env. Ou você pode especificar manualmente o que você quer que o nome do modelo seja. Isto aqui é apenas o backup.
+
+Então, se não encontrarmos uma variável para o nome do modelo, então nós usaríamos este modelo aqui. Ok. Muito básico.
+
+Isto é literalmente tudo que você precisa fazer. E, então, é claro, eu só tenho um arquivo docker muito simples aqui. Isto é como qualquer coisa que você veria apenas para runar o meu código Python.
+
+Então, agora, o que eu posso fazer é começar a runar isto. Então, eu posso dizer docker compose e, então, build. Então, isto construiu a imagem para mim.
+
+E, então, eu posso dizer docker compose e, então, up. E eu posso colocar o conteineiro up. E, então, você verá que está agora runando.
+
+Então, o que eu posso fazer é abrir isto agora. Então, deixe-me apenas abrir isto no meu browser. Ok.
+
+Então, você pode ver que eu abri esta aplicação streamlet que está runando no localhost port 8501. E, então, eu posso enviar um pedido aqui. Vai receber uma resposta.
+
+E, então, deve gerar isso para nós usando o docker model runner. E você pode ver que recebemos a nossa resposta. Então, a mudança principal é que você precisa ter certeza de que você especificou que está dependendo do serviço LLM.
+
+Provide o serviço LLM aqui. E, então, faça com que você esteja usando este host.docker.internal em vez de usar localhost quando você está tentando se comunicar com o API. Ok.
+
+Isto é basicamente tudo. Eu acho que isto é uma ferramenta muito, muito legal. Especialmente se você usar docker muito.
+
+Isto vai fazê-lo significativamente mais fácil para deplocar aplicações de GenAI. Se você gostou do vídeo, deixe seu like, se inscreva no canal e eu vejo você na próxima.
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.

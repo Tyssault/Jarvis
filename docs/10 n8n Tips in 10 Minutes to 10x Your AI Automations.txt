@@ -1,0 +1,77 @@
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)
+
+N8n é o meu produto favorito de automação sem código AI, onde você pode basicamente construir qualquer agente de AI que você quiser e integrá-lo muito facilmente com mais de 500 aplicações diferentes. Mas, há algumas partes da plataforma que eu vejo que as pessoas não gostam muito. Então, neste vídeo, eu vou dar os meus 10 dicas para trabalhar com o N8n em 10 minutos.
+
+Especificamente, focando nas partes subutilizadas e mais difíceis da plataforma para fazer você 10 vezes melhor dentro do N8n. Também, vamos lançar uma secção dedicada para o N8n na nossa comunidade do Automator Think Tank, então fiquem atentos para isso. O objetivo aqui é te dar um monte de valor muito, muito rapidamente.
+
+Há outros vídeos no meu canal onde eu desço para a construção de funções inteiras com o N8n, mas aqui vai ser um pouco diferente, vamos ir meio rápido. Então, um monte de coisas para descer, vamos lá. Certo, meus primeiros dois dicas aqui vão ser mais recomendações relacionadas a agentes de AI.
+
+A primeira é que muitos tutoriais do N8n para agentes de AI mostram usando a memória de bufa de janela para a história de conversa do seu agente, e então a memória de memória do VectorStore para o RAG. Eu recomendo muito não usar nenhum desses. Eles não escalam.
+
+Assim que você tiver usuários na plataforma, não vai funcionar muito bem na produção, porque esses funcionam na memória do seu instante do N8n, e não é muito escalável. O que eu recomendo usar em vez, e isso é muito, muito fácil de montar, é o SuperBase, porque há um database SQL com Postgres dentro do SuperBase, e então você pode usar para a memória de conversa do seu Postgres, e também há uma extensão chamada pgVector para embutimentos para o RAG, então você pode usar o SuperBase VectorStore. Então, ainda é uma plataforma, mas vai ser pronto para a produção e muito, muito escalável.
+
+SuperBase é incrível, então essa é a minha recomendação aqui. Dica número dois. Muitas pessoas me perguntam quais modelos de línguas grandes eu deveria usar dentro dos meus workflows do N8n.
+
+E a resposta curta é que depende muito do seu uso, mas eu posso dar uma recomendação geral só para que você tenha algo bom e passe direto para a construção dos seus workflows. Então, se eu clicar no modelo de conversa aqui, podemos ver nossas diferentes opções. E o que eu diria é que se você quiser o melhor modelo de línguas grandes do momento, eu escolheria o Anthropic e iria com o Clod 3.5 Sonnet.
+
+Se você precisa de algo que é absolutamente rápido e você não precisa de algo que é super poderoso, eu iria com o Grok e iria com o Llama Model. E finalmente, para algo que é muito, muito barato, mas ainda é bastante forte, eu escolheria o OpenAI e iria com o GPT-40 Mini. E então, para o modelo de embedição, eu recomendo muito ir com o Text Embedding 3 Small para o seu modelo de OpenAI e ter isso para o RAG.
+
+E então, qualquer modelo que você escolher aqui para o seu modelo de conversa, eu também iria usar isso para o modelo que processa as partes do seu RAG. Certo, então os próximos alguns dicas que eu tenho aqui serão baseados nesse agente RAG AI que eu criei em outro vídeo no meu canal. A primeira dica aqui, número 3, é que você tem que extrair texto de diferentes tipos de arquivos com diferentes nodes em N8n.
+
+Então, se você quiser extrair texto de um documento PDF, isso realmente tem que ser um node diferente comparado com se você quiser extrair texto de um documento de texto ou uma folha de Excel. E então, quando você clica no ícone de mais para adicionar e extrair de um node de arquivos, você tem todas essas opções diferentes aqui. Então você tem que incluir todas as opções do seu workflow aqui baseado nos tipos de arquivos que você vai ingerir no seu database de vectores.
+
+E eu vou em detalhes para como instalar esse tipo de coisa nesse outro vídeo no meu canal que eu vou ter referência aqui. Dica número 4, como trabalhar com as saídas do node anterior no seu node atual. E o que eu quero dizer com isso é que se eu clicar no node de setfileid aqui, eu referencio a saída de fileid e mimetype do node anterior aqui, que é o Google Drive Trigger que eu tenho.
+
+E a maneira que você recebe essa saída na esquerda é que você só tem que fazer uma execução de teste clicando no passo de teste. Você terá essa saída e agora, se eu quiser, eu posso ir e encontrar a ID de novo, apertá-la assim e é assim que ela cria uma expressão para referenciar o valor do node anterior. E você vai fazer esse tipo de coisa em basicamente todo o seu workflow.
+
+Mas aqui é onde as pessoas ficam confusas. Esse jeito de referenciar um node anterior só funciona para o node que foi jogado antes. Então o node que foi jogado antes desse node.
+
+Se você quiser, por exemplo, ter um download file referenciar um valor de dois nodes de volta, você não pode apenas dizer json.fileid mais. Você tem que referenciar o nome desse node. Então setfileid corresponde ao setfileid que vemos aqui.
+
+É assim que você pode referenciar esse valor. Se você fizer json. aqui, você só vai poder referenciar esses valores do node anterior.
+
+Então essa é a distinção entre quando você pode usar json. e quando você tem que referenciar o nome do node. Dica número 5. Quando você está construindo agentes de AI dentro de N8n, muitas vezes você quer que eles sejam pontos de fim do API, então você pode integrá-los em outras plataformas, como OpenWebUI ou um código custom Python que você desenvolveu.
+
+Há tantas plataformas diferentes que você quer integrar com N8n. E a forma como você faz isso é através de um node Webhook. Então você tem isso como um ponto de entrada para seu agente, mas também é legal poder testar seu agente na plataforma com esse widget de conversa aqui.
+
+E a forma como você pode fazer isso é adicionando o WinChatMessageReceiveTrigger. Então se eu só procurar por conversa aqui, eu tenho o chat trigger. Então você pode ter ambas de uma vez.
+
+E você combina essas duas juntas nesse EditFields, que tem essa síntese de JavaScript específica aqui para pegar qualquer valor definido. Então não importa qual input ele vem de, ele vai pegar o valor certo, como se meu último mensagem fosse hi, aqui. Então, essencialmente, se o input de conversa é definido, eu pego esse valor, senão eu pego o corpo da requesta web.
+
+Então esse é o chat trigger, esse é o Webhook trigger, e ele pega o valor, não importa qual é usado. Então é assim que você pode setar seu agente para ser um Webhook, mas também poder testá-lo com N8n, o que é super valioso. Dica número seis.
+
+Muitas pessoas não lidam bem com looping com N8n. Quando você tem nodes que podem dar múltiplos itens em um único output, como o Google Drive triggers, por exemplo, você tem que ter cuidado com como você maneja isso. Então uma coisa importante com N8n é que ele automaticamente maneja looping no sentido de que se um nodo produz múltiplos itens, eles serão processados um a um para o próximo nodo.
+
+Mas há algumas coisas importantes para se manter em mente com isso, porque, por exemplo, se você está tentando extrair o texto de um arquivo Google Drive e enviar isso para um modelo de linguagem grande, por exemplo, o que você vai fazer se há dois arquivos que foram criados ao mesmo tempo? Esse fluxo de trabalho precisa ser capaz de manejar isso. Então eu vou para uma execução na minha história para te dar esse exemplo. Nesse caso, havia dois arquivos que foram criados ao mesmo tempo.
+
+Então há dois itens na saída desse nodo de trigger e eu tenho que manejar ambos. E o jeito que eu faço isso, nesse caso especificamente, é depois que eu extrao o texto de ambos os arquivos aqui. Você pode ver que dois itens estão passando por toda essa pipelinha.
+
+Eu tenho esse nodo de sumação, o N, que na verdade concatena a saída de ambos esses arquivos juntos em um único parâmetro que eu posso, então, ir para o resto do meu fluxo de trabalho, dando para um modelo de linguagem grande, por exemplo. Esse é apenas um exemplo, mas o principal dicado aqui é apenas ser cuidadoso sobre como você maneja múltiplos itens em um único fluxo de saída no seu fluxo de trabalho N8n. Você tem que realmente pensar nisso.
+
+Dica número 7 é pinar dados. Uma função muito desutilizada do N8n, porque muitas vezes quando você está em seus fluxos de trabalho aqui, você precisa executar um evento de teste para que você possa ter a saída na direita aqui para então vê-la como a entrada para o próximo nodo, para que você possa pular e baixar e referenciar esses valores dinamicamente. Mas quando eu refresco o N8n ou fecho e volto, eu perco isso, então eu tenho que executar o evento de teste de novo, o que é realmente irritante.
+
+Mas o que você pode fazer é, se eu clicar no botão aqui, você pode clicar no botão de dados de pin no topo direito, e assim, esse outputo específico vai estar lá, mesmo se eu fizer um reload duro. Então eu vou salvar e fazer um reload duro e veremos que o dado de pin ainda está aqui, e então agora eu não tenho que executar o evento de teste de novo. Então isso acelera o desenvolvimento muito quando você volta para seus fluxos de trabalho.
+
+Dica número 8 é o erro de fluxos de trabalho, e isso é super importante para realmente fazer seu N8n fluxos de trabalho prontos para produção, porque você tem que manejar bem quando algo está errado, e tudo o que você tem que fazer no N8n para isso é criar um novo fluxo de trabalho com um erro de fluxo de trabalho. Então se eu clicar na opção de adicionar um nodo aqui e então procurar por erro, eu tenho esse erro de fluxo de trabalho, super fácil de adicionar, e eu vou mostrar como conectá-lo em outro fluxo de trabalho em um segundo, mas você pode fazer coisas aqui, como por exemplo, enviar uma mensagem Slack com os detalhes de erro, para que você saiba ir e manejar o que aconteceu dentro do fluxo de trabalho. E estabelecer isso é realmente, realmente fácil.
+
+Então dentro de outro fluxo de trabalho que você quer pegar os erros para, como o último que mostrei no tipo número 7, tudo o que você tem que fazer é clicar nos três pontos no topo direito, ir para settings, e então você pode selecionar um fluxo de trabalho que está triggerado como seu fluxo de trabalho de erro. Então eu vou para o tipo número 7, porque esse é o fluxo de trabalho de erro que eu acabei de mostrar, clicar em salvar, e então, boom! Agora, se algo for errado nesse fluxo de trabalho, ele vai triggar aquele outro e enviar uma mensagem Slack. Realmente útil para ter monitoramento de produção.
+
+O tipo número 9 é o trigger de horário. Uma função muito desutilizada na plataforma da NAN, na minha opinião, porque o que isso permite você fazer é ter fluxos de trabalho que triggam em um intervalo, como todos os dias ou todas as horas na meia-hora. Qualquer regra que você quiser montar aqui, você pode fazer o fluxo de trabalho triggar naquela hora consistentemente.
+
+E isso é realmente importante para coisas como gerar relatórios, como o que eu faço aqui. Eu pego todas as tarefas perdidas em um projeto no Asana, e então eu envio uma mensagem Slack alertando que essas coisas precisam ser feitas. Essa é a espécie de coisa que você não pode ter base de eventos.
+
+Não há nada que acontece em uma aplicação que triggaria isso. Eu só preciso fazer isso de vez em quando, em um tempo determinado, e então um fluxo de trabalho é perfeito para isso. Por último, dica número 10 é a biblioteca de fluxos de trabalho da NAN.
+
+Então, isso é sobre o site da NAN. Eu vou ter um link na descrição para isso, mas há mais de 1.000 templos de fluxos de trabalho aqui que você pode pesquisar para encontrar algo que te ajude a começar no que você quiser fazer. Então, eu posso pesquisar pelas aplicações, ou apenas palavras, ou até nodes específicos, por exemplo.
+
+Tipo, eu quero ter exemplos que usam o node Superbase VectorStore, e então, boom, aí vamos nós. Temos alguns exemplos aqui. Eu posso clicar em um e até verificá-lo no seu N8N Workflow Viewer widget e talvez usá-lo como um ponto de partida para o que eu quero construir.
+
+E então, eu estou trabalhando em algo atrás das cenas, que vai ser um agente AI que tem esse conjunto de fluxos de trabalho em sua base de conhecimento, um tipo de experto de N8N. Então, isso está vindo em breve também. Fiquem atentos para isso.
+
+Mas, sim, essa biblioteca de fluxos de trabalho é fantástica. Sinceramente, eu espero que este vídeo tenha te salvado de muitas dores trabalhando com o N8N. É uma plataforma fantástica, mas definitivamente algumas partes difíceis para ela.
+
+Eu também vou estar lançando mais conteúdo no N8N em breve, incluindo usá-lo para projetos de AI locais. E eu vou fazer um grande anúncio uma vez que eu tiver a seção do N8N da comunidade do Automator, então fiquem atentos para isso. Se você está olhando para isso ou se você apenas apreciou esse conteúdo em geral, eu realmente apreciaria um like e um se inscrever.
+
+E com isso, eu te vejo no próximo vídeo.
+
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)

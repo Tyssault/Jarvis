@@ -1,0 +1,215 @@
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)
+
+Retrival Augmented Generation é a mais popular ferramenta para dar acesso aos seus agentes de conhecimento, essencialmente tornando-os expertos domésticos para seus documentos. E é muito fácil implementar RAG e ferramentas sem código como N8n também, porque é tão amplamente adotada e apoiada. Mas, vou ser honesto, muitas vezes a RAG suja para mim, e a razão por isso é principalmente porque depende de um lookup que muitas vezes pode perder contexto clave e informação relacionada.
+
+Boa sorte tentando analisar as tendências em um spreadsheet, quando o lookup da RAG só pula um quarto das pedaços para a mesa e você precisa do todo. E eu acho isso tão frustrante quando eu o peço para fazer algo como sumarizar um encontro, mas aí ele pula as notas do encontro do errado dia. Tipo, vamos, o dia do encontro está bem lá no título do documento, por que você não consegue pegar o certo? E não a mencionar que a RAG muitas vezes luta para conectar diferentes documentos juntos, para te dar aquele contexto mais amplo necessário.
+
+Realmente, isso se baseia em duas coisas. Primeiro, a RAG não é capaz de zoomar para ver documentos inteiros ou setas de documentos, a menos que o contexto seja pequeno o suficiente. E então, segundo, a RAG não tem conceito de análise de dados adequada.
+
+Então agora a pergunta é, como nós sobrevivemos a essas limitações? E há algumas maneiras de fazer isso, mas o meu favorito absoluto é a RAG Gentic. E nesse vídeo, eu vou mostrar o que é isso, por que isso resolve nossos problemas, e eu vou mostrar exatamente como construir um agente de RAG Gentic em N8n. Além disso, essa função que eu vou te mostrar, eu vou ter como template para download para você trazer para sua própria instância N8n em minutos.
+
+Então essa é a visão de olho do agente de RAG Gentic em N8n, que eu vou te mostrar agora. E eu vou ser o primeiro a admitir, há uma boa quantidade acontecendo aqui, mas não se preocupe, eu vou te mostrar tudo, porque isso é o que leva para fazer um bom setup de RAG Gentic. Incluindo, eu estarei passando pela redação de RAG também, para que você compreenda tudo, indo de nossos arquivos no Google Drive, até extrair de diferentes tipos de arquivos, e adicionar para a nossa base de conhecimento de Superbase.
+
+E eu quero fazer uma versão local disso também, usando o pacote AI local, então deixe-me saber nos comentários se você estaria interessado nisso. E essa função inteira é uma espécie de versão 3 do agente de RAG Gentic em N8n que eu estou trabalhando. Essa é a última versão que eu cobri no meu canal anteriormente.
+
+Essa é uma implementação muito mais simples, então um bom ponto de partida que maneja alguns diferentes formatos de arquivos e tudo, mas não funciona muito bem com dados tabulares. Como veremos mais tarde neste vídeo, você precisa adicionar tablas diferentes de CSVs e arquivos Excel para a base de conhecimento, comparado com outras coisas. Você não pode apenas tratá-lo como um documento de texto, porque você tem que ser capaz de enquadrar aquela tabla.
+
+E também, este agente só tem RAG para sua ferramenta. Você pode ver, baseado nesta nota de ferramenta aqui, não há nada mais que ele tenha. Então, se o RAG Lookup falha para obter a informação que ele precisa, o agente não tem outra maneira de explorar o conhecimento em Superbase.
+
+Ele fica preso e tem que dizer ao usuário que ele não tem a resposta, mesmo que haja outras maneiras de olhar esses documentos para, potencialmente, obter a resposta de uma maneira diferente. E é isso que estamos fazendo neste workflow aqui. Então, deixe-me zoomar nisso um pouco, para que você possa ver as ferramentas que temos para o nosso agente RAG.
+
+Então, ainda temos a ferramenta RAG Lookup, como tivemos no nosso exemplo anterior, que, por acaso, é uma versão melhorada que pode localizar suas fontes. Então, até isso é um passo para cima. Mas também temos todas essas outras ferramentas Postgres para o nosso agente RAG, para que ele possa fazer outras coisas para olhar nosso conhecimento.
+
+Então, isso fica na nossa definição para um RAG agêntico. Tudo o que um RAG agêntico é, é dar aos agentes a habilidade de resolver como eles exploram a base de conhecimento, ao invés de apenas dar uma única ferramenta. Também inclui agentes podendo melhorar suas ferramentas RAG Lookup e escolher ferramentas diferentes para responder perguntas de diferentes usuários.
+
+Então, na versão antiga do nosso workflow agêntico aqui, nós temos a habilidade de melhorar o RAG Lookup, porque nós temos RAG como ferramenta, o agente poderia decidir invocá-la uma segunda vez com uma melhor ferramenta. Então, temos essa parte, pelo menos. Mas não há jeito para explorar a base de conhecimento de maneiras diferentes ou descobrir, baseado em uma pergunta de um usuário, oh, eu preciso olhar o dado dessa maneira.
+
+Mas com essas três ferramentas Postgres aqui, nós estamos dando para o nosso agente RAG agêntico nessa versão melhorada. Porque ele pode listar todos os documentos que estão disponíveis na base de conhecimento. E então ele pode obter os conteúdos de arquivos específicos.
+
+Então, se um RAG Lookup falha, por qualquer razão, então, ao invés de fazer esse lookup, nós podemos olhar os arquivos disponíveis para nós e então resolver qual documento ou documentos nós queremos olhar para obter essa resposta. Então, se nós o pedimos para sumarizar as notas de encontro para 23 de Fevereiro e o RAG Lookup falha por qualquer razão, talvez ele pule do momento errado, seja o que for, então nós podemos, em vez disso, apenas olhar os documentos e ver, oh, sim, o título desse documento é literalmente notas de encontro de 23 de Fevereiro. Então, eu vou pular isso, obter os conteúdos para ele, e então usar isso para responder a pergunta do usuário.
+
+Então, você já pode ver como ele é capaz de, de diferentes maneiras, olhar a base de conhecimento, usar o RAG, olhar o documento inteiro, ele tem tudo isso no seu toolbelt. E então, nós também temos esse tool para enxergar arquivos Excel e CSV como se fossem tabelas SQL. Super, super legal.
+
+Isso é um pouco de parte mais bonita da implementação, mas faz isso tão poderoso para ser capaz de obter coisas como somas e máximos sobre tabelas que você, tipicamente, não pode obter com o RAG porque ele nunca apenas pula um arquivo inteiro CSV a menos que seja realmente pequeno. Então, agora é a hora de levar o nosso agente para uma volta. Vamos perguntá-lo algumas perguntas mais difíceis que talvez a versão antiga poderia ter respondido com apenas RAG, talvez não, mas a coisa mais importante que eu quero te mostrar é que usando esses diferentes tools para explorar a base de conhecimento de diferentes maneiras, dependendo da pergunta que eu pergunto.
+
+Então, eu tenho esses seis documentos no meu drive Google, alguns que são spreadsheets, alguns que são documentos regulares. Eu já tenho isso tudo na minha base de conhecimento de Superbase, e eu vou passar por ter isso tudo instalado depois também. Então, nós temos a nossa tabela de documentos que inclui coisas como nossos embedidos para RAG, metadata e os conteúdos para cada um desses pedaços.
+
+Então, nós temos a tabela de documentos metadata que eu vou explicar mais depois. Isso tem a informação de nível alto para nossos documentos, como as URLs para as fontes de citação e os títulos também. E então nós temos a nossa tabela de documentos Rows.
+
+É assim que nós tomamos nossos CSVs e arquivos Excel e os guardamos em Superbase, onde eles podem ser queryados com queries SQL, mesmo que nós não realmente tenhamos que criar uma tabela SQL dedicada para cada CSV ou arquivo Excel. É muito, muito legal. Então, eu vou voltar e vamos lá e perguntar uma pergunta para um dos nossos documentos.
+
+Na verdade, primeiro, eu vou abrir um desses e eu vou mostrar para você os dados e as perguntas que eu vou fazer. Então, nós vamos para os métricos de renda de 2024 por mês. Isso é tudo dados falsos gerados por Claude, por acaso.
+
+E nós vamos perguntar uma pergunta simples, como, qual mês nós recebemos os mais novos clientes? E talvez você possa pular essa tabela inteira com RAG, porque ela é pequena o suficiente, mas nós queremos ver o nosso agente escrever uma query SQL para pegar isso, porque se essa tabela fosse grande o suficiente, nós não estaríamos capazes de pular a tabela inteira com RAG, porque seria só pegar o número de pedaços que ela aceitaria, e isso pode ser apenas um quarto da tabela. Então, nós não podemos nem pular o recorde que tem o maior número de novos clientes, e então, isso nos daria a resposta errada. Então, vamos voltar e, na verdade, perguntar essa pergunta aqui.
+
+Então, eu vou dizer, qual mês nós recebemos os mais novos clientes? E meu objetivo aqui é vê-lo invocar a ferramenta para escrever uma query SQL. Sim, aí está, ele fez. Então, eu até vou clicar nisso, você pode ver.
+
+Essa é a query que ele decidiu escrever. Um pouco mais complexa, então não vou entrar nisso agora, mas sim, olha só. 129 novos clientes no mês de dezembro, e essa é a resposta certa.
+
+Então, nós recebemos tudo de volta e sim, aqui está, diz a resposta certa. Tudo bem, então a próxima pergunta, eu vou ter um escritório vazio para a conversa para cada uma, então eu limpei isso. Vamos voltar para o Google Drive e abrir um documento de texto dessa vez.
+
+Então, áreas para melhoramento. Isso é um survejo de feedback de clientes. Eu vou perguntar como podemos melhorar e então ver se ele pode retirar isso desse documento, especificamente, sem eu chamá-lo explicitamente.
+
+Então, eu vou voltar aqui e vou perguntar quais são as áreas que podemos fazer melhor e eu especificamente não quero usar a palavra melhoramento, porque eu quero ter certeza que esse survejo não está apenas dependendo do fato de que nós apenas dizemos palavra por palavra áreas para melhoramento. Então, eu vou dizer áreas que podemos fazer melhor e sim, eu uso RAG para essa vez, acesso móvel, capacidades de integração e customizações de reportagens e isso é exatamente certo. Então, boom, nós temos a resposta certa.
+
+Então, agora eu volto, limpar a conversa de novo e essa vez eu queria explicitamente olhar os conteúdos do arquivo ao invés de performar RAG e, surpreendentemente, isso pode ser difícil para fazer quando você está em um environmento de teste com apenas essa quantidade de dados. É difícil fazer o RAG falhar, então ele precisa realmente tirar os conteúdos de um todo arquivo. Então, eu vou ser explícito aqui, eu vou dizer para usar esse atalho só para que você possa pelo menos vê-lo em ação, mas confie em mim pela minha experiência com RAG em geral, esse tipo de funcionalidade certamente é necessário porque o RAG não é sempre confiável por causa de o que estávamos falando antes.
+
+Então, deixe-me abrir esse produto Team Meetings Minute, eu vou dizer para olhar esse arquivo especificamente para depois tirar os itens de ação que nós temos. Então, deixe-me voltar para o N8n. Para esse teste, eu também vou ter site-source, mas primeiro, vamos pedir para obter os conteúdos do arquivo do produto Meeting Minutes e então me dizer os itens de ação.
+
+Então, eu estou explicitamente pedindo, e aí vamos nós. Sim, ele chamou a ferramenta para obter os conteúdos do arquivo, então, eu quero um link para o documento, porque eu quero talvez ir e verificar para ter certeza que eu tive a resposta certa, se eu não tiver o documento puxado já. E aí vamos nós.
+
+Diz-nos o link aqui. Eu posso clicar nisso e então, boom! Nós temos o documento aberto direto do nosso agente. Olha isso.
+
+O fã do vídeo de hoje é Unstract, uma plataforma LLM sem código de abertura para criar APIs e ETFs para transformar documentos sem estrutura em dados estruturados. E isso é tão importante para agentes de AI, especialmente com RAG, porque você não sempre vai ter simples documentos CSV e texto para sua base de conhecimento, então você pode facilmente extrair todos os textos e abri-los. Às vezes, você vai ter PDFs onde você tem que pular tabelas específicas, ou você vai ter imagens que você precisa extrair informação de para algo como uma receita.
+
+E é isso que Unstract pode ajudar você com. E você pode até transformá-lo em um ponto final API para colocar em algo como um N8n Workflow para lidar com seus documentos mais complicados. Então aqui é o repositório GitHub para Unstract, e você pode pensar nessa plataforma como serem três partes distintas.
+
+Primeiro, você tem o Prompt Studio. É aqui que você pode engenhar seus prompts para trabalhar com os LLMs e fazer com que eles saibam como extrair a informação de seus documentos sem estrutura. E então você pega esses prompts e adiciona-os em workflows.
+
+É aqui que você constrói esses fluxos para automaticamente extrair a informação de seus documentos. Então você pode depoisar os workflows como APIs de dados e pipelines ETL. E eles têm documentos fantásticos que eu vou deixar o link na descrição para como trabalhar com todos esses componentes diferentes para coisas como deployments API e pipelines ETL.
+
+E eu também quero chamar o Prompt Studio muito rápido, porque é fantástico o quão fácil é uploadar um arquivo, como essa receita que eu só tirei do Google, e então definir prompts para extrair todos os diferentes pedaços de informação que você quer, como os itens de linha, e a quantidade de imposto, e a quantidade de dólar no fundo, e isso é tão útil para a extração de tudo isso. Então você define os seus prompts aqui, descobre exatamente o que você precisa, e depois continue para construir seus workflows. Então se você tem mais do que só documentos de CSV e texto simples que você poderia extrair com um único nodo em N8n, eu recomendaria muito checar o Unstract.
+
+Isso só resolve tantos problemas que nós temos trabalhando com nossos documentos mais complexos, e é tão importante para uma enorme variedade de casos de uso, incluindo agentes RAG. Então, eu vou ter um link na descrição abaixo para o Unstract. Definitivamente recomendo checar eles se você quer trabalhar com todos os seus dados e não apenas o simples.
+
+Então agora você sabe em nível alto como esse setup de agentes RAG funciona. Então eu quero desenhar agora os diferentes componentes para que você tenha o que é necessário para pegar meu template e extendê-lo para o seu caso de uso específico. Este é um ponto de partida muito bom, mas eu não espero que seja uma solução fora da caixa para você.
+
+Eu quero que você trabalhe com o prompting e as ferramentas no pipeline, mude as coisas para trabalhar com a sua base de conhecimento específica. E então, zoomando aqui, eu vou mostrar a primeira parte desse workflow, e isso é funcionar todos os nodos nesta caixa vermelha para estabelecer sua base de conhecimento específica. Porque nós temos estas três diferentes tabelas aqui, e nós temos que criar cada uma delas.
+
+Então, o primeiro nodo é criar a nossa tabela de documentos, e se você estabeleceu RAG com o N8n antes, esta query provavelmente parece muito familiar para você, porque isso está na instrução de setup para a base de conhecimento específica. Então, você já pode ter isso, você sempre pode apenas usar o que já fez ou renomear a tabela de documentos e a query aqui. Mas isso constrói a nossa tabela de documentos, onde nós guardamos os embedimentos para RAG, o metadata e todos os conteúdos de cada arquivo também.
+
+E então nós temos o segundo nodo para criar a tabela de metadata, e esta tabela é o que guarda a informação de nível mais alto para nossos documentos, para que nosso agente seja capaz de olhar coisas de um nível mais alto comparado a apenas um lookup de RAG, decidir baseado no título se ele quer analisar um arquivo inteiro, como as métricas de renda, por exemplo. E também tem as URLs, para que eu possa citar suas fontes, tanto o RAG quanto os lookups inteiros aqui, essas ferramentas para os agentes que podem citar suas fontes quando chamam essas. E então a última coisa que nós temos que eu vou explicar mais depois é a esquema.
+
+Então para apenas os arquivos de tipo spreadsheet, nós definimos a esquema aqui, e isso nos diz quais são os campos quando queríamos a data para aquela tabela na tabela de arquivos de documentos. Falando nisso, esse é o terceiro nodo aqui, é criar os arquivos de documentos, e toda a data para cada arquivo é guardada no JSONB, nessa coluna de dados de arquivos aqui. É assim que nós conseguimos, essencialmente, criar queries SQL para a nossa tabela de dados, mas não ter que criar uma nova tabela SQL para cada arquivo que ingerimos, porque tudo está feito dentro desse JSONB, que é flexível.
+
+Nós podemos ter qualquer tipo de esquema guardado na data de arquivos aqui. Então isso é o que nós vemos aqui. Como, por exemplo, esse arquivo, nós temos clientes iniciais, todas essas coisas diferentes, mas então, para esse spreadsheet, nós temos CAC, LTV, MRR, toda essa data diferente é guardada nos dados de arquivos, e então, a esquema aqui diz ao agente como queryá-lo, que colunas estão disponíveis para ele.
+
+E não é o set-up perfeito, porque não te diz coisas como o tipo de dados, então ele pode tentar fazer uma soma sobre algo que na verdade tem símbolos de dólar para cada número, então é uma linha. Então, não é uma implementação perfeita. De novo, isso é apenas um template para te dar um começo, mas ele mostra o conceito muito poderoso de uma forma simples, e essa é a principal coisa que eu estou tentando fazer com esse agente.
+
+Então, a segunda parte para o nosso trabalho é o nosso pipeline RAG, isso é tudo nessa caixa azul, onde estamos tomando documentos de algo como Google Drive, e trazê-lo para o nosso Superbase Knowledge Base. E obviamente, temos que fazer isso antes de criar o nosso agente de AI, porque precisamos de um jeito para testar para ter certeza das ferramentas que estamos dando para explorar a base de conhecimento funcionando. Então, eu vou te guiar através do pipeline agora.
+
+Eu não vou cobrir a criação de todos os diferentes credenciais para coisas como Google Drive e Superbase, porque eu já fiz isso antes em outros vídeos no meu canal, como para essa versão do trabalho. E se você for criar novos credenciais, sempre haverá um botão de abertura que o N8n te dá, isso te traz para a página de documentação que faz super fácil para se instalar seus credenciais. A única coisa que eu diria para os nodos de Postgres, e os credenciais para isso, é que a documentação do N8n não é muito clara.
+
+Você precisa usar o método de pooler de transação para se conectar para o Postgres. Então, você vai para o seu dashboard para Superbase, clica em isso vai te salvar uma dor de cabeça, porém, foi para mim. Você não quer usar os parâmetros de conexão direto.
+
+Esses não vão funcionar. Você quer usar os do pooler de transação, onde o porto é 6543. Então isso vai te dar tudo o que você precisa, obviamente, exceto para o código de databases, que, espero, você deveria ter.
+
+Então, com isso fora do caminho, vamos descer para o começo desta pipelines, que é o Google Drive Trigger. Então, clicando nesse nodo, tudo que estamos fazendo no Google Drive é pular cada minuto para novos fios que são criados. E você pode trocar isso para Dropbox ou um trigger de fios locais, que vou mostrar quando eu faço a versão local AI disso.
+
+Este é apenas um exemplo usando o Google Drive. Então, está assistindo cada minuto para fios criados em um folhar específico que eu dou no meu drive. Então, eu tenho um trigger similar para fios que são atualizados também.
+
+Então, este trabalho vai lidar com ambos fios sendo criados e atualizados. Não há um trigger para assistir para fios que são deletados, infelizmente. É um grande desastre.
+
+Espero que eles adicionem isso no final, para que você possa limpar sua base de conhecimento quando você deletar um fio no Google Drive também. atualmente, isso não está apoiado. E então, uma coisa que estava realmente perdendo da minha versão antiga deste trabalho é que não se lidou corretamente quando vários fios vieram no trigger ao mesmo tempo.
+
+Ele só envia um fio por todo este trabalho e esquece o resto deles. Mas, nesta versão, eu estou lidando com isso para você. Eu sei que foi um grande pedaço de feedback que eu recebi.
+
+Eu adicionei este loop. Então, agora você pode lidar quando você pula em vários fios no mesmo minuto de polo ou atualiza vários. E eu até mostro isto aqui porque no meu dados pinados para o meu Google Drive Trigger, eu tenho dois itens.
+
+Estou enviando dois fios e lidando com isso neste loop. E então, o que ele vai fazer aqui é enviar um fio por todo este fluxo, assim como nós vimos antes. Mas, então, ele vai lutar para trás e fazer a mesma coisa para o próximo fio e o próximo fio até ele conseguir passar por tudo que o trigger deu e ele vai para o próximo fio.
+
+E então, agora estamos zoomando em apenas um nível de fios. O resto disso acontece por apenas um fio por um tempo. Primeiramente, eu já enviei tudo aqui.
+
+Então, vamos ver os inputs e outros porque eu tenho uma execução de teste que eu passei por. É por isso que você vê as caixas vermelhas para todos estes. Então, neste primeiro fio aqui, estamos setando o palco para o resto do funcionamento com todas nossas informações importantes, como as ids de fios para nossas Queres, o tipo do arquivo para determinar como queremos extrair o conteúdo, e então o título e o URL também, que vai ir para o database.
+
+A próxima coisa que queremos fazer é limpar todos os dados antigos para este arquivo no Superbase, e isso é se estamos atualizando o arquivo. Vamos fazer isso de vez em quando. E a razão pela qual queremos fazer isso é que queremos um escravo vazio, porque não queremos a chance de haver alguma data de uma versão antiga do nosso arquivo deixado na base de conhecimento para o nosso agente de query quando não deveria estar disponível.
+
+E para dar um exemplo bem claro disso, digamos que você tenha um arquivo que inicialmente tem 10 pedaços, porque é algo como 10 parágrafos, mas depois você deletou o último parágrafo, agora só tem 9 pedaços. Se você tentar apenas atualizar os pedaços existentes no database, ao invés de limpar e inserir-os de novo, você só vai atualizar os primeiros 9. E esse 10º pedaço, porque o arquivo tinha que ser mais longo, vai permanecer na base de conhecimento, mesmo que seja de uma versão antiga do arquivo. E então, a maneira mais segura que é geralmente recomendada é simplesmente deletar tudo.
+
+Então nós vamos deletar todos os pedaços de documento, especificamente para esse ID do arquivo, usando aquele campo de metadata que eu vou mostrar para vocês mais tarde, e depois fazendo a mesma coisa para os pedaços de dados também, para todos os nossos arquivos tabulares. E de novo, baseado no ID do arquivo que já setamos, nós só vamos deletar todos esses recordes na tabela de superbase. E depois nós queremos fazer o nosso primeiro insert, ou isso é na verdade um upsert também, porque se o arquivo já existe, nós só vamos atualizar o metadata, e se ele não existe, nós vamos inserir o metadata.
+
+E isso é apenas setar a fase inicial para o nosso documento aqui, com coisas como o título e a URL. E depois, para os pedaços, nós vamos setar a esquema, e eu vou mostrar isso em breve também. E nós podemos setar isso aqui, porque essa tabela não depende de ter nenhum conteúdo para o arquivo ainda, porque nós vamos extrair isso mais tarde, e é aí que nós vamos poder popularizar a tabela de documentos, porque nós vamos ter esse conteúdo extraído para adicionar a coluna de conteúdo aqui, criar nossos embedidos e adicioná-los, toda aquela coisa boa.
+
+A razão pela qual eu estou usando Postgres aqui, e depois Superbase aqui, eles são meio intercambiáveis, mas Postgres oferece nodes melhores para coisas como executar queries SQL, fazer upserts, como realizar um atualizador, se ele não está lá, insere-o. Você não tem essas opções para os nodes de Superbase, mas eu quero usar Superbase para deletar, porque ele tem essa opção de filtro que eu não vi com o Postgres. Então, isso é apenas um pouco do que eu estou meio que misturando e intercambiando os nodes de Postgres e Superbase nesta função.
+
+Então, ok. Neste ponto, nós temos uma tabela vazia, e nós inserimos o metadata inicial. Agora, nós queremos extrair o conteúdo para o resto deste pipeline.
+
+Então, nós downloadamos o arquivo do Google Drive. Então, esse campo de dados, essa saída, é o arquivo em si. Tipo, eu posso downloadá-lo ou verá-lo.
+
+Então, nós não temos o conteúdo do arquivo ainda. Nós temos o arquivo em si, guardado na nossa instância NaN, para que nós possamos extrair dele. E depois, nós vamos para este nodo de intercâmbio.
+
+Então, baseado no tipo de arquivo, tem que haver um jeito diferente para nós extrair o conteúdo dele. Porque a forma como você extrai conteúdo de um PDF, ou um spreadsheet, ou um Google Doc, todos esses são diferentes. Então, nós temos estes diferentes brancos que são todos determinados baseados neste intercâmbio aqui.
+
+Então, se é um arquivo CSV, como é neste teste, então nós vamos para o Output 2, este terceiro branco. Caso contrário, se é um Google Doc, ou também o Default, que é o Output 3, então nós vamos para este baixo branco aqui. Então, para o meu teste, nós vemos a linha vermelha indo extrair do CSV, porque este teste está trabalhando com um arquivo CSV que eu uploadei para o Google Drive.
+
+E é, na verdade, bastante simples. Se nós estamos extraindo apenas um PDF ou um documento de texto, nós só temos um único nodo aqui. E eu vou até mostrar para você.
+
+Se você for adicionar um novo nodo e procurar Extract, todos estes tipos de arquivos são suportados. Então, se você quiser extender isto para trabalhar com arquivos JSON, ou extrair de arquivos HTML, você pode adicionar estes nodos Extract, e aí você só precisa adicionar outro branco para o nome do interruptor aqui. Então, é muito fácil extender isto para outros tipos de arquivos também.
+
+Se é algo que não está suportado nessas opções que você viu ali, você sempre pode criar um workflow Custom NAN para extrair de diferentes tipos de arquivos também. Então, o mundo é o seu alvo aqui. As diferentes possibilidades são infinitas para como você pode trabalhar com qualquer tipo de arquivo que você quiser.
+
+E então, outros tipos de arquivos, como marcas e documentos de texto, também podem ser tratados apenas extraindo do documento de texto. Este nodo cobre vários tipos de arquivos diferentes também. O que eu quero focar, então, é na extração de CSVs, porque é aqui que fica um pouco mais complicado.
+
+E nós queremos popularizar o Schema no Metadata e os Rows também. Então, vamos voltar ao nosso workflow NAN. Eu vou mostrar para você como isso tudo funciona para CSV e Excel.
+
+Então, neste demo, eu estou apenas rolando este caminho CSV aqui. Mas para Excel, é exatamente o mesmo. O resto destes nodos é o mesmo.
+
+Nós só temos que ter um extração diferente. E então, primeiro, nós estamos tirando os conteúdos do CSV e o transformando em Rows no nosso workflow NAN. E então, nós queremos fazer duas coisas ao mesmo tempo.
+
+Porque nós queremos que o dado do nosso arquivo de mesa esteja disponível em reg. Então, nós queremos transformá-lo em um documento de texto e chunque-o, igual ao resto dos nossos documentos. Mas nós também queremos que ele viva no documento de Rows, porque nós queremos que possamos query-lo como se fosse uma tabela SQL.
+
+Nós estamos dando ao nosso agente a capacidade de fazer isso. Então, nós temos dois caminhos diferentes que nós estamos indo aqui. O primeiro, para todos os 15 recordes que ele tirou do CSV, nós estamos inserindo cada um destes no documento de Rows.
+
+Então, este é todo um arquivo, por exemplo. Tudo aqui. Nós estamos inserindo todos estes recordes neste nodo aqui.
+
+E então, em paralelo, nós também queremos começar a transformá-lo em um documento de texto. Então, nós vamos agregar tudo junto. Então, ao invés de serem múltiplos recordes, é apenas um único item, que é um arraio de todos os nossos Rows.
+
+E então, nós queremos sumá-lo, que essencialmente apenas transforma-o em uma linha, porque agora nós temos um documento de texto que nós podemos chuncar, igual ao que se nós extraíssemos de um PDF ou um arquivo de marcação, qualquer coisa que você pode ter em cima e embaixo, brancos aqui. E então, tudo isso vai para Superbase, que eu vou cobrir em um segundo aqui. Então, no final, as tabelas são tratadas igual a qualquer outro documento de texto, mas também nós temos esta rota aqui, onde nós estamos setando o esquema.
+
+Então, usando este JavaScript fantástico, que eu não vou explicar em detalhes aqui, nós estamos tomando os headers do CSV e definindo isso como nosso esquema, e depois atualizando nosso recorde de metadata, para que o agente possa acessar esse esquema também. Então, este é onde nós setamos este pedaço de informação. Então, nós dizemos que este arquivo CSV tem estes headers.
+
+E é assim que o agente sabe, ele vai ler este recorde primeiro, para obter o metadata para a análise do cohorte de clientes. Ele vai ver que este é o esquema, então ele sabe como escrever as querys SQL para query os pedaços aqui. Então, eu espero que isso faça sentido.
+
+Então, o agente tem que olhar aqui primeiro, entender o esquema, depois ir e query os pedaços. E nós estamos fazendo isso tudo possível aqui, adicionando o esquema a esse recorde de metadata. E então, a última parte aqui é a nossa Superbase.
+
+E essa aqui é bem simples, porque o NAN se cuida muito de nós, com todas essas nodes. É bastante complicado trocar tudo e adicioná-lo na Superbase, mas é só feito com 4 nodes aqui. Então, primeiro, nós temos o insert into Superbase VectorStore node, onde nós apenas definimos a tabela e a query que nós estamos usando para o RAG.
+
+E então, nós temos a nossa embedição, que eu estou apenas usando OpenAI. Aliás, eu estou usando TextEmbedding3 para o meu modelo de embedição. E então, para todas as LLMs, eu estou apenas usando GPT-40 Mini, que não é a LLM mais poderosa. 
+
+Eu só quero algo barato e rápido aqui, mas dependendo do seu caso de uso, você pode querer algo mais poderoso também, como GPT-40 ou Cloud 3.5 SONNET. De qualquer forma, esse é o nosso modelo de embedição. E então, nós estamos apenas usando um loader de dados de default.
+
+Isso é o que é responsável por chuncar nossos documentos, prepará-los para inserir em Superbase e definir a metadata também, o que é muito, muito importante. Para a metadata aqui, eu tenho o ID do arquivo e o título do arquivo. E a razão pela qual isso é tão importante é porque a metadata é como nós podemos query para eliminar apenas os recordes para um arquivo específico, quando nós estamos no começo do fluxo, quando nós queremos aquele espelho vazio para inserir para RAG.
+
+E então, o título do arquivo em si, nós também queremos na metadata, porque o agente vai referenciar isso para saber qual arquivo ele está realmente olhando quando ele faz RAG, para que ele possa localizar a sua fonte. E nós vamos entrar nisso mais tarde, mas no tool de RAG, nós na verdade o temos para que a metadata seja retornada também. Então, eu tenho esse TickTray aqui.
+
+Isso é como o agente pode saber o que ele está olhando. E então, finalmente, para o TextSplitter, eu só tenho algo muito simples com o personagem TextSplitter. Eu não coloquei um monte de pensamento nisso, porque vai depender muito do seu caso de uso, de como você quer chutar seus documentos.
+
+Então, só mantendo isso muito, muito simples ali. Mas isso é tudo para o nosso RAG Pipeline. E você também viu, enquanto eu estava passando por essa função, eu mostrei os inputs e outputs para tudo.
+
+Então, você basicamente viu uma corrida inteira disso. E eu já fiz isso. Então, todos os arquivos que eu tenho no meu Google Drive para ambos meus spreadsheets e meus documentos, eu já tinha isso tudo ingerido.
+
+Então, eu executei essa função para cada um deles. Eu só usei o trigger, joguei os meus arquivos e resolvi isso. Então, com o RAG Pipeline criado e todos os nossos conhecimentos prontos, nós podemos agora ir para a instalação do nosso agente.
+
+E, infelizmente, criar o nosso agente AI é mais simples do que o nosso RAG Pipeline, porque nós fazemos todo o trabalho, conseguimos tudo instalado em nossa base de conhecimento e base de super. E então, nosso agente só precisa de algumas ferramentas bastante simples para alcançá-lo. Então, vamos passar por isso aqui.
+
+Então, primeiro, eu tenho um par de triggers para essa função. Eu tenho um Webhook, para que possamos transformar nosso agente em um ponto de fim do API. E então, eu também tenho um trigger de conversa, para que possamos conversar com ele aqui no N8n Workflow.
+
+Isso é o que nos dá esse botão de conversa no meio inferior aqui. E então, esses dois nodos saem em formatos um pouco diferentes. Então, eu tenho esses arquivos de edição aqui, apenas um pouco de JavaScript para lidar com ambos esses diferentes triggers, para que tenhamos uma saída consistente para o nosso nodo de agente.
+
+Então, indo para isso aqui, nosso agente é bastante simples em geral. Eu só tenho esse trigger de sistema aqui, que descreve para ele os diferentes ferramentas que ele tem para explorar a base de conhecimento. E eu lhe dou algumas instruções para como liderar esses ferramentas.
+
+Por exemplo, eu lhe digo de começar com o RAG, e então usar algumas das outras ferramentas, se o RAG não te dar a resposta certa. E então, você pode certamente modificar esse trigger de sistema. Eu acho que há muita oportunidade de fazer isso um bom trigger de sistema.
+
+Eu só tenho isso como um exemplo para você. Uma coisa que ajuda muito com esses tipos de agentes de RAG, é perguntá-lo para ser honesto. Tipo, se você não encontrar a resposta do RAG e das outras ferramentas que você tem, apenas diga ao usuário, em vez de tentar fazer algo sozinho.
+
+E isso sozinho pode reduzir uma boa quantidade de alucinações. E então, para o nosso modelo, nós só temos o GPT-40 Mini, como eu mostrei antes. Seguindo uma história de conversa simples, que, por acaso, essa tabla foi criada automaticamente, se você não tiver ela já na primeira conversa, que é por isso que eu não crio isso como um quarto nodo na caixa vermelha.
+
+Então, legal e simples, e simples para você. E depois vamos aos nossos ferramentas. A primeira ferramenta que nós temos é o RAG.
+
+E você vai ver aqui, olhando para a versão antiga do workflow, essa é uma versão muito mais simples. E é porque a N8n teve um monte de atualizações muito boas para agentes de AI, desde que eu fiz esse último vídeo. Então, essa ferramenta para o Superbase VectorStore é muito mais simples.
+
+E existe a opção agora de incluir o metadata. Então, o ID do arquivo e o título do arquivo que nós inserimos no metadata para cada recorde, eu vou mostrar isso aqui, eu vou para documentos e clico no campo metadata. Nós veremos aqui que nós temos o ID do arquivo e o título do arquivo.
+
+Tudo isso é trazido para os resultados do RAG. Então, o agente tem acesso à essa informação para localizar suas fontes. Isso é super, super importante.
+
+E então, nós estamos usando o mesmo modelo de embedição que usamos quando inserimos coisas no Superbase. Isso é super importante, porque você só tem que ter certeza que seu modelo tem o mesmo número de dimensões para ambas as inserções e as recuperações. E então, indo para nossos outros ferramentas aqui, o primeiro que nós temos é listar nossos documentos.
+
+Então, só usando um simples query Postgres aqui, nós estamos pulando todos os nossos documentos do tablo de metadata do documento. Então, o agente pode ler todos esses, e então razoar sobre que arquivos ele quer olhar e os IDs de cada um deles. E também para os arquivos de tablo, as esquemas também.
+
+Então, ele sabe como queryar o tablo do documento. E eu estou retornando todo documento aqui. Então, tenha isso em mente.
+
+Se você tem um corpus enorme de documentos, você pode querer não retornar tudo e encontrar um jeito de filtrar os documentos que você está pulando, talvez baseado em um dia, ou tendo o AI que escreve a query, algo assim. Mas também tenha em mente que os LLMs podem gerenciar links de contexto muito longos agora. Então, mesmo que você tenha mil documentos em sua base de conhecimento, você ainda pode pular os títulos e IDs de cada um deles e derrubá-los no prompt para o LLM.
+
+Então, isso ainda pode funcionar. E depois...
+
+(Este arquivo tem mais de 30 minutos. Atualize para Ilimitado em TurboScribe.ai para transcrever arquivos de até 10 horas.)

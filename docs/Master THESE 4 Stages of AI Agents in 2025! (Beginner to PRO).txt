@@ -1,0 +1,163 @@
+Master THESE 4 Stages of AI Agents in 2025! (Beginner to PRO)
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Ao final deste vídeo, você vai entender como construir agentes de A.I. efetivos que realmente recebem resultados. Muitas vezes, há apenas um link falhado, certo? Uma coisa que, se você conhecesse, sua construção de agentes de A.I. poderia ser muito melhor. E é por isso que eu vou lhe mostrar os 4 estados de construção de agentes de A.I. para que, quando chega ao ponto em que você está construindo essas coisas de forma diária, você tenha todas as habilidades, recursos e conhecimento que requer para construí-las para que eles realmente recebam bons resultados.
+
+Agora, neste vídeo, eu vou lhe mostrar esses 4 estados. Eu vou lhe dar recursos livres que você pode implementar hoje. E eu prometo que, ao final deste vídeo, você irá sair com mais confiança, mais habilidades e mais conhecimento em construir agentes de A.I. porque nós vamos desmaiá-los de início até o fim.
+
+Então, sem mais delongas, vamos entrar no primeiro passo deste 4 estados de roadmap. O primeiro estado é promover com frameworks. Agora, este pode ser o mais importante estado, porque reenvolve o jeito que o seu cérebro deveria estar pensando quando se trata de criar instruções, que é o 2º estado.
+
+E nós vamos entrar em criar instruções boas e por que isso importa. Mas, antes de mesmo entrar em instruções customizadas, você precisa entender como promover com frameworks. Não só como usar frameworks promovidos, mas como criá-los você mesmo.
+
+Então, este estado do processo permite que você entenda os fundamentos de como os modelos subjetivos funcionam. Aqui, você quer masterizar o artigo de usar frameworks promovidos para ver sucesso. Então, você pode estar se perguntando, Drake, o que são essas coisas que você chama de frameworks promovidos? Bem, frameworks promovidos são simplesmente propósitos de acrônimos que permitem que você obtenha resultados melhores mais rápido.
+
+Então, eu tenho um exemplo aqui que eu ensino à minha comunidade. O formato de saída de acção de contexto de objetivo seria igual ao GCAO framework promovido. Você está literalmente usando acrônimos.
+
+Então, o G vai para o objetivo, o C vai para o contexto, A ação, O formato de saída. Você está usando esses acrônimos para desenvolver um framework promovido ou uma estrutura que você conhece como sucessiva. Estes podem ser pré-feitas, estes podem ser construídos por você, mas deixe-me mostrar um exemplo do que isso pode parecer.
+
+Então, o GCAO framework promovido permite que você prometa em um modelo de língua grande e obtenha resultados reais. Então, os frameworks promovidos são principalmente usados no modelo de língua grande, certo? Ainda não estamos levando estes para um agente artificial ainda. Podemos simplesmente colocá-los em uma versão gratuita do ChatGBT, e podemos realmente obter resultados melhores quando os usamos.
+
+Então, quando você olha para este GCAO framework promovido, como você pode ver, nós estabelecemos nosso promo em forma de um objetivo, damos contexto, temos uma ação e um formato de saída. Cada um destes é uma parte clave de cada promo, na minha opinião, e é por isso que eu ensino este principalmente, porque só permite que, não importa qual o seu problema, você sempre obtenha um bom resultado. Então, se estamos tomando uma olhada nisto, como eu quero um plano de treinamento, talvez eu queira listar o meu objetivo.
+
+Então, dando o contexto do modelo de língua grande para o seu objetivo em geral, certo? O que você está tentando acabar com? Qual é o resultado desejado no final do processo? Isso vai ser importante, e vai formar tudo ao redor disso. Então, eu quero ganhar 10 libras de músculo e trazer o meu peso corporal para 10% em 6 meses. Digamos que você é um bodybuilder, certo? Você quer colocar um pouco de músculo, você quer baixar o porcentagem de gordura corporal, isso seria o meu objetivo.
+
+Agora, o contexto é muito importante, porque isso vai dar ao modelo de língua grande uma ideia sobre o que você tem, o que você tentou, o que você fez até agora, quais alimentos você gosta, quais alimentos você não gosta. Tudo que vai para o bodybuilding, e o que você tem acesso a, vai para o contexto. Qual é o seu peso atual? Você pode pensar nisso em métricas também.
+
+Onde você está atualmente no seu negócio, na sua vida pessoal, com o objetivo que você está tentando alcançar? Ok, isso é o que o contexto está fazendo. Então, se isso é um único prompt, contexto aqui, eu estou só dando o meu peso atual, certo? Se eu quero ganhar 10 libras de músculo, talvez eu queira enumerar o que eu estou atualmente pesando. Então, eu tenho 155 libras, 13% de gordura corporal, equipamento disponível, certo? Outro ponto muito importante, para que quando está me dando uma divisão de treinamentos para alcançar meus objetivos depois, ele sabe exatamente o que eu tenho disponível.
+
+Então, eu dou algum equipamento que eu tenho disponível na seção de contexto. Talvez eu queira colocar o meu gênero aqui também. Então, talvez isso seja importante para o plano de nutrição ou a divisão de treinamentos para alcançar esse objetivo e chegar a 10% de gordura corporal, certo? Talvez eu queira colocar a minha altura aqui.
+
+Talvez eu queira colocar que dias eu definitivamente não posso treinar. Isso é o que vai para a seção de contexto. Em seguida, temos ação.
+
+E isso é o A no GCAO. Nós já passamos pelo G e C, que foram objetivo e contexto. Então, ação.
+
+Eu recomendo que quando você está criando esses próximos frameworks, não importa o que, se você está enviando comandos para um modelo de língua grande, faça com que você só faça uma ou duas ações. O modelo de língua grande leva uma ação melhor do que quando você tenta dar quatro ou cinco coisas para fazer. Então, eu coloquei Desenho e Optimização do Plano de Nutrição e divisão de treinamentos para alcançar meu objetivo.
+
+E então, a próxima coisa que temos que fazer é dar um formato de saída. Você sabe, eu sou uma pessoa que ama coisas em tabelas. Então, eu quero dizer, apresente tudo como tabelas claras.
+
+Uma ilustrando o plano de dieta e outra mostrando o horário de treinamento para que eu possa facilmente seguir. Então, isso é o que um bom prompto parece enquanto você está usando um framework de prompto. E isso é algo que você pode voltar para, certo? Você sabe, você precisa do seu objetivo, contexto, ação, formato de saída a cada vez.
+
+Agora, eu poderia até pastar isso no chat, GPT. E isso é, honestamente, uma boa maneira de começar na construção de agentes. É apenas aprender como conseguir bons resultados nas ferramentas de frente.
+
+Então, eu vou enviar isso. Eu estou usando o 04 mini, provavelmente um pouco de overkill para isso. Mas, como você pode ver, desde que eu coloquei minhas métricas aqui, diz que vai me dar um plano de seis meses para me ajudar a adicionar em torno de 10 libras de músculo.
+
+E então também está tomando meu porcentagem de gordura corporal em consideração quando está dando essa resposta e quando está tentando me ajudar, certo? Ele tem todas as minhas métricas aqui. Então, agora eu posso usar isso para formar o plano. Ele me dá o meu plano de nutrição diários.
+
+Como você pode ver, me dá todos os macros, tudo que eu preciso, tudo que eu preciso comer para alcançar meu objetivo. Me dá o meu intervalo de treinamento semanal, usando todas as máquinas que eu tenho disponível. Como você pode ver, máquina de extensão de quadril.
+
+Para equipamentos disponíveis, eu coloco, eu tenho uma máquina de extensão de quadril. E então me dá algumas dicas para sucesso baseadas nas minhas métricas e meu objetivo. Então, isso é o que usar um Plano de Plano parece.
+
+Se você quiser mais desses Plano de Plano de Plug & Play, nós os temos em nossa comunidade gratuita chamada A.I. Pioneers. Nós temos duas comunidades, como você pode ver aqui à esquerda, A.I. Pioneers e A.I. Foundations. A.I. Pioneers, nós basicamente nos damos coisas grátis e então A.I. Foundations, nós mostramos como realmente construir as coisas.
+
+Então você não está apenas consumindo, mas você está se tornando um criador. Então essas são nossas duas comunidades, não as confundam. Mas eu tenho cerca de seis Plano de Plano aqui que funcionam muito bem.
+
+E se você quiser vir aqui e usá-los, então você tem um lugar para mantê-los todos organizados, se sinta livre. Ele vai pedir para verificar seu e-mail porque nós não queremos nenhum spam, nós não queremos nenhum bot. Então não se alarme por isso.
+
+Mas essa seção é super importante, aprendendo como usar Plano de Plano e criá-los por si mesmo é crucial para o seu sucesso quando construindo agentes. Então o que nós queremos fazer é que nós queremos passar um pouco mais de tempo aqui nos Fundamentais. Então agora vamos ver o que criar o nosso próprio Plano de Plano pode parecer.
+
+O que eu posso fazer, talvez eu seja um desenhador ou um marketer e eu queira ter um estilo de imagem consistente quando eu estou criando imagens com o ChatGBT. Você poderia criar um Plano de Plano em torno de um estilo de imagem. Primeiro, você pode ter que encontrar seu estilo, certo? Você pode ter que encontrar uma boa resposta que o LLM te dá e então você pode templatizar seu Plano ou criar um plano em torno da resposta que ele te deu.
+
+Então, deixe-me mostrar um exemplo. Talvez eu esteja tentando encontrar meu estilo e eu quero esse estilo de comic-book de cartoon com pop de cor. Bem, primeiro, é isso que eu posso fazer, certo? Eu posso ter um resultado que eu considero valioso ou que eu quero ser capaz de repetir.
+
+Então eu vou enviar isso. E agora, este é apenas um processo de desenvolver seu Plano de Plano. Você está apenas tentando encontrar seu estilo, encontrar uma boa resposta.
+
+Isto pode funcionar com, de novo, imagens ou texto. Então, o ChatGPT me criou este ótimo imagem desse elefante no estilo de cartoon com esses pops de cor. Digamos que eu realmente gosto do estilo da imagem, mas eu quero ser capaz de mudar o sujeito, talvez com animais diferentes, pessoas diferentes, objetos diferentes, certo? O que eu poderia fazer é que eu poderia dizer ao ChatGPT para me criar um Plano de Plano que eu possa usar para consistentemente gerar o estilo de imagem a cada vez.
+
+Como eu disse, você pode fazer isso com texto também. Se você obter uma boa resposta, se você está encodeando, se você está fazendo tarefas diárias, tomando fotos de plantas, eu realmente não sei o que você faz. O que você fizer, você pode fazer o mesmo método que eu estou a mostrar com as imagens.
+
+E isso acontece depois de obter um bom resultado. Uma vez que você obter o resultado que você quer, então você deve escrever algo assim. Para este exemplo que eu coloquei, eu quero ser capaz de consistentemente duplicar esse estilo de imagem com apenas o sujeito e os setores trocados.
+
+Eu amo o estilo do cartoon com os pops de cor. Você pode me criar um framework templado que me permite facilmente copiar e pastar em um modelo de língua grande, onde eu posso então trocar o sujeito e o setor enquanto obter o mesmo estilo cada vez? Então, eu estou pedindo para ele me criar o framework templado. Você pode fazer isso sozinho ou você pode ter o ChatGPT fazer isso para você depois que você encontrar seu estilo ou obter a resposta que você quiser.
+
+Eu vou enviar isso. E eu amo o ChatGPT, como ele pode mudar de texto para imagens, de volta ao texto. Ele pode analisar as imagens.
+
+É incrível. Como você pode ver, ele me dá até placas de templado. Então, ele me dá o prompto de templado que eu posso usar.
+
+Ele faz isso em um formato templado com os braços. Então, agora, tudo que eu preciso fazer é mudar o sujeito. E então, eu posso entrar aqui e eu posso mudar esse sujeito e o setor também.
+
+E ele só faz isso muito simples para a gente copiar, usar todos esses placas de templado. Nós podemos pastar isso, honestamente, em uma página de Notion com esse prompt. E nós temos o nosso próprio framework de prompto construído.
+
+Então, esse seria um exemplo de criar o seu próprio framework de prompto. Eu espero que isso tenha sido útil e vai ser crucial para os próximos passos. Agora, o segundo passo desse processo, depois de você ter masturbado os frameworks de promptos e entendido o que significa criar promptos templados e usá-los ao seu avanço, o próximo passo é, na verdade, criá-los em nossas instruções customizadas.
+
+Aprendendo como criar instruções de código para que o modelo responda no tom exato com o formato de saída exato da forma exata que você quer cada vez. É como o que nós estávamos fazendo com os promptos templados e os frameworks de promptos, a exceção de que está no fundo. E cada agente que você cria no futuro vai ter essas coisas chamadas de promptos de sistema, o que é o mesmo como instruções customizadas.
+
+Então, entender primeiro, em um ambiente muito fácil de usar, como criar instruções vai te dar um grande vantajo. Então, eu vou mostrar esse exemplo no ChatGPT, mas você também pode usar algo como Claude se você quiser também. Agora, instruções customizadas estão em quase todos os modelos de línguas grandes agora, e eles te permitem transformar as respostas no fundo, para que quando você está escrevendo no fundo, você não precise dessas longas promptas.
+
+Você pode fazer tudo isso no fundo e deixar isso funcionar para você. Então, se eu clicar no meu acounto aqui e eu vou customizar o ChatGPT, o que você vai notar é que você pode ter o ChatGPT te chamar de algo. Você pode dar o que você faz para que as respostas sejam mais acostumadas a você.
+
+Esse passo é crucial. Que traitos deve o ChatGPT ter? Este é onde você pode dizer ao ChatGPT como ele deveria responder. Então, um que eu gosto de mostrar como um exemplo é escrever todas as sentenças de volta, não importa o que.
+
+Este é um bom exemplo de instruções customizadas. Vou clicar em Save, e agora quando eu pedir algo como Oi, como você está? E eu envio isso. O que você vai notar, desde que eu tive essas instruções customizadas escrever cada sentença de volta, vai usar as instruções do fundo e depois seguir isso de acordo.
+
+Então, você pode ficar engraçado com isso, você pode enganar seus amigos e simplesmente entrar no seu ChatGPT e pedir ao ChatGPT para começar a escrever tudo de volta, seja um tipo de brincadeira engraçada, ou o que você pode fazer é que você pode usar isso sério e para sua vantagem. Então, eu vou voltar ao último exemplo. Digamos que nós queremos criar imagens neste estilo a cada vez, mas nós queremos ser capazes de trocar o setor e o sujeito.
+
+Bem, se você se lembra do último exemplo, nós criamos um protocolo para isso, para que nós pudéssemos apenas copiar isso, pastar no ChatGPT, trocar o sujeito, o setor e os detalhes do setor, e então, ele usaria o mesmo estilo, mas seria um sujeito diferente em um setor diferente. Então, o que nós podemos fazer é que nós podemos realmente cozinhar isso para as instruções do fundo e usá-lo desse jeito, para que nós possamos ter uma experiência customizada a cada vez que chegamos ao ChatGPT para a geração de imagens. Então, o que eu posso fazer é que eu posso copiar essas instruções e, como eu fiz antes, eu posso ir para a esquina esquerda à direita e depois eu posso ir para Customizar ChatGPT.
+
+Quando eu clico nisso, o ChatGPT, de novo, pode te chamar de nome, você pode lhe dar qualquer coisa que você queira saber sobre você, mas aqui no ChatGPT, em que atributos deve o ChatGPT ter? Você pode apenas dar instruções para como você quer que ele te guie através de uma conversa. Então, eu quero que você gerencie imagens a cada e cada vez usando esse prompto de template. Então, eu posso copiar esse prompto de template e talvez eu coloque quotas em torno dele.
+
+Então, agora ele vai entender, tipo, ok, esse é o prompto de template. E aí eu posso dar o que deve fazer quando eu estou escrevendo no ChatGPT. Então, eu posso dizer, não importa o que, você tem que guiar o usuário através do processo de escolher um sujeito, setar e setar detalhes.
+
+Então eu disse, depois que você coletou toda essa informação, você tem que trocar a informação braquetada. Lembre-se, nós temos informações e braquetas aqui, o que nos permite fazer esse prompto de template no prompto com o que o usuário selecionou e gerar uma imagem usando esse prompto. Então, eu posso clicar em salvar, e já que está acessível para chats novos, eu vou clicar em um novo chat e eu posso dizer, olá, eu posso dizer qualquer coisa.
+
+E agora nós vamos ter esse processo customizado do ChatGPT nos guiando todo o caminho. Então, ele diz, olá, vamos começar com a sua ilustração de estilo de comédia, certo? O ChatGPT é muito customizado agora. Ele geralmente não faz isso quando você diz olá.
+
+Ele diz, primeiro, que sujeito você gostaria de apresentar? Esse é o poder das instruções customizadas. Ela te permite manipular a forma como o LLM responde a você. Eu só posso dizer um tigre bengal.
+
+Então, talvez eu queira um tigre bengal. Eu posso enviar isso. E lembre-se, eu queria que ele me desse três coisas.
+
+Eu queria que ele extraísse um sujeito de mim, um setting e um detalhe de setting. Então, ele diz, próximo, onde você gostaria de colocar o tigre bengal? Qual setting deveria estar? Deve estar em um templo antigo, uma aldeia urbana brilhante, uma ponta da montanha mista. Deixe-me apenas dizer uma cidade antiga subterrânea.
+
+Eu posso enviar isso. Então, agora ele está me guiando através de um processo. Isso levou-me cerca de três minutos para criar.
+
+E agora ele está me dizendo, Ótimo! Qual setting e detalhes você gostaria de incluir? Eu diria, Venha com isso sozinho. E então eu posso enviar isso. E agora, deve gerar a imagem para nós com todos os detalhes que ele coletou.
+
+Porque é o que nós o pedimos para fazer nas instruções. Então, como você pode ver, está começando agora. E estamos prestes a obter uma imagem épica.
+
+E a cada vez que eu começar um novo chat, enquanto eu tiver essas instruções customizadas, ativadas, vai me guiar através desse processo. E veja quão doce essa imagem é. E aquele mesmo estilo de cópia do livro de comédia que nós realmente gostamos com o elefante. Então, nós agora temos essa forma consistente de obter imagens a cada vez.
+
+É um resultado muito consistente. E perceba como a consistência é crucial. Quando você está dirigindo essas automações, ou você está dirigindo esses agentes no futuro, se você não sabe como promover um modelo de linguagem grande para obter resultados consistentes antes de começar a construir, você vai ficar muito irritado, muito estressado e confuso sobre por que você não está recebendo o resultado exato que você quer.
+
+Então, agora que você sabe como criar instruções customizadas e você entende as diferentes formas de obter resultados bons, como na parte de frente, e agora você sabe como fazer isso na parte de trás, a próxima coisa que podemos fazer é levá-la para uma plataforma de automação e começar a gerar algumas coisas legais. E podemos começar a automar mais partes do nosso funcionamento. Talvez nós queremos enviar essa imagem para um drive Google quando nós escrevermos um setor de assuntos e detalhes de assuntos, certo? Talvez nós queremos que ele vá para um databases.
+
+Talvez nós queremos que ele crie um posto de mídia social e upload-o para nós. Esse é o poder de automações e agentes. Agora que completamos os passos um e dois desse processo de quatro passos, é hora de ir para o passo três, que é construir automações.
+
+Agora, tudo que você aprendeu até esse ponto é absolutamente crucial para descansar e para entender, porque não só vai te ajudar a obter bons resultados em um modelo de língua grande, mas também vai te ajudar a usar um modelo de língua grande para construir coisas complexas, como automações e agentes, quando eu não estou aqui para te ajudar em um vídeo no YouTube. Agora, antes de começarmos com isso, se você quiser começar a reclamar semanas da sua vida, se você quiser começar a transformar suas ideias em lucro, e se você quiser começar a desenvolver agentes e a masterar a A.I. do fundo, então eu recomendo que você junte-se à nossa comunidade da A.I. Foundations. Eu mostrei para você a comunidade gratuita antes, e em nossa comunidade gratuita, A.I. Pioneers, você pode obter todos os recursos gratuitos, você pode se divertir, usar as coisas que estou mostrando para você como construir, ou você pode se juntar à A.I. Foundations e aprender como construí-la, para que você não tenha que se depender de recursos gratuitos mais.
+
+Temos um salão de aula que te guiará de iniciante a pro, não importa o nível de habilidade, até a partir de aprendizagem, conceitos básicos e modelos de língua grande, até a mastura de agentes, para que você possa começar a reclamar horas, se não semanas e dias da sua vida. Enquanto você está dormindo, você pode desenhar coisas que estão funcionando para você, e mostramos como fazer isso neste salão de aula. O calendário está cheio de livros de trabalho, eventos de rede, para que você possa interagir com a coisa mais poderosa da A.I. Foundations, que são os 1.300 membros da comunidade.
+
+Estamos compartilhando novos ferramentas aqui todos os dias, estamos compartilhando ideias de negócios, recomendações, estamos nos apresentando um ao outro, notícias de A.I. É tudo que você precisa sobre A.I. em um lugar. Então, antes de irmos mais longe, se você só quer pular isso e pular agora para A.I. Foundations e começar a aprender lá, eu recomendo muito o número um, e o número dois, você pode fazer isso. Vou deixar um link na descrição e no comentário de cima, se você se interessa.
+
+Mas agora, vamos pular para o nível três, que é construir automações e como isso é importante e o que isso realmente significa para fazer isso. Agora, espero que você esteja seguindo durante todo esse processo, porque nós vamos continuar construindo após os passos anteriores. Então, se você não assistiu ainda, eu recomendo voltar, porque eu vou falar sobre coisas que já mencionei.
+
+Então, este é um tool chamado N8n. É aqui que vamos construir nossas automações e agentes. Como você pode ver, estes pequenos nodos representam aplicações e podemos realizar ações em certas aplicações após uma ação em uma aplicação anterior ser realizada.
+
+Então, cada automação começa com um trigger e eu só vou usar Telegram para o meu trigger. Você pode conectar milhares de coisas diferentes a este N8n Canvas. Então, todos estes diferentes tools que você está vendo aqui na direita, todos têm diferentes ações que você pode tomar dentro de cada tool.
+
+Eles têm todo o ecossistema Google, o ecossistema Microsoft, Notion, PayPal, Stripe, literalmente toda a database que você pode pensar. Tudo em N8n, eles têm. Se você quer um tutorial completo em construir automações e agentes e aprender N8n, eu colocarei isso na direita agora mesmo.
+
+Mas, esta é uma automação básica que temos e digamos que depois de criarmos nossas imagens e aquele estilo específico que estávamos usando no ChatGBT para obter aquele estilo de cartão, digamos que queremos fazer isso, mas talvez queremos enviá-lo para o nosso Google Drive depois. Bem, podemos fazer isso construindo uma automação e uma automação é um fluxo de trabalho predefinido que é muito consistente, que funciona do mesmo jeito a cada vez. O que você vê é o que você obteve.
+
+Então, esta automação vai começar com eu escrever o que eu quero uma imagem de no Telegram. Depois, vamos para este passo, que cria a imagem programaticalmente com o ChatGBT. Então, o que fazemos quando eu clico nesse nodo é que vai aceitar a entrada do Telegram e usar isso nas minhas instruções customadas, que eu bati nesse nodo que cria imagens no ChatGBT.
+
+E nós estamos usando esse mesmo template e eu estou apenas enviando a mensagem do meu Telegram e nós estamos apenas conectados a uma chave API com OpenAI. Automações são genuinamente onde as coisas começam a se divertir. Como você pode ver neste nodo de OpenAI, nós temos a operação Generar uma imagem.
+
+Então, nós vamos manter isso. Você pode selecionar seu modelo de imagem. Por que não fazemos o melhor? E depois que isso acontece, depois que a imagem é gerada, eu automaticamente tenho que ir e enviar aquela imagem para o meu Google Drive para que tudo o que eu tenho que fazer é estar no meu celular.
+
+Eu poderia ter uma ideia de imagem. Eu poderia enviar uma mensagem ao meu celular. Eu poderia fazer isso em voz, se eu quisesse construir essa automação um pouco mais longe, ou eu poderia apenas escrever um texto, tipo, hey, eu quero uma imagem de, eu não sei, uma zebra em um café.
+
+E isso vai fazer no mesmo estilo que nós colocamos no passo de instruções customadas. E então, não é só que eu vou enviá-lo para o meu Google Drive, mas também enviar essa imagem para o ChatGBT. Então, vamos ver o que essa coisa parece como uma ação.
+
+Este é o passo 3. Depois, após você aprender custom instruções customadas, aprenda como construir essas automações pré-definidas que te permitem automar tarefas, certo? Você não tem que ir uploadar a imagem para o Google Drive depois disso. Você pode fazer isso ir mais longe e você pode ter postado no X ou no Facebook com uma captação se você quisesse adicionar outro node OpenAI. Você pode fazer tantas coisas diferentes.
+
+Então, deixe-me mostrar um exemplo. Então, eu tenho Telegram aberto aqui na direita no meu computador, mas, de novo, eu também poderia estar fazendo isso no meu celular. Vamos dizer que eu quero uma imagem de o que eu disse antes, uma zebra em um café no estilo do livro cômico que eu gerenciei antes.
+
+Então, como esse estilo de pop do livro cômico, eu bico isso no pronto na minha automação, então ele sabe o que fazer a cada vez. É como instruções customadas na sua automação. Então, fácil.
+
+Eu tenho essa imagem estalada. Nós aprendemos isso no último passo. E agora eu quero minhas imagens virem para esse Google Drive folder, imagens de automação.
+
+Eu já fiz esse de um leão em uma cidade urbana, mas agora, se eu escrever no meu chat do Telegram zebra em um café e eu envio isso e então clico em testar o funcionamento, já que eu não tenho ativado para o propósito de testar, você vai ver que começa essa automação. Então, se você tiver isso ativado enquanto você está saindo e voltando, isso pode estar funcionando para você. Talvez você esteja só tipo, zebra em um café, desligue o seu celular, o processo inteiro está feito.
+
+Você poderia conectar múltiplas apps diferentes para essa linha e é predefinido, certo? Então, você sabe exatamente o folder que vai entrar, você sabe exatamente como ele vai chamar o arquivo, você sabe que vai enviar uma imagem direto para o chat telegram, tudo é predefinido e fixado nessa automação. A única coisa dinâmica é minha solicitação, que nós cozinhamos para o propósito para gerar uma imagem. E isso vai levar um minuto, assim como faz no chat GPT, mas quando está completo, você vai ver que vai ir ao arquivo no meu telegram, assim como isso.
+
+Então, como você pode ver, agora está enviando o meu arquivo, ele acabou de enviar o arquivo bem ali, e agora enviou a imagem para o meu chat telegram, uma zebra em um café, e aquele estilo de livro cômico, tudo que eu tinha que dizer era uma zebra em um café. Então, muito legal, isso realmente parece muito doce, e se eu ir para as minhas imagens do folder automação, como você pode ver, ele nomeia o arquivo como o pronto que eu escrevi no telegram. Então, se eu clico aqui e eu tenho um arquivo da zebra no café, uma imagem, eu poderia, de novo, ir mais longe, eu poderia colocar uma captação nisso, eu poderia ter que ser cozido com as cores da minha marca, eu poderia fazer o que eu queria, eu poderia
+ Este arquivo é mais longo que 30 minutos.
+ Atualize para Ilimitado em TurboScribe.ai para transcrever arquivos de até 10 horas.

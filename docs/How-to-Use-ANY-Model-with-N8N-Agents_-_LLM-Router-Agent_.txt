@@ -1,0 +1,186 @@
+How to Use ANY Model with N8N Agents! (LLM Router Agent)
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Neste vídeo de hoje, eu vou mostrar como usar qualquer modelo com N8n usando algo chamado Open Router. Agora, eu também vou mostrar como criar um LLM Router para que seu agente decida qual modelo usar, baseado na sua pergunta. Vamos direto para uma demo.
+
+Então, a coisa bonita destes dois agentes aqui é que eles podem ser implementados em qualquer lugar que você queira. Você pode apenas botar estes no meio de qualquer sistema agêntico que você tenha quando você precisa obter uma resposta com um modelo dinâmico. Agora, o que vamos usar hoje é na verdade um novo atualizador em N8n, e isso permite você usar algo chamado Open Router.
+
+Então, quando eu clico aqui, como você pode ver, eu tenho o meu Output dinâmico para o meu modelo, mas o que eu quero mostrar a você é todos os modelos que o Open Router tem acesso a. Se eu for para Fixed e eu clico neste botão, veja todos estes modelos. Ele usa modelos antrópicos, modelos Amazon, modelos DeepSeek, você pode até usar DeepSeek aqui com todos estes modelos DeepSeek diferentes, Gemini, temos OpenAI aqui, temos Meta, Zalama, Microsoft, literalmente todos os modelos de AI que você pode pensar, nós temos aqui. Nós até temos Grok aqui, que eu estou assumindo que eles vão adicionar Grok 3 aqui em breve.
+
+Mas deixe-me mostrar para você como isso funciona. No meu Agente Decisivo, eu classifiquei 3 modelos que o Open Router tem acesso a dando-lhes um nome de modelo, forças, e é basicamente isso. E aí eu dou alguns exemplos de input e output do usuário.
+
+Mas basicamente eu dou forças para cada modelo. Então, se eu perguntar uma pergunta de websearch, Perplexity vai ser chamado. Se eu perguntar uma pergunta de razão avançada, vou fazer o 03mini ser chamado.
+
+E se eu perguntar uma pergunta de código, Anthropic vai ser chamado. Então, deixe-me abrir o chat em breve e perguntar uma pergunta. Eu poderia dizer algo como, me dê sugestões de restaurante para a minha data chegando em St. Patrick's Day no centro de Chicago, e eu poderia enviar.
+
+E este Agente Decisivo vai ter que decidir qual modelo usar, que neste caso deveria usar Perplexity, pois estou perguntando uma pergunta de dados ao vivo, e precisa de dados ao vivo. Como você pode ver, me dá uma boa resposta. Isso é ótimo.
+
+Me dá diferentes restaurantes que eu posso, você sabe, dar uma olhada. E se a gente clicar nesse modelo dinâmico, o que você vai perceber é que o modelo que ele usou era Perplexity, neste caso. Então, você pode dinamicamente mapear um modelo do Agente Previo.
+
+É isso que vamos aprender como construir hoje. Se eu perguntar uma pergunta de código e enviar. Como você pode ver, é claro que vai me dar o código como normal.
+
+E se a gente for verificar o modelo dinâmico, ele está usando Clod 3.5 Sonnet, porque nas minhas instruções, é assim que eu labelei as forças de Clod para o código. Então, esse é o sistema que eu vou mostrar para você como construir hoje. E lembre-se, isso pode ser implementado em qualquer workflow agêntico.
+
+Tudo que você precisa são esses dois agentes no sistema que eu vou mostrar para você. Então, eu vou mostrar para você como construir todo esse sistema de router LLM, passo a passo no vídeo de hoje. Mas se você quiser estar em uma posição onde você não precisa vir para o YouTube, mas você pode criar seus próprios agentes, então eu recomendo que você junte-se à nossa comunidade da AI Foundations, onde nós te ensinamos as habilidades para construir agentes.
+
+Nós temos um curso de mais de 30 módulos em construir seus agentes com o N8n. E não só isso, mas nós também temos múltiplos templos que você pode instalar facilmente em seu espaço de trabalho. Então, você não só está aprendendo como fazer isso, mas você também está chegando onde você quer estar muito mais rápido, recebendo ideias para seus agentes, e também algumas coisas que você pode intercambiar com seu próprio setup.
+
+E as pessoas estão absolutamente amando esse curso de construir agentes com o N8n. Anthony aqui diz que essa comunidade é uma mina de ouro para qualquer um que a encontre. Outro membro aqui disse que acabou de terminar outra sessão do curso com o N8n.
+
+Os conhecimentos e a estrutura fazem isso fácil de aplicar e praticar. E sim, isso é o que nós fazemos. Nós pegamos agentes, algo que é muito complexo, e nós fazemos isso fácil para você construir o seu próprio.
+
+Então, se você quer mudar seu pensamento, de ser um consumidor nessa revolução da AI, para ser um verdadeiro criador, então a comunidade da AI Foundations é o melhor lugar para estar. Nós acabamos de cruzar mais de 1000 membros, e nós estamos crescendo mais fortes todos os dias. Eu vou deixar um link no comentário de cima ou na descrição abaixo, se você quiser nos juntar na sua jornada da AI.
+
+Tudo bem, vamos começar a construir esse curso. Então, primeiro, o que você quer fazer é adicionar o seu primeiro passo. E você pode começar essa automação como quiser.
+
+Você pode usar Telegram, Slack, WhatsApp, na verdade, qualquer aplicação que você queira começar essa automação. Por enquanto, e o que eu recomendo é só começar simples, sabe? Para que você possa testá-lo, eu recomendo que você comece no chat. Dessa forma, quando você está no N8n, você pode acessar o chat e testá-lo, exatamente como você está usando o chat GBT, se você tem isso conectado a um agente de AI, ou qualquer modelo de língua grande, certo? E a próxima coisa que precisamos fazer é adicionar um nodo de agente de AI.
+
+Então, eu vou selecionar esse botão de mais, e onde diz Advanced AI, eu vou clicar nele. E então, nós podemos fazer apenas o nodo de agente de AI regular. Aqui, nós podemos deixar isso no agente de ferramentas.
+
+Isso deveria ser tudo bem por enquanto. E tudo mais também pode ficar o mesmo. Vamos clicar.
+
+E o que você vai notar é que isso está vermelho agora. Então, o que isso significa é que precisamos adicionar um modelo de conversa. Isso significa que algo está errado, e nesse caso, nós não temos um modelo de conversa.
+
+Então, quando nós clicamos nesse botão de mais no modelo de conversa, como você pode ver, aqui embaixo, no lado esquerdo, nós temos algo chamado modelo de conversa de roteiro aberto. Então, o que isso significa é que, quando nós clicamos nisso, nós vamos ter acesso a, literalmente, tudo que aparece aqui e mais. Então, primeiro, vamos lá e inscrever-nos para o roteiro aberto.
+
+Criar um acounto é muito simples. Você se inscreve, igual a qualquer outra aplicação, e então, o que você quer fazer é ir para créditos. Você não precisa adicionar muito aqui, mas você pode adicionar créditos usando criptomoedas, você pode adicionar créditos usando apenas um cartão de crédito regular.
+
+Isso realmente não importa. Você sabe, você pode até começar pequeno, se quiser. Eu apenas carreguei em 30 dólares, porque eu pensei que eu usaria muito.
+
+Na verdade, eu tenho usado muito nos últimos 12 dias, e eu acabei de passar por qualquer crédito. Obviamente, depende do modelo que você usa. Mas o que você quer fazer, uma vez que você se inscreve, e uma vez que você adiciona talvez até 5 a 10 dólares de créditos, o que você quer fazer é ir para créditos.
+
+Quando você escolhe créditos, você vai ser levado a todos os seus créditos do API aqui. Então, o que nós podemos fazer é clicar em criar crédito, e então, nós podemos dê-lo um nome, e você pode até setar um limite, para que ele não passe por um limite determinado de uso. Mas, por enquanto, eu vou colocar Testing LLM Router, e então, eu posso clicar em criar, e então, você vai ter uma chave secreta que você pode usar.
+
+Eu só vou deixá-lo na tela agora, porque, uma vez que você X isso, essa é a única vez que você vai poder ver a sua chave secreta. Eu também tenho que ter certeza de que você não está mostrando isso para qualquer um. Então, o que eu vou fazer é, eu vou voltar para o meu agente do router, eu vou clicar em Open Router Chat Model, uma vez que selecionamos o chat model aqui, eu vou selecionar Open Router, e então, eu vou criar um novo crédito.
+
+E então, isso é onde a gente pinta a chave do nosso API. Então, o que eu posso fazer é, eu posso pegar e copiar essa chave, agora eu posso fechá-la, e então, eu posso pintá-la aqui. Uma vez que eu clico em Save, ela deve dizer, conexão testada sucessivamente, lindo, e agora, nós temos acesso a todos os modelos no Open Router.
+
+Você pode até ver todos esses modelos, se você for para a página de casa do Open Router, você pode procurar por um modelo, para ver se eles o têm, ou você pode apenas selecionar Browse. E quando você seleciona Browse, você vai poder procurar e filtrar por todos os tipos de coisas diferentes, mas é muito legal usar isso, para procurar o modelo exato que você precisa. Então, como você pode ver, eles têm o novo modelo O3 Mini High.
+
+Se você for para o API, outra coisa que você pode fazer é, você pode setar parâmetros muito específicos para cada modelo, como temperatura, top P, top K, você pode ir realmente em profundidade com isso, e é por isso que eu amo o Open Router, por quão versátil ele é. Mas vamos voltar e terminar de conectar nosso agente. Então, eu posso selecionar qualquer modelo que eu quiser aqui. Por enquanto, eu vou apenas escrever um modelo, talvez para o meu agente, eu vou ter apenas o O3 Mini funcionando, é muito barato, muito custo-efetivo, muito rápido, bom em razões, então vamos escolher o modelo O3 Mini, você pode fazer qualquer modelo que você quiser aqui.
+
+Isso é apenas para o seu agente decididor, então isso não precisa ser dinâmico, mas é apenas o que vai fazer as decisões para qual modelo você vai usar, baseado na sua query. Então, eu posso apenas renovar esse agente, na verdade, para algo como o decididor, lindo, eu posso renovar, e então eu posso renovar isso para qualquer modelo que eu estou usando, apenas para ficar organizado, eu vou renovar isso para o O3 Mini, e eu posso clicar em renovar. Próximo, vamos adicionar alguma memória, nós podemos apenas adicionar uma memória de window buffer básica e deixar tudo o mesmo aqui, e eu vou apenas abreviar isso para WBM, lindo, e agora nós estamos prontos para ir, quando se trata de criar um propósito de sistema para que esse agente use, para decidir qual modelo usar.
+
+Agora, quando você está usando esse set-up, eu recomendo de qualquer jeito, de 1 a 10 modelos, para dar esse agente a habilidade de escolher, se você começar a adicionar mais do que isso, pode ser difícil para o agente decidir completamente qual modelo é melhor para você, e mais tarde no vídeo, eu vou mostrar um set-up que funciona melhor se você tiver um monte de modelos que você quer dar acesso a esse agente decididor para escolher, mas por enquanto, vamos entrar em algumas instruções básicas do sistema, e como você pode dar acesso a certos modelos, suas forças, suas deficiências, e apenas ajudá-lo a decidir qual modelo usar baseado no seu código. Eu vou clicar em opção de adicião, uma vez que eu estou no agente, e clico em mensagem de sistema, e então o que você pode fazer é, quando você vai para expressão, você pode abrir essa mensagem de sistema, para que pareça muito maior. Lá vamos nós, agora nós temos um lindo canvas para trabalhar com, nós podemos eliminar essa primeira linha, e agora nós podemos começar a promover.
+
+Então, eu vou estar escrevendo um templo básico para você, descrevendo tudo enquanto eu vou, para que você possa entender o porquê e como essa coisa está funcionando. Então, primeiro eu dou esse agente um papel, eu digo que você é um agente de roteiro, eu digo que seu trabalho é tomar as queries do usuário, e decidir qual modelo é melhor para cada caso de uso que o usuário pode ter. E então eu digo, você terá três modelos que você pode selecionar para a query do usuário, e eu vou mudar isso para, de, para a query do usuário.
+
+Lindo. Nós estávamos apenas citando qual trabalho o modelo tem, seu papel, e agora nós podemos começar a listar os modelos que ele tem disponível. Então aqui, você pode mudar esse número com quantos modelos você quiser dar acesso a. Por enquanto, eu só quero fazer três, então eu vou listar esses modelos agora.
+
+Para esse caso de uso específico, eu vou ficar com os três que mostrei no exemplo, então perplexidade, OpenAI 03 mini high, e então Anthropic Clawed 3.5 SONNET. Eu encontrei que 3.5 SONNET é ótimo para código, 03 mini high, melhor para a razão avançada, e perplexidade é realmente bom para a pesquisa web ao vivo, essa é a coisa principal deles. Então, quando eu tenho uma pergunta, eu quero que esse agente possa decidir qual modelo é melhor para mim nesse momento.
+
+Então vamos arrumar essa base. Eu digo, cada modelo tem suas forças e pode dar respostas melhores para perguntas específicas do usuário, e comandos. Vamos descer as forças de cada modelo, para que você possa decidir qual é melhor para a pergunta do usuário.
+
+Agora, isso é realmente um sistema agêntico, porque o modelo que o AI escolhe vai depender da nossa pergunta, e vai decidir, baseado na nossa pergunta, qual modelo é melhor para o trabalho. Então aqui nós queremos listar o ID exato do modelo que está listado no OpenRouter. É muito importante que quando listamos os modelos e suas forças, quando escrevemos modelo e damos o nome do modelo, nós queremos listar o ID exato que ele menciona no OpenRouter.
+
+Para chamar esse modelo exato. Então deixe-me mostrar o que estou falando. Eu vou fechar aqui e salvar.
+
+E se eu clicar em um desses modelos, eu posso acessar também, e encontrar qualquer modelo que eu queira, mas talvez eu queira usar Gemini Flash. Quando eu clico aqui, esse é o ID que o OpenRouter está usando para esse modelo específico. Então o que você quer fazer quando você está chamando um modelo, você quer copiar esse ID e pastá-lo em cima do lado do N8n.
+
+Então se eu quiser usar Perplexity, eu posso escrever Perplexity e encontrar o modelo de razão. E então eu quero ter certeza de que eu copiei esse ID exato. Agora, esse modelo é bem legal porque ele usa tanto LiveSearch quanto DeepSeq R1 em Perplexity.
+
+Então eu poderia usar o modelo de razão ou eu poderia usar o modelo básico de Perplexity Sonar. E eu vou, por enquanto, usar esse. Eu não preciso de pesquisa online profunda, mas esse é outro modelo que eu poderia adicionar se eu quisesse pesquisa profunda e funcionalidade online, eu poderia fazer esse modelo.
+
+Mas se eu estou perguntando perguntas básicas online, então eu só posso fazer Perplexity Sonar. Então eu vou copiar esse ID e depois eu vou voltar para o agente do router. E quando eu estou no agente do router, o que eu posso fazer é abrir isso e depois pastar o modelo que eu quero.
+
+Então com esse tag exato, nós também vamos dar exemplos de input e de output. Mas outra coisa legal quando você está listando modelos e suas forças, por exemplo, o que você quer fazer é quando você lista um modelo, você também quer listar as forças desse modelo. O Open Router, na verdade, tem uma boa lista de forças para você.
+
+Então quando você vai para o modelo que você quer e você clica nesse arco de descrição, como você pode ver, isso te dá uma descrição bonita. Eu recomendo atualizar essa descrição como você precisa, para que ela possa completamente encaixar o seu caso de uso para como você quer usar o modelo, porque se você está apenas dependendo disso, pode ser um pouco inacurado. Você tem que descrever aqui as forças desse modelo e você tem que pensar, se alguém estava te dando uma pergunta e você tinha que olhar essas forças por si mesmo, que forças você estaria procurando para usar esse modelo, baseado em certas perguntas.
+
+Pense se você fosse esse agente decidindo qual modelo usar. Você quer listar as forças como se você fosse o que decidisse. Então aqui nós temos perplexidade e então nós damos algumas forças.
+
+Eu digo, search web construído, features citações e a capacidade de customizar as fontes e pode searchar o web para dados ao vivo. Vamos para o próximo modelo. Talvez eu queira um modelo de razão muito alta.
+
+Bem, eu poderia usar o novo O3 Mini High. Como você pode ver, diz que seu esforço de razão está setado para alto ao invés do médio ou baixo. É custo-eficiente, otimizado para tarefas de razão STEM, excelência em ciência, matemática e codificação, mas eu acredito que Cloud 3.5 SONET pode até ser melhor para codificação.
+
+Então eu poderia usar essas coisas em minhas forças como eu quiser, mas eu realmente estou apenas tentando dizer a esse agente o que eu acho que são suas forças, para que ele possa usar o modelo baseado nas minhas perguntas, como eu disse. Então eu digo que é um modelo de linguagem custo-eficiente, otimizado para tarefas de razão, excelência em ciência e matemática, e então eu digo que esse modelo é melhor quando respostas cuidadosas e bem pensadas são necessárias em relação a problemas com múltiplas variáveis ou conexões. Eu encontrei que esse modelo é ótimo quando se trata de conectar múltiplas coisas diferentes.
+
+E finalmente, eu vou adicionar o meu modelo de Cloud 3.5 SONET. Então, como você pode ver, eu adicionei o modelo de Cloud 3.5 SONET, e então eu dei algumas forças. E para ser honesto com você, eu só peguei as forças daqui.
+
+Eu só copiei as forças aqui, porque isso deu um exemplo muito bom de forças no Open Router para o Cloud 3.5 SONET. Então, assim, nós temos dado contexto a esse agente sobre os modelos que eu quero usar e suas forças. Quanto mais modelos você tem, mais contexto você está dando ao agente, então pode começar a alucinar, que eu tenho uma solução para isso no final deste vídeo.
+
+Mas, por enquanto, nós podemos usar apenas 3, 5, talvez até 10 modelos. Mas nós precisamos dar alguns exemplos. Então, como você pode ver, eu disse que você tem que passar o código do usuário e decidir em um modelo usando um formato de objetos JSON estruturados, como este.
+
+Então, o que nós estamos fazendo é dar a este modelo uma estrutura de saída, para que toda vez que ele saia, sua resposta seja a mesma. Então, aqui embaixo, o que nós queremos fazer agora é dar a estrutura que nós queremos a saída. Então, eu vou escrever isso.
+
+Eu digo, estrutura de objetos JSON. E então eu dou dois objetos que eu quero este modelo toda vez que eu incluo em sua resposta. User query, então o todo do user query aqui.
+
+Então, ele pode passar para os outros agentes ou as outras categorias, se precisar. E então, modelo, modelo selecionado aqui. Agora, isso é provavelmente o suficiente, certo? Nós podemos provavelmente terminar aqui, mas o que eu sempre gosto de fazer com meus agentes, especialmente quando uma saída estruturada é necessária, é adicionar exemplos de saída e saída, para que ele possa entender como usar certos modelos que você tem aqui, como passar o user query corretamente, e assim por diante.
+
+Então, eu vou adicionar três exemplos, com cada exemplo usando um dos modelos. Eu digo, exemplo um, user query, procura o web e encontre pássaros legais. E então eu dou um exemplo de como o agente precisaria responder, certo? Então, este é o user query, ele está mapeando o user query ali, e então eu estou dando o modelo para selecionar.
+
+E eu estou espalhando exatamente como OpenRouter tem suas IDs espalhadas. E esta estrutura de JSON é muito estruturada. Ela não vai se separar do seu caminho, ela sempre vai exibir estes objetos aqui.
+
+Então você está só dando exemplos de como usar a estrutura. Eu vou adicionar dois mais exemplos usando os outros modelos. Então eu digo, exemplo dois, crie um plano de negócio para eu criar o próximo Google.
+
+Isso é uma tarefa bastante avançada, certo? E então nós temos OpenAI03miniHIGH para esse, usando o mesmo nome e ID do modelo que OpenRouter usa para referenciar esse modelo. E então, me dê código para criar o jogo Tetris com Python e eu estou perguntando perguntas de código, nós queremos usar o Anthropic 3.5 Sonnet. Se você está achando que não está selecionando o modelo certo, dê mais exemplos de input-output e isso deve resolver seu problema.
+
+Mas as instruções são completas. Depois de você ter exemplos, sua estrutura de objetos de JSON, formas de modelo e os nomes do modelo com a ID exata, e apenas instruções gerais, como rolos, objetivos e coisas básicas como isso, então você está pronto para ir para o próximo passo, que é criar o parser de output estruturado. Então, se eu clicar aqui, há um botão acima da mensagem do sistema que diz que requer um formato específico de saída.
+
+O que você quer fazer é acessá-lo. E aí você vai ver esse botão aparecer, conectar um parser de saída no canvas para especificar o formato de saída que você requer. Antes de fazer isso, eu quero que você pegue sua estrutura de objetos de JSON, a estrutura de exemplos que você criou.
+
+Então, para mim, é só user, query e modelo. Então, desse braço de cima, vou copiar. Aliás, eu tenho instruções e módulos de curso, até mesmo na comunidade, sobre como criar objetos de JSON, e eu vou super em profundidade em instruções.
+
+Ainda mais em profundidade do que eu fiz nesse vídeo, muito mais em profundidade, na verdade, sobre como conseguir a estrutura perfeita. Mas, por enquanto, isso deve ser para o nosso caso de uso. Eu vou copiar isso.
+
+Eu quero que você faça o mesmo. Eu quero que você copie a estrutura de objetos de JSON e depois conecte o parser de saída. Então, você pode apenas clicar nesse texto amarelo aqui e então selecionar o parser de saída estruturado aqui em cima, certo? E agora, você pode pastear esse exemplo aqui.
+
+Então, eu posso deletar tudo e depois pastear o meu exemplo. Então, agora nós estamos dando esse modelo uma estrutura de saída para ser usada a cada vez que saia suas respostas. Eu posso renovar isso.
+
+Eu sempre gosto de acertar os nomes em tudo para limpar o meu espaço de trabalho. Então, eu vou chamar isso de saída estruturada, assim. E agora, nós podemos até mesmo testar o agente decididor para ver se está escolhendo o modelo certo e ver como está passando suas respostas.
+
+Deixe-me dar uma pergunta de tipo de código. Eu posso vir aqui e pastear um prompto muito longo aqui onde eu estou pedindo um pedido de Curl HTTP e vejamos qual modelo ele me dá aqui. Agora, eu não realmente tenho um modelo em mente.
+
+Eu estaria bem com outro 0.3 mini ou Cloud. Algo além de perplexidade aqui, eu acho que seria bom. Então, como você pode ver, isso nos dá essa saída estruturada e depois nos dá um item.
+
+Quando eu clico, podemos ver a resposta do agente. Então, para o modelo, ele está usando o Cloud 3.5 SONNET e para o código, ele vai enviá-lo assim. Então, está enviando a coisa exata que eu escrevi para o chat, o que é incrível.
+
+Então, nós temos mais um passo que precisamos completar e é usar a saída estruturada que temos para passar isso para outro agente para resolver o código, resolver a pergunta, resolver o comando. Então, o que queremos fazer é clicar nesse botão de mais e adicionar um nodo de agente AI avançado. Então, eu vou selecionar esse agente AI.
+
+E então, o que nós queremos fazer é passar o código e mapear o modelo de conversão. Então, para o Source for Prompt, onde diz a mensagem do usuário aqui, em vez do nodo de conversão conectado, o que nós queremos fazer é definir isso abaixo, e isso vai ser dinâmico, então nós queremos fazer isso uma expressão. Quando fazemos isso uma expressão, o que podemos fazer do agente decidir é passar o código do usuário.
+
+Então, agora é como se nós estivéssemos perguntando a esse modelo, porque o modelo anterior está colocando o código do usuário em seu próprio campo aqui. O que nós queremos fazer é... Bem, se você quiser, você pode renovar isso. Eu vou apenas chamar isso de Agente Output e então eu posso clicar.
+
+A próxima coisa que nós queremos fazer é mapear outro modelo de conversão aberto. Então, eu vou selecionar isso, selecionar modelo de conversão aberto. E então, nós podemos usar o mesmo acounto de conversão aberto, a menos que você queira mudar isso para usos limitados, mas eu vou usar o mesmo acounto.
+
+E aqui, o que você pode fazer é ter um modelo dinâmico. E esse é realmente o benefício de fazer Open Router aqui. Em qualquer outro modelo, você pode fazer isso, mas Open Router tem acesso a todos os modelos.
+
+Então, eu poderia fazer expressões no modelo de conversão que tem todos. O que eu posso fazer é clicar na expressão e então deletar isso. E o que eu quero fazer é mapear modelo para modelo.
+
+Então, eu vou mapear o modelo para a expressão de modelo de Open Router. E aqui, isso vai mudar dinamicamente. A cada vez que você vê esse verde dentro do N8n, significa que é um campo dinâmico.
+
+Então, nós estamos mapeando o que for esse campo. Então, isso pode ser qualquer coisa que o agente decida usar. Ele vai enviar o nosso código de uso e também o nosso modelo que ele selecionou para nós.
+
+Em seguida, eu posso adicionar outra memória do buffer de janela. Então, eu vou selecionar isso e eu vou definir abaixo. E para a chave, eu vou colocar o ID da sessão de mensagem de conversão.
+
+Lindo. E agora nós estamos prontos. Nós podemos renomear isso se quisermos e então nós podemos testá-lo.
+
+Eu vou renomear o modelo de conversão de Open Router para modelo dinâmico, e isso é WBM2. Então, qualquer pergunta que eu pergunte, vai responder com um modelo dinâmico dentro desse agente. E como eu disse, você pode colocar isso em qualquer automação que você quiser.
+
+Eu poderia dizer, crie-me um plano de negócio para ser o próximo Windows. Eu poderia enviar isso. Como você pode ver, o código do usuário foi enviado para o próximo.
+
+E ele também está usando o novo modelo de 0.3.0 Mini High do OpenAI. E então, ele está criando um outputo aqui. E então, ele me dá esse plano de negócio usando o melhor modelo que a OpenAI atualmente tem disponível no mercado.
+
+Muito rápido. Muito legal que ele pode fazer isso para você. Ele te dá muitas informações aqui com esse modelo.
+
+E a razão pela qual nós obtivemos esse modelo foi por um outputo dinâmico enquanto usamos o Open Router. Agora, se você quiser começar a usar vários diferentes modelos e você quiser ter apenas um modelo selecionado de 10 ou mais, o que eu recomendo fazer é criar um sistema como esse. Então, o usuário sempre terá uma pergunta ou um comando.
+
+Você é o usuário. O que você der ao modelo, isso vai ser o seu comando de pergunta ou, em outras palavras, um query. O que eu recomendo fazer é enviar isso para um agente categorizador.
+
+Então, ao invés de decidir qual modelo usar aqui, você decidiria qual categoria isso cai em. Você diria, é isso uma tarefa de pensamento profunda? É isso uma tarefa de código? É isso uma tarefa de pesquisa web? E então você poderia ter modelos sobre essas categorias. Então, você enviaria a categoria, qualquer categoria que o prompt está em ou a query está em.
+
+O que você faria é enviar isso para um agente completamente diferente. E você poderia ter isso como um filtro de troca, você poderia ter isso como diferentes funcionamentos, o que você quiser. E cada agente aqui tem uma lista de modelos para aquele tipo de query específico e como certos modelos são melhores em certas situações.
+
+Então, talvez você tenha múltiplos modelos de código complexos que fazem certas coisas muito bem dentro do código. Bem, então você teria que enviar a sua query para esse agente, que decide qual modelo de código usar. Então, você vai um passo mais profundo em quebrá-lo em diferentes agentes que podem performar categorias de tarefas no ponto em que você está na direção certa para aquela categoria específica.
+
+O que depois iria para o seu agente de resposta, o que nós criamos aqui, o agente de saída. E então, essa mensagem iria para você, o usuário. Então, se você precisa adicionar mais modelos, essa é a estrutura que eu recomendo, quebrá-la para mais agentes que podem descrever cada modelo dentro da categoria, muito melhor do que um agente poderia fazer.
+
+Isso é tudo que eu tenho para o vídeo de hoje. Se você gostou, por favor, deixe um like e se inscreva. Eu gostaria muito de apreciá-lo.
+
+E se você quer aprender como construir agentes como este e agentes que se tornem muito mais complexos, então eu recomendo se unir, de novo, à comunidade da AI Foundations, onde nós ensinamos tudo. Aqui nós temos um grupo, uma comunidade de mais de 1.000 membros, e todos são tão ajudantes aqui. Esta comunidade é realmente diferente de qualquer comunidade que eu já vi, e não estou apenas dizendo isso porque eu sou um dos proprietários da comunidade, mas a razão pela qual eu digo isso é porque esse é o feedback que nós recebemos.
+
+Só no posto de introdução, nós temos mais de 8.700 comentários de pessoas apenas se apresentando, outras pessoas respondendo, os convidando para a comunidade. Este é realmente um espaço para encontrar suas pessoas dentro da revolução da AI. Então eu recomendo se unir à nossa comunidade, a Master Agents e também apenas os fundamentos da AI se você ainda não chegou tão longe.
+
+Mas como você pode ver, nós temos o curso Build Agents com o N8n e eu realmente espero ver você lá dentro. Mas com isso dito, é tudo o que eu tenho para este vídeo. De novo, se você gostou, por favor, deixe um like e se inscreva.
+
+Eu vou ter um link de playlist aqui de todos os nossos tutoriais do N8n que o Carter e eu fizemos. Então se você quiser conferir isso para continuar indo mais profundo, eu recomendo que você faça. Tudo bem, vejo você no próximo vídeo.
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.

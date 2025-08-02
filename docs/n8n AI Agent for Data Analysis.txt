@@ -1,0 +1,46 @@
+n8n AI Agent for Data Analysis
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Olá a todos, estamos de volta com outro ótimo tutorial sobre agentes de A.I. N8n e desta vez, eu criei um agente de A.I. N8n de análise de dados. Então, o que ele faz? Ele eventualmente recebe um arquivo CSV, faz algumas calculações sobre ele, passa ele para o LLM, todas as calculações e o LLM, usando a calculação, ou seja, nosso agente de A.I., como você pode ver, usa essa calculação para gerar um relatório final. Agora, esse relatório final, ou seja, um texto, é então enviado a um arquivo JSON e o relatório final está guardado em um arquivo JSON.
+
+Então, deixe-me lançar esse teste particular para que você possa vê-lo e então eu vou explicar todos os nodos um por um. Então, aqui a execução começou. O primeiro é clicar em executar, isso é um trigger manual.
+
+Você precisa clicar nesse trigger para iniciar o trabalho. O segundo é um arquivo de leitura binária, que é algo que fizemos no último tutorial também. Aqui você precisa proporcionar o caminho para seu arquivo CSV, certo? Aqui você pode ver que veja os usuários, dados, OneDrive, Desktop, Booklist.csv. Depois, o próximo nodo é extrair o arquivo.
+
+Então, no primeiro passo, estamos carregando o arquivo, não estamos lendo ele. No próximo passo, estamos carregando ele do arquivo CSV que temos e aqui você pode ver que todos os dados estão agora extraídos. Na direita, você pode ver como um único texto, certo? Ele consistia de colunas como id, título, autor, formato, preço e outras coisas.
+
+Então, é um CSV muito pequeno para demonstração, mas você pode ir para um grande. Uma vez que o texto é extraído, este é o core. Este é o código de Python que eu escrevi, usando a ajuda do chat.gpt, é claro, o que me ajuda a extrair a informação clara sobre o setor de dados.
+
+É como se estivesse fazendo uma análise básica. Como você pode ver aqui, colunas duplicadas, valores totalmente faltantes, forma do setor de dados, não-nulo, valores faltantes, cardenalidade. Então, todas as diferentes informações, como os top 5 valores frequentes, mínimo de deviação estándar, 25% médio, 75% máximo, todas as informações importantes são extraídas aqui e a análise final, que é completamente matemática, é enviada para o agente AI.
+
+Como você pode ver na direita, esta é a informação que está sendo enviada. Agora, este é o corpo, que é o agente AI. O agente AI, como você pode ver, este é o input que estamos recebendo do nodo anterior, que está fazendo todas as calculações.
+
+E aqui estou usando um prompt para gerar insights de negócios desses detalhes sobre a base de dados. O output deveria começar com, aqui, as insights do setor de dados. Como você pode ver, e aqui vai o setor de dados variável.
+
+Uma vez feito, estamos conectando um modelo de chat Olama aqui, que é um local LLM. Clique aqui, para que você possa ver que este particular output está vindo do agente AI e estou usando o modelo Gamma 3 1 bilhão. Então, este particular LLM ajuda em sumarizar todos os detalhes que temos.
+
+Agora, temos o output. O que fazer agora? Então, nós estamos agora convertendo este particular texto de volta para um binário, para que possamos salvar este dado em algum arquivo JSON. Então, na direita, você pode ver que este é o outputo que estamos recebendo do agente AI.
+
+Aqui estão as insights do setor de dados, o sumário total de dados. O setor de dados consiste de 10 linhas com 5 colunas, etc, etc. E o último passo é escrever um arquivo binário.
+
+Então, uma vez que você clique aqui, você precisa mencionar o caminho para seu arquivo de saída. Estou escrevendo um arquivo JSON por agora. E aqui você precisa mencionar o que deve ser escrito.
+
+E é assim que nós criamos nosso agente de análise de dados de AI usando NA10. Então, espero que você tenha entendido. Agora, vamos construir todo o fluxo muito rápido do início.
+
+Então, aqui você precisa ir e criar um novo fluxo de trabalho. Eu criei isso. Clique no primeiro passo, que é trigar manualmente.
+
+Você pode ir para o chat também, ou o que você quiser fazer. O próximo passo é ler e escrever fios do disco. Então, você precisa clicar em ler fios aqui, e você precisa proporcionar o caminho do seu fio aqui, como você pode ver.
+
+Uma vez feito, o próximo passo é adicionar um nodo de extração. Então, a leitura e os nodos de extração são diferentes. Lembre-se disso.
+
+O nodo de leitura basicamente ajuda você a carregar o fio, enquanto o extração ajuda você a extrair o dado do fio. Então, dependendo do fio que você tem, você pode ir para extração CSV ou extração do texto, o que você quiser fazer. Eu fiz isso com o fio de texto extração, se você observar, mesmo que fosse uma CSV, porque eu estava tendo alguns problemas de formato.
+
+Uma vez isso feito, o próximo passo é escrever o nodo de código. Então, escreva um código que você pode gerar do chat GPT, sem problemas, e aposta aqui. O próximo passo é adicionar um agente AI, e este é o agente AI que estou adicionando, definido abaixo, qualquer um dos prontos mencionados, e uma vez que você executou o nodo anterior, você recebe uma variável mostrada aqui, no lado esquerdo, você precisa apertá-la para a área do pronto.
+
+E, como você pode ver no final, há um modelo de chat que precisa ser adicionado, então clique em Olama aqui, e clique em Modelo de Chat. Escolha seu modelo, eu estou usando Gamma 3 1B. Então, com isso, esta é a primeira parte que foi feita.
+
+Agora, a próxima parte é adicionar a conversão de volta. Então, se você lembra, você precisa agora adicionar um converter binário, e então, novamente, escreva para o arquivo. Então, com isso, você poderia criar um agente de ciência de dados AI inteira de novo.
+
+Isto é bastante fácil, e é muito, muito útil também, você só precisa replazar seu arquivo CSV, URL, ou caminho, caminho local, e então, eventualmente, toda a análise é feita automaticamente. Você pode mudar o pronto, isto é apenas para demonstração, portanto, eu não fui. Se você não quiser adicionar algum arquivo de saída, o arquivo de saída final deve aparecer na direita.
+
+Então, isto faz sua análise de dados inteira automatizada. Espero que você tente o agente de ciência de dados AI, e nos vemos no próximo tutorial. Obrigado.
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.

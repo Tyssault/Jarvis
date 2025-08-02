@@ -1,0 +1,163 @@
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)
+
+A AI está, de uma só mão, fazendo desta década, uma que vai descer na história. Neste ponto, isso nem é suficiente para um debate, e uma grande parte disso são os agentes de AI, que são modelos de língua grande capazes de interagir com o mundo externo através de APIs, webscraping, co-generação, e o listo continua. Há um milhão de maneiras diferentes de construir agentes de AI, tanto com código quanto sem, e há bons argumentos para ir de ambas as maneiras.
+
+Por um lado, soluções sem código, como Flowwise e N8n, fazem isso tão fácil de construir agentes de AI poderosos sem ter que debugar e manter um monte de código. Por outro lado, codificar seus próprios agentes de AI com línguas como Python e librarias como LangChain, te dão toda a customização e controle que você poderia precisar, e às vezes, as ferramentas sem código simplesmente não oferecem isso. Muitas vezes você tem que codificar seus próprios agentes de AI para a produção, porque as soluções sem código muitas vezes não são ricas em ferramentas quando seus requerimentos começam a ficar realmente específicos, e então muitas vezes as pessoas começam com o código sem e depois saem da necessidade.
+
+No entanto, eu encontrei o perfeito trifecta que combina código e sem código para te dar o melhor de ambos os mundos. Agentes de AI rápidos e fáceis de desenvolver que ainda são extremamente poderosos e capazes de cumprir qualquer das suas necessidades. O que é o segredo aqui? Está usando o N8n para as ferramentas de agentes, e então Python e LangChain para o agente de AI em si.
+
+Eu estou obsessado com essa combinação, porque realmente elimina as forças de código e sem código tão bem. Tudo bem, apenas me escutem sobre isso. O N8n faz isso tão fácil para se instalar credenciais para seus serviços, e então conectá-los todos juntos em workflows que você pode realmente criar como pontos de fim de API para seus agentes.
+
+E então Python e LangChain te permitem criar agentes de AI muito facilmente com qualquer LLM que você escolha em poucas linhas de código. E então você pode conectar em seus N8n workflows em cinco linhas de código, e então criar ferramentas customizadas em Python para qualquer coisa que talvez você não poderia fazer no N8n. Então é apenas a combinação perfeita.
+
+E se você não pode ver a beleza dela neste ponto, eu não sei o que dizer. Então, eu vou ensinar-vos passo a passo como instalar esse tipo de agente, com um exemplo divertido e prático que eu criei para você, e até mesmo testá-lo no final para ver o quão bem funciona. Meu objetivo no final deste vídeo é ter você convencido que este é o jeito de construir seus agentes de AI.
+
+Tudo bem, então, já que estamos combinando código e não-código para este agente de AI, vai ter duas partes principais para o que eu estou passando por aqui. A primeira vai ser os N8n workflows que nos dão as ferramentas para interagir com serviços como Slack e Google Drive. E então, na segunda parte, eu vou passar-vos através de codificar o agente com Python e LangChain e, na verdade, integrar com os N8n workflows para trazer tudo junto.
+
+Então, o que este agente de AI vai poder fazer é enviar mensagens em Slack, summarizar conversas em Slack e enviar arquivos para o Google Drive. Apenas alguns exemplos simples de ferramentas que eu coloquei aqui para este agente para fazer algo simples e ainda bem prático. Mas o que eu realmente quero passar por aqui como ponto principal é que você pode extender isso para qualquer coisa, porque o céu é o limite com os workflows que você pode criar no N8n e integrar para este agente.
+
+Então, apenas pense no que você quer fazer e, enquanto eu estou te guiando através disso, pense em como você pode tão facilmente fazer isso com o que eu estou colocando aqui. Então, a primeira coisa que eu quero fazer é te guiar rapidamente através dos três N8n workflows que eu vou usar para ferramentas para o nosso agente de AI que estamos fazendo com Python e LangChain. Agora, eu não vou cobrir como instalar o N8n ou como instalar cada um destes workflows em detalhes porque a principal coisa que eu quero cobrir aqui é como exatamente você pode usar os N8n workflows como ferramentas em um agente de Python e LangChain.
+
+Eu não quero passar todo o tempo te incomodando com os detalhes de instalar estes workflows agora, mas eu tenho muitos outros vídeos no meu canal e há muitos outros recursos no YouTube para instalar o N8n e entrar nos detalhes básicos de fazer estes workflows. Então, de novo, isso vai ser apenas uma análise de nível alto, mas eu quero mostrar o que estamos fazendo com estes ferramentas. Então, a primeira ferramenta que eu tenho aqui é uma para sumar uma conversa em Slack.
+
+Então, começa com um Webhook porque haverá uma URL que invocamos dentro do código de Python para fazer esta chamada de ferramenta. E com este pedido aqui, vai entrar para, basicamente, apenas puxar um monte de mensagens de Slack de um canal específico que eu tenho referenciado aqui. E você poderia fazer este dinâmico se você quisesse extender o agente e tê-lo, na verdade, olhando para os IDs do canal e passá-lo para puxar mensagens de um canal específico, mas só para mantê-lo simples aqui, eu tenho o canal encodado.
+
+Então, indo para este pequeno espaço de trabalho de teste em Slack que eu criei aqui, este é o que eu tenho para a minha demonstração aqui. Então, eu só tenho esta pequena conversa que eu fiz comigo mesmo como exemplo. É apenas alguém que está planejando uma nova startup para AI Pets e eles estão tentando descobrir o seu stack de tecnologias.
+
+Então, este é o que eu tenho para uma pequena conversa de nove mensagens aqui como algo que vamos sumar. Então, eu puxo todas essas mensagens, eu agrego todas elas em um único campo e depois eu posso passar isso para o meu modelo de língua maior com um pronto dizendo para sumar esta conversa. Então, eu passo dinâmicamente a lista combinada de mensagens de Slack dizendo para o LLM sumar.
+
+E então, para o meu modelo aqui, eu vou usar o GPT-40 Mini. E então, uma vez que eu recebo essa resposta do LLM com a sumação, eu respondo para o Webhook com esse item. E então, agora eu volto para o código do Python com essa sumação e então o meu agente pode fazer o que quiser fazer com essa sumação.
+
+Então, esse é o primeiro ato que temos aqui para Slack. O próximo ato que eu quero cobrir bem rapidamente aqui é o de postar uma mensagem para Slack. Agora, este é ainda mais simples do que o outro porque é realmente apenas uma ação que queremos fazer aqui para fazer a mensagem em Slack.
+
+E então, é claro, nós queremos começar e terminar com o Webhook novamente porque nós queremos, novamente, chamar esse URL no nosso código do Python para invocar esse ato para enviar uma mensagem para Slack. E então, no nosso código do Python, nós teremos uma função que aceitará um argumento do texto de mensagem para enviar e então ele invocará esse Webhook com isso como parte do payload para que nós tenhamos o texto que nós realmente queremos enviar para o canal de Slack. E então, nós temos esse tiro de referência dinâmica e o atributo de texto de mensagem deste nodo para enviar uma mensagem para Slack.
+
+De novo, eu tenho o canal hardcoded aqui. Você poderia fazer essa dinâmica se quiser com outro ato para olhar para os IDs do canal na workspace de Slack, mas eu estou apenas mantendo isso simples aqui. A outra coisa que eu queria rapidamente mencionar aqui, é que é como um pequeno bolinho de ouro para te salvar um pouco de tempo.
+
+Seguir as credenciais de Slack é um pouco mais complicado em N8n do que algumas das outras credenciais. Ainda é fácil no geral porque N8n faz isso super limpo para fazer tudo e te oferece documentação. Mas tenha em mente que quando você vai para a documentação para estabelecer as credenciais, eles referenciam a navegação de uma forma estranha que não deu muito sentido para mim.
+
+Então, deixe-me encontrar isso aqui. Sim, então vai te dizer para ir para adicionar funcionalidades e funcionalidades e selecionar as permissões. Isso não parece existir.
+
+Se você for para api.slack.com onde você precisa ir para estabelecer sua aplicação Slack para obter as credenciais para colocar em N8n, para obter as permissões, você precisa ir para OAuth and Permissions. Então, uma vez que você está lá, é aqui que você vai ver o URL redirecionado que N8n pede de você para obter do Slack. E também para as credenciais aqui, deixe-me acessar o botão.
+
+Eu estava brincando com muito aqui. Quando diz que você precisa de certas credenciais, você vai runar a funcionalidade e você terá erros quando essas credenciais não estão instaladas. Mas em suas credenciais de tokens do usuário, você pode apenas setar.
+
+Essas são as que você geralmente vai precisar para ler mensagens. Então, quando você está summarizando a conversa com aquela outra funcionalidade, essas são as que você precisa. E então, eu acho que existem outras funcionalidades que você tem que setar para enviar mensagens, mas, de qualquer forma, é aqui que você faz tudo isso.
+
+Então, mantenha isso em mente. Apenas um pouco de uma bolinha de ouro para você lá. Então, voltando à funcionalidade aqui, eu já tenho a minha credencial instalada, é claro.
+
+E então, sim, apenas a última coisa é responder ao Webhook com aquele item vindo. Então, basicamente, o resultado de enviar a mensagem Slack. Então, o terceiro e último produto que temos aqui é para criar um arquivo em Google Drive, especificamente, um Doc do Google.
+
+Agora, esse produto é realmente simples, como o último. Uma única ação que temos aqui para criar um arquivo em Google Drive. Então, nós temos um par de parâmetros que estão vindo do apiCall, que é basicamente apenas o nome do arquivo e o texto para colocá-lo.
+
+E então, eu estou codificando o folder que eu vou enviar para o Google Drive apenas para esse folder de Meeting Notes que eu estou brincando com outros vídeos no meu canal. E então, finalmente, uma coisa realmente importante é que nas opções extras aqui, eu adicionei esse botão para converter para um documento Google, senão o texto que eu vou enviar para o Google Drive vai ser colocado em um arquivo .txt. E eu gosto de documentos Google, eu só quero que pareça muito legal, e por isso eu fiz isso. E então, tudo mais com os Webhooks é exatamente o mesmo, e esse é o workflow.
+
+Você pode ver aqui como, uma vez que você entende como os Webhooks funcionam, e quais ações você quer e os workflows do NAN, é tão, tão fácil setar qualquer ferramenta que você quiser para o seu código Python e LangChain. E falando nisso, nós podemos entrar nisso agora e, na verdade, começar a usar esses workflows para o nosso agente. Agora, para a minha parte favorita, nós conseguimos encoder o agente AI com Python e LangChain e interagir com nossos workflows N8n.
+
+Realmente rápido, antes de começar, eu vou ter um link na descrição desse vídeo para um repositório GitHub, onde você pode encontrar todo o código que estamos a fazer aqui se você quiser rapidamente fazer isso por si mesmo e implementá-lo. Mas agora, eu vou te guiar passo a passo criando todo esse código para interagir com o N8n, construir nosso agente AI, toda aquela coisa boa. Você pode ver aqui, eu só tenho o esqueleto para uma função principal no meu esqueleto Python principal, e depois eu tenho esse outro esqueleto Python vazio onde nós vamos criar todas as ferramentas para interagir com os endpoints do N8n API.
+
+Também, com todo o código no repositório GitHub, existe também um arquivo .txt de requerimentos, então você pode ver os pacotes de Python e suas versões para ter o mesmo ambiente como eu, e também um arquivo .env.example que você filma com suas próprias credências, como coisas para o seu entrópico ou chaves do API OpenAI, toda a produção de N8n, URL webhooks que fomos falar antes, e também quando você setar a autorização no seu N8n webhooks, você vai ter um token eu tenho instruções sobre como criar isso também dentro do N8n, você vai querer ter tudo isso setado aqui, nomear este arquivo para .env, e aí você vai estar setado com o mesmo ambiente como eu. Então agora, nós podemos realmente criar nossos todos os agentes que interagirão com nossos endpoints do N8n API, e eu vou começar dentro deste script Python utilitário para definir as ferramentas por importar todos os paquetes que eu preciso, coisas como .env, e também a utilidade de ferramentas do LangChain, que é um decorador de funções que faz com que as funções que definimos aqui possam ser usadas como ferramentas que a gente binde para o nosso agente. Em seguida, eu vou carregar os variáveis de ambiente, e depois trazer tudo que eu preciso para o N8n, incluindo o token Bearer que eu vou ter como header de autorização.
+
+Você colocou isso no N8n. E também os três URLs de produção que precisamos aqui para chamar cada um dos webhooks para esses diferentes workflows N8n. Em seguida, eu tenho uma função de ajuda aqui, e essa é provavelmente a parte mais legal desse conjunto, porque faz com que seja muito fácil criar tantos ferramentas como você quiser, porque todas elas vão gerenciar essa função que faz com que seja super limpo fazer esses pedidos de API para os workflows N8n.
+
+Então, a primeira coisa que eu faço aqui é que eu tenho todos os meus parâmetros definidos, coisas como o método, que vai ser um GET ou um POST, dependendo do tipo de operação, a URL, que é a URL do workflow N8n, e então o nome da função, porque isso é basicamente como a AI sabe qual ferramenta ela está invocando, e então, opcionalmente, um payload, como se você tivesse que passar algo como a mensagem que você quer enviar no Slack, o texto real para isso. Então, com isso, nós definimos nossos headers, o que inclui o token Bearer que precisamos, senão a N8n vai rejeitar esse pedido de API, e então nós podemos tentar fazer esse pedido, e então isso apoia tanto os pedidos de GET quanto os de POST com um payload, e nós temos ambos entre nossos diferentes workloads que nós temos na N8n. E então, se nós recebemos um pedido sucessivo para o ponto final da API, nós vamos aumentar para o status, caso haja um erro de 4 ou 3 proibido, e então nós vamos retornar a resposta do ponto final da API para que o agente possa reassumir o que aconteceu quando ela chamou esse tool.
+
+E então nós vamos ter um EXCEPT aqui, basicamente, se houver algum erro, nós vamos pegá-lo, e então retornar para o agente, dizendo que houve um erro com essa função específica, aqui está o erro, para que ele possa tentar se corrigir e talvez chamar o tool de novo. Então, isso é tudo que nós precisamos agora, essa função wrapper bonita, que faz com que seja tão fácil setar qualquer tool trabalhando com a N8n. Você vai ver isso agora.
+
+Então, nós vamos começar a encontrar esses tools. Então, o primeiro que nós queremos aqui é o tool para resumir uma conversa Slack. E quando você usa o tool decorator aqui, então você coloca o at tool no topo da função, isso é a forma de a LangChain transformar essa função em um pacote de tool.
+
+Então, nós vamos pegar todos os nossos tools diferentes juntos, combiná-los, colocá-los no modelo de linguagem grande, e o modelo de linguagem grande vai usar os docks strings aqui para entender quando usar essas funções e como usá-las. Então, eu dou uma pequena descrição, eu dou uma chamada de exemplo, e então eu especifico alguns argumentos e também o que essa função vai retornar para que ela possa reassumir sobre a saída. Tipo, talvez quando eu resumo uma conversa Slack, eu obviamente retorno o resumo.
+
+Então, eu digo para a AI que ela pode esperar para receber o resumo, o que também ajuda ela a saber quando invocar esse tool especificamente. E veja o quão simples essa função é. É literalmente apenas cinco linhas de código aqui, porque eu retorno chamando essa função aqui, essa função de ajuda que eu fiz, especificamente, é um getRequest, eu tenho esse variável de envolvimento que define o meu URL do N8nAPI e então eu tenho o nome da função também. É tão fácil.
+
+E para as outras duas ferramentas, é também tão fácil. Então, nós temos uma para enviar uma mensagem Slack, novamente, docks string para ajudá-la a entender quando e como usar esse tool. É um getRequest, eu tenho esse URL e então meu payload vai incluir a mensagem que eu quero enviar em Slack.
+
+Então, esse é o único parâmetro que eu tenho para esse tool e eu digo ao modelo de linguagem grande no dock string exatamente o que esse parâmetro precisa ser para que ele saiba o que enviar para a mensagem para enviar uma mensagem Slack. Então, o último tool que eu tenho aqui é criar um Google Doc. Então, dessa vez, eu aceito dois parâmetros porque eu preciso do nome do arquivo e o texto dentro dele.
+
+E, novamente, eu só chamo de invoke-n8n-webhook. É tão, tão fácil. Então, mesmo se eu tivesse 20 ferramentas para esse agente, esse arquivo não seria tão grande.
+
+Leva mais espaço para escrever o dock string do que realmente faz para criar nenhuma dessas ferramentas, porque eu estou realmente alcançando o N8n para a maioria da complexidade, para as ações que eu quero fazer aqui. E essa é a beleza dele. Não há muito código, porque eu estou alcançando um código para fazer as coisas tão mais simples.
+
+E se eu realmente preciso de mais complexidade para um tool que o N8n não pode suportar, então eu posso customizar algo em um desses tools aqui. Então, eu tenho toda a flexibilidade que eu preciso, mas também é muito simples quando o N8n faz o truque. E, a maior parte do tempo, faz.
+
+Tipo, para todas essas ferramentas que eu tenho aqui, certamente faz o truque para mim. Então, isso é tudo para criar as ferramentas. Agora, podemos ir rapidamente para definir o nosso UI Streamlit para a frente e interagir com nosso modelo de língua maior, e depois testaremos.
+
+Então, agora nós conseguimos criar o setup para interagir com nosso modelo de língua maior e setupar o nosso UI Streamlit para que possamos interagir com nosso agente no browser. Então, como com o outro tool Utility Python Script, eu vou começar aqui importando todos os paquetes Python que eu preciso. Eu também estou importando todos os tools do outro script.
+
+Então, deixe-me voltar aqui rapidamente, porque tem uma coisa que eu esqueci de adicionar. E é essa mapeamento final aqui, onde nós pegamos o nome de cada uma das funções de nosso tool e nós mapeamos isso para o instante real dessa função no script. Então, dessa forma, eu pego isso aqui, importo no meu script principal e agora eu tenho cada uma dessas funções importadas.
+
+Então, o que nós vamos fazer é pegar cada uma dessas linhas doc que nós temos que ajudam o LLM a entender como e quando usar cada tool, e isso vai ser colocado no instante real, e isso é sob a capa usando a linha de linha. Então, é assim que o LLM sabe quando e como chamar esses tools para interagir com nossos workflows N8n. Nós também vamos então carregar nossos variáveis ambientais, como antes.
+
+Dessa vez, apenas definindo a variável ambiental para o modelo que nós queremos usar. Então, você pode usar modelos Anthropic ou OpenAI para esse setup. Apenas faça com que você tenha o certo OpenAI ou Keyset Anthropic API, dependendo do modelo que você está usando.
+
+Com isso, nós vamos definir nosso mensagem de sistema aqui, que é basicamente apenas um contexto extra no começo da conversa para acentuar como o LLM responde. Então, são apenas alguns exemplos pequenos que eu tenho aqui de formas que eu estou sendo muito específico com isso, para que eu consiga os tipos de respostas que eu quero. Dizendo coisas como como formatar links para Google Docs baseado no ID de documento.
+
+Então, apenas um pequeno exemplo. Então, nós podemos entrar em nossas funções para realmente interagir com o LLM e unir os tools neles. Então, o primeiro pequeno negócio azul que eu tenho aqui, eu não realmente quero entrar nisso em detalhes, mas eu coloquei isso aqui.
+
+Essa função de ajuda aqui faz possível usar modelos Anthropic e OpenAI, mesmo que ambos tenham formatos um pouco diferentes. Para como eles produzem uma resposta quando você invoca o modelo. Então, isso apenas maneja a diferença aqui e o coloca em um único formato que funciona com o resto do script.
+
+Então, de novo, eu não vou entrar nisso, mas isso vai fazer possível que você use ambos, o que é muito, muito conveniente. E então, com isso, nós podemos entrar na nossa função para promover o AI. Então, nós vamos setar o nosso chatbot aqui.
+
+Então, vai ser uma instância OpenAI de conversa se o modelo é um modelo GPT, senão, conversa Anthropic. E então, nós recebemos todas as nossas ferramentas da mapeamento da ferramenta disponível que nós temos definido aqui. E então, voltando para o script, eu bindo as ferramentas.
+
+Então, isso é uma função LangChain que faz com que seja tão simples. Isso seria muitas linhas de código se não fosse para uma LangChain, mas faz com que seja tão fácil bindir todas as nossas ferramentas. E então, nós podemos invocar o nosso chatbot agora com essas ferramentas e nós estamos, na verdade, streamando a saída.
+
+Então, eu tenho um pouco de código aqui para passar por todas as partes enquanto ela está produzindo o stream no formato de escritora. E eu estou reunindo tudo isso e também alcançando essas partes como um generador. Então, isso é um tópico Python um pouco mais avançado.
+
+E eu não quero entrar nisso em muito detalhes, mas eu realmente queria implementar isso porque então, dessa forma, a AI vai estar escrevendo sua resposta ao longo do tempo, o que parece muito, muito legal. Então, eu estou usando generadores aqui alcançando essas partes enquanto elas são produzidas do stream. Então, de novo, um pouco mais avançado, mas parece realmente, realmente legal.
+
+Então, o que nós vamos fazer depois de termos terminado recebendo a resposta quando ela está totalmente streamada, nós vamos verificar se temos alguma chamada de ferramentas. E se nós temos alguma chamada de ferramentas, então eu vou adicionar essa mensagem para a história da conversa. Então, a AI sabe depois que ela escolheu fazer uma chamada de ferramentas aqui.
+
+E então, eu vou passar por cada chamada de ferramentas que nós queremos fazer porque a AI pode querer fazer mais do que uma. E então, nós vamos pegar o nome da chamada, pegar seus argumentos também, e então invocar aquela chamada. Eu só tenho alguns argumentos de imprimir que eu vou mostrar na demonstração.
+
+E então, o resultado de invocar essa chamada, nós vamos adicionar como mensagem de ferramentas para a conversa, porque dessa forma, a AI tem contexto sobre o que realmente aconteceu quando ela decidiu invocar esse N8n Workflow. Então, foi a mensagem enviada sucessivamente no Slack? Qual foi a sumariza da conversa no Slack? Todos esses diferentes saídos são colocados nessa mensagem de ferramentas aqui para que ela possa razoar sobre a saída. E então, o que nós vamos fazer é chamar novamente a AI recursivamente para receber uma resposta do LLM agora que ela fez a chamada de ferramentas.
+
+Então, ela pode escolher fazer outra chamada de ferramentas ou talvez agora ela vai produzir a resposta final para o usuário. O que for que seja, nós temos que fazer isso novamente e então nós só estamos gerando os pedaços dessa resposta. Então, isso é tudo para interagir com o nosso LLM.
+
+É realmente legal e fácil. E eu até fiz mais complicado do que eu tinha que fazer só para colocar o streaming lá, porque eu acho que é tão legal. Mas, sim, o Lanchain faz isso tão rápido para fazer agentes de AI.
+
+E então, para a função principal aqui, eu só vou adicionar um título de streamlet, setar nossas mensagens iniciais para uma única mensagem de sistema, como eu defini em cima. E então, toda vez que a UI do streamlet se refresca, eu quero redisponibilizar tudo da conversa na UI. E então, eu também vou definir um input de conversa aqui, onde o que for que o usuário escreva vai ir para essa variável de prompt que eu vou adicionar para a interface do usuário e também o estado interno das mensagens.
+
+E então, eu vou promptar a AI para receber o stream e streamá-lo para a UI do streamlet. E então, uma vez que o stream é completo, eu vou adicioná-lo para o estado interno das mensagens também. E isso é tudo para a nossa UI.
+
+E então, agora, nós estamos totalmente completos. Nós temos esse agente completamente instalado. E nós podemos ir em frente e testá-lo.
+
+Para gerar esse agente de AI com o streamlet, tudo que eu tenho que fazer é ir para o diretório que tem esses scripts do Python que eu estava trabalhando e entrar no comando streamlet run n8n lanchainagent.py Isso vai instantaneamente virar uma nova instância de streamlet no meu browser e levar-me a ele imediatamente. E nós podemos ver... Bum! Aí está, nós temos nossa conversa com apenas uma mensagem de sistema no momento. E então, agora, eu vou mostrar-lhe rapidamente como nós podemos usar todos esses ferramentas juntos para fazer algo meio legal.
+
+Não vai ser, tipo, incrivelmente poderoso, mas vai mostrar-lhe muito claramente como legal esse setup é e quão fácil é trabalhar com lanchain, Python e n8n. E então, o que eu vou fazer aqui é pedir para resumir a conversa no Slack. E, de novo, o canal está encodado, então ele sabe que canal para fazer logo.
+
+Ele vai chamar o n8n workflow e receber essa resuma, ter que retornar, e então aqui vamos nós. Bum! É super legal e fácil. Agora, eu até posso ir para o terminal aqui e mostrar minhas mensagens de debug onde ele decidiu invocar esse tool.
+
+E essa é a resposta que ele recebeu do n8n workflow call. E então, nós temos uma boa resuma aqui. E agora, eu vou dizer que faça alguma pesquisa para mim sobre os pros e cons de cada um.
+
+Então, eu vou ter que fazer um pouco de trabalho para mim. Talvez você tenha algum tipo de tool de pesquisa web que faria alguma coisa disso e depois retornaria uma resposta. Mas, neste caso, eu só queria usar esse conhecimento interno para me dar alguns pros e cons.
+
+Então, isso ajudaria a fazer uma decisão para a minha startup AI, TechStack. Então, eu diria Ótimo! Obrigado! Agora, crie um Google Doc com os seus encontros. Então, agora ele vai ir e, na verdade, fazer um Google Doc com tudo o que ele me deu.
+
+Então, nós vamos dar um pouco de tempo. Isso vai ser um pouco mais longo do que eu esperava. Então, eu vou pausar e retornar quando isso estiver completo.
+
+Ok, eu pausei por uns 5 segundos e depois foi feito. Então, foi super, super rápido. Mas, aqui vamos nós.
+
+Ele criou um Google Doc e ele até linkou para mim, o que é super, super legal. Ou eu posso ir no meu folha de notas de encontros aqui que eu referenciei antes. Clicar no botão de baixo e aqui vamos nós.
+
+TechStack Research. Ele escolheu o título completamente sozinho e vai para ele. Nós temos todo o marco.
+
+É por isso que parece meio estúpido porque é marcado. Todo o marco para a pesquisa que ele fez para mim. Isso é lindo.
+
+Então, neste ponto, nós temos sumado a conversa no Slack e criamos um Google Doc. Então, agora a última coisa que nós queremos fazer é enviar uma mensagem no Slack. Então, eu vou dizer Fantástico! Envia este link para o Slack deixando-os saber que você fez pesquisa para resolver todos os seus problemas.
+
+Vamos lá! Então, ele vai chamar o último workflow. O último que nós temos que usar. E boom! Nós enviamos a mensagem no Slack e, na verdade, eu recebi a notificação agora.
+
+E você pode ver que eu recebi uma nova mensagem. Então, clicando nisso. Aqui vamos nós.
+
+Eu fiz alguma pesquisa sobre as opções do TechStack. Aqui está o link para o Doc com toda a pesquisa. Isso é tão, tão fácil.
+
+Então, teoreticamente, eu não tive de tocar no Slack ou no Google Drive para fazer qualquer coisa disso. Eu só queria mostrar que tudo estava funcionando. Mas isso é lindo.
+
+E ele está usando o N8n para tudo o que está interagindo com esses serviços externos. Então, é tão conveniente para setar tudo isso. Então, aí está.
+
+Isso é o N8n, o Python e o LangChain combinados juntos para fazê-lo muito fácil para construir agentes de AI poderosos e controláveis. Se você acha que há outro stack que seria ainda melhor, me diga nos comentários. Eu adoraria ouvir de você outras tecnologias que você quer que eu explore, porque eu sempre estou aberto a novas ideias para conteúdo.
+
+Então, se você achou isso valioso e você vai usar esse TechStack para criar seus próprios agentes de AI, eu realmente apreciaria um like e um se inscrever. E com isso, eu te vejo no próximo vídeo.
+
+(Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.)

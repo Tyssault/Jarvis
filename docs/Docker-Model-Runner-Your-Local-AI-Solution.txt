@@ -1,0 +1,94 @@
+Docker Model Runner: Your Local AI Solution!
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Olá, pessoal. Sou o Michael Forster, do Co-Cloud, e no vídeo de hoje, vamos explorar uma nova beta do desktop do Docker, conhecida como o Docker Model Runner. Eu sei, certo? Uma função intuitivamente chamada.
+
+Vamos usar o desktop do Docker para gerar modelos. Este atalho oficial permite-se gerar modelos de linguagem larga, tipo chat GPT, acho que modelos de AI, localmente na sua máquina, e é tão fácil quanto gerar um conteiner. Então, não há set-ups mais complexos, não há terceiros, não há custos de cloud pesados, certo? Podemos fazer isso aqui na nossa Windows PC ou Mac, certo? Na verdade, veio para o Mac primeiro.
+
+Então, neste demo, vou usar o Windows 11 com Ubuntu no subsistema de Windows para Linux, WSL2, e tenho um NVIDIA 4070 GPU, obviamente, com suporte para CUDA. Então, vamos mostrar como funciona. Então, no final deste tutorial, você saberá o que é o Docker Model Runner, suas funções claves e como puxar, gerar e interagir com modelos de AI na sua máquina local.
+
+Nós até faremos uma demonstração de mão a mão com comandos reales e vamos ver um modelo responder aos nossos promptes. Agora, primeiro, antes de entrarmos na demonstração de mão a mão, deixe-me apenas dizer isso, o que é o Docker Model Runner, certo? O Docker Model Runner é uma nova função atualmente em beta para o desktop do Docker 4.4.0 e é desejado para fazer modelos tão simples quanto gerar um conteiner. Então, ele gera um motor de inferência diretamente no desktop do Docker e expõe-o através de um API compatível com o OpenAI familiar.
+
+Então, em termos simples, o que isso significa é que o desktop do Docker agora vem com um serviço instalado que pode acessar e gerar modelos de linguagem grande para você, para que você possa testar funções de AI em suas aplicações sem necessariamente se depender de serviços de cloud. Agora, algumas das funções claves neste lançamento de beta incluem a coisa que estamos falando agora, que é basicamente o modelo local LLM gerado e executado. Então, você pode lutar, você pode testar seus modelos de AI localmente na sua máquina, sem necessidade de internet de cloud.
+
+Então, isso é ótimo para a privacidade, porque nenhum dado vai deixar a sua máquina e é ótimo para uma iteração mais rápida durante o desenvolvimento. Agora, eu vou dizer uma coisa aqui. Obviamente, vai ser difícil competir com um modelo de 670 bilhões de parâmetros.
+
+É dependente de hardware. A outra função, além da habilidade de lutar modelos, é que ele tem um API compatível com o OpenAI. Então, o que isso significa é que o Model Runner vai expor um ponto de entrada do OpenAI, um ponto de entrada do API para completações, chats, embedimentos, etc., para que seus aplicativos ou ferramentas possam falar com o modelo local, como eles fariam com o API do OpenAI.
+
+Então, você pode apontar o seu SDK ou comandos curl, basicamente, para modelrunner.docker.internal, e você pode, basicamente, receber respostas dos modelos locais. Então, não há mudanças de código necessárias, além de uma mudança na URL do ponto de entrada. Outra coisa é que, como é um motor de inferência integrado, o modelo real vai funcionar fora dos conteineres como um processo de gerador administrado pelo desktop docker.
+
+Esse desenho evita a superfície de funcionar modelos pesados dentro de um VM ou um conteiner, basicamente, dando uma melhor performance. Agora, de novo, como eu mencionei antes, é poderizado pela biblioteca Llama CPP, abaixo da parede, e isso é otimizado para a inferência local de CPU e GPU. Então, essencialmente, o Model Runner do Docker é como ter o Llama, que eu amo e uso frequentemente, embedido no Docker.
+
+Agora, o outro aspecto disso é que você agora também recebe aceleração de GPU. Então, para máquinas que o apoiam, o Model Runner do Docker pode usar seu GPU para acelerar a inferência de modelos. Então, inicialmente, a beta, quando veio, só apoiava o silicone apical.
+
+Então, tipo, você poderia usar, tipo, aceleração de metal ou, tipo, o M1, M2 MAX, certo? Mas, agora, você está realmente capaz de assistir isso em Windows com GPUs NVIDIA. Então, vamos demonstrar hoje a versão em Windows. Então, o que isso significa é que, se você tem uma GPU compatível com o CUDA, como o nosso RTX 4070, o modelo local pode funcionar significativamente mais rápido utilizando aquela carteira de vídeo.
+
+E então, só para que você esteja ciente, vamos falar sobre isso. No nosso set-up WSL2 para nossa máquina virtual Ubuntu, que está funcionando dentro de WSL, em Windows, nós já instalamos os drives NVIDIA necessários e ativamos o apoio de GPU no desktop do Docker. Então, isso vai ser usando a GPU NVIDIA para virtualização para o WSL2.
+
+Então, há um monte de set-ups realmente especializados para Windows que são realmente fáceis de fazer, mas você precisa estar ciente. E, por último, há um paquete de modelos OCI que está acontecendo. Então, os modelos são paquetados e distribuídos, tipo, são artefatos de OCI.
+
+Então, exatamente como imagens do Docker. Eles podem ser postados no Hub do Docker, geralmente com um monítero AI, o que significa que eles começam com o AI. Então, o Hub do Docker está trabalhando fortemente com os vendedores de modelos para garantir que as versões oficiais dos modelos se compartilhem, junto com versões específicas, como o tamanho dos parâmetros.
+
+Então, você pode, basicamente, fazer quase o equivalente de um pulo do Docker e, basicamente, pular do repositório do AI, como pular uma imagem de conteineiro. Então, isso vai eliminar o problema de downloadar arquivos de modelos gigantescos de sitos aleatórios. Em vez disso, você só usa os comandos do Docker e seus modelos são capturados localmente para reutilização.
+
+Então, nenhum mais tipo de desafio ambiental para modelos AI. Docker Model Runner, por acaso, apoia o pulo, listar e remover, permitindo basicamente que você maneje os modelos no seu sistema. Apenas um modelo é ativo em qualquer momento.
+
+Você pode ter, tipo, uma coleção de modelos, dos pequenos para os maiores, e, tipo, trocar entre eles como é necessário. De novo, apenas o modelo que está em uso é, na verdade, carregado na memória. Os outros são carregados no disco.
+
+Então, você não tem que se preocupar com isso. Então, na nossa demonstração, vamos começar com um modelo muito pequeno para velocidade, mas só para que você saiba, você tem opções. Então, tipo, com um 4070, a gente pode, geralmente, sair com cerca de 80 gigabytes de RAM.
+
+A gente pode, geralmente, sair com cerca de um modelo de 70 bilhões de parâmetros antes de as coisas realmente começar a descer. Acima disso, e isso fica meio assustador. Então, você sabe, só quero que você saiba.
+
+Então, o suficiente sobre as feituras inteiras e tudo mais. Vamos deixar nossas mãos sujas. Então, vamos descer para a nossa demonstração.
+
+Ok, então, como prometido, vamos ter as mãos aqui por um segundo. Então, eu estou, na verdade, no desktop do Docker, e só quero apontar algumas coisas primeiro. Então, uma coisa é que você vai precisar ir ao seu ícone de settings.
+
+Basicamente, o seu equipamento de settings. E faça com que, uma, não há atualizações de software. E notem que eu estou rolando 4.4.1.2. Então, 4.4.0 Plus é necessário.
+
+E você vai ter que ir em Features & Development e ativar, basicamente, o Docker Model Runner. Então, notem que eu tenho o cheque aqui. Ativar o suporte de TCP do lado de host, assim como ativar a inferência de GPU.
+
+Então, algo a se lembrar é que todas essas caixas, tipicamente, precisam ser checadas se você quiser um model runner de GPU. Notem que diz 4.4.1.2 aqui embaixo. E que você terá que aplicar e reiniciar seu engine de Docker, para que isso tenha efeito.
+
+Uma vez que isso acontece, o que você vai querer fazer é, uma vez que você terminou o model runner do Docker, você vai querer ir, eu quero dizer, você pode ir para o WSL, mas nós vamos, na verdade, ficar com o PowerShell aqui por um segundo. Não é o meu favorito, mas, você sabe, é necessário e útil, especialmente se você está nos sistemas de Windows, certo? E a razão pela qual eu estou fazendo isso é que parece que há um bug no WSL2 agora com o Ubuntu, porque estava funcionando e agora não está. E deixe-me mostrar o que eu estou falando.
+
+Então, se a gente voltar aqui para o Ubuntu, notem que eu fiz um status de modelo de Docker. E basicamente, está me dizendo que não é capaz de resolver um conteineiro com esse nome. Agora, se eu fizer um docker ps-a, notem que eu não vejo a coisa em questão, mas no começo desse todo o tutorial, lembrem-se que eu disse que está realmente funcionando no host.
+
+E parece que há algum problema de integração com o WSL e o host, porque se eu entrar aqui, e digamos que eu faça um docker rm-f, e eu vou parar o docker model runner. Você iria pensar então que eu poderia fazer um status de modelo de Docker, e tudo iria ser redownloadado, e nós estaríamos todos super confusos, certo? Mas o problema é que quando eu tentar downloadar um modelo, como você verá aqui, eu vou até puxar o modelo ai-2, ele vai jogar um erro. Então, eu não sei muito bem o que está acontecendo, mas isso é uma featura beta, então, desde o dia 27 de maio, isso parece ser um problema bastante estándar com o docker model runner.
+
+Agora, aqui está o desafio. Se eu mudar para o PowerShell, por exemplo, e faço um docker model status, você notará que diz que tudo está legal, na verdade. Estamos bons.
+
+E então, se eu fazer uma lista de modelos, vai mostrar que nada foi downloadado. Então, parece que há dois espaços diferentes para o model runner dentro do WSL e o model runner fora. Então, basicamente, para ter certeza de que tudo fica claro, eu vou limpar o docker model runner, e vou ir para o PowerShell.
+
+Isso é só se você está no Windows, por exemplo. Se você está no Mac, você não vai ver isso, e só verificar o status, e diz que tudo está bom. Ok? Então, vamos fazer o resto disso no PowerShell, então, na verdade, não estamos rolando no WSL e no Ubuntu, porque parece que está tendo um problema que só apareceu.
+
+Então, vamos rolar o resto desses comandos. Então, vamos fazer um docker model, esse é o nosso comando de base, e vamos fazer um pulo, igual a gente faz um pulo docker, certo? Como se estivéssemos pulando uma imagem. Vamos para o espaço AI, e vamos fazer um m2 pequeno.
+
+Agora, isso é cerca de 215 megabytes de tamanho, e então, vai downloadar o modelo do Docker Hub, como se estivéssemos pulando uma imagem de conteineiro. Vai pular toda a coisa, então, é rápido, e você vai ver um progress bar, obviamente. Vai dizer, pulou sucessivamente.
+
+Então, o que aconteceu? Então, se olharmos o docker model list, o que vemos agora, é que, oh, esse é um modelo de 361 milhões de parâmetros, e é bem pequeno, na verdade. Então, e o que ele está fazendo, foi criado há dois meses, é cerca de 256 megabytes, agora está downloadado, e agora está no meu disco, e notem que isso tem um tag específico, que você pode usar para downloadar versões específicas, certo? Agora, pulamos esse, digamos que, você sabe, nós queríamos pular um, como um outro, então, de novo, só para dizer isso, foi o docker model list, para listar tudo aqui. Então, o que vamos fazer agora, é que vamos dizer, olha, eu tenho o modelo aqui, e o que se eu o carregar? Então, vamos fazer um docker model run, ai, pequeno, m2, e vamos carregar e dizer, Oi, o que é o docker model runner? Agora, para setar as expectativas, isso é um modelo pequeno, então, não devemos necessariamente esperar para que ele saia com a resposta mais sofisticada, mas vamos ver o que ele faz.
+
+Ok? Então, vamos ver, dockerfile, parece que ele descreve docker desktop, interessante. Então, não nos deu a resposta, vamos carregar de novo e ver o que ele faz. Tudo bem, parece que nos deu a resposta errada, então, há muitas alucinações.
+
+Outra alucinação. Ok, interessante. Então, de novo, temos que ser cuidadosos, estes são modelos pequenos, então, o que podemos fazer com eles? Então, com um pequeno, certo? Pergunta que não é necessariamente informação específica, você pode ver algo diferente.
+
+Lembre-se que esta imagem foi criada há dois meses, como sabemos isso? Bem, porque disse quando fizemos docker model list, disse, olha, foi criada há dois meses. Então, teria conhecimento do docker model runner? Provavelmente não, então, é realmente apenas fazer uma resposta. Vamos dizer, como é isso, ao invés? Quão rápido o cheetah corre? Bem remarcável.
+
+O mais rápido animal do mundo corre 75 milhas por hora, 151 quilômetros. Ah, a memória serve, isso é bem acerto, certo? Agora, digamos que não necessariamente queremos escrever nossa pergunta e queremos algum tipo de modo interativo. Bem, agora estamos em um modo de conversa interativo, certo? E então, agora, podemos escrever nossa pergunta diretamente, como o quanto faz um elefante correr? Eu disse esperar, mas tudo bem, eu consegui.
+
+Muitos fatores para a saúde, em termos de peso humano, olha isso, 11.000 a 15.000 quilômetros, isso é muito. Então, quando terminamos, por acaso, você pode escrever como sempre, certo? Então, basicamente, fizemos um modelo de AI através do docker, sem contêineres, sem environmentos especial de Python, sem dependências, e porque temos um GPU, estamos recebendo respostas mais rápidas do que apenas um CPU puro, certo? E então, com este modelo de Tino, é mais difícil de dizer, modelos maiores realmente mostrariam acelerações maiores. Mas vamos dar uma olhada no espaço de AI por um segundo, que está disponível no hub.docker.com. Então, notem que eles têm DeepSeq, eles têm 5.4, eles têm Mistral, eles têm SmallM2 e GemmaM3.
+
+Isto parece ser o download mais significativo que eles tiveram até agora em criações. Notem que DeepSeq é de 28 dias, eu acho que a maioria destes são de cerca de um mês. Então, é interessante, o que eu downloadei deve ter sido diferente.
+
+Mas vamos dar uma olhada em Small, por exemplo. Notem que há alguns tags aqui do Hugging Face, certo? Então nós temos várias versões diferentes, certo? Que têm diferentes quantificações. Notem que aqui está a mais recente, que é provavelmente o que fizemos de defaulto, certo? Aqui está 360 milhões, aqui está 135 milhões, aqui está 135 milhões com diferentes focos, certo? Então, notem que isto está aqui.
+
+Não houve muito mudança nisto, porque eu acho que eles ainda estão trabalhando os Kinks, mas Win é aqui, por acaso, também. Mistral, 5.4, QWQ, DeepCoder, legal. Há um monte aqui.
+
+E aí você está. Nós acabamos de criar um modelo AI local usando o Docker Model Runner, e nesta demonstração, nós puxamos um modelo AI tão facilmente quanto puxar uma imagem docker. Em resumo, o Docker Model Runner traz uma primeira abordagem local para o desenvolvimento de AI, e então é mais rápido, potencialmente mais barato e mais seguro, e então os desenvolvedores podem experimentar com as funções de AI em suas apps, direto em seus computadores ou em suas instalações de trabalho.
+
+E de novo, já que está integrado com o Docker, se encaixa direto em seus funcionamentos muito suavemente, você pode até imaginar um bundle de um modelo AI local como parte do seu composto de dados para testes, ou você pode usá-lo em pipelines de CIA, você sabe, dependendo de como você está usando. Também uma nota rápida sobre os modelos que estão disponíveis para uso. Então o Docker está rapidamente expandindo os modelos disponíveis para oferecer uma variedade na área de nomes de AI.
+
+Atualmente, isso inclui modelos do Google, do Meta, do Hugging Face, Microsoft 5.4 e outros. Então, apenas fique atento porque vai haver mais. Se você achou este vídeo útil, por favor, goste, inscreva-se no nosso canal para mais tutoriais de tecnologia.
+
+E não esqueça de conferir o CodeCloud para mais treinamento de DevOps, Cloud e AI. Nós temos cursos em praticamente tudo CNCF, tudo DevOps e tudo Cloud. E estamos evoluindo para a AI.
+
+Então, obrigado por assistir e feliz em experimentar com o Docker Model Runner. Agora vá usar sua própria AI local e se impressionar. Sem cloud necessário.
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.

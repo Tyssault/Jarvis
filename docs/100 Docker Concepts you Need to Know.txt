@@ -1,0 +1,70 @@
+100+ Docker Concepts you Need to Know
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem. 
+Bem-vindo ao Docker 101. Se seu objetivo é enviar software para o mundo real, um dos conceitos mais poderosos para entender é a containerização. Quando se desenvolve localmente, solve o problema antigo de que funciona na minha máquina, e quando se desenvolve no cloud, solve o problema antigo de que essa arquitetura não escala.
+
+Nos próximos minutos, vamos desbloquear o poder dentro desse container aprendendo 101 conceitos e termos diferentes relacionados à ciência de computadoras, o cloud e, é claro, o Docker. Eu acho que você conhece o que é um computador, certo? É uma caixa que tem três componentes importantes dentro. Um CPU para calcular coisas, memória de acesso rápido para as aplicações que você está usando agora, e um disco para esconder coisas que você pode usar mais tarde.
+
+Isso é hardware de metal barro, mas para usá-lo, precisamos de um sistema de operação. O mais importante é que o OS provide um kernel que fica em cima do metal barro, permitindo que as aplicações de software funcionem nele. Nos tempos antigos, você iria para a loja e comprar software para instalar fisicamente na sua máquina.
+
+Mas, hoje em dia, a maioria da software é entregue através da internet, através da mágica do networking. Quando você assiste um vídeo no YouTube, seu computador é chamado de cliente, mas você e bilhões de outros usuários estão recebendo esse dados de computadores remotos chamados de servidores. Quando uma aplicação começa a alcançar milhões de pessoas, coisas estranhas começam a acontecer.
+
+O CPU fica cansado de lidar com todas as requerências vinculadas. A I.O. do disco desacelera, a banda de network se maximiza, e a base de dados se torna muito grande para criar, efetivamente. Além disso, você escreveu um código de merda que está causando condições de corrida, leque de memória e erros incomodados que eventualmente irão agredir o seu servidor.
+
+A grande pergunta é como nós escalamos a nossa infraestrutura. Um servidor pode escalar de duas maneiras, verticalmente ou horizontalmente. Para escalar verticalmente, você pega seu único servidor e aumenta seu RAM e CPU.
+
+Isso pode levar você bem longe, mas eventualmente você chuta. A outra opção é escalar horizontalmente, onde você distribui seu código para múltiplos servidores menores, que são muitas vezes quebrados em micro-serviços que podem funcionar e escalar independentemente. Mas sistemas distribuídos como esse não são muito práticos quando se trata de metal barato, porque a alocação de recursos é diferente.
+
+Uma maneira que os engenheiros tratam disso é com máquinas virtuais, usando ferramentas como o Hypervisor. Ele pode isolar e escalar múltiplos sistemas operativos em uma única máquina. Isso ajuda, mas a alocação de CPU e memória de um VM ainda está fixada.
+
+E é aqui que o Docker entra, o sponsor do vídeo de hoje. Aplicações funcionando em cima do motor do Docker todos compartilham o mesmo kernel de sistema operativo e usam recursos dinamicamente, baseado em suas necessidades. Sob a capa, o Docker está funcionando um processo demoníaco ou persistente que faz todo esse mágico possível e nos dá virtualização de nível OS.
+
+O que é incrível é que qualquer desenvolvedor pode facilmente alcançar esse poder simplesmente instalando o desktop do Docker. Isso permite que você desenvolva software sem ter que fazer mudanças massivas para o seu sistema local. Mas aqui é como o Docker funciona em três passos fáceis.
+
+Primeiro, você começa com um arquivo do Docker. Isso é como um blueprint que diz ao Docker como configurar o ambiente que gerencia sua aplicação. O arquivo do Docker é usado para construir uma imagem, que contém um OS, suas dependências e seu código, como um template para gerar sua aplicação.
+
+E podemos upload essa imagem para o cloud, para lugares como o Docker Hub, e compartilhar com o mundo. Mas uma imagem, por si só, não faz nada. Você precisa gerá-la como um container, que é um pacote isolado que gera seu código, que, na teoria, poderia escalar infinitamente no cloud.
+
+Containers são estados, o que significa que quando eles se fecham, toda a data dentro deles é perdida. Mas isso os faz portáteis e eles podem gerar em qualquer plataforma de cloud sem que o vendedor loque. Bastante legal, mas a melhor forma de aprender o Docker é gerar um container.
+
+Vamos fazer isso agora, criando um arquivo do Docker. Um arquivo do Docker contém uma coleção de instruções, que, por convenção, são em todas as capas. FROM é geralmente a primeira instrução que você verá, que pinta para uma imagem base para começar.
+
+Isso geralmente será um distro Linux e pode ser seguido por uma coluna, que é uma marcação de imagem opcional, e, neste caso, especifica a versão do OS. Próximo, temos a instrução de diretório de trabalho, que cria um diretório de fonte e CDs nele. E é lá que colocamos nosso código de fonte.
+
+Todos os comandos, daqui a pouco, serão executados deste diretório de trabalho. Próximo, podemos usar a instrução RUN para usar um gerador de paquetes Linux para instalar nossas dependências. RUN permite que você faça qualquer comando, como você faria da linha de comando.
+
+Atualmente, estamos funcionando como um gerador de fonte, mas, para melhor segurança, podemos também criar um gerador não-gerador com a instrução do gerador. Agora, podemos usar COPY para copiar o código na nossa máquina local para a imagem. Você está quase lá.
+
+Vamos fazer uma breve intermissão. Agora, para fazer esse código, temos uma chave API, que podemos setar como uma variável de ambiente com a instrução ENV. Estamos construindo um servidor web que as pessoas podem se conectar, que requer um porto para o tráfego externo.
+
+Use a instrução EXPOSE para fazer esse porto acessível. Finalmente, isso nos leva à instrução de comando, que é a comanda que você quer usar quando iniciar um gerador de paquetes. Neste caso, ela vai gerar o nosso servidor web.
+
+Só pode haver um comando por gerador, embora você também possa adicionar um ponto de entrada, permitindo que você passe argumentos para o comando quando você o gera. Isso é tudo que precisamos para o arquivo docker. Mas, como um toque adicionado, podemos também usar o LABEL para adicionar mais metadatas, ou podemos fazer um cheque de saúde para ver se está funcionando corretamente, ou se o gerador precisa guardar dados que vão ser usados mais tarde ou ser usado por vários contêineres, podemos montar um volume para ele com um disco persistente.
+
+Ok, nós temos um arquivo docker, então agora o que? Quando você instala o desktop docker, isso também instala o CLI docker, que você pode usar do terminal. Ative a ajuda docker para ver todos os comandos possíveis, mas o que precisamos agora é o BUILD docker, que vai transformar este arquivo docker em uma imagem. Quando você ativa o comando, é uma boa ideia usar o TLAG para tagá-lo com um nome reconhecível.
+
+Veja como ele construiu a imagem em lares. Cada lar é identificado por um hash SHA-256, o que significa que se você modificar o arquivo docker, cada lar será cachado, então só tem que reconstruir o que realmente mudou. E isso faz seu funcionamento como desenvolvedor muito mais eficiente.
+
+Em adição, é importante apontar que às vezes você não quer que certos arquivos acabem em uma imagem docker, no qual caso você pode adicioná-los ao arquivo docker ignore para excluí-los dos arquivos reales que são copiados lá. Agora, abra o desktop docker e veja a imagem lá. Não só isso nos dá um deslizamento detalhado, mas graças ao scout docker, podemos proativamente identificar qualquer vulnerabilidade de segurança para cada lar da imagem.
+
+Funciona através de extrair o código de materiais do software da imagem e compará-lo com um monte de databases de consultoria de segurança. Quando há um jogo, é dado um rating de severidade para que você possa priorizar seus esforços de segurança. Mas agora o tempo finalmente chegou para gerar um conteineiro.
+
+Podemos alcançar isso simplesmente clicando no botão de gerar. Sob a parede, executa o comando docker gerar e podemos agora acessar o nosso servidor no localhost. Em adição, podemos ver o conteineiro gerando aqui no desktop docker, que é o equivalente ao comando docker psst, que você pode gerar do terminal para obter um deslizamento de todos os conteineiros que estão funcionando e parados na sua máquina.
+
+Se clicarmos nele, podemos inspecionar os logs deste conteineiro ou verificar o sistema de arquivos, e podemos até executar comandos diretamente dentro do conteineiro que está funcionando. Agora, quando é hora de fechar, podemos usar o stop do docker para pará-lo graçosamente ou o kill do docker para pará-lo forçadamente. Você ainda pode ver o conteineiro fechado aqui na UI ou usar o remove para se livrar dele.
+
+Mas agora você pode querer gerar seu conteineiro no cloud. O push do docker vai upload sua imagem para um registro remoto, onde ele pode ser lançado em um cloud como o AWS com serviço Elastic Container, ou pode ser lançado em plataformas sem servidores como o Google Cloud Run. Conversamente, você pode querer usar a imagem docker de alguém outro, que pode ser downloadada do cloud com o pool do docker.
+
+E agora você pode gerar qualquer código de desenvolvedores sem ter que fazer nenhuma mudança para seu ambiente local ou máquina. Parabéns! Você é agora um experto docker bonificado e certificado. Eu aquibem permito-lhe que você imprime este certificado e leve-o para sua próxima entrevista de trabalho.
+
+Mas o docker é apenas o começo. Há uma boa chance que sua aplicação tenha mais de um serviço, no qual caso, você vai querer saber sobre o Docker Compose, uma ferramenta para manejar aplicações multicontainer. Ela permite você definir várias aplicações e suas imagens docker em um único arquivo YAML, como um front-end, um back-end e um database.
+
+O comando up do Docker Compose vai girar todos os contêineres simultaneamente, enquanto o comando down o detém. Isso funciona em um servidor indivíduo, mas uma vez que você alcança uma escala massiva, você provavelmente precisará de uma ferramenta de orquestração, como o Kubernetes, para gerar e manejar contêineres em todo o mundo. Funciona assim.
+
+Você tem um plano de controle que expõe um API que pode manejar o clúster. O clúster tem múltiplos nodes ou máquinas, cada uma contendo um kubelet e múltiplos pods. Um pod é a unidade minímum deployável no Kubernetes, que tem um ou mais contêineres dentro dele.
+
+O que faz o Kubernetes tão efetivo é que você pode descrever o estado desejado do sistema e ele automaticamente escala para cima ou para baixo, enquanto também proporciona tolerância de erro para automaticamente curar se um dos seus servidores cai. Fica meio complicado, mas a boa notícia é que você provavelmente não precisa de Kubernetes. Foi desenvolvida pela Google baseada em seu sistema Borg e é realmente só necessário para sistemas de tráfego altamente complexos.
+
+Se isso soa como você, você também pode usar extensões no desktop do Docker para desbloquear seus pods. E com isso, nós vimos 100 conceitos relacionados à contêinerização. Um grande abraço ao Docker por fazer esse vídeo possível.
+
+Obrigado por assistir e vejo você no próximo.
+ Transcrito por TurboScribe.ai. Atualize para Ilimitado para remover esta mensagem.
